@@ -1,0 +1,13 @@
+# Documentation: Include technical documentation and design diagrams.
+Documentation/
+
+# Database: Store files related to database management, such as migrations or SQL scripts.
+Database/
+
+# Controllers: Store controller classes handling user interactions and application flow.
+Controllers/
+
+# Models: Store model classes responsible for data management and business logic.
+Models/
+
+

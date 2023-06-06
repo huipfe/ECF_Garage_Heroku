@@ -1,0 +1,17 @@
+Trello : https://trello.com/b/oxxE9JtC/ecf-garage
+(suivre le trello)
+
+Faire diagramme pour la logique du back 
+(utiliser :
+merise http://www.jfreesoft.com/JMerise/ avec java https://www.java.com/fr/download/manual.jsp 
+ou 
+https://www.lucidchart.com/pages/fr
+)
+: 
+
+Faire Figma pour le Front : https://www.figma.com/file/SaW2sE4UMapRzftQdaG8DU/ECF_Garage?type=design&node-id=9-44&t=l3rijzeslJeOXY32-0
+
+
+Git : https://github.com/huipfe/ECF_Garage
+
+Draw io : https://app.diagrams.net/#Hhuipfe%2FECF_Garage%2Fmaster%2FECF_Garage.drawio

@@ -1,6 +1,3 @@
-# Documentation: Include technical documentation and design diagrams.
-Documentation/
-
 # Database: Store files related to database management, such as migrations or SQL scripts.
 Database/
 

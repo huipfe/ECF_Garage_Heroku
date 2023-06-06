@@ -1,0 +1,27 @@
+Elements in project:
+
+Models: Represent the data and logic of the application.
+Views: Display the user interface and present information to users.
+Controllers: Handle user input, process requests, and interact with models and views.
+
+
+Pages (Views):
+
+Homepage: Display information about the garage, services offered, and featured cars.
+Login page: Allow administrators and employees to log in.
+Services page: Present information about the different automotive repair services offered.
+Opening hours page: Show the garage's opening hours.
+Used cars listing page: Display a list of available used cars with relevant details.
+Car details page: Provide detailed information about a selected used car.
+Contact page: Allow visitors to contact the garage via a form.
+Testimonials page: Show testimonials from customers.
+
+
+Folders:
+
+Models: Store model classes responsible for data management and business logic.
+Views: Contain view templates and related assets (CSS, JavaScript, images, etc.).
+Controllers: Store controller classes handling user interactions and application flow.
+Assets: Hold static files such as CSS stylesheets, JavaScript files, and images.
+Documentation: Include technical documentation and design diagrams.
+Database: Store files related to database management, such as migrations or SQL scripts.

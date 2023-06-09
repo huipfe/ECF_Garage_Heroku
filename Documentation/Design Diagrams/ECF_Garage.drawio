@@ -1,6 +1,6 @@
-<mxfile host="app.diagrams.net" modified="2023-06-09T13:21:21.468Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="n2aE979JUvsOndhZ4Kri" version="21.3.7" type="github">
+<mxfile host="app.diagrams.net" modified="2023-06-09T13:40:21.377Z" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/114.0.0.0 Safari/537.36" etag="AkkWes0_CvqIUYtAqqS0" version="21.3.7" type="github">
   <diagram name="Page-1" id="gkpLkfRcWBr6_EryrWo8">
-    <mxGraphModel dx="3676" dy="1806" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="4274" dy="2124" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
@@ -450,13 +450,13 @@
           <mxGeometry x="-1960" y="1840" width="110" height="105" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-110" value="Users" style="html=1;overflow=block;blockSpacing=1;swimlane;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fontStyle=0;marginBottom=0;swimlaneFillColor=#D92332;startSize=25;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;align=center;spacing=0;strokeColor=#ffffff;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#D92332;strokeWidth=2.3;" parent="1" vertex="1">
-          <mxGeometry x="-1772" y="1820" width="282" height="158" as="geometry" />
+          <mxGeometry x="-1772" y="1820" width="282" height="148" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-111" value="- user_id : INT AUTO INCREMENTE&lt;br&gt;- passe_word : VARCHAR(50)&lt;br&gt;- login_status : BOOL&lt;br&gt;- date_de_registre : VARCHAR(50)&lt;br&gt;- email : VARCHAR(50)" style="part=1;html=1;resizeHeight=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;swimlaneFillColor=#06042e;strokeOpacity=100;fillOpacity=100;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;" parent="BnAunMeXDNx3pweOuM9s-110" vertex="1">
-          <mxGeometry y="25" width="282" height="125" as="geometry" />
+          <mxGeometry y="25" width="282" height="115" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-112" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;" parent="BnAunMeXDNx3pweOuM9s-110" vertex="1">
-          <mxGeometry y="150" width="282" height="8" as="geometry" />
+          <mxGeometry y="140" width="282" height="8" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-115" value="Client/Visiteur" style="html=1;overflow=block;blockSpacing=1;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;align=center;spacing=0;strokeColor=#ffffff;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#262526;strokeWidth=2.3;" parent="1" vertex="1">
           <mxGeometry x="-2120" y="1840" width="130" height="105" as="geometry" />
@@ -525,16 +525,16 @@
         <mxCell id="BnAunMeXDNx3pweOuM9s-143" value="Horaires" style="html=1;overflow=block;blockSpacing=1;swimlane;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fontStyle=0;marginBottom=0;swimlaneFillColor=#D9777F;startSize=25;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;align=center;spacing=0;strokeColor=#ffffff;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#D9777F;strokeWidth=2.3;" parent="1" vertex="1">
           <mxGeometry x="-1394.25" y="2090" width="389" height="128" as="geometry" />
         </mxCell>
-        <mxCell id="BnAunMeXDNx3pweOuM9s-144" value="- jour : DATE&lt;br&gt;-&amp;nbsp;heure_debut : VARCHAR(50)&lt;br&gt;-&amp;nbsp;heure_fin : VARCHAR(50)&lt;br&gt;-&amp;nbsp;id : INT" style="part=1;html=1;resizeHeight=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;swimlaneFillColor=#272733;strokeOpacity=100;fillOpacity=100;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;" parent="BnAunMeXDNx3pweOuM9s-143" vertex="1">
+        <mxCell id="BnAunMeXDNx3pweOuM9s-144" value="- jour : DATE&lt;br&gt;-&amp;nbsp;heure_debut : VARCHAR(50)&lt;br&gt;-&amp;nbsp;heure_fin : VARCHAR(50)&lt;br&gt;-&amp;nbsp;id : INT&amp;nbsp;" style="part=1;html=1;resizeHeight=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;swimlaneFillColor=#272733;strokeOpacity=100;fillOpacity=100;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;" parent="BnAunMeXDNx3pweOuM9s-143" vertex="1">
           <mxGeometry y="25" width="389" height="95" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-145" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#FFFFFF;" parent="BnAunMeXDNx3pweOuM9s-143" vertex="1">
           <mxGeometry y="120" width="389" height="8" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-147" value="Contact" style="html=1;overflow=block;blockSpacing=1;swimlane;childLayout=stackLayout;horizontal=1;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=0;fontStyle=0;marginBottom=0;swimlaneFillColor=#D9777F;startSize=25;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;align=center;spacing=0;strokeColor=#ffffff;strokeOpacity=100;fillOpacity=100;rounded=1;absoluteArcSize=1;arcSize=9;fillColor=#D9777F;strokeWidth=2.3;" parent="1" vertex="1">
-          <mxGeometry x="-1067.75" y="2530" width="375" height="118" as="geometry" />
+          <mxGeometry x="-1233.5" y="2316" width="375" height="118" as="geometry" />
         </mxCell>
-        <mxCell id="BnAunMeXDNx3pweOuM9s-148" value="- Address_garage : VARCHAR(50)&lt;br&gt;- telephone : INT&lt;br&gt;- email_garage : VARCHAR(50)&lt;br&gt;- formulaire_de_contact ; VARCHAR(50)" style="part=1;html=1;resizeHeight=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;swimlaneFillColor=#272733;strokeOpacity=100;fillOpacity=100;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;" parent="BnAunMeXDNx3pweOuM9s-147" vertex="1">
+        <mxCell id="BnAunMeXDNx3pweOuM9s-148" value="- id : INT&lt;br&gt;- nom : VARCHAR(50)&lt;br&gt;- email_garage : VARCHAR(50)&lt;br&gt;- message ; VARCHAR(50)" style="part=1;html=1;resizeHeight=0;strokeColor=none;fillColor=none;align=left;verticalAlign=middle;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;swimlaneFillColor=#272733;strokeOpacity=100;fillOpacity=100;whiteSpace=wrap;fontSize=16.7;fontColor=#ffffff;" parent="BnAunMeXDNx3pweOuM9s-147" vertex="1">
           <mxGeometry y="25" width="375" height="85" as="geometry" />
         </mxCell>
         <mxCell id="BnAunMeXDNx3pweOuM9s-149" value="" style="line;strokeWidth=1;fillColor=none;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;fontColor=#FFFFFF;strokeColor=#FFFFFF;" parent="BnAunMeXDNx3pweOuM9s-147" vertex="1">
@@ -581,15 +581,15 @@
           </mxGeometry>
         </mxCell>
         <mxCell id="hIMolJZO88c_dkQbjLxj-2" value="&lt;font color=&quot;#f2f2f2&quot;&gt;Rôle&lt;/font&gt;" style="swimlane;fontStyle=1;align=center;verticalAlign=top;childLayout=stackLayout;horizontal=1;startSize=26;horizontalStack=0;resizeParent=1;resizeParentMax=0;resizeLast=0;collapsible=1;marginBottom=0;whiteSpace=wrap;html=1;fillColor=#D92332;" parent="1" vertex="1">
-          <mxGeometry x="-1717" y="2080" width="180" height="100" as="geometry">
+          <mxGeometry x="-1717" y="2080" width="180" height="80" as="geometry">
             <mxRectangle x="-2040" y="2060" width="70" height="30" as="alternateBounds" />
           </mxGeometry>
         </mxCell>
         <mxCell id="hIMolJZO88c_dkQbjLxj-3" value="&lt;font color=&quot;#fafafa&quot;&gt;- name : VARCHAR(50)&lt;br&gt;- is_admin : BOOL&lt;br&gt;- id : INT AUTO INCREMENTE&lt;br&gt;&lt;/font&gt;" style="text;strokeColor=#b85450;fillColor=#D92332;align=left;verticalAlign=top;spacingLeft=4;spacingRight=4;overflow=hidden;rotatable=0;points=[[0,0.5],[1,0.5]];portConstraint=eastwest;whiteSpace=wrap;html=1;" parent="hIMolJZO88c_dkQbjLxj-2" vertex="1">
-          <mxGeometry y="26" width="180" height="74" as="geometry" />
+          <mxGeometry y="26" width="180" height="54" as="geometry" />
         </mxCell>
         <mxCell id="hIMolJZO88c_dkQbjLxj-4" value="" style="line;strokeWidth=1;fillColor=default;align=left;verticalAlign=middle;spacingTop=-1;spacingLeft=3;spacingRight=3;rotatable=0;labelPosition=right;points=[];portConstraint=eastwest;strokeColor=#b85450;" parent="hIMolJZO88c_dkQbjLxj-2" vertex="1">
-          <mxGeometry y="100" width="180" as="geometry" />
+          <mxGeometry y="80" width="180" as="geometry" />
         </mxCell>
         <mxCell id="Jd2qodpVmGrZEep4cUXJ-26" value="1 un A est lié à un seul B&lt;br&gt;propriété non nullable&lt;br&gt;&lt;br&gt;0..1 un A est lié à au plus un B&lt;br&gt;propriété nullable&lt;br&gt;&lt;br&gt;1..* un A est lié à plusieurs B&amp;nbsp;&lt;br&gt;tableau non vide.&lt;br&gt;&lt;br&gt;0..* un A peut être lié à plusieurs B&lt;br&gt;tableau pouvant être vide." style="text;whiteSpace=wrap;html=1;" vertex="1" parent="1">
           <mxGeometry x="-2107.5" y="1970" width="217.5" height="180" as="geometry" />

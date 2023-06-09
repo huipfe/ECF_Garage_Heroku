@@ -17,7 +17,7 @@ $color-primary_red_dark: #D92332;
 
 // Definir taille largeur minimal du projet
 /**Variables tailles minimal du projet**/
-$min-width: 425px;
+$min-mobile: 425px;
 $min-width-tablet: 768px;
 $min-width-desktop: 1024px;
 $min-width-large: 1200px;
@@ -27,7 +27,7 @@ body {
 font-family: 'Barlow', sans-serif;
 font-family: 'Rajdhani', sans-serif;
 
-min-width: $min-width;
+min-width: $min-mobile;
 
 
 }
@@ -40,7 +40,6 @@ ul.navbar-nav {
         }
     }
 }
-
 
 // Footer
 footer {

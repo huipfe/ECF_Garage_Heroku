@@ -1,8 +1,8 @@
 
 
 <footer id="footer">
-<div class="container">
-    <div class="row">
+<div class="container-fluid">
+    <div class="row p-3">
         <div class="col-md-3">
         <h4>Nos horaires</h4>
         <p>Horaires d'ouverture et de fermeture :</p>

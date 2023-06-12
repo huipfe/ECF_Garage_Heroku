@@ -17,24 +17,23 @@ $color-primary_red_dark: #D92332;
 
 // Definir taille largeur minimal du projet
 /**Variables tailles minimal du projet**/
-$min-mobile: 425px;
-$min-width-tablet: 768px;
-$min-width-desktop: 1024px;
-$min-width-large: 1200px;
+$min-width-mobile: 425px;
+$min-width-desktop: 1440px;
+
+$min-height-mobile: 850px;
+$min-height-desktop: 1060px;
 
 body {
 // Definir Typographie du projet
 font-family: 'Barlow', sans-serif;
 font-family: 'Rajdhani', sans-serif;
 
-min-width: $min-mobile;
-
-
+min-width: $min-width-mobile;
+min-height: $min-height-mobile;
 }
 
+/* Header */
 // Navbar
-/* */
-
 ul.navbar-nav {
     li.nav-item {
         a.nav-link {
@@ -43,7 +42,73 @@ ul.navbar-nav {
     }
 }
 
-// Footer
+// Gaps @Media Quieries entre les éléments de ma navbar
+    @media (min-width: 1537px) {
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 100px;
+        }
+    }
+    @media (min-width: 1417px) and (max-width: 1537px) {
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 80px;
+        }
+    }
+    @media (min-width: 1357px) and (max-width: 1417px) {
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 70px;
+        }
+    }
+    @media (min-width: 1237px) and (max-width: 1357px) {
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 60px;
+        }
+    }
+    @media (min-width: 1237px) and (max-width: 1297px) {
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 50px;
+        }
+    }
+    @media (min-width: 1176px) and (max-width: 1237px){
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 40px;
+        }
+    }
+    @media (min-width: 1111px) and (max-width: 1176px){
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 30px;
+        }
+    }
+        @media (min-width: 1047px) and (max-width: 1111px){
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 20px;
+        }
+    }
+        @media (min-width: 992px) and (max-width: 1047px){
+        .navbar-nav {
+            // display: flex;
+            // justify-content: space-between;
+            gap: 10px;
+        }
+    }
+
+
+/* Footer */
 footer {
     background-color: $color-primary_black;
     color: $color-primary_white;

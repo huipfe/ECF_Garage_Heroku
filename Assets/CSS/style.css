@@ -5,13 +5,60 @@ body {
   font-family: "Barlow", sans-serif;
   font-family: "Rajdhani", sans-serif;
   min-width: 425px;
+  min-height: 850px;
 }
 
-/* */
+/* Header */
 ul.navbar-nav li.nav-item a.nav-link {
   color: #D92332;
 }
 
+@media (min-width: 1537px) {
+  .navbar-nav {
+    gap: 100px;
+  }
+}
+@media (min-width: 1417px) and (max-width: 1537px) {
+  .navbar-nav {
+    gap: 80px;
+  }
+}
+@media (min-width: 1357px) and (max-width: 1417px) {
+  .navbar-nav {
+    gap: 70px;
+  }
+}
+@media (min-width: 1237px) and (max-width: 1357px) {
+  .navbar-nav {
+    gap: 60px;
+  }
+}
+@media (min-width: 1237px) and (max-width: 1297px) {
+  .navbar-nav {
+    gap: 50px;
+  }
+}
+@media (min-width: 1176px) and (max-width: 1237px) {
+  .navbar-nav {
+    gap: 40px;
+  }
+}
+@media (min-width: 1111px) and (max-width: 1176px) {
+  .navbar-nav {
+    gap: 30px;
+  }
+}
+@media (min-width: 1047px) and (max-width: 1111px) {
+  .navbar-nav {
+    gap: 20px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1047px) {
+  .navbar-nav {
+    gap: 10px;
+  }
+}
+/* Footer */
 footer {
   background-color: #262526;
   color: #F2F2F2;

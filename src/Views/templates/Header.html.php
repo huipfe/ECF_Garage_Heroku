@@ -34,7 +34,7 @@ crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand img-fluid" href="#">
-                <img src="https://trello.com/1/cards/646b18745ed83e14926328a3/attachments/646b1dd3b07071c56d54391a/download/image.png" width="100" height="auto"
+                <img src="Assets/images/Logo_garage.png" width="100" height="auto"
             alt="Logo Garage">
                 </img>
             </a>

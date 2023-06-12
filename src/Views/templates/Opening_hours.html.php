@@ -6,3 +6,15 @@ pouvoir consulter les horaires d'ouverture du garage directement sur le site web
 de planifier leur passage sur place. Ces horaires méritent d’être donc visibles dans le pied de chaque 
 page du site. L’administrateur doit être en mesure de préciser quand le garage est ouvert, depuis son 
 espace dédié. -->
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

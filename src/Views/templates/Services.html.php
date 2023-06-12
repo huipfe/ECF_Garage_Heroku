@@ -5,3 +5,15 @@ afficher de manière claire et concise les différents services de réparation a
 le garage sur sa page d'accueil.
 De plus, l'administrateur doit avoir la possibilité de modifier ces informations directement à partir 
 de son espace d'administration. -->
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

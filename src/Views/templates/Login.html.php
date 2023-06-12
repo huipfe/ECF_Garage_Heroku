@@ -6,3 +6,15 @@
 ● L’employé ne pourra pas créer son propre compte, seul l’administrateur pourra en générer un pour lui.
 Quel que soit le type d’utilisateur souhaitant se connecter, il pourra le faire grâce au même formulaire de connexion. 
 Les identifiants à entrer seront l’adresse e-mail et un mot de passe sécurisé.
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

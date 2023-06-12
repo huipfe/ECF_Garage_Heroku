@@ -13,3 +13,16 @@ Pour chaque voiture, il faudra afficher obligatoirement:
 - Le kilométrage
 Pour augmenter les chances qu’une voiture soit vendue, il peut être intéressant de transmettre aussi une galerie d’images, un tableau de caractéristiques ainsi que la liste des équipements et options installés dans ce véhicule.
 N’importe quel employé du garage doit pouvoir ajouter, depuis son espace, de nouvelles voitures sur le site. -->
+
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

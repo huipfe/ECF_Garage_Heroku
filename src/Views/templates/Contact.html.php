@@ -11,3 +11,15 @@ en bas de chaque annonce d’un véhicule d’occasion. Le sujet du formulaire s
 Reproduction interdite ECF - Garage automobile Page 7 sur 12
 automatiquement ajusté en fonction du titre de l'annonce pour permettre une future communication 
 plus efficace avec le garage. -->
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

@@ -9,3 +9,15 @@ Les avis seront modérés par un employé du garage pour éviter tout contenu in
 Les commentaires approuvés seront alors affichés sur la page d’accueil.
 A noter que les employés du garage devront également avoir la possibilité d'ajouter des témoignages 
 clients directement depuis leur espace dédié. -->
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

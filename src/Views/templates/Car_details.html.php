@@ -8,3 +8,15 @@ recherche de véhicules. Les résultats pourront être ajustés en fonction d'un
 d'un nombre de kilomètres parcourus ou d'une année de mise en circulation (voir exemple dans les annexes) .
 Et pour obtenir la meilleure expérience utilisateur possible, les filtres devront être appliqués 
 sans recharger la page. -->
+
+<?php 
+require_once 'src/Views/templates/Header.html.php';
+?>
+
+<main>
+
+</main>
+
+<?php 
+require_once 'src/Views/templates/Footer.html.php';
+?>

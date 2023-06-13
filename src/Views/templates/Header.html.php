@@ -19,7 +19,7 @@ crossorigin="anonymous">
 <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
 <!-- Style du projet -->
-<link rel="stylesheet" href="Assets/CSS/style.css">
+<link rel="stylesheet" href="/ECF_Garage/Assets/CSS/style.css">
 
 <!-- Boostrap Icons -->
 <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -34,7 +34,7 @@ crossorigin="anonymous">
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
         <div class="container-fluid">
             <a class="navbar-brand img-fluid" href="#">
-                <img src="Assets/images/Logo_garage.png" width="100" height="auto"
+                <img src="/ECF_Garage/Assets/images/Logo_garage.png" width="100" height="auto"
             alt="Logo Garage">
                 </img>
             </a>
@@ -52,21 +52,21 @@ crossorigin="anonymous">
         
                 <ul class="navbar-nav" >
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="../../../index.html.php">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="/ECF_Garage/index.html.php">Accueil</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="src/Views/templates/Services.html.php">Nos service</a>
+                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Services.html.php">Nos service</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="src/Views/templates/Used_cars_listing.html.php">Nos produits</a>
+                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">Nos produits</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="src/Views/templates/Apropos.html.php">A propos</a>
+                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Apropos.html.php">A propos</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="src/Views/templates/Contact.html.php">Contact</a>
+                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Contact.html.php">Contact</a>
                     </li>
-                    <li class="list-inline-item nav-item "><a href="src/Views/templates/Login.html.php">
+                    <li class="list-inline-item nav-item "><a href="/ECF_Garage/src/Views/templates/Login.html.php">
                         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.9995 17.4167C20.2521 17.4167 21.4766 17.0452 22.5181 16.3493C23.5597 15.6534 24.3714 14.6643 24.8508 13.507C25.3301 12.3497 25.4555 11.0763 25.2112 9.84776C24.9668 8.61922 24.3636 7.49073 23.4779 6.60499C22.5921 5.71926 21.4636 5.11607 20.2351 4.8717C19.0066 4.62732 17.7331 4.75274 16.5759 5.2321C15.4186 5.71145 14.4295 6.52321 13.7336 7.56472C13.0376 8.60624 12.6662 9.83072 12.6662 11.0833C12.6662 12.763 13.3335 14.3739 14.5212 15.5617C15.7089 16.7494 17.3198 17.4167 18.9995 17.4167Z" fill="#D92332"/>
 <path d="M28.4997 33.25C28.9196 33.25 29.3224 33.0832 29.6193 32.7863C29.9162 32.4894 30.083 32.0866 30.083 31.6667C30.083 28.7272 28.9153 25.9081 26.8368 23.8296C24.7583 21.7511 21.9392 20.5834 18.9997 20.5834C16.0602 20.5834 13.2411 21.7511 11.1626 23.8296C9.08409 25.9081 7.91638 28.7272 7.91638 31.6667C7.91638 32.0866 8.0832 32.4894 8.38013 32.7863C8.67706 33.0832 9.07979 33.25 9.49972 33.25H28.4997Z" fill="#D92332"/>

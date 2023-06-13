@@ -55,7 +55,7 @@
 
     <a href="#" class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
     me-md-autolink-body-emphasistext-decoration-none">
-        <img src="Assets/images/Logo_garage.png" width="100" height="auto"
+        <img src="/ECF_Garage/Assets/images/Logo_garage.png" width="100" height="auto"
             alt="Logo Garage">
         </img>
     </a>
@@ -68,7 +68,7 @@
     me-md-autolink-body-emphasistext-decoration-none">
         <a href="#" class="col-md-4 d-flex align-items-center justify-content-end mb-3 mb-md-0
     me-md-autolink-body-emphasistext-decoration-none">
-        <img src="Assets/images/bouton_question.png" width="60" height="auto"
+        <img src="/ECF_Garage/Assets/images/bouton_question.png" width="60" height="auto"
             alt="Logo Garage">
         </img>
 </a>

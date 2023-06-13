@@ -3,11 +3,7 @@
 
 <?php 
 require_once "Header.html.php";
-
 ?>
-
-
-
 
 <main>
     
@@ -32,7 +28,7 @@ require_once "Header.html.php";
 
         <!-- Bouton qui envois sur la page "à propos" -->
         <div class="position-relative">
-            <h2 class="position-absolute bottom-100 start-50 translate-middle bg-dark text-center mt-n5">
+            <h2 class="position-absolute bottom-100 start-50 translate-middle text-center mt-n5">
                 <span class="">Cliquez ici,</span>
                 <br>
             <a href="src/Views/templates/Apropos.html.php"

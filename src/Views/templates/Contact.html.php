@@ -17,6 +17,10 @@ require_once "Header.html.php";
 ?>
 
 <main>
+    
+<div>
+    <h1>Contact</h1>
+</div>
 
 </main>
 

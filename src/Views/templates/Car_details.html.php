@@ -14,7 +14,9 @@ require_once 'src/Views/templates/Header.html.php';
 ?>
 
 <main>
-
+<div>
+    <h1>Détails des voitures</h1>
+</div>
 </main>
 
 <?php 

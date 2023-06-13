@@ -12,7 +12,9 @@ require_once 'src/Views/templates/Header.html.php';
 ?>
 
 <main>
-
+<div>
+    <h1>Horaires</h1>
+</div>
 </main>
 
 <?php 

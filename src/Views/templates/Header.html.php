@@ -40,32 +40,33 @@ crossorigin="anonymous">
             </a>
         
         
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"           aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+            aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
 <svg width="29" height="22" viewBox="0 0 29 22" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.03571 4.04082H27.9643C28.5363 4.04082 29 3.63881 29 3.14286V0.897959C29 0.402005 28.5363 0 27.9643 0H1.03571C0.463676 0 0 0.402005 0 0.897959V3.14286C0 3.63881 0.463676 4.04082 1.03571 4.04082ZM1.03571 13.0204H27.9643C28.5363 13.0204 29 12.6184 29 12.1224V9.87755C29 9.3816 28.5363 8.97959 27.9643 8.97959H1.03571C0.463676 8.97959 0 9.3816 0 9.87755V12.1224C0 12.6184 0.463676 13.0204 1.03571 13.0204ZM1.03571 22H27.9643C28.5363 22 29 21.598 29 21.102V18.8571C29 18.3612 28.5363 17.9592 27.9643 17.9592H1.03571C0.463676 17.9592 0 18.3612 0 18.8571V21.102C0 21.598 0.463676 22 1.03571 22Z" fill="#D92332"/>
 </svg>
 
 </button>
-            <div class="collapse navbar-collapse text-uppercase justify-content-center fw-bold fs-4" 
+            <div class="collapse navbar-collapse text-uppercase justify-content-center fw-bold fs-4"
             id="navbarNav" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
         
                 <ul class="navbar-nav" >
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="index.html.php">Accueil</a>
+                        <a class="nav-link active" aria-current="page" href="../../../index.html.php">Accueil</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="Services.html.php">Nos service</a>
+                        <a class="nav-link" href="src/Views/templates/Services.html.php">Nos service</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="Used_cars_listing.html.php">Nos produits</a>
+                        <a class="nav-link" href="src/Views/templates/Used_cars_listing.html.php">Nos produits</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="Testimonials.html.php">A propos</a>
+                        <a class="nav-link" href="src/Views/templates/Apropos.html.php">A propos</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="Contact.html.php">Contact</a>
+                        <a class="nav-link" href="src/Views/templates/Contact.html.php">Contact</a>
                     </li>
-                    <li class="list-inline-item nav-item "><a href="#">
+                    <li class="list-inline-item nav-item "><a href="src/Views/templates/Login.html.php">
                         <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M18.9995 17.4167C20.2521 17.4167 21.4766 17.0452 22.5181 16.3493C23.5597 15.6534 24.3714 14.6643 24.8508 13.507C25.3301 12.3497 25.4555 11.0763 25.2112 9.84776C24.9668 8.61922 24.3636 7.49073 23.4779 6.60499C22.5921 5.71926 21.4636 5.11607 20.2351 4.8717C19.0066 4.62732 17.7331 4.75274 16.5759 5.2321C15.4186 5.71145 14.4295 6.52321 13.7336 7.56472C13.0376 8.60624 12.6662 9.83072 12.6662 11.0833C12.6662 12.763 13.3335 14.3739 14.5212 15.5617C15.7089 16.7494 17.3198 17.4167 18.9995 17.4167Z" fill="#D92332"/>
 <path d="M28.4997 33.25C28.9196 33.25 29.3224 33.0832 29.6193 32.7863C29.9162 32.4894 30.083 32.0866 30.083 31.6667C30.083 28.7272 28.9153 25.9081 26.8368 23.8296C24.7583 21.7511 21.9392 20.5834 18.9997 20.5834C16.0602 20.5834 13.2411 21.7511 11.1626 23.8296C9.08409 25.9081 7.91638 28.7272 7.91638 31.6667C7.91638 32.0866 8.0832 32.4894 8.38013 32.7863C8.67706 33.0832 9.07979 33.25 9.49972 33.25H28.4997Z" fill="#D92332"/>
@@ -91,4 +92,3 @@ crossorigin="anonymous">
                 </ul>
     </nav>
 </header>
-

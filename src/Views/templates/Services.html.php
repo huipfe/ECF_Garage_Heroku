@@ -7,13 +7,14 @@ De plus, l'administrateur doit avoir la possibilité de modifier ces information
 de son espace d'administration. -->
 
 <?php 
-require_once 'src/Views/templates/Header.html.php';
+require_once "Header.html.php";
 ?>
 
 <main>
 
 </main>
 
+
 <?php 
-require_once 'src/Views/templates/Footer.html.php';
+require_once "Footer.html.php";
 ?>

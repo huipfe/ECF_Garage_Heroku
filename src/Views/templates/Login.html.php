@@ -8,13 +8,14 @@ Quel que soit le type d’utilisateur souhaitant se connecter, il pourra le fair
 Les identifiants à entrer seront l’adresse e-mail et un mot de passe sécurisé.
 
 <?php 
-require_once 'src/Views/templates/Header.html.php';
+require_once "Header.html.php";
 ?>
 
 <main>
 
 </main>
 
+
 <?php 
-require_once 'src/Views/templates/Footer.html.php';
+require_once "Footer.html.php";
 ?>

@@ -11,13 +11,14 @@ A noter que les employés du garage devront également avoir la possibilité d'a
 clients directement depuis leur espace dédié. -->
 
 <?php 
-require_once 'src/Views/templates/Header.html.php';
+require_once "Header.html.php";
 ?>
 
 <main>
 
 </main>
 
+
 <?php 
-require_once 'src/Views/templates/Footer.html.php';
+require_once "Footer.html.php";
 ?>

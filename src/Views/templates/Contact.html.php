@@ -13,13 +13,14 @@ automatiquement ajusté en fonction du titre de l'annonce pour permettre une fut
 plus efficace avec le garage. -->
 
 <?php 
-require_once 'src/Views/templates/Header.html.php';
+require_once "Header.html.php";
 ?>
 
 <main>
 
 </main>
 
+
 <?php 
-require_once 'src/Views/templates/Footer.html.php';
+require_once "Footer.html.php";
 ?>

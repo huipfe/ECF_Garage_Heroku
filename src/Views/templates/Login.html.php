@@ -22,62 +22,67 @@ require_once "Header.html.php";
         </img> -->
 
         
-<section class="vh-100" style="position: relative;">
+<section class="vh-100 position-relative">
     <div class="container py-5 h-100">
         <div class="row d-flex align-items-center justify-content-center h-100">
             <div class="col-md-8 col-lg-7 col-xl-6">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
                 <!-- Mobile -->
-                <img class="img-fluid d-lg-none" width="100%" height="auto"
+                <img class="img-fluid d-lg-none w-100 h-100"
                         src="/ECF_Garage/Assets/images/Fond_Login_Mobile_page.png"
                         alt="Fond_Login_Mobile">
                 </div>
                 <!-- Desktop -->
-                <img class="img-fluid d-none d-lg-block" width="100%" height="1000px"
+                <img class="img-fluid d-none d-lg-block" width="100%" height="100%"
                         src="/ECF_Garage/Assets/images/Fond_Login_Desktop_page.png"
                         alt="Fond_Voiture_homepage_desktop">
                 </img>
                     </div>
                     <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="position: relative; z-index: 1;">
                 <form>
-                <!-- Email input -->
-                <div class="form-outline mb-4">
-                    <input type="email" id="form1Example13" class="form-control form-control-lg" />
-                    <label class="form-label" for="form1Example13">Email address</label>
+                <!-- Logo Login -->
+                    <img src="/ECF_Garage/Assets/images/Login_logo.png"
+                    width="80" height="auto"
+                    alt="Login_logo"
+                    class="m-2">
+                <!-- Se connecter -->
+                <div>
+                    <p class="h1 fw-bold mb-2 mx-1 mx-md-4 mt-4">Se connecter</p>
+                    <p class="fw-thin mb-5 mx-1 mx-md-4 mt-4">
+                        Uniquement nos collaborateurs,<br> peuvent se connecter.</p>
                 </div>
 
-                <!-- Password input -->
-                <div class="form-outline mb-4">
-                    <input type="password" id="form1Example23" class="form-control form-control-lg" />
-                    <label class="form-label" for="form1Example23">Password</label>
-                </div>
-        
-                <div class="d-flex justify-content-around align-items-center mb-4">
-                    <!-- Checkbox -->
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="form1Example3" checked />
-                        <label class="form-check-label" for="form1Example3"> Remember me </label>
+                <!-- Name input -->
+                    <div class="form-outline mb-4">
+                        <label class="form-label" for="form3Example1" class="">Nom*</label>
+                        <input type="text" id="form3Example1" class="form-control"/>
+                        
                     </div>
-                    <a href="#!">Forgot password?</a>
+
+                <!-- Email input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example13">Email*</label>
+                    <input type="email" id="form1Example13" class="form-control form-control-lg" />
+
+                </div>
+
+                <!-- Mot de pass input -->
+                <div class="form-outline mb-4">
+                    <label class="form-label" for="form1Example23">Mot de passe</label>
+                    <input type="password" id="form1Example23" class="form-control form-control-lg" />
+                <!-- Avertissement Mot de passe -->
+                    <p class="fw-thin mb-5 mx-1 mx-md-4 mt-4 text-light mot-de-passe">
+                    Il devrait y avoir au moins 8 caractères.
+                    </p>
                 </div>
 
         <!-- Submit button -->
-                <button type="submit" class="btn btn-primary btn-lg btn-block">Sign in</button>
-        
-                <div class="divider d-flex align-items-center my-4">
-                    <p class="text-center fw-bold mx-3 mb-0 text-muted">OR</p>
-                </div>
-        
-                <a class="btn btn-primary btn-lg btn-block" style="background-color: #3b5998" href="#!"
-                    role="button">
-                    <i class="fab fa-facebook-f me-2"></i>Continue with Facebook
-                </a>
-                <a class="btn btn-primary btn-lg btn-block" style="background-color: #55acee" href="#!"
-            role="button">
-                <i class="fab fa-twitter me-2"></i>Continue with Twitter</a>
+                    <button type="submit" class="btn btn-danger btn-connexion btn-lg btn-block w-100">
+                    Connexion
+                    </button>
 
                 </form>
-        
+
             </div>
         </div>
     </div>

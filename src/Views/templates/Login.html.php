@@ -22,9 +22,9 @@ require_once "Header.html.php";
         </img> -->
 
         
-<section class="vh-100 position-relative">
-    <div class="container py-5 h-100">
-        <div class="row d-flex align-items-center justify-content-center h-100">
+<section class="position-relative">
+    <div class="container-fluid py-5 py-lg-0">
+        <div class="row d-flex align-items-center ">
             <div class="col-md-8 col-lg-7 col-xl-6">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
                 <!-- Mobile -->
@@ -33,12 +33,12 @@ require_once "Header.html.php";
                         alt="Fond_Login_Mobile">
                 </div>
                 <!-- Desktop -->
-                <img class="img-fluid d-none d-lg-block" width="100%" height="100%"
+                <img class=" d-none d-lg-block w-100 h-100"
                         src="/ECF_Garage/Assets/images/Fond_Login_Desktop_page.png"
                         alt="Fond_Voiture_homepage_desktop">
                 </img>
                     </div>
-                    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 " style="position: relative; z-index: 1;">
+                    <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
                 <form id="login-form" class="was-validated">
                 <!-- Logo Login -->
                     <img src="/ECF_Garage/Assets/images/Login_logo.png"

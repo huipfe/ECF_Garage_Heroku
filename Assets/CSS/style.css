@@ -70,11 +70,16 @@ div.col-md-7.col-lg-5.col-xl-5.offset-xl-1 p:nth-child(2) {
   font-family: "Barlow";
   font-weight: 200;
   font-size: 20px;
-  line-height: 17px;
+  line-height: 25px;
   font-style: normal;
   color: #F2F2F2;
 }
 
+@media (min-width: 992px) {
+  div.col-md-7.col-lg-5.col-xl-5.offset-xl-1 p:nth-child(2) {
+    color: #8F8F8F;
+  }
+}
 div.form-outline.mb-4 label {
   font-family: "Rajdhani";
   font-style: normal;
@@ -89,8 +94,68 @@ div.form-outline.mb-4 label {
   font-weight: 100;
   font-size: 20px;
   line-height: 15px;
+  color: #F2F2F2;
 }
 
+@media (min-width: 992px) {
+  .mot-de-passe {
+    font-weight: 100;
+    font-size: 15px;
+    line-height: 20px;
+    color: #8F8F8F;
+  }
+}
 button.btn-connexion {
   background-color: #D92332;
+}
+
+.my-form-control {
+  display: block;
+  width: 100%;
+  padding: 0.375rem 0.75rem;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #F2F2F2;
+  background-color: transparent;
+  background-clip: padding-box;
+  border: var(--bs-border-width) solid #C3C3C3;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+  border-radius: var(--bs-border-radius);
+  transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.my-form-control::-moz-placeholder {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #F2F2F2;
+}
+
+.my-form-control::placeholder {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 25px;
+  color: #F2F2F2;
+}
+
+@media (min-width: 992px) {
+  .my-form-control::-moz-placeholder {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 20px;
+    color: #8F8F8F;
+  }
+  .my-form-control::placeholder {
+    font-weight: 200;
+    font-size: 15px;
+    line-height: 20px;
+    color: #8F8F8F;
+  }
 }/*# sourceMappingURL=style.css.map */

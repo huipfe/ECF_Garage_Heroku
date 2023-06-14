@@ -38,8 +38,8 @@ require_once "Header.html.php";
                         alt="Fond_Voiture_homepage_desktop">
                 </img>
                     </div>
-                    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1" style="position: relative; z-index: 1;">
-                <form>
+                    <div class="col-md-7 col-lg-5 col-xl-5 offset-xl-1 " style="position: relative; z-index: 1;">
+                <form id="login-form" class="was-validated">
                 <!-- Logo Login -->
                     <img src="/ECF_Garage/Assets/images/Login_logo.png"
                     width="80" height="auto"
@@ -47,33 +47,38 @@ require_once "Header.html.php";
                     class="m-2">
                 <!-- Se connecter -->
                 <div>
-                    <p class="h1 fw-bold mb-2 mx-1 mx-md-4 mt-4">Se connecter</p>
-                    <p class="fw-thin mb-5 mx-1 mx-md-4 mt-4">
+                    <p class="h1 fw-bold mb-2 mx-1 mt-4">Se connecter</p>
+                    <p class="fw-thin mb-5 mx-1 mt-4">
                         Uniquement nos collaborateurs,<br> peuvent se connecter.</p>
                 </div>
 
                 <!-- Name input -->
                     <div class="form-outline mb-4">
                         <label class="form-label" for="form3Example1" class="">Nom*</label>
-                        <input type="text" id="form3Example1" class="form-control"/>
+                        <input type="text" id="form3Example1" class="my-form-control"
+                        placeholder="Entrez votre nom" required/>
                         
                     </div>
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form1Example13">Email*</label>
-                    <input type="email" id="form1Example13" class="form-control form-control-lg" />
+                    <input type="email" id="form1Example13" class="my-form-control my-form-control-lg"
+                    placeholder="Entrez votre email" required/>
 
                 </div>
 
                 <!-- Mot de pass input -->
                 <div class="form-outline mb-4">
                     <label class="form-label" for="form1Example23">Mot de passe</label>
-                    <input type="password" id="form1Example23" class="form-control form-control-lg" />
+                    <input type="password" id="form1Example23" class="my-form-control my-form-control-lg"
+                    placeholder="Entrez votre mot de passe" pattern=".{8,}" required/>
                 <!-- Avertissement Mot de passe -->
-                    <p class="fw-thin mb-5 mx-1 mx-md-4 mt-4 text-light mot-de-passe">
+                <div class="invalid-feedback">
+                    <p class="fw-thin mb-5 mx-1 mt-4 mot-de-passe" id="password-error">
                     Il devrait y avoir au moins 8 caractères.
                     </p>
+                    </div>
                 </div>
 
         <!-- Submit button -->
@@ -87,6 +92,7 @@ require_once "Header.html.php";
         </div>
     </div>
 </section>
+
 
 
 </main>

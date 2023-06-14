@@ -18,37 +18,37 @@ ul.navbar-nav li.nav-item a.nav-link {
     gap: 100px;
   }
 }
-@media (min-width: 1417px) and (max-width: 1537px) {
+@media (min-width: 1418px) and (max-width: 1537px) {
   .navbar-nav {
     gap: 80px;
   }
 }
-@media (min-width: 1357px) and (max-width: 1417px) {
+@media (min-width: 1358px) and (max-width: 1417px) {
   .navbar-nav {
     gap: 70px;
   }
 }
-@media (min-width: 1237px) and (max-width: 1357px) {
+@media (min-width: 1298px) and (max-width: 1357px) {
   .navbar-nav {
     gap: 60px;
   }
 }
-@media (min-width: 1237px) and (max-width: 1297px) {
+@media (min-width: 1238px) and (max-width: 1297px) {
   .navbar-nav {
     gap: 50px;
   }
 }
-@media (min-width: 1176px) and (max-width: 1237px) {
+@media (min-width: 1177px) and (max-width: 1237px) {
   .navbar-nav {
     gap: 40px;
   }
 }
-@media (min-width: 1111px) and (max-width: 1176px) {
+@media (min-width: 1112px) and (max-width: 1176px) {
   .navbar-nav {
     gap: 30px;
   }
 }
-@media (min-width: 1047px) and (max-width: 1111px) {
+@media (min-width: 1048px) and (max-width: 1111px) {
   .navbar-nav {
     gap: 20px;
   }
@@ -157,5 +157,151 @@ button.btn-connexion {
     font-size: 15px;
     line-height: 20px;
     color: #8F8F8F;
+  }
+}
+div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(1) {
+  position: absolute;
+  top: 45%;
+  left: 33%;
+  transform: translate(-110%, -80%);
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 40px;
+  line-height: 46px;
+  color: #FFFFFF;
+}
+div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
+  position: absolute;
+  top: 55%;
+  left: 33%;
+  transform: translate(-105%, 45%);
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+  color: #FFFFFF;
+}
+
+@media (min-width: 1440px) and (max-width: 1619px) {
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(1) {
+    left: 33%;
+    font-size: 35px;
+    line-height: 36px;
+  }
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
+    left: 35%;
+    font-size: 15px;
+    line-height: 20px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(1) {
+    left: 40%;
+    transform: translate(-110%, -80%);
+    font-size: 35px;
+    line-height: 36px;
+  }
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
+    left: 43%;
+    transform: translate(-105%, 45%);
+    font-size: 15px;
+    line-height: 25px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(1) {
+    left: 45%;
+    transform: translate(-110%, -80%);
+    font-size: 33px;
+    line-height: 40px;
+  }
+  div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
+    left: 45%;
+    transform: translate(-105%, 45%);
+    font-size: 13px;
+    line-height: 27px;
+  }
+}
+.staff-members {
+  position: absolute;
+  width: 10%;
+  height: auto;
+  top: 90%;
+  left: 17%;
+  transform: translate(-110%, -80%);
+}
+
+.staff-members-text {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 14px;
+  color: #FFFFFF;
+  position: absolute;
+  top: 89%;
+  left: 25%;
+  transform: translate(-110%, -80%);
+}
+
+@media (min-width: 1670px) and (max-width: 1820px) {
+  .staff-members {
+    width: 10%;
+    top: 85%;
+    left: 15%;
+  }
+  .staff-members-text {
+    top: 84%;
+    left: 24%;
+  }
+}
+@media (min-width: 1580px) and (max-width: 1669px) {
+  .staff-members {
+    width: 10%;
+    top: 80%;
+    left: 13%;
+  }
+  .staff-members-text {
+    top: 79%;
+    left: 22%;
+  }
+}
+@media (min-width: 1439px) and (max-width: 1579px) {
+  .staff-members {
+    width: 10%;
+    top: 80%;
+    left: 13%;
+  }
+  .staff-members-text {
+    top: 79%;
+    left: 23%;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1439px) {
+  .staff-members {
+    width: 10%;
+    top: 80%;
+    left: 20%;
+  }
+  .staff-members-text {
+    top: 79%;
+    left: 30%;
+    font-size: 12px;
+    line-height: 14px;
+  }
+}
+@media (min-width: 992px) and (max-width: 1199px) {
+  .staff-members {
+    width: 10%;
+    top: 76%;
+    left: 16%;
+  }
+  .staff-members-text {
+    top: 75%;
+    left: 27%;
+    font-size: 10px;
+    line-height: 14px;
   }
 }/*# sourceMappingURL=style.css.map */

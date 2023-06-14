@@ -33,10 +33,27 @@ require_once "Header.html.php";
                         alt="Fond_Login_Mobile">
                 </div>
                 <!-- Desktop -->
+            <div>
                 <img class=" d-none d-lg-block w-100 h-100"
-                        src="/ECF_Garage/Assets/images/Fond_Login_Desktop_page.png"
-                        alt="Fond_Voiture_homepage_desktop">
-                </img>
+                    src="/ECF_Garage/Assets/images/Fond_Login_Desktop_page_etoile.png"
+                    alt="Fond_Voiture_homepage_desktop">
+                        <p class="h1 mb-2 mx-1 mt-4 d-none d-lg-block">
+                        
+                        Quoi de mieux, que de<br> commencer sa journée, par....</p>
+                        <p class="mb-2 mx-1 mt-4 d-none d-lg-block">
+                        Le garage V. Parrot, une expérience unique, avec des experts
+                        dans tout<br> les domaines, pour vous offrir une vision totale.
+                        </p>
+                        
+                        <div class="">
+                        <img class=" d-none d-lg-block staff-members"
+                        src="/ECF_Garage/Assets/images/Staff_members.png"
+                        alt="Staff_members">
+                        </img>
+                        <p class="d-none d-lg-block staff-members-text">Les membres du staff</p>
+                        </div>
+
+            </div>
                     </div>
                     <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
                 <form id="login-form" class="was-validated">

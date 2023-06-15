@@ -106,40 +106,60 @@ require_once "Header.html.php";
     <!-- Première colonne - Noms d'utilisateur -->
     <div class="col-lg-4 col-md-6">
       <div class="mb-3">
-        <h4>Noms d'utilisateur</h4>
+        <div class="d-flex align-items-center">
+          <div class="picto">
+            <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png" alt="Pictogramme"
+            class="img-fluid m-2" width="72">
+          </div>
+          <h4>Noms d'utilisateur</h4>
+        </div>
+
+
         <ul class="list-unstyled">
           <li>
+
             <div class="d-flex align-items-center">
+                <div class="picto">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                alt="Pictogramme" class="img-fluid m-2" width="72">
+              </div>
               <div class="avatar">
-                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                alt="Avatar" class="img-fluid">
               </div>
-              <div class="username">Nom 1</div>
-              <div class="picto">
-                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
-              </div>
+              <div class="username ">Nom 1</div>
             </div>
+
           </li>
           <li>
+
             <div class="d-flex align-items-center">
+                <div class="picto">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                alt="Pictogramme" class="img-fluid m-2" width="72">
+              </div>
               <div class="avatar">
-                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                alt="Avatar" class="img-fluid">
               </div>
-              <div class="username">Nom 2</div>
-              <div class="picto">
-                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
-              </div>
+              <div class="username ">Nom 2</div>
             </div>
+
           </li>
           <li>
+
             <div class="d-flex align-items-center">
+                <div class="picto">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                alt="Pictogramme" class="img-fluid m-2" width="72">
+              </div>
               <div class="avatar">
-                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                alt="Avatar" class="img-fluid">
               </div>
-              <div class="username">Nom 3</div>
-              <div class="picto">
-                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
-              </div>
+              <div class="username ">Nom 3</div>
             </div>
+
           </li>
         </ul>
       </div>
@@ -147,7 +167,7 @@ require_once "Header.html.php";
 
 
     <!-- Deuxième colonne - Emails -->
-    <div class="col-lg-4 col-md-6">
+    <div class="col-lg-4 col-md-6 d-none d-md-block">
       <div class="mb-3">
         <h4>Emails</h4>
         <ul class="list-unstyled">
@@ -159,7 +179,7 @@ require_once "Header.html.php";
     </div>
 
     <!-- Troisième colonne - Actions -->
-    <div class="col-lg-4">
+    <div class="col-lg-4 d-none d-lg-block">
       <div class="mb-3">
         <h4>Actions</h4>
         <ul class="list-unstyled">

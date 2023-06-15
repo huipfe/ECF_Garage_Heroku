@@ -18,9 +18,14 @@ require_once "Header.html.php";
 
 <main>
     
-<div>
-    <h1>Contact</h1>
-</div>
+<section>
+
+    <div class="p-1 bg-danger text-white">
+        <h1>dcsdfsd</h1>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci quia laudantium quod quasi, esse at iusto eos. Omnis veritatis tenetur voluptate blanditiis beatae necessitatibus eveniet, atque iste a labore sapiente.</p>
+    </div>
+
+</section>
 
 </main>
 

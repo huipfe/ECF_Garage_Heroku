@@ -434,3 +434,15 @@ div.container {
 .avatar {
     margin-right: 10px;
 }
+
+/* Contact page */
+
+
+section {
+    div.p-1.bg-danger.text-white {
+        h1 {
+            font-weight: 700;
+            color: $color-primary_white;
+        }
+    }
+}

@@ -330,4 +330,10 @@ div.container div.row div.col-lg-6 div.m-2 h3 + p {
 
 .avatar {
   margin-right: 10px;
+}
+
+/* Contact page */
+section div.p-1.bg-danger.text-white h1 {
+  font-weight: 700;
+  color: #F2F2F2;
 }/*# sourceMappingURL=style.css.map */

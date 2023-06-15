@@ -58,7 +58,8 @@ crossorigin="anonymous">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Services.html.php">Nos service</a>
                     </li>
                     <li class="nav-item ">
-                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">Nos produits</a>
+                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">
+                            Nos produits</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Apropos.html.php">A propos</a>
@@ -77,7 +78,7 @@ crossorigin="anonymous">
 </svg></a></li>
                 </ul>
                 <ul class="d-flex d-lg-none justify-content-end" id="scrolldown-mobile">
-                    <li class="list-inline-item nav-item  ps-5"><a href="#footer" >
+                    <li class="list-inline-item nav-item  ps-5"><a href="#copy-right" >
 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.88401 0H26.116C27.7924 0 28.6305 2.03973 27.4439 3.2351L15.3326 15.445C14.598 16.185 13.402 16.185 12.6674 15.445L0.556102 3.2351C-0.630539 2.03973 0.207644 0 1.88401 0Z" fill="#D92332"/>
                 </svg></a></li>
@@ -85,7 +86,7 @@ crossorigin="anonymous">
             </div>
         </div>
                 <ul class=" d-lg-inline-block d-none justify-content-end" id="scrolldown-desktop">
-                    <li class="list-inline-item nav-item  ps-5"><a href="#footer">
+                    <li class="list-inline-item nav-item  ps-5"><a href="#copy-right">
 <svg width="28" height="16" viewBox="0 0 28 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 <path d="M1.88401 0H26.116C27.7924 0 28.6305 2.03973 27.4439 3.2351L15.3326 15.445C14.598 16.185 13.402 16.185 12.6674 15.445L0.556102 3.2351C-0.630539 2.03973 0.207644 0 1.88401 0Z" fill="#D92332"/>
                 </svg></a></li>

@@ -49,33 +49,33 @@
     </div>
 </footer>
 
-
-    <div class="container-fluid">
-<div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-1 ">
-
-    <a href="#" class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
-    me-md-autolink-body-emphasistext-decoration-none">
-        <img src="/ECF_Garage/Assets/images/Header & Footer/Logo_garage.png" width="100" height="auto"
-            alt="Logo Garage">
-        </img>
+<section id="copy-right">
+        <div class="container-fluid">
+    <div class="d-flex flex-wrap justify-content-between align-items-center py-3 my-1 ">
+    
+        <a href="#" class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
+        me-md-autolink-body-emphasistext-decoration-none">
+            <img src="/ECF_Garage/Assets/images/Header & Footer/Logo_garage.png" width="100" height="auto"
+                alt="Logo Garage">
+            </img>
+        </a>
+    
+        <p class="col-md-4 mb-0 text-body-secondary d-flex align-items-center justify-content-start
+        text-uppercase fw-bold fs-5">
+            Garage V.Parrot © 2022 tous droits reserves  </p>
+    
+            <div class="col-md-3 d-flex align-items-center justify-content-end
+        me-md-autolink-body-emphasistext-decoration-none">
+            <a href="#" class="col-md-4 d-flex align-items-center justify-content-end mb-3 mb-md-0
+        me-md-autolink-body-emphasistext-decoration-none">
+            <img src="/ECF_Garage/Assets/images/Header & Footer/bouton_question.png" width="60" height="auto"
+                alt="Logo Garage">
+            </img>
     </a>
-
-    <p class="col-md-4 mb-0 text-body-secondary d-flex align-items-center justify-content-start
-    text-uppercase fw-bold fs-5">
-        Garage V.Parrot © 2022 tous droits reserves  </p>
-
-        <div class="col-md-3 d-flex align-items-center justify-content-end
-    me-md-autolink-body-emphasistext-decoration-none">
-        <a href="#" class="col-md-4 d-flex align-items-center justify-content-end mb-3 mb-md-0
-    me-md-autolink-body-emphasistext-decoration-none">
-        <img src="/ECF_Garage/Assets/images/Header & Footer/bouton_question.png" width="60" height="auto"
-            alt="Logo Garage">
-        </img>
-</a>
+            </div>
         </div>
     </div>
-</div>
-
+</section>
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
 integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">

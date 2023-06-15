@@ -116,7 +116,7 @@ require_once "Header.html.php";
             class="img-fluid p-2" width="72">
           </div>
           <h4>Noms d'utilisateur</h4>
-          <h4>Email</h4>
+          <h4 style="margin-right: 2rem;">Email</h4>
           <h4>Actions</h4>
         </div>
         
@@ -140,13 +140,21 @@ require_once "Header.html.php";
                 <div class="username">Nom 1</div>
               </div>
               <ul class="list-unstyled">
-                <li>Email 1</li>
+                <li style="margin-left: 6rem;">Email 1</li>
               </ul>
               <ul class="list-unstyled">
+                
+                <button class="btn btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
-                  <i class="bi bi-trash"></i> Supprimer
                 </li>
+                </button>
+                <button class="btn btn-sm btn-danger m-2">
+                <li>
+                <i class="bi bi-trash"></i> Supprimer
+                </li>
+                </button>
+
               </ul>
             </div>
           </li>
@@ -167,13 +175,21 @@ require_once "Header.html.php";
                 <div class="username">Nom 2</div>
               </div>
               <ul class="list-unstyled">
-                <li>Email 2</li>
+                <li style="margin-left: 6rem;">Email 2</li>
               </ul>
               <ul class="list-unstyled">
+
+                <button class="btn btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
-                  <i class="bi bi-trash"></i> Supprimer
                 </li>
+                </button>
+                <button class="btn btn-sm btn-danger m-2">
+                <li>
+                <i class="bi bi-trash"></i> Supprimer
+                </li>
+                </button>
+
               </ul>
             </div>
           </li>
@@ -194,13 +210,21 @@ require_once "Header.html.php";
                 <div class="username">Nom 3</div>
               </div>
               <ul class="list-unstyled">
-                <li>Email 3</li>
+                <li style="margin-left: 6rem;">Email 3</li>
               </ul>
               <ul class="list-unstyled">
+
+                <button class="btn btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
-                  <i class="bi bi-trash"></i> Supprimer
                 </li>
+                </button>
+                <button class="btn btn-sm btn-danger m-2">
+                <li>
+                <i class="bi bi-trash"></i> Supprimer
+                </li>
+                </button>
+
               </ul>
             </div>
           </li>

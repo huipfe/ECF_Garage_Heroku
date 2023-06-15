@@ -306,6 +306,14 @@ div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
   }
 }
 /* Dashboard page */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
 div.container div.row div.col-lg-6 div.m-2 h3 + p {
   font-family: "Barlow";
   font-style: normal;
@@ -313,4 +321,13 @@ div.container div.row div.col-lg-6 div.m-2 h3 + p {
   font-size: 1rem;
   line-height: 21px;
   color: #B5B5C3;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 10px;
 }/*# sourceMappingURL=style.css.map */

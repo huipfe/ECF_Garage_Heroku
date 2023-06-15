@@ -393,23 +393,44 @@ div.col-lg-7.col-xl-6 {
 
 /* Dashboard page */
 
+//Input
+.input-group {
+@extend .my-input-group !optional;
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    width: 100%;
+  }
+
+
 //Text users
 
 div.container {
-  div.row {
-    div.col-lg-6 {
-      div.m-2 {
-        h3 {
-          + p {
-            font-family: 'Barlow';
-            font-style: normal;
-            font-weight: 500;
-            font-size: 1rem;
-            line-height: 21px;
-            color: #B5B5C3;
-          }
+    div.row {
+        div.col-lg-6 {
+            div.m-2 {
+                h3 {
+                    + p {
+                    font-family: 'Barlow';
+                    font-style: normal;
+                    font-weight: 500;
+                    font-size: 1rem;
+                    line-height: 21px;
+                    color: #B5B5C3;
+                        }
+                    }
+                }
+            }
         }
-      }
     }
-  }
+
+// Avatar
+.user-details {
+    display: flex;
+    align-items: center;
+}
+
+.avatar {
+    margin-right: 10px;
 }

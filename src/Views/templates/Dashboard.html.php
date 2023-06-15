@@ -60,7 +60,7 @@ require_once "Header.html.php";
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <!-- Photo de l'admin -->
-        <img src="/ECF_Garage/Assets/images/Avatar Admin.png" 
+        <img src="/ECF_Garage/Assets/images/Dashboard page/Avatar Admin.png"
         width="80" height="auto"
         class="img-fluid m-2" alt="Photo de l'admin">
         <p class="text-center fs-5 fw-bold">Admin@gmail.com</p>
@@ -101,6 +101,85 @@ require_once "Header.html.php";
   </div>
 </div>
 
+<div class="container-lg">
+  <div class="row">
+    <!-- Première colonne - Noms d'utilisateur -->
+    <div class="col-lg-4 col-md-6">
+      <div class="mb-3">
+        <h4>Noms d'utilisateur</h4>
+        <ul class="list-unstyled">
+          <li>
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+              </div>
+              <div class="username">Nom 1</div>
+              <div class="picto">
+                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+              </div>
+              <div class="username">Nom 2</div>
+              <div class="picto">
+                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
+              </div>
+            </div>
+          </li>
+          <li>
+            <div class="d-flex align-items-center">
+              <div class="avatar">
+                <img src="chemin-vers-avatar.png" alt="Avatar" class="img-fluid">
+              </div>
+              <div class="username">Nom 3</div>
+              <div class="picto">
+                <img src="chemin-vers-picto.png" alt="Pictogramme" class="img-fluid">
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </div>
+
+
+    <!-- Deuxième colonne - Emails -->
+    <div class="col-lg-4 col-md-6">
+      <div class="mb-3">
+        <h4>Emails</h4>
+        <ul class="list-unstyled">
+          <li>Email 1</li>
+          <li>Email 2</li>
+          <li>Email 3</li>
+        </ul>
+      </div>
+    </div>
+
+    <!-- Troisième colonne - Actions -->
+    <div class="col-lg-4">
+      <div class="mb-3">
+        <h4>Actions</h4>
+        <ul class="list-unstyled">
+          <li>
+            <i class="bi bi-pencil"></i> Modifier
+            <i class="bi bi-trash"></i> Supprimer
+          </li>
+          <li>
+            <i class="bi bi-pencil"></i> Modifier
+            <i class="bi bi-trash"></i> Supprimer
+          </li>
+          <li>
+            <i class="bi bi-pencil"></i> Modifier
+            <i class="bi bi-trash"></i> Supprimer
+          </li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
 
 
 

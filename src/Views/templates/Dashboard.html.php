@@ -51,47 +51,59 @@ require_once "Header.html.php";
   </div>
 </div> -->
 
-  <!-- Barre de navigation -->
-  <nav class="navbar navbar-expand-lg navbar-light bg-light">
-    <a class="navbar-brand" href="#">Panel d'administration</a>
-  </nav>
-
-  <!-- Contenu principal -->
-  <div class="container mt-4">
+<!-- Dashboard titre -->
+<section class="d-none d-lg-block bg-light text-center">
+  <div class="container">
     <div class="row">
-
-      <!-- Photo de l'admin -->
-      <div class="col-lg-6">
-        <img src="chemin/vers/photo-admin.jpg" class="img-fluid" alt="Photo de l'admin">
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <h1 class="py-5 m-5">Panel d'administration</h1>
       </div>
+      <div class="col-lg-6 d-flex align-items-center justify-content-center">
+        <!-- Photo de l'admin -->
+        <img src="/ECF_Garage/Assets/images/Avatar Admin.png" 
+        width="80" height="auto"
+        class="img-fluid m-2" alt="Photo de l'admin">
+        <p class="text-center fs-5 fw-bold">Admin@gmail.com</p>
+      </div>
+    </div>
+  </div>
+</section>
 
-      <!-- Barre de recherche utilisateur -->
-      <div class="col-lg-6">
-        <div class="input-group">
-          <input type="text" class="form-control" placeholder="Recherche">
-          <div class="input-group-append">
-            <span class="input-group-text bg-light">
-              <i class="fas fa-search"></i>
-            </span>
-          </div>
+
+
+<!-- Contenu principal -->
+<div class="container mt-3 justify-content-center text-center">
+  <div class="row">
+
+    <!-- Barre de recherche utilisateur -->
+    <div class="col-lg-6">
+      <div class="input-group">
+        <div class="m-2 justify-content-start text-start">
+          <h3>Utilisateur</h3>
+          <p>X employé(s)</p>
+        </div>
+        <input type="text" class="form-control m-2 p-2" placeholder="Recherche">
+        <div class="input-group-append">
+          <button class="btn btn-light m-2 p-2" type="button">
+            <i class="bi bi-search"></i>
+          </button>
         </div>
       </div>
-
     </div>
 
     <!-- Bouton "Créer Compte" -->
-    <div class="row mt-4">
-      <div class="col-lg-6">
-        <h3>Utilisateur</h3>
-      </div>
-      <div class="col-lg-6">
-        <button class="btn btn-danger btn-block">
-          <i class="fas fa-user"></i> Créer Compte
-        </button>
-      </div>
+    <div class="col-12 col-lg-6 py-2 justify-content-end text-end">
+      <button class="btn btn-danger fs-4">
+        <i class="bi bi-person-add"></i> Créer Compte
+      </button>
     </div>
 
   </div>
+</div>
+
+
+
+
 </main>
 
 

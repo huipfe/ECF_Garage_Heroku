@@ -18,11 +18,11 @@ require_once "Header.html.php";
 
 <main>
     <div class="p-1 bg-danger text-white">
-<section>
+    <section>
     
         
     <!-- Titre -->
-    <section>
+    <section class="p-2 m-2">
         <h1>Discutons ensemble, à propos de choses qui nous
             <span style="color: #D9777F;">passionnent</span> !
 
@@ -36,110 +36,115 @@ require_once "Header.html.php";
     </section>
 
         <!-- Info -->
-    <section>
+    <section class="p-3">
         <div>
-            <i style="color:#D9777F"class="bi bi-envelope-fill fs-2 m-2"></i><h2 class="m-2">
+            <i style="color:#D9777F"class="bi bi-envelope-fill fs-2 m-2"></i><h2 class="m-2 fs-4">
                 Garage.V.Parrot@gmail.com</h2>
         </div>
 
-        <div >
-            <i style="color:#D9777F"class="bi bi-telephone-fill fs-2 m-2"></i><h2 class="m-2">Numéro garage</h2>
+        <div class="Num-Garage">
+            <i style="color:#D9777F"class="bi bi-telephone-fill fs-2 m-2"></i><h2 class="m-2 fs-4">Numéro garage</h2>
         </div>
 
         <div>
-            <i style="color:#D9777F"class="bi bi-geo-alt-fill fs-2 m-2"></i><h2 class="m-2">Adresse garage</h2>
+            <i style="color:#D9777F"class="bi bi-geo-alt-fill fs-2 m-2"></i><h2 class="m-2 fs-4">Adresse garage</h2>
         </div>
     </section>
 
 <!-- Formulaire -->
             <!-- partie block -->
         </section>
-            <div class="p-3 bg-light text-dark block-white-title">
+            <div class="p-3 m-3 bg-light text-dark block-white-title">
                 <h2 class="title-dark">Je suis intéressé par...</h2>
             
                 <div class="d-flex flex-wrap m-1">
-                    <div class="block-rouge">
+                    <button class="btn btn-danger block-rouge">
                         <p class="m-2 title-box-white">Les voitures d’occasions</p>
-                    </div>
+                    </button>
             
-                    <div class="block-white m-1">
+                    <button class="block-white m-1 btn btn-light">
                         <p class="m-1 title-box-dark">Les belles carrosseries</p>
-                    </div>
+                    </button>
             
-                    <div class="block-white m-1">
+                    <button class="block-white m-1 btn btn-light">
                         <p class="m-1 title-box-dark">Les bons plans</p>
-                    </div>
+                    </button>
                 </div>
             
-                <div class="d-flex flex-wrap m-1">
-                    <div class="block-white">
+                <div class="d-flex flex-wrap m-1 ">
+                    <button class="block-white m-1 btn btn-light">
                         <p class="m-1 title-box-dark">La conception auto</p>
-                    </div>
+                    </button>
             
-                    <div class="block-white m-1">
+                    <button class="block-white m-1 btn btn-light">
                         <p class="m-1 title-box-dark">Autres</p>
-                    </div>
+                    </button>
                 </div>
 
                 <!-- Partie message -->
-                <form id="contactForm" data-sb-form-api-token="API_TOKEN">
+                <form id="contactForm">
 
-                <!-- Name Input -->
+                <!-- SurName & Name Input -->
                 <div class="form-floating mb-3">
-                  <input class="form-control" id="name" type="text" placeholder="Name" data-sb-validations="required" />
-                  <label for="name">Name</label>
-                  <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
+                    <input class="form-control" id="name" type="text"
+                    placeholder="Votre Prénom & Nom" data-sb-validations="required" required/>
+                    <label for="name" class="form-color form-label">Votre Prénom & Nom</label>
+                    <div class="invalid-feedback" data-sb-feedback="name:required">Name is required.</div>
                 </div>
+
+                <div style="border: 3px solid #D94350;"></div>
 
                 <!-- Email Input -->
                 <div class="form-floating mb-3">
-                  <input class="form-control" id="emailAddress" type="email"
-                  placeholder="Email Address" data-sb-validations="required,email" />
-                  <label for="emailAddress">Email Address</label>
-                  <div class="invalid-feedback"
-                  data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                  <div class="invalid-feedback"
-                  data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
+                    <input class="form-control" id="emailAddress" type="email"
+                    placeholder="Votre courriel" data-sb-validations="required,email" required/>
+                    <label for="emailAddress" class="form-color">Votre courriel</label>
+                        <div class="invalid-feedback"
+                        data-sb-feedback="emailAddress:required">Email Address is required.</div>
+                        <div class="invalid-feedback"
+                    data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                 </div>
 
+                <div style="border: 3px solid #D94350;"></div>
+                
                 <!-- Message Input -->
                 <div class="form-floating mb-3">
-                  <textarea class="form-control" id="message" type="text"
-                  placeholder="Message" style="height: 10rem;" data-sb-validations="required"></textarea>
-                  <label for="message">Message</label>
-                  <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
+                    <textarea class="form-control" id="message" type="text"
+                    placeholder="Votre message"
+                    style="height: 10rem;" data-sb-validations="required" required></textarea>
+                    <label for="message" class="form-color">Votre message</label>
+                    <div style="border: 3px solid #D94350;"></div>
+                    <div class="invalid-feedback" data-sb-feedback="message:required">Message is required.</div>
                 </div>
 
                 <!-- Submit success message -->
                 <div class="d-none" id="submitSuccessMessage">
-                  <div class="text-center mb-3">
-                    <div class="fw-bolder">Form submission successful!</div>
+                    <div class="text-center mb-3">
+                        <div class="fw-bolder">Form submission successful!</div>
                     <p>To activate this form, sign up at</p>
-                    <a href="https://startbootstrap.com/solution/contact-forms">
-                        https://startbootstrap.com/solution/contact-forms</a>
-                  </div>
+                    </div>
                 </div>
 
                 <!-- Submit error message -->
                 <div class="d-none" id="submitErrorMessage">
-                  <div class="text-center text-danger mb-3">Error sending message!</div>
+                    <div class="text-center text-danger mb-3">Error sending message!</div>
                 </div>
 
                 <!-- Submit button -->
                 <div class="d-grid">
-                  <button class="btn btn-primary btn-lg" id="submitButton" type="submit">Submit</button>
+                    
+                    <button class="btn btn-danger submit-red-button"
+                        id="submitButton"
+                        type="submit">
+                        <i class="bi bi-send-fill fs-3"></i>
+                        <p class="submit-message">Envoyez le message</p>
+                    </button>
+
                 </div>
-              </form>
-              <!-- End of contact form -->
-
-
-          </div>
-        </section>
-
-        
-    
-
-
+            </form>
+                <!-- End of contact form -->
+        </div>
+    </section>
     </div>
 </main>
 

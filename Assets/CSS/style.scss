@@ -403,7 +403,13 @@ div.col-lg-7.col-xl-6 {
     width: 100%;
     }
 
+    // Bouton Création de compte
 
+    @media (min-width: 992px) { /* Taille lg et supérieure */
+    .btn-lg-lg {
+    font-size: 1.25rem;
+    }
+}
 //Text users
 
 div.container {
@@ -438,14 +444,23 @@ div.container {
 /* Contact page */
 
 // Titre
-section {
-    div.p-1.bg-danger.text-white {
-        h1 {
+.p-1.bg-danger.text-white {
+  .container-fluid {
+    .row {
+      .col-lg-6 {
+        section {
+          .p-2.m-2 {
+            h1 {
             font-weight: 700;
             color: $color-primary_white;
+            }
+          }
         }
+      }
     }
+  }
 }
+
 
 // Info
 section {

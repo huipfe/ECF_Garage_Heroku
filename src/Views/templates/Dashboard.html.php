@@ -96,11 +96,13 @@ require_once "Header.html.php";
     </div>
 
     <!-- Bouton "Créer Compte" -->
-    <div class="col-12 col-lg-6 py-2 justify-content-end text-end">
-      <button class="btn btn-danger fs-4">
-        <i class="bi bi-person-add"></i> Créer Compte
-      </button>
-    </div>
+<div class="col-12 col-lg-6 py-2 justify-content-end text-end">
+  <button class="btn btn-danger btn-lg-lg">
+    <i class="bi bi-person-add"></i> Créer Compte
+  </button>
+</div>
+
+
 
   </div>
 </div>

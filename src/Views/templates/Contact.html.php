@@ -104,42 +104,32 @@ require_once "Header.html.php";
                             </div>
 
                             <!-- Partie message -->
-                            <form id="contactForm">
+                            <form id="contactForm" action="/ECF_Garage/src/Models/sendMail.php" method="POST">
                                 <!-- SurName & Name Input -->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="name" type="text"
-                                    placeholder="Votre Prénom & Nom" data-sb-validations="required" required/>
+                                    <input class="form-control" name="name" id="name" type="text"
+                                    placeholder="Votre Prénom & Nom" required>
                                     <label for="name" class="form-color form-label">Votre Prénom & Nom</label>
-                                    <div class="invalid-feedback"
-                                    data-sb-feedback="name:required">Name is required.</div>
                                 </div>
-
+                        
                                 <div style="border: 3px solid #D94350;"></div>
-
+                        
                                 <!-- Email Input -->
                                 <div class="form-floating mb-3">
-                                    <input class="form-control" id="emailAddress" type="email"
-                                    placeholder="Votre courriel" data-sb-validations="required,email" required/>
+                                    <input class="form-control" name="email" id="emailAddress" type="email"
+                                    placeholder="Votre courriel" required>
                                     <label for="emailAddress" class="form-color">Votre courriel</label>
-                                    <div class="invalid-feedback"
-                                    data-sb-feedback="emailAddress:required">Email Address is required.</div>
-                                    <div class="invalid-feedback"
-                                    data-sb-feedback="emailAddress:email">Email Address Email is not valid.</div>
                                 </div>
-
+                        
                                 <div style="border: 3px solid #D94350;"></div>
-                                
+                        
                                 <!-- Message Input -->
                                 <div class="form-floating mb-3">
-                                    <textarea class="form-control" id="message" type="text"
-                                    placeholder="Votre message" style="height: 10rem;"
-                                    data-sb-validations="required" required></textarea>
+                                    <textarea class="form-control" name="message" id="message"
+                                    placeholder="Votre message" style="height: 10rem;" required></textarea>
                                     <label for="message" class="form-color">Votre message</label>
-                                    <div style="border: 3px solid #D94350;"></div>
-                                    <div class="invalid-feedback"
-                                    data-sb-feedback="message:required">Message is required.</div>
                                 </div>
-
+                        
                                 <!-- Submit success message -->
                                 <div class="d-none" id="submitSuccessMessage">
                                     <div class="text-center mb-3">
@@ -147,12 +137,12 @@ require_once "Header.html.php";
                                         <p>To activate this form, sign up at</p>
                                     </div>
                                 </div>
-
+                        
                                 <!-- Submit error message -->
                                 <div class="d-none" id="submitErrorMessage">
                                     <div class="text-center text-danger mb-3">Error sending message!</div>
                                 </div>
-
+                        
                                 <!-- Submit button -->
                                 <div class="d-grid">
                                     <button class="btn btn-danger submit-red-button" id="submitButton" type="submit">
@@ -169,6 +159,8 @@ require_once "Header.html.php";
         </div>
     </div>
 </main>
+
+
 
 
 <?php 

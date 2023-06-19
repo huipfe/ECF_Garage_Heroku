@@ -28,14 +28,18 @@ require_once "Header.html.php";
 
 <div class="container">
 
+
+	<!-- Inventory - START -->
 	<div class="row" id="ads">
+
     <!-- Category Card -->
     <div class="col-md-4">
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Low KMS</span>
                 <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" 
+                <img class="img-fluid"
+                src="/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg" width="440" height="262"
                 alt="Alternate Text" />
             </div>
             <div class="card-image-overlay m-auto">
@@ -56,7 +60,8 @@ require_once "Header.html.php";
             <div class="card-image">
                 <span class="card-notify-badge">Fully-Loaded</span>
                 <span class="card-notify-year">2017</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" 
+                <img class="img-fluid"
+                src="/ECF_Garage/Assets/images/Used cars listing/voiture_2.jpg" width="440" height="262"
                 alt="Alternate Text" />
             </div>
             <div class="card-image-overlay m-auto">
@@ -78,7 +83,8 @@ require_once "Header.html.php";
             <div class="card-image">
                 <span class="card-notify-badge">Price Reduced</span>
                 <span class="card-notify-year">2018</span>
-                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" 
+                <img class="img-fluid"
+                src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg" width="440" height="262"
                 alt="Alternate Text" />
             </div>
             <div class="card-image-overlay m-auto">
@@ -103,47 +109,46 @@ require_once "Header.html.php";
 
 
 <div class="row heading">
-    <h2 class="sub-heading">Inventory</h2>
+    <!-- <h2 class="sub-heading">Inventory</h2> -->
 </div>
 
 <div class="container-fluid" id="inventory">
     <div class="row">
         <div class="col-md-3">
             <div class="card">
-                 
-                    <img class="img-fluid" 
-                    src="... .jpg?w=400" 
+
+                    <img class="img-fluid"
+                    src=""width="400" height="auto"
                     alt="Card image cap">
-                    <button class="btn view-btn">MARQUE VOITURE</button>
+                    <button class="btn view-btn">SEDAN</button>
                     <div class="ribbon"><span>Popular</span></div>
-                 
                 
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
-                <button class="btn view-btn">MARQUE VOITURE</button>
+                <button class="btn view-btn">SUV</button>
                 <div class="ribbon"><span>Popular</span></div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
-                <button class="btn view-btn">MARQUE VOITURE</button>
+                <button class="btn view-btn">TRUCK</button>
                 <div class="ribbon"><span>Popular</span></div>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
-                <button class="btn btn-danger view-btn">MARQUE VOITURE</button>               
+                <button class="btn btn-danger view-btn">HATCHBACK</button>
                 <div class="ribbon">
                     <span>Popular</span>
                 </div>
@@ -156,34 +161,34 @@ require_once "Header.html.php";
     <div class="row mt-5">
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn view-btn">WAGON</button>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn btn-danger view-btn">COUPE</button>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn btn-danger view-btn">CONVERTIBLE</button>
             </div>
         </div>
         <div class="col-md-3">
             <div class="card">
-                <img class="img-fluid" 
-                src="... .jpg?w=400" 
+                <img class="img-fluid"
+                src=""width="400" height="auto"
                 alt="Card image cap">
-                <button class="btn  view-btn">MINIVAN</button>               
+                <button class="btn  view-btn">MINIVAN</button>
             </div>
         </div>
 

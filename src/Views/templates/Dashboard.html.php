@@ -85,28 +85,28 @@ require_once "Header.html.php";
               <div class="picto">
                 <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
                 alt="Pictogramme"
-                class="img-fluid p-2"
+                class="img p-2"
                 width="72">
               </div>
               <div class="user-details">
                 <div class="avatar">
                   <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                   alt="Avatar"
-                  class="img-fluid">
+                  class="img">
                 </div>
                 <div class="username">Bidule</div>
               </div>
               <ul class="list-unstyled">
-                <li style="margin-left: 6rem;">Bidule@gmail.com</li>
+                <li style="margin-left: 2rem;">Bidule@gmail.com</li>
               </ul>
               <ul class="list-unstyled">
                 
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
                 </li>
                 </button>
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                 <i class="bi bi-trash"></i> Supprimer
                 </li>
@@ -121,28 +121,28 @@ require_once "Header.html.php";
               <div class="picto">
                 <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
                 alt="Pictogramme"
-                class="img-fluid p-2"
+                class="img p-2"
                 width="72">
               </div>
               <div class="user-details">
                 <div class="avatar">
                   <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                   alt="Avatar"
-                  class="img-fluid">
+                  class="img">
                 </div>
                 <div class="username">Chouk</div>
               </div>
               <ul class="list-unstyled">
-                <li style="margin-left: 6rem;">Chouk@laposte.net</li>
+                <li style="margin-left: 2rem;">Chouk@laposte.net</li>
               </ul>
               <ul class="list-unstyled">
 
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
                 </li>
                 </button>
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                 <i class="bi bi-trash"></i> Supprimer
                 </li>
@@ -157,28 +157,28 @@ require_once "Header.html.php";
               <div class="picto">
                 <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
                 alt="Pictogramme"
-                class="img-fluid  p-2"
+                class="img  p-2"
                 width="72">
               </div>
               <div class="user-details">
                 <div class="avatar">
                   <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                   alt="Avatar"
-                  class="img-fluid">
+                  class="img">
                 </div>
                 <div class="username">Ilan</div>
               </div>
               <ul class="list-unstyled">
-                <li style="margin-left: 6rem;">ilan.tervil@wanadoo.fr</li>
+                <li style="margin-left: 2rem;">ilan.tervil@wanadoo.fr</li>
               </ul>
               <ul class="list-unstyled">
 
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                   <i class="bi bi-pencil"></i> Modifier
                 </li>
                 </button>
-                <button class="btn btn-sm btn-danger m-2">
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
                 <li>
                 <i class="bi bi-trash"></i> Supprimer
                 </li>

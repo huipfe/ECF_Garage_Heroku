@@ -410,6 +410,20 @@ div.col-lg-7.col-xl-6 {
     font-size: 1.25rem;
     }
 }
+
+// btn-responsive
+@media (max-width: 767px) {
+.btn-responsive {
+font-size: 0.55rem;
+    }
+}
+
+@media (min-width: 767px ) and (max-width: 992px) {
+.btn-responsive {
+font-size: 0.85rem;
+    }
+}
+
 //Text users
 
 div.container {

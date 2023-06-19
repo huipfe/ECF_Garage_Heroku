@@ -26,6 +26,7 @@ require_once "Header.html.php";
     <h1 class="">Nos Produits</h1>
 </div>
 
+<!-- Mis en avant -->
 <div class="container">
 
 
@@ -105,6 +106,7 @@ require_once "Header.html.php";
 </div>
 
 
+<!-- Les autres -->
 <div class="container">
 
 
@@ -118,7 +120,7 @@ require_once "Header.html.php";
             <div class="card">
 
                     <img class="img-fluid"
-                    src=""width="400" height="auto"
+                    src="/ECF_Garage/Assets/images/Used cars listing/voiture_4.jpg" width="400" height="auto"
                     alt="Card image cap">
                     <button class="btn view-btn">SEDAN</button>
                     <div class="ribbon"><span>Popular</span></div>
@@ -128,7 +130,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/voiture_5.jpg" width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn view-btn">SUV</button>
                 <div class="ribbon"><span>Popular</span></div>
@@ -137,7 +139,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/voiture_6.jpg" width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn view-btn">TRUCK</button>
                 <div class="ribbon"><span>Popular</span></div>
@@ -146,7 +148,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/HATCHBACK.jpg" width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn btn-danger view-btn">HATCHBACK</button>
                 <div class="ribbon">
@@ -162,7 +164,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/WAGON.jpg"width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn view-btn">WAGON</button>
             </div>
@@ -170,7 +172,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/COUPE.jpg"width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn btn-danger view-btn">COUPE</button>
             </div>
@@ -178,7 +180,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/CONVERTIBLE.jpg"width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn btn-danger view-btn">CONVERTIBLE</button>
             </div>
@@ -186,7 +188,7 @@ require_once "Header.html.php";
         <div class="col-md-3">
             <div class="card">
                 <img class="img-fluid"
-                src=""width="400" height="auto"
+                src="/ECF_Garage/Assets/images/Used cars listing/MINIVAN.jpg"width="400" height="auto"
                 alt="Card image cap">
                 <button class="btn  view-btn">MINIVAN</button>
             </div>

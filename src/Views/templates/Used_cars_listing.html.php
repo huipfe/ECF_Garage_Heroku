@@ -4,14 +4,16 @@
 <!-- US3. Exposer les voitures d'occasion Utilisateurs concernés: Employés, Visiteurs
 Fonctionnalités désirées
 Reproduction interdite ECF - Garage automobile Page 6 sur 12
-Selon les souhaits de monsieur Parrot, le site web devra présenter les véhicules d'occasion disponibles 
+Selon les souhaits de monsieur Parrot, le site web devra présenter les véhicules d'occasion disponibles
 à la vente, avec des photos, des descriptions détaillées et des informations techniques.
 Pour chaque voiture, il faudra afficher obligatoirement:
 - Son prix
 - Une image à mettre en avant
 - L’année de mise en circulation
 - Le kilométrage
-Pour augmenter les chances qu’une voiture soit vendue, il peut être intéressant de transmettre aussi une galerie d’images, un tableau de caractéristiques ainsi que la liste des équipements et options installés dans ce véhicule.
+Pour augmenter les chances qu’une voiture soit vendue, il peut être intéressant de transmettre aussi
+une galerie d’images, un tableau de caractéristiques
+ainsi que la liste des équipements et options installés dans ce véhicule.
 N’importe quel employé du garage doit pouvoir ajouter, depuis son espace, de nouvelles voitures sur le site. -->
 
 
@@ -21,8 +23,180 @@ require_once "Header.html.php";
 
 <main>
 <div>
-    <h1>Liste Voiture</h1>
+    <h1 class="">Nos Produits</h1>
 </div>
+
+<div class="container">
+
+	<div class="row" id="ads">
+    <!-- Category Card -->
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Low KMS</span>
+                <span class="card-notify-year">2018</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC011A021001.jpg&width=440&height=262" 
+                alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord LX</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Fully-Loaded</span>
+                <span class="card-notify-year">2017</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=CAC80HOC021B121001.jpg&width=440&height=262" 
+                alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$28,000.00</span>
+                <span class="card-detail-badge">13000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda CIVIC HATCHBACK LS</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+
+    <div class="col-md-4">
+        <div class="card rounded">
+            <div class="card-image">
+                <span class="card-notify-badge">Price Reduced</span>
+                <span class="card-notify-year">2018</span>
+                <img class="img-fluid" src="https://imageonthefly.autodatadirect.com/images/?USER=eDealer&PW=edealer872&IMG=USC80HOC091A021001.jpg&width=440&height=262" 
+                alt="Alternate Text" />
+            </div>
+            <div class="card-image-overlay m-auto">
+                <span class="card-detail-badge">Used</span>
+                <span class="card-detail-badge">$22,000.00</span>
+                <span class="card-detail-badge">8000 Kms</span>
+            </div>
+            <div class="card-body text-center">
+                <div class="ad-title m-auto">
+                    <h5>Honda Accord Hybrid LT</h5>
+                </div>
+                <a class="ad-btn" href="#">View</a>
+            </div>
+        </div>
+    </div>
+
+</div>
+</div>
+
+
+<div class="container">
+
+
+<div class="row heading">
+    <h2 class="sub-heading">Inventory</h2>
+</div>
+
+<div class="container-fluid" id="inventory">
+    <div class="row">
+        <div class="col-md-3">
+            <div class="card">
+                 
+                    <img class="img-fluid" 
+                    src="... .jpg?w=400" 
+                    alt="Card image cap">
+                    <button class="btn view-btn">MARQUE VOITURE</button>
+                    <div class="ribbon"><span>Popular</span></div>
+                 
+                
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn view-btn">MARQUE VOITURE</button>
+                <div class="ribbon"><span>Popular</span></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn view-btn">MARQUE VOITURE</button>
+                <div class="ribbon"><span>Popular</span></div>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn btn-danger view-btn">MARQUE VOITURE</button>               
+                <div class="ribbon">
+                    <span>Popular</span>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+
+    <div class="row mt-5">
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn view-btn">WAGON</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn btn-danger view-btn">COUPE</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn btn-danger view-btn">CONVERTIBLE</button>
+            </div>
+        </div>
+        <div class="col-md-3">
+            <div class="card">
+                <img class="img-fluid" 
+                src="... .jpg?w=400" 
+                alt="Card image cap">
+                <button class="btn  view-btn">MINIVAN</button>               
+            </div>
+        </div>
+
+    </div>
+
+
+
+</div>
+
+<!-- Inventory - END -->
+</div>
+
+
 </main>
 
 

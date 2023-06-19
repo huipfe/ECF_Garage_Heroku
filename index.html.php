@@ -1,12 +1,7 @@
-
-<?php 
-// require_once 'src/Views/templates/Header.html.php';
-?>
+<!-- Charge mes éléments sur l'index -->
+<!-- Charge la homepage, qui charge mes footer & headers -->
 
 <?php 
 require_once 'src/Views/templates/Homepage.html.php';
 ?>
 
-<?php 
-// require_once 'src/Views/templates/Footer.html.php';
-?>

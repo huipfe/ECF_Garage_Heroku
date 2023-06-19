@@ -76,29 +76,29 @@ require_once "Header.html.php";
                 <div class="col-lg-6">
                     <section>
                         <!-- Formulaire -->
-                        <div class="p-3 m-3 bg-light text-dark block-white-title">
+                        <div class="p-3 m-3 bg-light text-dark block-title">
                             <h2 class="title-dark fw-bold p-3">Je suis intéressé par...</h2>
                         
                             <div class="d-flex flex-wrap m-1">
-                                <button class="btn btn-danger block-rouge">
-                                    <p class="m-2 title-box-white">Les voitures d’occasions</p>
+                                <button class="btn-click btn btn-light block-white">
+                                    <p class="m-2 title-box-dark">Les voitures d’occasions</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Les belles carrosseries</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Les bons plans</p>
                                 </button>
                             </div>
                         
                             <div class="d-flex flex-wrap m-1 ">
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">La conception auto</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Autres</p>
                                 </button>
                             </div>
@@ -159,6 +159,52 @@ require_once "Header.html.php";
         </div>
     </div>
 </main>
+
+<script>
+
+// Récupérer tous les boutons de sujet
+const subjectButtons = document.querySelectorAll('.btn-click');
+
+// Fonction pour gérer le clic sur un bouton de sujet
+function handleSubjectButtonClick(event) {
+  const button = event.currentTarget;
+
+  // Vérifier si le bouton est déjà sélectionné
+  const isSelected = button.classList.contains('btn-danger');
+
+  // Réinitialiser tous les boutons
+  subjectButtons.forEach((subjectButton) => {
+    subjectButton.classList.remove('btn-danger');
+    subjectButton.classList.add('btn-light');
+    subjectButton.classList.remove('block-rouge');
+    subjectButton.classList.add('block-white');
+    subjectButton.querySelectorAll('.title-box-white').forEach((titleBox) => {
+      titleBox.classList.remove('title-box-white');
+      titleBox.classList.add('title-box-dark');
+    });
+  });
+
+  // Mettre à jour les classes du bouton actuel en fonction de la sélection
+  if (!isSelected) {
+    button.classList.remove('btn-light');
+    button.classList.add('btn-danger');
+    button.classList.remove('block-white');
+    button.classList.add('block-rouge');
+    button.querySelectorAll('.title-box-dark').forEach((titleBox) => {
+      titleBox.classList.remove('title-box-dark');
+      titleBox.classList.add('title-box-white');
+    });
+  }
+}
+
+// Ajouter un gestionnaire d'événement à chaque bouton de sujet
+subjectButtons.forEach((subjectButton) => {
+  subjectButton.addEventListener('click', handleSubjectButtonClick);
+});
+
+
+
+</script>
 
 <script src="/ECF_Garage/Assets/JS/script.js"></script>
 

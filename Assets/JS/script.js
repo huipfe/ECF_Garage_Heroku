@@ -1,3 +1,5 @@
+/*----------------------------Envoie du formulaire---------------------------------------------------*/
+
 // Fonction pour envoyer le formulaire via AJAX
 function submitForm(event) {
     event.preventDefault(); // Empêcher le rechargement de la page par défaut
@@ -23,7 +25,7 @@ function submitForm(event) {
 }
 
 
-/*-------------------------------------------------------------------------------------------------*/
+/*----------------------------------Vérification Modal-----------------------------------------------*/
 
 // Fonction pour afficher la modal
 function displayModal(response) {
@@ -75,7 +77,7 @@ form.addEventListener('submit', submitForm);
 
 
 
-/*-------------------------------------------------------------------------------------------------*/
+/*----------------------------------Réinitialiser Form-----------------------------------------------*/
 
 
 // Fonction pour réinitialiser le formulaire
@@ -110,3 +112,4 @@ function submitForm(event) {
     xhr.send(formData);
 }
 
+/*-------------------------------------------------------------------------------------------------*/

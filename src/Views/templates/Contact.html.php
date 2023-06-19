@@ -160,6 +160,7 @@ require_once "Header.html.php";
     </div>
 </main>
 
+<script src="/ECF_Garage/Assets/JS/script.js"></script>
 
 
 

@@ -1,0 +1,42 @@
+@charset "UTF-8";
+/* Dashboard page */
+.input-group {
+  position: relative;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  width: 100%;
+}
+
+@media (min-width: 992px) { /* Taille lg et supérieure */
+  .btn-lg-lg {
+    font-size: 1.25rem;
+  }
+}
+@media (max-width: 767px) {
+  .btn-responsive {
+    font-size: 0.55rem;
+  }
+}
+@media (min-width: 767px) and (max-width: 992px) {
+  .btn-responsive {
+    font-size: 0.85rem;
+  }
+}
+div.container div.row div.col-lg-6 div.m-2 h3 + p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1rem;
+  line-height: 21px;
+  color: #B5B5C3;
+}
+
+.user-details {
+  display: flex;
+  align-items: center;
+}
+
+.avatar {
+  margin-right: 10px;
+}/*# sourceMappingURL=Dashboard.css.map */

@@ -9,6 +9,7 @@ body {
   min-height: 850px;
 }
 
+/* Import Header&Footer */
 /* Header */
 ul.navbar-nav li.nav-item a.nav-link {
   color: #D92332;
@@ -66,6 +67,7 @@ footer {
 }
 
 /* Index ou Homepage */
+/* Import LoginPage */
 /* Login page */
 div.col-lg-5 p:nth-child(2) {
   font-family: "Barlow";
@@ -306,6 +308,7 @@ div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
     line-height: 14px;
   }
 }
+/* Import Dashboard */
 /* Dashboard page */
 .input-group {
   position: relative;
@@ -348,6 +351,7 @@ div.container div.row div.col-lg-6 div.m-2 h3 + p {
   margin-right: 10px;
 }
 
+/* Import Contact Page */
 /* Contact page */
 .p-1.bg-danger.text-white .container-fluid .row .col-lg-6 section .p-2.m-2 h1 {
   font-weight: 700;
@@ -502,8 +506,9 @@ section div:nth-child(3) h2 {
   color: #F2F2F2;
 }
 
+/* Import Used_cars_listing page */
 /* Used_cars_listing page */
-main div h1 {
+main div h1.products {
   font-family: "Rajdhani";
   font-style: normal;
   font-weight: 700;

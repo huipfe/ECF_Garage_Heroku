@@ -23,7 +23,7 @@ require_once "Header.html.php";
 
 <main>
 <div>
-    <h1 class="">Nos Produits</h1>
+    <h1 class="products">Nos Produits</h1>
 </div>
 
 <!-- Mis en avant -->

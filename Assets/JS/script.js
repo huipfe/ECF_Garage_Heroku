@@ -112,4 +112,45 @@ function submitForm(event) {
     xhr.send(formData);
 }
 
-/*-------------------------------------------------------------------------------------------------*/
+/*-------------------------------------------Click Bouton-----------------------------------------*/
+
+
+// Récupérer tous les boutons de sujet
+const subjectButtons = document.querySelectorAll('.btn-click');
+
+// Fonction pour gérer le clic sur un bouton de sujet
+function handleSubjectButtonClick(event) {
+  const button = event.currentTarget;
+
+  // Vérifier si le bouton est déjà sélectionné
+  const isSelected = button.classList.contains('btn-danger');
+
+  // Réinitialiser tous les boutons
+  subjectButtons.forEach((subjectButton) => {
+    subjectButton.classList.remove('btn-danger');
+    subjectButton.classList.add('btn-light');
+    subjectButton.classList.remove('block-rouge');
+    subjectButton.classList.add('block-white');
+    subjectButton.querySelectorAll('.title-box-white').forEach((titleBox) => {
+      titleBox.classList.remove('title-box-white');
+      titleBox.classList.add('title-box-dark');
+    });
+  });
+
+  // Mettre à jour les classes du bouton actuel en fonction de la sélection
+  if (!isSelected) {
+    button.classList.remove('btn-light');
+    button.classList.add('btn-danger');
+    button.classList.remove('block-white');
+    button.classList.add('block-rouge');
+    button.querySelectorAll('.title-box-dark').forEach((titleBox) => {
+      titleBox.classList.remove('title-box-dark');
+      titleBox.classList.add('title-box-white');
+    });
+  }
+}
+
+// Ajouter un gestionnaire d'événement à chaque bouton de sujet
+subjectButtons.forEach((subjectButton) => {
+  subjectButton.addEventListener('click', handleSubjectButtonClick);
+});

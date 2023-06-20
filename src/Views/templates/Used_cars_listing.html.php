@@ -26,15 +26,52 @@ require_once "Header.html.php";
     <h1 class="products">Nos Produits</h1>
 </div>
 
+
+
 <!-- Mis en avant -->
 <div class="container">
 
+    <!-- Barre de recherche utilisateur -->
+    <div class="col-lg-6">
+        <div class="input-group">
+
+            <input
+            type="text"
+            class="form-control m-2 p-2 rounded-5"
+            placeholder="Recherche ">
+
+        <div class="input-group-append">
+            <button
+            class="btn btn-light m-2 p-2"
+            type="button">
+                <i
+                    class="bi bi-search">
+                </i>
+            </button>
+        </div>
+
+        </input>
+
+
+        <!-- Barre de filtrage -->
+        <section>
+    
+            <div class="m-2 filtrage-bar">
+                <h5 class="m-2 p-2 filtrage-title">
+                Liste des voitures <br>d'occasions par filtre
+                </h5>
+                <div class="gray-bar"></div>
+            </div>
+        </section>
+
+    </div>
+</div>
 
 	<!-- Inventory - START -->
 	<div class="row" id="ads">
 
     <!-- Category Card -->
-    <div class="col-md-4">
+    <div class="col-12 col-lg-4">
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Low KMS</span>
@@ -56,7 +93,7 @@ require_once "Header.html.php";
             </div>
         </div>
     </div>
-    <div class="col-md-4">
+    <div class="col-12 col-lg-4">
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Fully-Loaded</span>
@@ -79,7 +116,7 @@ require_once "Header.html.php";
         </div>
     </div>
 
-    <div class="col-md-4">
+    <div class="col-12 col-lg-4">
         <div class="card rounded">
             <div class="card-image">
                 <span class="card-notify-badge">Price Reduced</span>
@@ -107,11 +144,11 @@ require_once "Header.html.php";
 
 
 <!-- Les autres -->
-<div class="container">
+<!-- <div class="container">
 
 
 <div class="row heading">
-    <!-- <h2 class="sub-heading">Inventory</h2> -->
+    <h2 class="sub-heading">Inventory</h2>
 </div>
 
 <div class="container-fluid" id="inventory">
@@ -194,7 +231,7 @@ require_once "Header.html.php";
             </div>
         </div>
 
-    </div>
+    </div> -->
 
 
 

@@ -605,79 +605,29 @@ main div h1.products {
   font-size: 18px;
 }
 
-.ribbon {
-  position: absolute;
-  right: -5px;
-  top: -5px;
-  z-index: 1;
-  overflow: hidden;
-  width: 75px;
-  height: 75px;
-  text-align: center;
+section div.m-2.filtrage-bar {
+  display: flex; /* Ajout de la propriété flex */
+  align-items: center; /* Centrer les éléments verticalement */
+  justify-content: space-between; /* Centrer horizontalement les éléments */
+  width: 398px;
+  height: 48.97px;
+  background: #e8e4e4;
+  border-radius: 21px;
+  padding: 0 10px; /* Ajouter un espace de padding pour éviter le dépassement */
 }
-
-.ribbon span {
+section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
+  font-family: "Rajdhani";
+  font-style: normal;
+  font-weight: 600;
   font-size: 10px;
-  color: #fff;
-  text-transform: uppercase;
-  text-align: center;
-  font-weight: bold;
-  line-height: 20px;
-  transform: rotate(45deg);
-  width: 100px;
-  display: block;
-  background: #F62459;
-  background: linear-gradient(#ff89b1 0%, #ff006e 100%);
-  box-shadow: 0 3px 10px -5px rgb(0, 0, 0);
-  position: absolute;
-  top: 19px;
-  right: -21px;
+  line-height: 13px;
+  color: #000000;
+  margin: 0; /* Supprimer la marge par défaut */
 }
-
-.ribbon span::before {
-  content: "";
-  position: absolute;
-  left: 0%;
-  top: 100%;
-  z-index: -1;
-  border-left: 3px solid #F62459;
-  border-right: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #F62459;
-}
-
-.ribbon span::after {
-  content: "";
-  position: absolute;
-  right: 0%;
-  top: 100%;
-  z-index: -1;
-  border-right: 3px solid #F62459;
-  border-left: 3px solid transparent;
-  border-bottom: 3px solid transparent;
-  border-top: 3px solid #F62459;
-}
-
-#inventory .card:hover {
-  transition: all 0.3s ease;
-  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
-}
-
-#inventory .view-btn {
-  background-color: #e6de08;
-  margin: -25px 0 0 0;
-  border-radius: 0 0 0 0;
-  font-size: 14px;
-  border: #e6de08;
-  color: #000;
-}
-
-#inventory .btn:hover {
-  background-color: #ff4444;
-  color: #fff;
-  border: 2px solid #ff4444;
-  transition: all 0.3s ease;
-  box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
+section div.m-2.filtrage-bar div.gray-bar {
+  flex-grow: 1; /* Permet à la gray-bar de s'étendre et remplir l'espace disponible */
+  height: 34px;
+  background: rgba(38, 37, 38, 0.7);
 }
 
 /* Import */

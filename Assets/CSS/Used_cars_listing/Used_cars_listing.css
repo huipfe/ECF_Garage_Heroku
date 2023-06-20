@@ -98,14 +98,14 @@ main div h1.products {
 }
 
 section div.m-2.filtrage-bar {
-  display: flex; /* Ajout de la propriété flex */
-  align-items: center; /* Centrer les éléments verticalement */
-  justify-content: space-between; /* Centrer horizontalement les éléments */
-  width: 398px;
-  height: 48.97px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 40rem;
+  height: 3rem;
   background: #e8e4e4;
   border-radius: 21px;
-  padding: 0 10px; /* Ajouter un espace de padding pour éviter le dépassement */
+  padding: 0 10px;
 }
 section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
   font-family: "Rajdhani";
@@ -114,10 +114,52 @@ section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
   font-size: 10px;
   line-height: 13px;
   color: #000000;
-  margin: 0; /* Supprimer la marge par défaut */
+  margin: 0;
 }
 section div.m-2.filtrage-bar div.gray-bar {
-  flex-grow: 1; /* Permet à la gray-bar de s'étendre et remplir l'espace disponible */
+  display: flex;
+  align-items: center;
+  flex-grow: 1;
   height: 34px;
   background: rgba(38, 37, 38, 0.7);
+  padding: 0 10px;
+}
+section div.m-2.filtrage-bar div.gray-bar .form-check {
+  margin-right: 10px;
+  margin-bottom: 0;
+  margin-top: 0;
+}
+section div.m-2.filtrage-bar div.gray-bar p {
+  font-family: "Barlow";
+  font-style: normal;
+  font-weight: 500;
+  font-size: 10px;
+  line-height: 12px;
+  text-align: start;
+  color: #262526;
+  margin: 0 5px;
+}
+
+.form-check-input[type=checkbox] {
+  position: absolute;
+  opacity: 0;
+}
+
+.form-check-input[type=checkbox] + .form-check-label::before {
+  content: "";
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  margin-right: -2px;
+  background-color: #D92332;
+  border: 1px solid #D9777F;
+  border-radius: 3px;
+  vertical-align: middle;
+}
+
+.form-check-input[type=checkbox]:checked + .form-check-label::before {
+  content: "✓";
+  color: #ffffff;
+  text-align: center;
+  line-height: 16px;
 }/*# sourceMappingURL=Used_cars_listing.css.map */

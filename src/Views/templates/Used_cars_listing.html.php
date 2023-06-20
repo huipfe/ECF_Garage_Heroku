@@ -29,7 +29,7 @@ require_once "Header.html.php";
 
 
 <!-- Mis en avant -->
-<div class="container">
+<div class="container-lg">
 
     <!-- Barre de recherche utilisateur -->
     <div class="col-lg-6">
@@ -52,20 +52,54 @@ require_once "Header.html.php";
 
         </input>
 
-
-        <!-- Barre de filtrage -->
-        <section>
-    
-            <div class="m-2 filtrage-bar">
-                <h5 class="m-2 p-2 filtrage-title">
-                Liste des voitures <br>d'occasions par filtre
-                </h5>
-                <div class="gray-bar"></div>
-            </div>
-        </section>
-
     </div>
 </div>
+
+
+<!-- Barre de filtrage -->
+<section>
+    <div class="m-2 filtrage-bar">
+        <h5 class="m-2 p-2 filtrage-title">
+            Liste des voitures <br> d'occasions par filtre
+        </h5>
+        <div class="gray-bar d-flex align-items-center">
+            <div class="form-check custom-checkbox">
+                <input class="form-check-input"  type="checkbox" value="" id="checkbox1">
+                <label class="form-check-label cursor-pointer" for="checkbox1">
+                    <span class="checkbox-icon"> Filtre 1</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                <label class="form-check-label cursor-pointer" for="checkbox2">
+                    <span class="checkbox-icon">Filtre 2</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                <label class="form-check-label cursor-pointer" for="checkbox3">
+                    <span class="checkbox-icon">Filtre 3</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox4">
+                <label class="form-check-label cursor-pointer" for="checkbox4">
+                    <span class="checkbox-icon">Filtre 4</span>
+                </label>
+            </div>
+            <div class="form-check">
+                <input class="form-check-input" type="checkbox" value="" id="checkbox5">
+                <label class="form-check-label cursor-pointer" for="checkbox5">
+                    <span class="checkbox-icon">Filtre 5</span>
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+
+
+
 
 	<!-- Inventory - START -->
 	<div class="row" id="ads">

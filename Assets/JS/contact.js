@@ -45,16 +45,16 @@ function displayModal(response) {
     newModal.setAttribute('id', 'modalForm');
     newModal.innerHTML = `
     <div class="modal-dialog modal-dialog-centered">
-      <div class="modal-content">
-        <div class="modal-header">
-          <h5 class="modal-title">Confirmation d'envoi du formulaire</h5>
+      <div class="modal-content rounded-4" style="background: #D92332;">
+        <div class="modal-header" >
+          <h5 class="modal-title" style="color: #F2F2F2;">Confirmation d'envoi du formulaire</h5>
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p>${response === 'success' ? 'Le formulaire a été envoyé avec succès!' : 'Une erreur s\'est produite lors de l\'envoi du formulaire.'}</p>
+          <p style="color: #F2F2F2;">${response === 'success' ? 'Le formulaire a été envoyé avec succès!' : 'Une erreur s\'est produite lors de l\'envoi du formulaire.'}</p>
         </div>
         <div class="modal-footer">
-          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Fermer</button>
+          <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>
         </div>
       </div>
     </div>
@@ -96,7 +96,7 @@ function submitForm(event) {
 
     // Créer une requête AJAX
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/ECF_Garage/src/Models/sendMail.php', true);
+    xhr.open('POST', '/ECF_Garage/src/Utils/sendMail.php', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             // Réponse de la requête AJAX

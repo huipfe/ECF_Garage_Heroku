@@ -30,7 +30,7 @@ section {
             border: 3px solid $color-primary_red_light;
             border-radius: 16px;
             h2 {
-                font-family: 'Barlow';
+                font-family: $font-text;
                 font-style: normal;
                 font-weight: 500;
                 line-height: 14px;
@@ -43,7 +43,7 @@ section {
     div:first-child,
         div:nth-child(3) {
             h2 {
-                    font-family: 'Barlow';
+                    font-family: $font-text;
                     font-style: normal;
                     font-weight: 500;
                     line-height: 14px;
@@ -60,7 +60,7 @@ section {
 
 }
 .title-dark {
-        font-family: 'Rajdhani';
+        font-family: $font-headline;
         font-style: normal;
         font-weight: 700;
         line-height: 26px;
@@ -92,7 +92,7 @@ section {
 }
 
 .title-box-white {
-        font-family: 'Barlow';
+        font-family: $font-text;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -103,7 +103,7 @@ section {
 }
 
 .title-box-dark {
-        font-family: 'Barlow';
+        font-family: $font-text;
         font-style: normal;
         font-weight: 500;
         font-size: 18px;
@@ -128,7 +128,7 @@ section {
 }
 
 .submit-message {
-font-family: 'Barlow';
+font-family: $font-text;
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
@@ -136,7 +136,7 @@ line-height: 20px;
 }
 
 .form-color {
-font-family: 'Barlow';
+font-family: $font-text;
 font-style: normal;
 font-weight: 500;
 font-size: 20px;
@@ -165,7 +165,7 @@ color: #D92332;
 }
 
 .my-form-control-contact::placeholder {
-    font-family: 'Barlow';
+    font-family: $font-text;
     font-style: normal;
     font-weight: 400;
     font-size: 20px;

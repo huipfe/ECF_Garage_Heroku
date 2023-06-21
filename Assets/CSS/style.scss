@@ -23,32 +23,33 @@ $min-width-desktop: 1440px;
 $min-height-mobile: 850px;
 $min-height-desktop: 1060px;
 
+
 body {
 // Definir Typographie du projet
-font-family: 'Barlow', sans-serif;
-font-family: 'Rajdhani', sans-serif;
+font-family: $font-text;
+font-family: $font-headline;
 
 min-width: $min-width-mobile;
 min-height: $min-height-mobile;
 }
 
 /* Import Header&Footer */
-@import "HeaderFooter/HeaderFooter.scss";
+@import "HeaderFooter/_HeaderFooter.scss";
 
 /* Index ou Homepage */
 
 /* Import LoginPage */
-@import "LoginPage/LoginPage.scss";
+@import "LoginPage/_LoginPage.scss";
 
 /* Import Dashboard */
 
-@import "Dashboard/Dashboard.scss";
+@import "Dashboard/_Dashboard.scss";
 
 /* Import Contact Page */
-@import "ContactPage/ContactPage.scss";
+@import "ContactPage/_ContactPage.scss";
 
 /* Import Used_cars_listing page */
-@import "Used_cars_listing/Used_cars_listing.scss";
+@import "Used_cars_listing/_Used_cars_listing.scss";
 
 /* Import */
 

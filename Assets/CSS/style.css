@@ -595,7 +595,6 @@ main div h1.products {
   background-color: #e6de08;
   color: #1e1717;
   border: 2px solid #e6de08;
-  background: transparent;
   transition: all 0.3s ease;
   box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
 }
@@ -629,11 +628,12 @@ section div.m-2.filtrage-bar div.gray-bar {
   align-items: center;
   flex-grow: 1;
   height: 34px;
+  margin: 4px;
   background: rgba(38, 37, 38, 0.7);
   padding: 0 10px;
 }
 section div.m-2.filtrage-bar div.gray-bar .form-check {
-  margin-right: 10px;
+  margin-right: 8px;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -683,10 +683,11 @@ section div.m-2.filtrage-bar div.gray-bar p {
   section div.m-2.filtrage-bar div.gray-bar {
     width: 20rem;
     height: 28px;
-    padding: 0 5px;
+    margin: 1px;
+    padding: 0 22px;
   }
   section div.m-2.filtrage-bar div.gray-bar .form-check {
-    margin-right: 5px;
+    margin-right: 10px;
   }
   section div.m-2.filtrage-bar div.gray-bar p {
     font-size: 9px;
@@ -695,10 +696,15 @@ section div.m-2.filtrage-bar div.gray-bar p {
   .form-check-input[type=checkbox] + .form-check-label::before {
     width: 12px;
     height: 12px;
-    margin-left: -6px;
+    margin-left: -1px;
   }
   .form-check-input[type=checkbox]:checked + .form-check-label::before {
     line-height: 12px;
+  }
+  .checkbox-icon {
+    font-size: 12px;
+    margin-left: -57px;
+    margin-right: 45px;
   }
 }
 @media (max-width: 559px) {
@@ -712,22 +718,29 @@ section div.m-2.filtrage-bar div.gray-bar p {
   section div.m-2.filtrage-bar div.gray-bar {
     width: 15rem;
     height: 30px;
-    padding: 0 5px;
+    margin: 6px;
+    padding: 0 25px;
   }
   section div.m-2.filtrage-bar div.gray-bar .form-check {
-    margin-right: 5px;
+    margin-left: 2px;
+    margin-right: 8px;
   }
   section div.m-2.filtrage-bar div.gray-bar p {
     font-size: 6px;
     margin: 0 3px;
   }
   .form-check-input[type=checkbox] + .form-check-label::before {
-    width: 12px;
-    height: 12px;
-    margin-left: -6px;
+    width: 10px;
+    height: 10px;
+    margin-right: -8px;
   }
   .form-check-input[type=checkbox]:checked + .form-check-label::before {
-    line-height: 12px;
+    line-height: 15px;
+  }
+  .checkbox-icon {
+    font-size: 10px;
+    margin-left: -35px;
+    margin-right: 20px;
   }
 }
 /* Import */

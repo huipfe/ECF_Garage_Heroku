@@ -743,6 +743,17 @@ section div.m-2.filtrage-bar div.gray-bar p {
     margin-right: 20px;
   }
 }
+.rating .bi-star-fill {
+  color: #FFD233;
+}
+.rating .bi-star {
+  color: rgba(255, 210, 51, 0.4);
+}
+
+.btn-danger .bi-info-circle-fill {
+  color: #D9777F;
+}
+
 /* Import */
 /* Import */
 /* Import *//*# sourceMappingURL=style.css.map */

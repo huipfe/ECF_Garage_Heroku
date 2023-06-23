@@ -365,3 +365,25 @@ section {
         margin-right: 20px;
     }
 }
+
+// Details button
+
+
+
+// Rating
+$star-color: #FFD233;
+
+.rating {
+    .bi-star-fill {
+        color: $star-color;
+    }
+
+    .bi-star {
+        color: rgba($star-color, 0.4); // Couleur avec une transparence de 0.4
+    }
+}
+
+.btn-danger .bi-info-circle-fill {
+    color: #D9777F;
+}
+

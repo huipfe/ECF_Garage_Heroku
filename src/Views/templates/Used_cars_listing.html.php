@@ -102,22 +102,23 @@ require_once "Header.html.php";
                     </div>
                     <div class="col-md-7 col-lg-12">
                         <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h5 class="card-title" id = "title-card">Ford Mustang</h5>
-                            <p class="card-text" id = "title-description">Ford Mustang GT, une voiture de
+                            <h3 class="card-title fw-bold" id = "title-card">Ford Mustang</h3>
+                            <p class="card-text fst-italic" id = "title-description">Ford Mustang GT, une voiture de
                                 sport emblématique avec un design élégant et des performances puissantes.</p>
-                            <p class="card-text" id = "title-modele">Modèle : V8-GT </p>
-                            <p class="card-text" id = "title-year">Année : 2022</p>
-                            <p class="card-text" id = "title-kilometrage">Kilométrage : 5 000 km</p>
-                            <p class="card-text" id = "title-price">Prix : 50 000 €</p>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
+                            <p class="card-text fs-5" id = "title-modele">Modèle : V8-GT </p>
+                            <p class="card-text fs-5" id = "title-year">Année : 2022</p>
+                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 5 000 km</p>
+                            <p class="card-text fs-5" id = "title-price">Prix :
+                                <span class="fw-bold">50 000 €</span></p>
+                                <div class="rating">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
                             </div>
                             <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                             </a>
                         </div>
                     </div>
@@ -134,14 +135,15 @@ require_once "Header.html.php";
                     </div>
                     <div class="col-md-7 col-lg-12">
                         <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h5 class="card-title" id = "title-card">Audi</h5>
-                            <p class="card-text" id = "title-description">Audi R8 V10, une supercar de luxe
+                            <h3 class="card-title fw-bold" id = "title-card">Audi</h3>
+                            <p class="card-text fst-italic" id = "title-description">Audi R8 V10, une supercar de luxe
                                 avec un moteur V10 et une tenue de route exceptionnelle.</p>
-                            <p class="card-text" id = "title-modele">Modèle : R8 V10</p>
-                            <p class="card-text" id = "title-year">Année : 2023</p>
-                            <p class="card-text" id = "title-kilometrage">Kilométrage : 2 000 km</p>
-                            <p class="card-text" id = "title-price">Prix : 150 000 €</p>
-                            <div class="rating">
+                            <p class="card-text fs-5" id = "title-modele">Modèle : R8 V10</p>
+                            <p class="card-text fs-5" id = "title-year">Année : 2023</p>
+                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 2 000 km</p>
+                            <p class="card-text fs-5" id = "title-price">Prix :
+                                <span class="fw-bold">150 000 €</span></p>
+                                <div class="rating">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -149,7 +151,7 @@ require_once "Header.html.php";
                                 <i class="bi bi-star"></i>
                             </div>
                             <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                             </a>
                         </div>
                     </div>
@@ -166,22 +168,23 @@ require_once "Header.html.php";
                     </div>
                     <div class="col-md-7 col-lg-12">
                         <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h5 class="card-title" id = "title-card">Lamborghini</h5>
-                            <p class="card-text" id = "title-description">Lamborghini Aventador SVJ, une
+                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
+                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
                                 voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
-                            <p class="card-text" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text" id = "title-year">Année : 2018</p>
-                            <p class="card-text" id = "title-kilometrage">Kilométrage : 1 000 km</p>
-                            <p class="card-text" id = "title-price">Prix : 370 000 €</p>
+                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
+                            <p class="card-text fs-5" id = "title-year">Année : 2018</p>
+                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 1 000 km</p>
+                            <p class="card-text fs-5" id = "title-price">Prix :
+                                <span class="fw-bold">370 000 €</span></p>
                             <div class="rating">
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
                                 <i class="bi bi-star"></i>
                             </div>
                             <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                             </a>
                         </div>
                     </div>

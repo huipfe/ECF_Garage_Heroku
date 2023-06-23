@@ -1,7 +1,5 @@
 /*--------------------------------------Barre de Recherche-------------------------------------------*/
 
-
-
 // Fonction de recherche
 const searchCars = () => {
     // Récupérer la valeur de recherche

@@ -22,42 +22,33 @@ require_once "Header.html.php";
 ?>
 
 <main>
-    <div>
-        <h1 class="products">Nos Produits</h1>
-    </div>
 
 
-
-<!-- Mis en avant -->
     <div class="container-lg">
-    
-        <!-- Barre de recherche utilisateur -->
-        <div class="col-lg-6">
-            <div class="input-group">
-    
-                <input
-                type="text"
-                class="form-control m-2 p-2 rounded-5"
-                placeholder="Recherche ">
-    
-            <div class="input-group-append">
-                <button
-                class="btn btn-light m-2 p-2"
-                type="button">
-                    <i
-                        class="bi bi-search">
-                    </i>
-                </button>
+        <div class="row">
+
+            <div class="col-lg">
+                <h1 class="products">Nos Produits</h1>
             </div>
-    
-            </input>
-    
+
+            <div class="col-lg-6">
+                <div class="input-group" style="margin-top: 12px;">
+                    <input type="text" class="form-control m-2 p-2 rounded-5"
+                    id="searchInput" placeholder="Recherche">
+                    <div class="input-group-append">
+                        <button class="btn btn-light m-2 p-2" type="button" id="searchButton">
+                            <i class="bi bi-search"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+
         </div>
     </div>
     
     
     <!-- Barre de filtrage - Mobile -->
-    <section>
+    <section id = "sidebar-mobile">
             <div class="m-2 filtrage-bar d-lg-none">
                 <h5 class="m-2 p-2 filtrage-title">
                     Liste des voitures <br> d'occasions par filtre
@@ -99,86 +90,99 @@ require_once "Header.html.php";
         
     <!-- -->
         
-    <div class="container">
-            <div class="row">
-        
-                    <div class="col-lg-4">
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                            <div class="col-md-5 col-lg-12">
-                                <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg"
-                                alt="Image 1" class="card-img">
+<div class="container">
+    <div class="row">
+
+        <div class="col-lg-4">
+            <div class="card mb-3" style="background: #E8E4E4;">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-12">
+                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg"
+                            alt="Image 1" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-lg-12">
+                        <div class="card-body mx-3 text-md-center text-lg-end">
+                            <h5 class="card-title" id = "title-card">Ford Mustang</h5>
+                            <p class="card-text" id = "title-description">Ford Mustang GT, une voiture de
+                                sport emblématique avec un design élégant et des performances puissantes.</p>
+                            <p class="card-text" id = "title-modele">Modèle : V8-GT </p>
+                            <p class="card-text" id = "title-year">Année : 2022</p>
+                            <p class="card-text" id = "title-kilometrage">Kilométrage : 5 000 km</p>
+                            <p class="card-text" id = "title-price">Prix : 50 000 €</p>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
                             </div>
-                            <div class="col-md-7 col-lg-12">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nom de la voiture 1</h5>
-                                    <p class="card-text">Description de la voiture 1</p>
-                                    <p class="card-text">Kilométrage : 10 000 km</p>
-                                    <p class="card-text">Prix : 20 000 €</p>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                </div>
-                                    <a href="#" class="btn btn-danger">Détails</a>
-                                </div>
-                            </div>
+                            <a href="#" class="btn btn-danger">Détails
+                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-            
-                    <div class="col-lg-4">
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                            <div class="col-md-5 col-lg-12">
-                                <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_2.jpg"
-                                alt="Image 1" class="card-img">
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-3" style="background: #E8E4E4;">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-12">
+                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_2.jpg"
+                            alt="Image 2" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-lg-12">
+                        <div class="card-body mx-3 text-md-center text-lg-end">
+                            <h5 class="card-title" id = "title-card">Audi</h5>
+                            <p class="card-text" id = "title-description">Audi R8 V10, une supercar de luxe
+                                avec un moteur V10 et une tenue de route exceptionnelle.</p>
+                            <p class="card-text" id = "title-modele">Modèle : R8 V10</p>
+                            <p class="card-text" id = "title-year">Année : 2023</p>
+                            <p class="card-text" id = "title-kilometrage">Kilométrage : 2 000 km</p>
+                            <p class="card-text" id = "title-price">Prix : 150 000 €</p>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
                             </div>
-                            <div class="col-md-7 col-lg-12">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nom de la voiture 1</h5>
-                                    <p class="card-text">Description de la voiture 1</p>
-                                    <p class="card-text">Kilométrage : 10 000 km</p>
-                                    <p class="card-text">Prix : 20 000 €</p>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                </div>
-                                    <a href="#" class="btn btn-danger">Détails</a>
-                                </div>
-                            </div>
+                            <a href="#" class="btn btn-danger">Détails
+                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
-                
-                    <div class="col-lg-4">
-                        <div class="card mb-3">
-                            <div class="row g-0">
-                            <div class="col-md-5 col-lg-12">
-                                <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
-                                alt="Image 1" class="card-img">
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-3" style="background: #E8E4E4;">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-12">
+                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
+                            alt="Image 3" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-lg-12">
+                        <div class="card-body mx-3 text-md-center text-lg-end">
+                            <h5 class="card-title" id = "title-card">Lamborghini</h5>
+                            <p class="card-text" id = "title-description">Lamborghini Aventador SVJ, une
+                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
+                            <p class="card-text" id = "title-modele">Modèle : Aventador SVJ </p>
+                            <p class="card-text" id = "title-year">Année : 2018</p>
+                            <p class="card-text" id = "title-kilometrage">Kilométrage : 1 000 km</p>
+                            <p class="card-text" id = "title-price">Prix : 370 000 €</p>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
                             </div>
-                            <div class="col-md-7 col-lg-12">
-                                <div class="card-body">
-                                    <h5 class="card-title">Nom de la voiture 1</h5>
-                                    <p class="card-text">Description de la voiture 1</p>
-                                    <p class="card-text">Kilométrage : 10 000 km</p>
-                                    <p class="card-text">Prix : 20 000 €</p>
-                                <div class="rating">
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star-fill"></i>
-                                    <i class="bi bi-star"></i>
-                                </div>
-                                    <a href="#" class="btn btn-danger">Détails</a>
-                                </div>
-                            </div>
+                            <a href="#" class="btn btn-danger">Détails
+                                <i class="mx-1 bi bi-info-circle-fill"></i>
+                            </a>
                         </div>
                     </div>
                 </div>
@@ -186,48 +190,58 @@ require_once "Header.html.php";
         </div>
 
     </div>
-
+</div>
 
         <!-- Barre de filtrage - LG (sidebar) -->
-    <section>
-            <div class="m-2 filtrage-bar d-none d-lg-flex">
-                <h5 class="m-2 p-2 filtrage-title">
-                    Liste des voitures <br> d'occasions par filtre
-                </h5>
-                <div class="gray-bar d-flex align-items-center">
-                    <div class="form-check ">
-                        <input class="form-check-input"  type="checkbox" value="" id="checkbox1">
-                        <label class="form-check-label cursor-pointer" for="checkbox1">
-                            <span class="checkbox-icon pe-none"> Filtre 1</span>
-                        </label>
+        <div class="col-lg-3">
+            <section id = "sidebar-lg">
+                    <div class="m-2 filtrage-bar d-none d-lg-flex">
+                        <h5 class="m-2 p-2 filtrage-title">
+                            Liste des voitures <br> d'occasions par filtre
+                        </h5>
+                        <div class="gray-bar d-flex align-items-center">
+                            <div class="form-check ">
+                                <input class="form-check-input"  type="checkbox" value="" id="checkbox1">
+                                <label class="form-check-label cursor-pointer" for="checkbox1">
+                                    <span class="checkbox-icon pe-none"> Filtre 1</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                                <label class="form-check-label cursor-pointer" for="checkbox2">
+                                    <span class="checkbox-icon pe-none">Filtre 2</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                                <label class="form-check-label cursor-pointer" for="checkbox3">
+                                    <span class="checkbox-icon pe-none">Filtre 3</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox4">
+                                <label class="form-check-label cursor-pointer" for="checkbox4">
+                                    <span class="checkbox-icon pe-none">Filtre 4</span>
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="checkbox" value="" id="checkbox5">
+                                <label class="form-check-label cursor-pointer" for="checkbox5">
+                                    <span class="checkbox-icon pe-none">Filtre 5</span>
+                                </label>
+                            </div>
+                        </div>
                     </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                        <label class="form-check-label cursor-pointer" for="checkbox2">
-                            <span class="checkbox-icon pe-none">Filtre 2</span>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox3">
-                        <label class="form-check-label cursor-pointer" for="checkbox3">
-                            <span class="checkbox-icon pe-none">Filtre 3</span>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                        <label class="form-check-label cursor-pointer" for="checkbox4">
-                            <span class="checkbox-icon pe-none">Filtre 4</span>
-                        </label>
-                    </div>
-                    <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                        <label class="form-check-label cursor-pointer" for="checkbox5">
-                            <span class="checkbox-icon pe-none">Filtre 5</span>
-                        </label>
-                    </div>
-                </div>
-            </div>
-    </section>
+            </section>
+        </div>
+
+    </div>
+</div>
+
+
+
+<script src="/ECF_Garage/Assets/JS/Used_cars_listing.js"></script>
+
 
 </main>
 

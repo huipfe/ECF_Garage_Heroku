@@ -604,7 +604,7 @@ main div h1.products {
   font-size: 18px;
 }
 
-section div.m-2.filtrage-bar {
+section div.filtrage-bar {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -613,8 +613,11 @@ section div.m-2.filtrage-bar {
   background: #e8e4e4;
   border-radius: 21px;
   padding: 0 10px;
+  margin-left: 18px;
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
-section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
+section div.filtrage-bar h5.m-2.p-2.filtrage-title {
   font-family: "Rajdhani", sans-serif;
   font-style: normal;
   font-weight: 600;
@@ -623,7 +626,7 @@ section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
   color: #000000;
   margin: 0;
 }
-section div.m-2.filtrage-bar div.gray-bar {
+section div.filtrage-bar div.gray-bar {
   display: flex;
   align-items: center;
   flex-grow: 1;
@@ -632,12 +635,12 @@ section div.m-2.filtrage-bar div.gray-bar {
   background: rgba(38, 37, 38, 0.7);
   padding: 0 10px;
 }
-section div.m-2.filtrage-bar div.gray-bar .form-check {
+section div.filtrage-bar div.gray-bar .form-check {
   margin-right: 8px;
   margin-bottom: 0;
   margin-top: 0;
 }
-section div.m-2.filtrage-bar div.gray-bar p {
+section div.filtrage-bar div.gray-bar p {
   font-family: "Barlow", sans-serif;
   font-style: normal;
   font-weight: 500;
@@ -673,23 +676,23 @@ section div.m-2.filtrage-bar div.gray-bar p {
 }
 
 @media (min-width: 560px) and (max-width: 680px) {
-  section div.m-2.filtrage-bar {
+  section div.filtrage-bar {
     width: 30rem;
     padding: 0 5px;
   }
-  section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
+  section div.filtrage-bar h5.m-2.p-2.filtrage-title {
     font-size: 0.7rem;
   }
-  section div.m-2.filtrage-bar div.gray-bar {
+  section div.filtrage-bar div.gray-bar {
     width: 20rem;
     height: 28px;
     margin: 1px;
     padding: 0 22px;
   }
-  section div.m-2.filtrage-bar div.gray-bar .form-check {
+  section div.filtrage-bar div.gray-bar .form-check {
     margin-right: 10px;
   }
-  section div.m-2.filtrage-bar div.gray-bar p {
+  section div.filtrage-bar div.gray-bar p {
     font-size: 9px;
     margin: 0 3px;
   }
@@ -708,24 +711,24 @@ section div.m-2.filtrage-bar div.gray-bar p {
   }
 }
 @media (max-width: 559px) {
-  section div.m-2.filtrage-bar {
+  section div.filtrage-bar {
     width: 25rem;
     padding: 0 5px;
   }
-  section div.m-2.filtrage-bar h5.m-2.p-2.filtrage-title {
+  section div.filtrage-bar h5.m-2.p-2.filtrage-title {
     font-size: 0.7rem;
   }
-  section div.m-2.filtrage-bar div.gray-bar {
+  section div.filtrage-bar div.gray-bar {
     width: 15rem;
     height: 30px;
     margin: 6px;
     padding: 0 25px;
   }
-  section div.m-2.filtrage-bar div.gray-bar .form-check {
+  section div.filtrage-bar div.gray-bar .form-check {
     margin-left: 2px;
     margin-right: 8px;
   }
-  section div.m-2.filtrage-bar div.gray-bar p {
+  section div.filtrage-bar div.gray-bar p {
     font-size: 6px;
     margin: 0 3px;
   }

@@ -200,7 +200,7 @@ main div  {
 
 // Barre de filtrage
 section {
-    div.m-2.filtrage-bar {
+    div.filtrage-bar {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -209,6 +209,10 @@ section {
         background: #e8e4e4;
         border-radius: 21px;
         padding: 0 10px;
+
+        margin-left: 18px;
+        margin-top: 20px;
+        margin-bottom: 20px;
 
         h5.m-2.p-2.filtrage-title {
             font-family: $font-headline;
@@ -279,7 +283,7 @@ section {
 
 @media (min-width: 560px) and (max-width: 680px) {
     section {
-        div.m-2.filtrage-bar {
+        div.filtrage-bar {
             width: 30rem;
             padding: 0 5px;
 
@@ -323,7 +327,7 @@ section {
 
 @media (max-width: 559px) {
     section {
-        div.m-2.filtrage-bar {
+        div.filtrage-bar {
             width: 25rem;
             padding: 0 5px;
 

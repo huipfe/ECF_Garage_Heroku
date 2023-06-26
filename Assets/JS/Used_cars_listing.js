@@ -48,90 +48,6 @@ searchInput.addEventListener("input", searchCars);
 
 // /*--------------------------------------Barre de Filtrage-------------------------------------------*/
 
-// // Fonction de filtrage des voitures
-// const filtrerVoitures = () => {
-//     // Récupérer la liste des voitures
-//     const voitures = Array.from(document.getElementsByClassName("card"));
-
-//     // Parcourir la liste des voitures et appliquer les filtres
-//     voitures.forEach((voiture) => {
-//         // Récupérer les valeurs des cases à cocher à chaque itération
-//         const checkbox1 = document.getElementById("checkbox1").checked; // Supérieur à année >
-//         const checkbox2 = document.getElementById("checkbox2").checked; // Inférieur à année <
-//         const checkbox3 = document.getElementById("checkbox3").checked; // Supérieur à kilomètre >
-//         const checkbox4 = document.getElementById("checkbox4").checked; // Inférieur à kilomètre <
-//         const checkbox5 = document.getElementById("checkbox5").checked; // Supérieur ou égale à prix >=
-
-//         const annee = parseInt(voiture.querySelector(".filter-year span").textContent);
-//         const kilometrage = parseInt(voiture.querySelector(".filter-kilometrage span").textContent.replace("km", ""));
-//         const prix = parseInt(voiture.querySelector("#title-price span").textContent.replace(" ", "").replace("€", ""));
-
-//         // Afficher toutes les voitures si aucune case n'est cochée
-//         // if (!checkbox1 && !checkbox2 && !checkbox3 && !checkbox4 && !checkbox5) {
-//         //     voiture.style.display = "block";
-//         //     return;
-//         // }
-
-//         // Variable filtre
-//         const years = 2020;
-//         const kilometers = 2000;
-//         const prices = 100000;
-    
-
-//         // Filtrer par année
-//         const filtreAnnee1 = checkbox1 && annee > years;
-//         const filtreAnnee2 = checkbox2 && annee < years;
-
-//         // Filtrer par kilométrage
-//         const filtreKilometrage1 = checkbox3 && kilometrage > kilometers;
-//         const filtreKilometrage2 = checkbox4 && kilometrage < kilometers;
-
-//         // Filtrer par prix
-//         const filtrePrix = checkbox5 && prix >= prices;
-
-//         // Cacher les voitures qui ne passent pas les filtres
-//         if (filtreAnnee1 || filtreAnnee2 || filtreKilometrage1 || filtreKilometrage2 || filtrePrix) {
-//             voiture.style.display = "none";
-//         } else {
-//             voiture.style.display = "block";
-//         }
-//     });
-// };
-
-// // Lier la fonction de filtrage à l'événement "change" des cases à cocher
-// document.getElementById("checkbox1").addEventListener("change", filtrerVoitures);
-// document.getElementById("checkbox2").addEventListener("change", filtrerVoitures);
-// document.getElementById("checkbox3").addEventListener("change", filtrerVoitures);
-// document.getElementById("checkbox4").addEventListener("change", filtrerVoitures);
-// document.getElementById("checkbox5").addEventListener("change", filtrerVoitures);
-
-
-
-
-
-// /*-----------------------------Comportement checkbox - Barre de Filtrage---------------------------*/
-
-//     // Sélectionnez toutes les checkboxes avec la classe "form-check-input"
-//     const checkboxes = document.querySelectorAll('.form-check-input');
-
-//     // Ajoutez un gestionnaire d'événement "change" à chaque checkbox
-//     checkboxes.forEach(checkbox => {
-//         checkbox.addEventListener('change', function () {
-//             if (this.checked) {
-//                 // Si une checkbox est cochée, désactivez les autres checkboxes du même groupe
-//                 const groupName = this.getAttribute('name');
-//                 const groupCheckboxes = document.querySelectorAll(`input[name="${groupName}"]`);
-
-//                 groupCheckboxes.forEach(groupCheckbox => {
-//                     if (groupCheckbox !== this) {
-//                         groupCheckbox.checked = false;
-//                     }
-//                 });
-//             }
-//         });
-//     });
-
-
 // Fonction de filtrage des voitures
 const filtrerVoitures = () => {
     // Récupérer la liste des voitures
@@ -140,14 +56,14 @@ const filtrerVoitures = () => {
     // Parcourir la liste des voitures et appliquer les filtres
     voitures.forEach((voiture) => {
         // Récupérer les valeurs des cases à cocher à chaque itération
-        const checkbox1 = document.getElementById("checkbox1").checked; // Supérieur à année >
-        const checkbox2 = document.getElementById("checkbox2").checked; // Inférieur à année <
-        const checkbox3 = document.getElementById("checkbox3").checked; // Supérieur à kilomètre >
-        const checkbox4 = document.getElementById("checkbox4").checked; // Inférieur à kilomètre <
-        const checkbox5 = document.getElementById("checkbox5").checked; // Supérieur ou égale à prix >=
+        const checkbox1 = document.getElementById("checkbox1").checked; // Supérieur ou égale à année >=
+        const checkbox2 = document.getElementById("checkbox2").checked; // Inférieur ou égale à année <=
+        const checkbox3 = document.getElementById("checkbox3").checked; // Supérieur ou égale à kilomètre >=
+        const checkbox4 = document.getElementById("checkbox4").checked; // Inférieur ou égale à kilomètre <=
+        const checkbox5 = document.getElementById("checkbox5").checked; // Inférieur ou égale à prix <=
 
         const annee = parseInt(voiture.querySelector(".filter-year span").textContent);
-        const kilometrage = parseInt(voiture.querySelector(".filter-kilometrage span").textContent.replace("km", ""));
+        const kilometrage = parseInt(voiture.querySelector(".filter-kilometrage span").textContent.replace(" ", ""));
         const prix = parseInt(voiture.querySelector("#title-price span").textContent.replace(" ", "").replace("€", ""));
 
         // Afficher toutes les voitures si aucune case n'est cochée
@@ -162,21 +78,21 @@ const filtrerVoitures = () => {
         const prices = 100000;
 
         // Filtrer par année
-        const filtreAnnee1 = checkbox1 && annee > years;
-        const filtreAnnee2 = checkbox2 && annee < years;
+        const filtreAnnee1 = checkbox1 && annee >= years;
+        const filtreAnnee2 = checkbox2 && annee <= years;
 
         // Filtrer par kilométrage
-        const filtreKilometrage1 = checkbox3 && kilometrage > kilometers;
-        const filtreKilometrage2 = checkbox4 && kilometrage < kilometers;
+        const filtreKilometrage1 = checkbox3 && kilometrage >= kilometers;
+        const filtreKilometrage2 = checkbox4 && kilometrage <= kilometers;
 
         // Filtrer par prix
-        const filtrePrix = checkbox5 && prix >= prices;
+        const filtrePrix = checkbox5 && prix <= prices;
 
         // Cacher les voitures qui ne passent pas les filtres
         if (filtreAnnee1 || filtreAnnee2 || filtreKilometrage1 || filtreKilometrage2 || filtrePrix) {
-            voiture.style.display = "none";
-        } else {
             voiture.style.display = "block";
+        } else {
+            voiture.style.display = "none";
         }
     });
 };

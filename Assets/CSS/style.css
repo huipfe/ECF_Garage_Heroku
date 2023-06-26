@@ -636,7 +636,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar {
   padding: 0 10px;
 }
 section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-  margin-right: 6px;
+  margin-right: 2px;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -811,11 +811,11 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     margin-left: 2rem;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar {
-    height: 36px;
+    height: 34px;
     padding: 0 70px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-    margin-right: 38px;
+    margin-right: 34px;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -839,7 +839,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     padding: 0 25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-    margin-left: 12px;
+    margin-left: 9px;
     margin-right: 25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar span {
@@ -862,7 +862,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     padding: 0 22px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-    margin-right: 2px;
+    margin-right: -2px;
     margin-left: -25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar span {

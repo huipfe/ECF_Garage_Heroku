@@ -57,31 +57,31 @@ require_once "Header.html.php";
                     <div class="form-check ">
                         <input class="form-check-input"  type="checkbox" value="" id="checkbox1" name="years">
                         <label class="form-check-label cursor-pointer" for="checkbox1">
-                            <span class="checkbox-icon pe-none">2020></span>
+                            <span class="checkbox-icon pe-none">2020>=</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox2" name="years">
                         <label class="form-check-label cursor-pointer" for="checkbox2">
-                            <span class="checkbox-icon pe-none">2020<</span>
+                            <span class="checkbox-icon pe-none">2020<=</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox3" name="kilometers">
                         <label class="form-check-label cursor-pointer" for="checkbox3">
-                            <span class="checkbox-icon pe-none">2000km></span>
+                            <span class="checkbox-icon pe-none">2000km>=</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox4" name="kilometers">
                         <label class="form-check-label cursor-pointer" for="checkbox4">
-                            <span class="checkbox-icon pe-none">2000km<</span>
+                            <span class="checkbox-icon pe-none">2000km<=</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox5" name="price">
                         <label class="form-check-label cursor-pointer" for="checkbox5">
-                            <span class="checkbox-icon pe-none">100000€>=</span>
+                            <span class="checkbox-icon pe-none">100000€<=</span>
                         </label>
                     </div>
                 </div>
@@ -197,6 +197,73 @@ require_once "Header.html.php";
             </div>
         </div>
 
+                <div class="col-lg-4">
+            <div class="card mb-3" style="background: #E8E4E4;">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-12">
+                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
+                            alt="Image 3" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-lg-12">
+                        <div class="card-body mx-3 text-md-center text-lg-end">
+                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
+                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
+                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
+                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
+                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2025</span></p>
+                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                <span>1 000 km</span></p>
+                            <p class="card-text fs-5" id = "title-price">Prix :
+                                <span class="fw-bold">250 000 €</span></p>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-danger">Détails
+                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-4">
+            <div class="card mb-3" style="background: #E8E4E4;">
+                <div class="row g-0">
+                    <div class="col-md-5 col-lg-12">
+                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
+                            alt="Image 3" class="img-fluid">
+                    </div>
+                    <div class="col-md-7 col-lg-12">
+                        <div class="card-body mx-3 text-md-center text-lg-end">
+                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
+                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
+                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
+                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
+                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2018</span></p>
+                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                <span>1 000 km</span></p>
+                            <p class="card-text fs-5" id = "title-price">Prix :
+                                <span class="fw-bold">99 000 €</span></p>
+                            <div class="rating">
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                                <i class="bi bi-star"></i>
+                            </div>
+                            <a href="#" class="btn btn-danger">Détails
+                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     </div>
 </div>

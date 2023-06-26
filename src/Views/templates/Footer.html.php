@@ -85,7 +85,7 @@ integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/
 </script>
 
 <!-- JS du projet -->
-<script src="/Assets/JS/script.js"></script>
+<script src="/ECF_Garage/Assets/JS/script.js"></script>
 </body>
 
 </html>

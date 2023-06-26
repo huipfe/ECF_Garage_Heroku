@@ -76,35 +76,35 @@ require_once "Header.html.php";
                 <div class="col-lg-6">
                     <section>
                         <!-- Formulaire -->
-                        <div class="p-3 m-3 bg-light text-dark block-white-title">
+                        <div class="p-3 m-3 bg-light text-dark block-title">
                             <h2 class="title-dark fw-bold p-3">Je suis intéressé par...</h2>
                         
                             <div class="d-flex flex-wrap m-1">
-                                <button class="btn btn-danger block-rouge">
-                                    <p class="m-2 title-box-white">Les voitures d’occasions</p>
+                                <button class="btn-click btn btn-light block-white">
+                                    <p class="m-2 title-box-dark">Les voitures d’occasions</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Les belles carrosseries</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Les bons plans</p>
                                 </button>
                             </div>
                         
                             <div class="d-flex flex-wrap m-1 ">
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">La conception auto</p>
                                 </button>
                         
-                                <button class="block-white m-1 btn btn-light">
+                                <button class="block-white m-1 btn-click btn btn-light">
                                     <p class="m-1 title-box-dark">Autres</p>
                                 </button>
                             </div>
 
                             <!-- Partie message -->
-                            <form id="contactForm" action="/ECF_Garage/src/Models/sendMail.php" method="POST">
+                            <form id="contactForm">
                                 <!-- SurName & Name Input -->
                                 <div class="form-floating mb-3">
                                     <input class="form-control" name="name" id="name" type="text"
@@ -159,8 +159,6 @@ require_once "Header.html.php";
         </div>
     </div>
 </main>
-
-
 
 
 <?php 

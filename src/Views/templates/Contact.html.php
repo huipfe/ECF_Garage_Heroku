@@ -161,6 +161,8 @@ require_once "Header.html.php";
 </main>
 
 
+<script src="/ECF_Garage/Assets/JS/contact.js"></script>
+
 <?php 
 require_once "Footer.html.php";
 ?>

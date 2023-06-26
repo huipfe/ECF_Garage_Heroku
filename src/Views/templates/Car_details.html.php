@@ -14,9 +14,14 @@ require_once 'Header.html.php';
 ?>
 
 <main>
-<div>
-    <h1>Détails des voitures</h1>
-</div>
+
+<section id="">
+    <div>
+        <h1>Détails des voitures</h1>
+    </div>
+</section>
+
+
 </main>
 
 <?php 

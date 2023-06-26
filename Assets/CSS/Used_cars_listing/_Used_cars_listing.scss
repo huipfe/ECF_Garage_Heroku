@@ -198,8 +198,8 @@ main div  {
 // Barre de recherche
 
 
-// Barre de filtrage
-section {
+// Barre de filtrage Mobile
+section#filter-sidebar {
     div.filtrage-bar {
         display: flex;
         align-items: center;
@@ -239,20 +239,19 @@ section {
                 margin-top: 0;
             }
 
-            p {
+            span {
                 font-family: $font-text;
                 font-style: normal;
                 font-weight: 500;
                 font-size: 10px;
                 line-height: 12px;
                 text-align: start;
-                color: #262526;
+                color: $color-primary_white;
                 margin: 0 5px;
             }
         }
     }
 }
-
 
 
 // Checkbox
@@ -281,8 +280,225 @@ section {
 }
 
 
+// Barre de filtrage LG >992px
+
+@media (min-width: 1701px)   {
+    section#filter-sidebar {
+        div.filtrage-bar {
+            width: 70rem;
+            height: 4rem;
+            padding: 0 25px;
+            margin-left: 20rem;
+
+            div.gray-bar {
+                height: 50px;
+                padding: 0 130px;
+
+                .form-check {
+                    margin-right: 40px;
+                    margin-left: 20px;
+                }
+
+                span {
+                font-family: $font-text;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 10px;
+                text-align: start;
+                color: $color-primary_white;
+                margin: 0 5px;
+                }
+            }
+        }
+    }
+    .form-check-input[type="checkbox"] + .form-check-label::before {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+    }
+}
+
+@media (min-width: 1501px) and (max-width: 1700px)  {
+    section#filter-sidebar {
+        div.filtrage-bar {
+            width: 70rem;
+            height: 4rem;
+            padding: 0 25px;
+            margin-left: 15rem;
+
+            div.gray-bar {
+                height: 50px;
+                padding: 0 130px;
+
+                .form-check {
+                    margin-right: 40px;
+                    margin-left: 20px;
+                }
+
+                span {
+                font-family: $font-text;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 13px;
+                line-height: 20px;
+                text-align: start;
+                color: $color-primary_white;
+                margin: 0 5px;
+                }
+            }
+        }
+    }
+    .form-check-input[type="checkbox"] + .form-check-label::before {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+    }
+}
+
+
+
+@media (min-width: 1301px) and (max-width: 1500px) {
+    section#filter-sidebar {
+        div.filtrage-bar {
+            width: 70rem;
+            height: 4rem;
+            padding: 0 25px;
+            margin-left: 10rem;
+
+            div.gray-bar {
+                height: 50px;
+                padding: 0 130px;
+
+                .form-check {
+                    margin-right: 40px;
+                    margin-left: 20px;
+                }
+
+                span {
+                font-family: $font-text;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 12px;
+                text-align: start;
+                color: $color-primary_white;
+                margin: 0 5px;
+                }
+            }
+        }
+    }
+    .form-check-input[type="checkbox"] + .form-check-label::before {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+    }
+}
+
+
+
+@media (min-width: 1201px) and (max-width: 1300px) {
+    section#filter-sidebar {
+        div.filtrage-bar {
+            width: 70rem;
+            height: 4rem;
+            padding: 0 25px;
+            margin-left: 5rem;
+
+            div.gray-bar {
+                height: 50px;
+                padding: 0 130px;
+
+                .form-check {
+                    margin-right: 40px;
+                    margin-left: 20px;
+                }
+
+                span {
+                font-family: $font-text;
+                font-style: normal;
+                font-weight: 500;
+                font-size: 10px;
+                line-height: 12px;
+                text-align: start;
+                color: $color-primary_white;
+                margin: 0 5px;
+                }
+            }
+        }
+    }
+    .form-check-input[type="checkbox"] + .form-check-label::before {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+    border-radius: 5px;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1200px) {
+    section#filter-sidebar {
+        div.filtrage-bar {
+            width: 60rem;
+            height: 4rem;
+            padding: 0 30px;
+
+            margin-left: 2rem;
+
+            div.gray-bar {
+                height: 36px;
+                padding: 0 70px;
+
+                .form-check {
+                    margin-right: 40px;
+                    margin-bottom: 0;
+                    margin-top: 0;
+                }
+            }
+        }
+    }
+}
+
+// Barre de filtrage Mobile >819px
+// Barre de filtrage Mobile >819px
+@media (min-width: 819px) and (max-width: 992px) {
+    section#filter-sidebar {
+            div.filtrage-bar {
+                width: 50rem;
+                height: 4rem;
+                padding: 0 25px;
+                margin-left: 1rem;
+                margin-top: 15px;
+                margin-bottom: 20px;
+                h5.m-2.p-2.filtrage-title {
+                        font-size: 0.7rem;
+                }
+    
+                div.gray-bar {
+                    width: 20rem;
+                    height: 28px;
+                    margin: 1px;
+                    padding: 0 25px;
+    
+                    .form-check {
+                        margin-left: 15px;
+                        margin-right: 25px;
+                    }
+                    span {
+                        font-size: 9px;
+                        margin: 0 3px;
+
+                }
+            }
+        }
+    }
+}
+
+// Barre de filtrage Mobile <680px
 @media (min-width: 560px) and (max-width: 680px) {
-    section {
+    section#filter-sidebar {
         div.filtrage-bar {
             width: 30rem;
             padding: 0 5px;
@@ -298,12 +514,13 @@ section {
                 padding: 0 22px;
 
                 .form-check {
-                    margin-right: 10px;
+                    margin-right: 2px;
+                    margin-left: -20px;
                 }
 
-                p {
+                span {
                     font-size: 9px;
-                    margin: 0 3px;
+                    margin: 5 3px;
                 }
             }
         }
@@ -326,7 +543,7 @@ section {
 }
 
 @media (max-width: 559px) {
-    section {
+    section#filter-sidebar {
         div.filtrage-bar {
             width: 25rem;
             padding: 0 5px;
@@ -339,14 +556,14 @@ section {
                 width: 15rem;
                 height: 30px;
                 margin: 6px;
-                padding: 0 25px;
+                padding: 0 30px;
 
                 .form-check {
-                    margin-left: 2px;
-                    margin-right: 8px;
+                    margin-left: -15px;
+                    margin-right: 5px;
                 }
 
-                p {
+                span {
                     font-size: 6px;
                     margin: 0 3px;
                 }

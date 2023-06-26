@@ -48,8 +48,8 @@ require_once "Header.html.php";
     
     
     <!-- Barre de filtrage - Mobile -->
-    <section id = "sidebar-mobile">
-            <div class=" filtrage-bar d-lg-none">
+    <section id="filter-sidebar">
+            <div class=" filtrage-bar ">
                 <h5 class="m-2 p-2 filtrage-title">
                     Liste des voitures <br> d'occasions par filtre
                 </h5>
@@ -57,38 +57,79 @@ require_once "Header.html.php";
                     <div class="form-check ">
                         <input class="form-check-input"  type="checkbox" value="" id="checkbox1">
                         <label class="form-check-label cursor-pointer" for="checkbox1">
-                            <span class="checkbox-icon pe-none"> Filtre 1</span>
+                            <span class="checkbox-icon pe-none">Années</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox2">
                         <label class="form-check-label cursor-pointer" for="checkbox2">
-                            <span class="checkbox-icon pe-none">Filtre 2</span>
+                            <span class="checkbox-icon pe-none">Kilométrage</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox3">
                         <label class="form-check-label cursor-pointer" for="checkbox3">
-                            <span class="checkbox-icon pe-none">Filtre 3</span>
+                            <span class="checkbox-icon pe-none">Prix</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox4">
                         <label class="form-check-label cursor-pointer" for="checkbox4">
-                            <span class="checkbox-icon pe-none">Filtre 4</span>
+                            <span class="checkbox-icon pe-none">Note</span>
                         </label>
                     </div>
                     <div class="form-check">
                         <input class="form-check-input" type="checkbox" value="" id="checkbox5">
                         <label class="form-check-label cursor-pointer" for="checkbox5">
-                            <span class="checkbox-icon pe-none">Filtre 5</span>
+                            <span class="checkbox-icon pe-none">Filtre</span>
                         </label>
                     </div>
                 </div>
             </div>
     </section>
+
+    <!-- Barre de filtrage - LG (sidebar) -->
+    <!-- <section id="sidebar-lg" >
+        <div class="filtrage-bar-lg d-none d-lg-flex">
+            <h5 class="m-2 p-2 filtrage-title-lg">
+                Liste des voitures <br> d'occasions par filtre
+            </h5>
+            <div class="gray-bar-lg d-flex align-items-center">
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox1">
+                    <label class="form-check-label cursor-pointer" for="checkbox1">
+                        <span class="checkbox-icon pe-none"> Filtre 1</span>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                    <label class="form-check-label cursor-pointer" for="checkbox2">
+                        <span class="checkbox-icon pe-none">Filtre 2</span>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                    <label class="form-check-label cursor-pointer" for="checkbox3">
+                        <span class="checkbox-icon pe-none">Filtre 3</span>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox4">
+                    <label class="form-check-label cursor-pointer" for="checkbox4">
+                        <span class="checkbox-icon pe-none">Filtre 4</span>
+                    </label>
+                </div>
+                <div class="form-check mb-2">
+                    <input class="form-check-input" type="checkbox" value="" id="checkbox5">
+                    <label class="form-check-label cursor-pointer" for="checkbox5">
+                        <span class="checkbox-icon pe-none">Filtre 5</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </section> -->
         
-    <!-- -->
+    <!-- Main cars -->
         
 <div class="container">
     <div class="row">
@@ -191,49 +232,6 @@ require_once "Header.html.php";
                 </div>
             </div>
         </div>
-
-<!-- Barre de filtrage - LG (sidebar) -->
-<div class="col-lg-3 position-relative">
-    <section id="sidebar-lg" class="position-absolute top-50 start-100 translate-middle">
-        <div class="m-2 filtrage-bar d-none d-lg-flex flex-column">
-            <h5 class="m-2 p-2 filtrage-title">
-                Liste des voitures <br> d'occasions par filtre
-            </h5>
-            <div class="gray-bar d-flex flex-column align-items-center">
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox1">
-                    <label class="form-check-label cursor-pointer" for="checkbox1">
-                        <span class="checkbox-icon pe-none"> Filtre 1</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                    <label class="form-check-label cursor-pointer" for="checkbox2">
-                        <span class="checkbox-icon pe-none">Filtre 2</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox3">
-                    <label class="form-check-label cursor-pointer" for="checkbox3">
-                        <span class="checkbox-icon pe-none">Filtre 3</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                    <label class="form-check-label cursor-pointer" for="checkbox4">
-                        <span class="checkbox-icon pe-none">Filtre 4</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                    <label class="form-check-label cursor-pointer" for="checkbox5">
-                        <span class="checkbox-icon pe-none">Filtre 5</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </section>
-</div>
 
 
     </div>

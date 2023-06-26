@@ -234,7 +234,7 @@ section#filter-sidebar {
             padding: 0 10px;
 
             .form-check {
-                margin-right: 8px;
+                margin-right: 6px;
                 margin-bottom: 0;
                 margin-top: 0;
             }
@@ -452,7 +452,7 @@ section#filter-sidebar {
                 padding: 0 70px;
 
                 .form-check {
-                    margin-right: 40px;
+                    margin-right: 38px;
                     margin-bottom: 0;
                     margin-top: 0;
                 }
@@ -461,7 +461,6 @@ section#filter-sidebar {
     }
 }
 
-// Barre de filtrage Mobile >819px
 // Barre de filtrage Mobile >819px
 @media (min-width: 819px) and (max-width: 992px) {
     section#filter-sidebar {
@@ -483,7 +482,7 @@ section#filter-sidebar {
                     padding: 0 25px;
     
                     .form-check {
-                        margin-left: 15px;
+                        margin-left: 12px;
                         margin-right: 25px;
                     }
                     span {
@@ -515,7 +514,7 @@ section#filter-sidebar {
 
                 .form-check {
                     margin-right: 2px;
-                    margin-left: -20px;
+                    margin-left: -25px;
                 }
 
                 span {

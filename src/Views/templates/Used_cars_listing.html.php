@@ -55,79 +55,39 @@ require_once "Header.html.php";
                 </h5>
                 <div class="gray-bar d-flex align-items-center">
                     <div class="form-check ">
-                        <input class="form-check-input"  type="checkbox" value="" id="checkbox1">
+                        <input class="form-check-input"  type="checkbox" value="" id="checkbox1" name="years">
                         <label class="form-check-label cursor-pointer" for="checkbox1">
-                            <span class="checkbox-icon pe-none">Années</span>
+                            <span class="checkbox-icon pe-none">2020></span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox2">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox2" name="years">
                         <label class="form-check-label cursor-pointer" for="checkbox2">
-                            <span class="checkbox-icon pe-none">Kilométrage</span>
+                            <span class="checkbox-icon pe-none">2020<</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox3">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox3" name="kilometers">
                         <label class="form-check-label cursor-pointer" for="checkbox3">
-                            <span class="checkbox-icon pe-none">Prix</span>
+                            <span class="checkbox-icon pe-none">2000km></span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox4">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox4" name="kilometers">
                         <label class="form-check-label cursor-pointer" for="checkbox4">
-                            <span class="checkbox-icon pe-none">Note</span>
+                            <span class="checkbox-icon pe-none">2000km<</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox5">
+                        <input class="form-check-input" type="checkbox" value="" id="checkbox5" name="price">
                         <label class="form-check-label cursor-pointer" for="checkbox5">
-                            <span class="checkbox-icon pe-none">Filtre</span>
+                            <span class="checkbox-icon pe-none">100000€>=</span>
                         </label>
                     </div>
                 </div>
             </div>
     </section>
 
-    <!-- Barre de filtrage - LG (sidebar) -->
-    <!-- <section id="sidebar-lg" >
-        <div class="filtrage-bar-lg d-none d-lg-flex">
-            <h5 class="m-2 p-2 filtrage-title-lg">
-                Liste des voitures <br> d'occasions par filtre
-            </h5>
-            <div class="gray-bar-lg d-flex align-items-center">
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox1">
-                    <label class="form-check-label cursor-pointer" for="checkbox1">
-                        <span class="checkbox-icon pe-none"> Filtre 1</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox2">
-                    <label class="form-check-label cursor-pointer" for="checkbox2">
-                        <span class="checkbox-icon pe-none">Filtre 2</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox3">
-                    <label class="form-check-label cursor-pointer" for="checkbox3">
-                        <span class="checkbox-icon pe-none">Filtre 3</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox4">
-                    <label class="form-check-label cursor-pointer" for="checkbox4">
-                        <span class="checkbox-icon pe-none">Filtre 4</span>
-                    </label>
-                </div>
-                <div class="form-check mb-2">
-                    <input class="form-check-input" type="checkbox" value="" id="checkbox5">
-                    <label class="form-check-label cursor-pointer" for="checkbox5">
-                        <span class="checkbox-icon pe-none">Filtre 5</span>
-                    </label>
-                </div>
-            </div>
-        </div>
-    </section> -->
         
     <!-- Main cars -->
         
@@ -147,8 +107,9 @@ require_once "Header.html.php";
                             <p class="card-text fst-italic" id = "title-description">Ford Mustang GT, une voiture de
                                 sport emblématique avec un design élégant et des performances puissantes.</p>
                             <p class="card-text fs-5" id = "title-modele">Modèle : V8-GT </p>
-                            <p class="card-text fs-5" id = "title-year">Année : 2022</p>
-                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 5 000 km</p>
+                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2022</span></p>
+                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                <span>5 000 km</span></p>
                             <p class="card-text fs-5" id = "title-price">Prix :
                                 <span class="fw-bold">50 000 €</span></p>
                                 <div class="rating">
@@ -180,8 +141,9 @@ require_once "Header.html.php";
                             <p class="card-text fst-italic" id = "title-description">Audi R8 V10, une supercar de luxe
                                 avec un moteur V10 et une tenue de route exceptionnelle.</p>
                             <p class="card-text fs-5" id = "title-modele">Modèle : R8 V10</p>
-                            <p class="card-text fs-5" id = "title-year">Année : 2023</p>
-                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 2 000 km</p>
+                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2023</span></p>
+                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                <span>2 000 km</span></p>
                             <p class="card-text fs-5" id = "title-price">Prix :
                                 <span class="fw-bold">150 000 €</span></p>
                                 <div class="rating">
@@ -191,7 +153,8 @@ require_once "Header.html.php";
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star"></i>
                             </div>
-                            <a href="#" class="btn btn-danger">Détails
+                            <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
+                            class="btn btn-danger">Détails
                                 <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                             </a>
                         </div>
@@ -213,8 +176,9 @@ require_once "Header.html.php";
                             <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
                                 voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
                             <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text fs-5" id = "title-year">Année : 2018</p>
-                            <p class="card-text fs-5" id = "title-kilometrage">Kilométrage : 1 000 km</p>
+                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2018</span></p>
+                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                <span>1 000 km</span></p>
                             <p class="card-text fs-5" id = "title-price">Prix :
                                 <span class="fw-bold">370 000 €</span></p>
                             <div class="rating">

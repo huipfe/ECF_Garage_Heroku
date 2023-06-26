@@ -636,7 +636,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar {
   padding: 0 10px;
 }
 section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-  margin-right: 8px;
+  margin-right: 6px;
   margin-bottom: 0;
   margin-top: 0;
 }
@@ -815,7 +815,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     padding: 0 70px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-    margin-right: 40px;
+    margin-right: 38px;
     margin-bottom: 0;
     margin-top: 0;
   }
@@ -839,7 +839,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     padding: 0 25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
-    margin-left: 15px;
+    margin-left: 12px;
     margin-right: 25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar span {
@@ -863,7 +863,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar .form-check {
     margin-right: 2px;
-    margin-left: -20px;
+    margin-left: -25px;
   }
   section#filter-sidebar div.filtrage-bar div.gray-bar span {
     font-size: 9px;

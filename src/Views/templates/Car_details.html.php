@@ -10,7 +10,7 @@ Et pour obtenir la meilleure expérience utilisateur possible, les filtres devro
 sans recharger la page. -->
 
 <?php 
-require_once 'src/Views/templates/Header.html.php';
+require_once 'Header.html.php';
 ?>
 
 <main>
@@ -20,5 +20,5 @@ require_once 'src/Views/templates/Header.html.php';
 </main>
 
 <?php 
-require_once 'src/Views/templates/Footer.html.php';
+require_once 'Footer.html.php';
 ?>

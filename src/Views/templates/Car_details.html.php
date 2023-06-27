@@ -23,6 +23,7 @@ require_once 'Header.html.php';
             <div class="justify-content-start">
                 <button
                 class="btn">
+                <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">
                     <i
                     class="bi bi-arrow-left">
                     </i>
@@ -30,7 +31,7 @@ require_once 'Header.html.php';
             </div>
 
             <img
-            class="mb-2 mt-5 mx-2"
+            class="mb-2 mt-5"
             src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
             alt="voitureImage">
         </div>
@@ -38,18 +39,49 @@ require_once 'Header.html.php';
     </section>
     
 <!-- Descriptif  -->
-    <section>
-    
+    <section id="description">
+        <div class="m-2 fw-4"><p>Hot Sale</p></div>
+        <div class="m-2">
+            <h1>Nom Voiture®</h1>
+
+            <h2>Descriptif rapide</h2>
+
+            <h3>Année de la mise en circulation</h3>
+        </div>
+
+            <div class="m-3 mt-5 d-flex">
+                <h4 class="">Genre Véhicule</h4>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+                <i class="bi bi-star-fill"></i>
+            </div>
+
+            <div class="mb-5">
+                <h5 class="m-3 mt-5">Description :</h5>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
+
+                        <p>
+                        Odit inventore possimus repudiandae molestiae quaerat cum, velit,</p>
+
+                        <p>
+                        saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
+                        veritatis magni quibusdam labore ea?
+                    </p>
+            </div>
+
     </section>
 
 <!-- Série image modal & poids  -->
-    <section>
+    <section id="modal-image">
     
     </section>
 
 
 </main>
 
-<?php 
+<?php
 require_once 'Footer.html.php';
 ?>

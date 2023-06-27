@@ -62,7 +62,7 @@ ul.navbar-nav li.nav-item a.nav-link {
 }
 /* Footer */
 footer {
-  background-color: #262526;
+  background: linear-gradient(to bottom right, #333 0%, #000 50%) bottom right/50% 50% no-repeat, linear-gradient(to bottom left, #333 0%, #000 50%) bottom left/50% 50% no-repeat, linear-gradient(to top left, #333 0%, #000 50%) top left/50% 50% no-repeat, linear-gradient(to top right, #333 0%, #000 50%) top right/50% 50% no-repeat;
   color: #F2F2F2;
 }
 
@@ -935,11 +935,6 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
 section#header div.container {
   background: #D9777F;
 }
-section#header img {
-  width: 425px;
-  height: auto;
-}
-
 section#header div.justify-content-start {
   color: #262526;
   text-align: start;
@@ -949,8 +944,79 @@ section#header div.justify-content-start {
   line-height: 15px;
   letter-spacing: 0.24px;
 }
+section#header img {
+  width: 100%;
+  height: auto;
+}
 
 /* Descriptif */
+section#description div.m-2.fw-4 {
+  display: flex;
+  width: 100px;
+  height: auto;
+  padding: 2px 6px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--red, #F12B2C);
+  color: var(--primary-grey-6, #FFF);
+}
+section#description div.m-2.fw-4 p {
+  font-size: 14px;
+  margin: 0.5rem;
+  margin-left: 14px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+section#description div.m-2 h1, section#description div.m-2 h2 {
+  color: #000;
+  font-size: 25px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+section#description div.m-2 h3 {
+  color: #000;
+  font-size: 15px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+section#description div.m-3 h4 {
+  color: #D9777F;
+  text-align: start;
+  font-size: 20px;
+  margin-right: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.65px;
+}
+section#description div.m-3 .bi-star-fill::before {
+  content: "\f586";
+  color: #f2d900;
+}
+section#description div.mb-5 h5 {
+  color: #000;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+}
+section#description div.mb-5 p {
+  color: #000;
+  font-size: 13px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  line-height: 180%;
+  letter-spacing: 0.2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
 /* Série image modal & poids  */
 /* Import */
 /* Import *//*# sourceMappingURL=style.css.map */

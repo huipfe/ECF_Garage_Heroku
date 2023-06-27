@@ -1,20 +1,14 @@
 /* Haut de la page - image */
+
+
 // Container rouge fond
 section#header {
     div.container {
-        background: #D9777F;
+        background: $color-primary_red_light;
     }
-    // Image
-        img {
-            width: 425px;
-            height: auto;
-        }
-}
-
-// Bouton Retour flêche
-section#header {
+    // Bouton Retour flêche
     div.justify-content-start {
-        color: #262526;
+        color: $color-primary_black;
         text-align: start;
         font-size: 12px;
         font-family: $font-text;
@@ -22,12 +16,97 @@ section#header {
         line-height: 15px;
         letter-spacing: 0.24px;
     }
+    // Image
+        img {
+            width: 100%;
+            height: auto;
+        }
 }
 
 
+
 /* Descriptif */
+// Titre
+section#description {
+    div.m-2.fw-4 {
+        display: flex;
+        width: 100px;
+        height: auto;
+        padding: 2px 6px;
+        align-items: center;
+        gap: 10px;
+        flex-shrink: 0;
+        border-radius: 10px;
+        background: var(--red, #F12B2C);
+        color: var(--primary-grey-6, #FFF);
+            p {
+                font-size: 14px;
+                margin: 0.5rem;
+                margin-left: 14px;
+                font-family: $font-headline;
+                font-weight: 600;
+                letter-spacing: 0.72px;
+                text-transform: uppercase;
+            }
+    }
+    div.m-2 {
+        h1,h2 {
+        color: #000;
+        font-size: 25px;
+        font-family: $font-headline;
+        font-weight: 600;
+        }
+        h3 {
+        color: #000;
+        font-size: 15px;
+        font-family: $font-headline;
+        font-weight: 600;
+        }
+    }
+    div.m-3 {
+        // Genre + étoile
+        h4 {
+            color: #D9777F;
+            text-align: start;
+            font-size: 20px;
+            margin-right: 20px;
+            font-family: $font-text;
+            font-weight: 500;
+            line-height: 15px;
+            letter-spacing: 1.65px;
+        }
+        .bi-star-fill::before {
+        content: "\f586";
+        color: #f2d900;
+        // background-color: #D8D8DD;
+        }
+    }
+    div.mb-5 {
+        h5 {
+            color: #000;
+            font-size: 20px;
+            font-family: $font-text;
+            font-weight: 600;
+            line-height: 15px;
+            letter-spacing: 0.24px;
+        }
+        p {
+            color: #000;
+            font-size: 13px;
+            font-family: $font-text;
+            font-weight: 300;
+            line-height: 180%;
+            letter-spacing: 0.2px;
+            display: flex;
+            flex-direction: column;
+            margin-left: 1.5rem;
+        } 
+    }
+}
 
 //text
+
+
 
 
 /* Série image modal & poids  */

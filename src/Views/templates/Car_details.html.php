@@ -66,12 +66,8 @@ require_once 'Header.html.php';
             <div class="mb-5">
                 <h5 class="m-3 mt-5">Description :</h5>
                     <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-
-                        <p>
-                        Odit inventore possimus repudiandae molestiae quaerat cum, velit,</p>
-
-                        <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Odit inventore possimus repudiandae molestiae quaerat cum, velit,<br>
                         saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
                         veritatis magni quibusdam labore ea?
                     </p>
@@ -83,17 +79,38 @@ require_once 'Header.html.php';
     <section id="modal-image">
 
     <!-- Image modal -->
-        <div class="m-2" style="">
+        <div class="">
 
-        <button class="btn"><img src="" alt="miniature-1"></button>
-        <button class="btn"><img src="" alt="miniature-1"></button>
-        <button class="btn"><img src="" alt="miniature-1"></button>
+            <div class="m-2">
+    
+            <button class="btn">
+                <img
+                width= "50px";
+                height= "50px";
+                src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                alt="miniature-1"></button>
+    
+            <button class="btn">
+                <img
+                width= "50px";
+                height= "50px";
+                src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                alt="miniature-1"></button>
+    
+            <button class="btn">
+                <img
+                width= "50px";
+                height= "50px";
+                src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                alt="miniature-1"></button>
+    
+            </div>
+    
+            <div class="m-2">
+                <h5 class="m-2 mb-4">Poids :</h5>
+                    <div class="btn my-btn-danger mb-2 btn-danger">XX Tonnes</div>
+            </div>
 
-        </div>
-
-        <div class="m-2" style="">
-            <h5 class="">Poids :</h5>
-                <div class="btn btn-danger">XX Tonnes</div>
         </div>
 
     </section>

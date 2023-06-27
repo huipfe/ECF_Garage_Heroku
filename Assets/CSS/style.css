@@ -926,7 +926,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
   color: rgba(255, 210, 51, 0.4);
 }
 
-.btn-danger .bi-info-circle-fill {
+.btn-danger .bi-info-circle-fill, section#modal-image .my-btn-danger .bi-info-circle-fill {
   color: #D9777F;
 }
 
@@ -1018,5 +1018,42 @@ section#description div.mb-5 p {
 }
 
 /* Série image modal & poids  */
+section#modal-image {
+  display: flex;
+  width: 380px;
+  height: 189px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  flex-shrink: 0;
+}
+section#modal-image .m-2 {
+  align-items: center;
+  gap: 23px;
+  flex-shrink: 0;
+}
+section#modal-image button.btn, section#modal-image button.my-btn-danger {
+  border-radius: 10px;
+  border: 5px solid rgba(217, 67, 80, 0.2);
+  background: lightgray 6.132px 8.137px/75% 75% no-repeat, #FFF;
+}
+section#modal-image img {
+  width: 50px;
+  height: 50px;
+}
+section#modal-image h5 {
+  color: #000;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+}
+section#modal-image .my-btn-danger {
+  border-radius: 10px;
+  border: 2px solid rgba(241, 229, 229, 0.22);
+  background: #D94350;
+}
+
 /* Import */
 /* Import *//*# sourceMappingURL=style.css.map */

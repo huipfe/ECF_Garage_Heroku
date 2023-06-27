@@ -81,7 +81,21 @@ require_once 'Header.html.php';
 
 <!-- Série image modal & poids  -->
     <section id="modal-image">
-    
+
+    <!-- Image modal -->
+        <div class="m-2" style="">
+
+        <button class="btn"><img src="" alt="miniature-1"></button>
+        <button class="btn"><img src="" alt="miniature-1"></button>
+        <button class="btn"><img src="" alt="miniature-1"></button>
+
+        </div>
+
+        <div class="m-2" style="">
+            <h5 class="">Poids :</h5>
+                <div class="btn btn-danger">XX Tonnes</div>
+        </div>
+
     </section>
 
 

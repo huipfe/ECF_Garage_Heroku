@@ -7,14 +7,14 @@ section#header {
         background: $color-primary_red_light;
     }
     // Bouton Retour flêche
-    div.justify-content-start {
+    div.justify-content-start a.text-decoration-none span  {
         color: $color-primary_black;
         text-align: start;
         font-size: 12px;
         font-family: $font-text;
         font-weight: 500;
         line-height: 15px;
-        letter-spacing: 0.24px;
+        letter-spacing: 0.30px;
     }
     // Image
         img {
@@ -22,7 +22,6 @@ section#header {
             height: auto;
         }
 }
-
 
 
 /* Descriptif */
@@ -90,6 +89,7 @@ section#description {
             line-height: 15px;
             letter-spacing: 0.24px;
         }
+        //text
         p {
             color: #000;
             font-size: 13px;
@@ -103,9 +103,6 @@ section#description {
         } 
     }
 }
-
-//text
-
 
 
 

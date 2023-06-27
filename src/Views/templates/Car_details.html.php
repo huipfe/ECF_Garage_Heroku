@@ -21,15 +21,20 @@ require_once 'Header.html.php';
         <div class="container">
 
             <div class="justify-content-start">
-                <button
-                class="btn">
-                <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">
-                    <i
-                    class="bi bi-arrow-left">
-                    </i>
-                </button>Retour à la liste
+                <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
+                class="text-decoration-none">
+                <span>
+                    <button
+                    class="btn">
+                        <i
+                        class="bi bi-arrow-left"></i>
+                            Retour à la liste
+                        </span>
+                    </button>
+                </a>
             </div>
 
+    
             <img
             class="mb-2 mt-5"
             src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"

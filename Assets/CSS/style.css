@@ -935,14 +935,14 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
 section#header div.container {
   background: #D9777F;
 }
-section#header div.justify-content-start {
+section#header div.justify-content-start a.text-decoration-none span {
   color: #262526;
   text-align: start;
   font-size: 12px;
   font-family: "Barlow", sans-serif;
   font-weight: 500;
   line-height: 15px;
-  letter-spacing: 0.24px;
+  letter-spacing: 0.3px;
 }
 section#header img {
   width: 100%;

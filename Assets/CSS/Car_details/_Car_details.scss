@@ -1,159 +1,159 @@
 /* Haut de la page - image */
-
-
-// Container rouge fond
 section#header {
-    div.container {
-        background: $color-primary_red_light;
-    }
-    // Bouton Retour flêche
-    div.justify-content-start a.text-decoration-none span  {
-        color: $color-primary_black;
-        text-align: start;
-        font-size: 12px;
-        font-family: $font-text;
-        font-weight: 500;
-        line-height: 15px;
-        letter-spacing: 0.30px;
-    }
-    // Image
-        img {
-            width: 100%;
-            height: auto;
-        }
-}
+  div.container {
+    background: $color-primary_red_light;
+  }
 
+  /* Bouton Retour flêche */
+  div.justify-content-start a.text-decoration-none span {
+    color: $color-primary_black;
+    text-align: start;
+    font-size: 12px;
+    font-family: $font-text;
+    font-weight: 500;
+    line-height: 15px;
+    letter-spacing: 0.30px;
+  }
+
+  /* Image */
+  img {
+    width: 100%;
+    height: auto;
+  }
+}
 
 /* Descriptif */
-// Titre
 section#description {
-    div.m-2.fw-4 {
-        display: flex;
-        width: 100px;
-        height: auto;
-        padding: 2px 6px;
-        align-items: center;
-        gap: 10px;
-        flex-shrink: 0;
-        border-radius: 10px;
-        background: var(--red, #F12B2C);
-        color: var(--primary-grey-6, #FFF);
-            p {
-                font-size: 14px;
-                margin: 0.5rem;
-                margin-left: 14px;
-                font-family: $font-headline;
-                font-weight: 600;
-                letter-spacing: 0.72px;
-                text-transform: uppercase;
-            }
-    }
-    div.m-2 {
-        h1,h2 {
-        color: #000;
-        font-size: 25px;
-        font-family: $font-headline;
-        font-weight: 600;
-        }
-        h3 {
-        color: #000;
-        font-size: 15px;
-        font-family: $font-headline;
-        font-weight: 600;
-        }
-    }
-    div.m-3 {
-        // Genre + étoile
-        h4 {
-            color: #D9777F;
-            text-align: start;
-            font-size: 20px;
-            margin-right: 20px;
-            font-family: $font-text;
-            font-weight: 500;
-            line-height: 15px;
-            letter-spacing: 1.65px;
-        }
-        .bi-star-fill::before {
-        content: "\f586";
-        color: #f2d900;
-        // background-color: #D8D8DD;
-        }
-    }
-    div.mb-5 {
-        h5 {
-            color: #000;
-            font-size: 20px;
-            font-family: $font-text;
-            font-weight: 600;
-            line-height: 15px;
-            letter-spacing: 0.24px;
-        }
-        //text
-        p {
-            color: #000;
-            font-size: 13px;
-            font-family: $font-text;
-            font-weight: 300;
-            line-height: 180%;
-            letter-spacing: 0.2px;
-            display: flex;
-            flex-direction: column;
-            margin-left: 1.5rem;
-        } 
-    }
-}
-
-/* Série image modal & poids  */
-
-// Image modal
-section#modal-image {
+  div.m-2.fw-4 {
     display: flex;
-    width: 380px;
-    height: 189px;
-    flex-direction: column;
-    align-items: flex-start;
-    gap: 19px;
+    width: 100px;
+    height: auto;
+    padding: 2px 6px;
+    align-items: center;
+    gap: 10px;
     flex-shrink: 0;
+    border-radius: 10px;
+    background: var(--red, #F12B2C);
+    color: var(--primary-grey-6, #FFF);
 
-    .m-2 {
-        // display: flex;
-        // width: 220px;
-        // height: auto;
-        align-items: center;
-        gap: 23px;
-        flex-shrink: 0;
+    p {
+      font-size: 14px;
+      margin: 0.5rem;
+      margin-left: 14px;
+      font-family: $font-headline;
+      font-weight: 600;
+      letter-spacing: 0.72px;
+      text-transform: uppercase;
+    }
+  }
+
+  div.m-2 {
+    h1,
+    h2 {
+      color: #000;
+      font-size: 25px;
+      font-family: $font-headline;
+      font-weight: 600;
     }
 
-    button.btn {
-        border-radius: 10px;
-        border: 5px solid rgba(217, 67, 80, 0.20);
-        background: lightgray 6.132px 8.137px / 75% 75% no-repeat, #FFF;
+    h3 {
+      color: #000;
+      font-size: 15px;
+      font-family: $font-headline;
+      font-weight: 600;
+    }
+  }
+
+  div.m-3 {
+    /* Genre + étoile */
+    h4 {
+      color: #d9777f;
+      text-align: start;
+      font-size: 20px;
+      margin-right: 20px;
+      font-family: $font-text;
+      font-weight: 500;
+      line-height: 15px;
+      letter-spacing: 1.65px;
     }
 
-    img {
-        width: 50px;
-        height: 50px;
+    .bi-star-fill::before {
+      content: "\f586";
+      color: #f2d900;
     }
+  }
 
+  div.mb-5 {
     h5 {
-        color: #000;
-        font-size: 20px;
-        font-family: $font-text;
-        font-weight: 600;
-        line-height: 15px;
-        letter-spacing: 0.24px;
+      color: #000;
+      font-size: 20px;
+      font-family: $font-text;
+      font-weight: 600;
+      line-height: 15px;
+      letter-spacing: 0.24px;
     }
-     // Button
-// Button
-    .my-btn-danger {
-        @extend .btn;
-        @extend .btn-danger;
-        border-radius: 10px;
-        border: 2px solid rgba(241, 229, 229, 0.22);
-        background: #D94350;
+
+    /* Text */
+    p {
+      color: #000;
+      font-size: 13px;
+      font-family: $font-text;
+      font-weight: 300;
+      line-height: 180%;
+      letter-spacing: 0.2px;
+      display: flex;
+      flex-direction: column;
+      margin-left: 1.5rem;
     }
+  }
 }
+
+/* Série image modal & poids */
+section#modal-image {
+  display: flex;
+  width: 380px;
+  height: 189px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  flex-shrink: 0;
+
+  .m-2 {
+    align-items: center;
+    gap: 23px;
+    flex-shrink: 0;
+  }
+
+  button.btn {
+    border-radius: 10px;
+    border: 5px solid rgba(217, 67, 80, 0.20);
+    background: lightgray 6.132px 8.137px / 75% 75% no-repeat, #FFF;
+  }
+
+  img {
+    width: 50px;
+    height: 50px;
+  }
+
+  h5 {
+    color: #000;
+    font-size: 20px;
+    font-family: $font-text;
+    font-weight: 600;
+    line-height: 15px;
+    letter-spacing: 0.24px;
+  }
+
+  /* Button */
+  .my-btn-danger {
+    @extend .btn;
+    @extend .btn-danger;
+    border-radius: 10px;
+    border: 2px solid rgba(241, 229, 229, 0.22);
+    background: #d94350;
+  }
+}
+
 
 
 

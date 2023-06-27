@@ -127,7 +127,8 @@ require_once 'Header.html.php';
             <div class="col-lg-6">
                 <section id="header">
                     <div class="justify-content-start">
-                        <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php" class="text-decoration-none">
+                        <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
+                        class="text-decoration-none">
                             <span>
                                 <button class="btn">
                                     <i class="bi bi-arrow-left"></i>
@@ -136,7 +137,9 @@ require_once 'Header.html.php';
                             </span>
                         </a>
                     </div>
-                    <img class="mb-2 mt-5" src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg" alt="voitureImage">
+                    <img class="mb-2 mt-5"
+                    src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
+                    alt="voitureImage">
                 </section>
             </div>
             
@@ -175,13 +178,25 @@ require_once 'Header.html.php';
                             <div class="">
                                 <div class="m-2">
                                     <button class="btn">
-                                        <img width="50px" height="50px" src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg" alt="miniature-1">
+                                        <img
+                                        width="50px"
+                                        height="50px"
+                                        src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                        alt="miniature-1">
                                     </button>
                                     <button class="btn">
-                                        <img width="50px" height="50px" src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg" alt="miniature-1">
+                                        <img
+                                        width="50px"
+                                        height="50px"
+                                        src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                                        alt="miniature-1">
                                     </button>
                                     <button class="btn">
-                                        <img width="50px" height="50px" src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg" alt="miniature-1">
+                                        <img
+                                        width="50px"
+                                        height="50px"
+                                        src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                        alt="miniature-1">
                                     </button>
                                 </div>
                                 <div class="m-2">

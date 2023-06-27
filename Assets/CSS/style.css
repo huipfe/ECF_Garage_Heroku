@@ -932,6 +932,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
 
 /* Import Car details. */
 /* Haut de la page - image */
+section#header {
+  /* Bouton Retour flêche */
+  /* Image */
+}
 section#header div.container {
   background: #D9777F;
 }
@@ -971,7 +975,8 @@ section#description div.m-2.fw-4 p {
   letter-spacing: 0.72px;
   text-transform: uppercase;
 }
-section#description div.m-2 h1, section#description div.m-2 h2 {
+section#description div.m-2 h1,
+section#description div.m-2 h2 {
   color: #000;
   font-size: 25px;
   font-family: "Rajdhani", sans-serif;
@@ -983,8 +988,11 @@ section#description div.m-2 h3 {
   font-family: "Rajdhani", sans-serif;
   font-weight: 600;
 }
+section#description div.m-3 {
+  /* Genre + étoile */
+}
 section#description div.m-3 h4 {
-  color: #D9777F;
+  color: #d9777f;
   text-align: start;
   font-size: 20px;
   margin-right: 20px;
@@ -996,6 +1004,9 @@ section#description div.m-3 h4 {
 section#description div.m-3 .bi-star-fill::before {
   content: "\f586";
   color: #f2d900;
+}
+section#description div.mb-5 {
+  /* Text */
 }
 section#description div.mb-5 h5 {
   color: #000;
@@ -1017,7 +1028,7 @@ section#description div.mb-5 p {
   margin-left: 1.5rem;
 }
 
-/* Série image modal & poids  */
+/* Série image modal & poids */
 section#modal-image {
   display: flex;
   width: 380px;
@@ -1026,6 +1037,7 @@ section#modal-image {
   align-items: flex-start;
   gap: 19px;
   flex-shrink: 0;
+  /* Button */
 }
 section#modal-image .m-2 {
   align-items: center;
@@ -1052,7 +1064,7 @@ section#modal-image h5 {
 section#modal-image .my-btn-danger {
   border-radius: 10px;
   border: 2px solid rgba(241, 229, 229, 0.22);
-  background: #D94350;
+  background: #d94350;
 }
 
 /* Import */

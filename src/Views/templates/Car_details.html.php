@@ -126,6 +126,7 @@ require_once 'Header.html.php';
             <!-- Section header -->
             <div class="col-lg-6">
                 <section id="header">
+                    <div class="container">
                     <div class="justify-content-start">
                         <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
                         class="text-decoration-none">
@@ -137,9 +138,10 @@ require_once 'Header.html.php';
                             </span>
                         </a>
                     </div>
-                    <img class="mb-2 mt-5"
+                    <img class="mb-3 mt-5"
                     src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
                     alt="voitureImage">
+                    </div>
                 </section>
             </div>
             

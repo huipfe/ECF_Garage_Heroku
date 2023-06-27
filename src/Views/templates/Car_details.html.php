@@ -13,112 +13,6 @@ sans recharger la page. -->
 require_once 'Header.html.php';
 ?>
 
-<!-- <main> -->
-
-<!-- Haut de la page - image -->
-    <!-- <section id="header">
-
-        <div class="container">
-
-            <div class="justify-content-start">
-                <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
-                class="text-decoration-none">
-                <span>
-                    <button
-                    class="btn">
-                        <i
-                        class="bi bi-arrow-left"></i>
-                            Retour à la liste
-                        </span>
-                    </button>
-                </a>
-            </div>
-
-    
-            <img
-            class="mb-2 mt-5"
-            src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
-            alt="voitureImage">
-        </div>
-
-    </section> -->
-    
-<!-- Descriptif  -->
-    <!-- <section id="description">
-        <div class="m-2 fw-4"><p>Hot Sale</p></div>
-        <div class="m-2">
-            <h1>Nom Voiture®</h1>
-
-            <h2>Descriptif rapide</h2>
-
-            <h3>Année de la mise en circulation</h3>
-        </div>
-
-            <div class="m-3 mt-5 d-flex">
-                <h4 class="">Genre Véhicule</h4>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-                <i class="bi bi-star-fill"></i>
-            </div>
-
-            <div class="mb-5">
-                <h5 class="m-3 mt-5">Description :</h5>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                        Odit inventore possimus repudiandae molestiae quaerat cum, velit,<br>
-                        saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
-                        veritatis magni quibusdam labore ea?
-                    </p>
-            </div>
-
-    </section> -->
-
-<!-- Série image modal & poids  -->
-    <!-- <section id="modal-image"> -->
-
-    <!-- Image modal -->
-        <!-- <div class="">
-
-            <div class="m-2">
-    
-            <button class="btn">
-                <img
-                width= "50px";
-                height= "50px";
-                src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
-                alt="miniature-1"></button>
-    
-            <button class="btn">
-                <img
-                width= "50px";
-                height= "50px";
-                src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
-                alt="miniature-1"></button>
-    
-            <button class="btn">
-                <img
-                width= "50px";
-                height= "50px";
-                src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
-                alt="miniature-1"></button>
-    
-            </div>
-    
-            <div class="m-2">
-                <h5 class="m-2 mb-4">Poids :</h5>
-                    <div class="btn my-btn-danger mb-2 btn-danger">XX Tonnes</div>
-            </div>
-
-        </div>
-
-    </section>
-
-
-</main> 
--->
-
 <main>
 
     <div class="container-lg">
@@ -145,15 +39,18 @@ require_once 'Header.html.php';
                 </section>
             </div>
             
-            <!-- Section description and modal-image -->
+            <!-- Section description -->
             <div class="col-lg-6">
                 <div class="row">
+
                     <div class="col-lg-12">
                         <section id="description">
                             <div class="m-2 fw-4"><p>Hot Sale</p></div>
-                            <div class="m-2">
+                            <div class="m-2 d-lg-flex">
                                 <h1>Nom Voiture®</h1>
                                 <h2>Descriptif rapide</h2>
+                            </div>
+                            <div class="m-2">
                                 <h3>Année de la mise en circulation</h3>
                             </div>
                             <div class="m-3 mt-5 d-flex">
@@ -166,34 +63,40 @@ require_once 'Header.html.php';
                             </div>
                             <div class="mb-5">
                                 <h5 class="m-3 mt-5">Description :</h5>
-                                <p>
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Odit inventore possimus repudiandae molestiae quaerat cum, velit,<br>
+                                <ul class="list-unstyled">
+                                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Odit inventore possimus repudiandae molestiae quaerat cum, velit,
                                     saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
-                                    veritatis magni quibusdam labore ea?
-                                </p>
+                                    veritatis magni quibusdam labore ea?</p></li>
+                                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                                    Odit inventore possimus repudiandae molestiae quaerat cum, velit,
+                                    saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
+                                    veritatis magni quibusdam labore ea?</p></li>
+                                </ul>
                             </div>
                         </section>
                     </div>
+
+                    <!-- Section image modal & poids -->
                     <div class="col-lg-12">
                         <section id="modal-image">
-                            <div class="">
+                            <div>
                                 <div class="m-2">
-                                    <button class="btn">
+                                    <button class="btn" data-toggle="modal" data-target="#imageModal1">
                                         <img
                                         width="50px"
                                         height="50px"
                                         src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
                                         alt="miniature-1">
                                     </button>
-                                    <button class="btn">
+                                    <button class="btn" data-toggle="modal" data-target="#imageModal2">
                                         <img
                                         width="50px"
                                         height="50px"
                                         src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
                                         alt="miniature-1">
                                     </button>
-                                    <button class="btn">
+                                    <button class="btn" data-toggle="modal" data-target="#imageModal3">
                                         <img
                                         width="50px"
                                         height="50px"
@@ -208,8 +111,124 @@ require_once 'Header.html.php';
                             </div>
                         </section>
                     </div>
+
+                    <!-- Modal 1 -->
+                    <div class="modal fade"
+                    id="imageModal1"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="imageModalLabel1"
+                    aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel1">Image 1</h5>
+                                    <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                    alt="miniature-1"
+                                    class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Modal 2 -->
+                    <div class="modal fade"
+                    id="imageModal2"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="imageModalLabel2"
+                    aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel2">Image 2</h5>
+                                    <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                                    alt="miniature-2"
+                                    class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <!-- Modal 3 -->
+                    <div class="modal fade"
+                    id="imageModal3"
+                    tabindex="-1"
+                    role="dialog"
+                    aria-labelledby="imageModalLabel3"
+                    aria-hidden="true">
+                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                            <div class="modal-content">
+                                <div class="modal-header">
+                                    <h5 class="modal-title" id="imageModalLabel3">Image 3</h5>
+                                    <button
+                                    type="button"
+                                    class="close"
+                                    data-dismiss="modal"
+                                    aria-label="Close">
+                                        <span aria-hidden="true">&times;</span>
+                                    </button>
+                                </div>
+                                <div class="modal-body">
+                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                    alt="miniature-3"
+                                    class="img-fluid">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Button trigger modal -->
+<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                        width="50px"
+                                        height="50px"
+                                    alt="miniature-3"
+                                    class="img-fluid">
+</button> -->
+
+<!-- Modal -->
+<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body">
+                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                    alt="miniature-3"
+                                    class="img-fluid">
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+        <button type="button" class="btn btn-primary">Save changes</button>
+      </div>
+    </div>
+  </div>
+</div> -->
+
                 </div>
             </div>
+
         </div>
     </div>
 

@@ -931,5 +931,26 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
 }
 
 /* Import Car details. */
+/* Haut de la page - image */
+section#header div.container {
+  background: #D9777F;
+}
+section#header img {
+  width: 425px;
+  height: auto;
+}
+
+section#header div.justify-content-start {
+  color: #262526;
+  text-align: start;
+  font-size: 12px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+}
+
+/* Descriptif */
+/* Série image modal & poids  */
 /* Import */
 /* Import *//*# sourceMappingURL=style.css.map */

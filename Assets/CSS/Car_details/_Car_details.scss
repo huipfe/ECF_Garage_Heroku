@@ -1,1 +1,37 @@
-// Titre
+/* Haut de la page - image */
+// Container rouge fond
+section#header {
+    div.container {
+        background: #D9777F;
+    }
+    // Image
+        img {
+            width: 425px;
+            height: auto;
+        }
+}
+
+// Bouton Retour flêche
+section#header {
+    div.justify-content-start {
+        color: #262526;
+        text-align: start;
+        font-size: 12px;
+        font-family: $font-text;
+        font-weight: 500;
+        line-height: 15px;
+        letter-spacing: 0.24px;
+    }
+}
+
+
+/* Descriptif */
+
+//text
+
+
+/* Série image modal & poids  */
+
+// Image modal
+
+// Button

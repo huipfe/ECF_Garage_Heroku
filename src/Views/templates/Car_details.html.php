@@ -15,11 +15,37 @@ require_once 'Header.html.php';
 
 <main>
 
-<section id="">
-    <div>
-        <h1>Détails des voitures</h1>
-    </div>
-</section>
+<!-- Haut de la page - image -->
+    <section id="header">
+
+        <div class="container">
+
+            <div class="justify-content-start">
+                <button
+                class="btn">
+                    <i
+                    class="bi bi-arrow-left">
+                    </i>
+                </button>Retour à la liste
+            </div>
+
+            <img
+            class="mb-2 mt-5 mx-2"
+            src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
+            alt="voitureImage">
+        </div>
+
+    </section>
+    
+<!-- Descriptif  -->
+    <section>
+    
+    </section>
+
+<!-- Série image modal & poids  -->
+    <section>
+    
+    </section>
 
 
 </main>

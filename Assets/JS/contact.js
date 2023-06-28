@@ -10,7 +10,7 @@ function submitForm(event) {
 
     // Créer une requête AJAX
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/ECF_Garage/src/Models/sendMail.php', true);
+    xhr.open('POST', '/ECF_Garage/src/Utils/sendMail.php', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             // Réponse de la requête AJAX
@@ -82,35 +82,38 @@ form.addEventListener('submit', submitForm);
 
 // Fonction pour réinitialiser le formulaire
 function resetForm() {
-    let form = document.getElementById('contactForm');
-    form.reset();
+  let form = document.getElementById('contactForm');
+  form.reset();
 }
 
 // Fonction pour envoyer le formulaire via AJAX
 function submitForm(event) {
-    event.preventDefault(); // Empêcher le rechargement de la page par défaut
+  event.preventDefault(); // Empêcher le rechargement de la page par défaut
 
-    // Récupérer les données du formulaire
-    let form = document.getElementById('contactForm');
-    let formData = new FormData(form);
+  // Récupérer les données du formulaire
+  let form = document.getElementById('contactForm');
+  let formData = new FormData(form);
 
-    // Créer une requête AJAX
-    let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/ECF_Garage/src/Utils/sendMail.php', true);
-    xhr.onreadystatechange = function () {
-        if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
-            // Réponse de la requête AJAX
-            let response = xhr.responseText;
-            // Afficher une modal en fonction de la réponse
-            displayModal(response);
-            // Réinitialiser le formulaire
-            resetForm();
-        }
-    };
+  // Créer une requête AJAX
+  let xhr = new XMLHttpRequest();
 
-    // Envoyer les données du formulaire via AJAX
-    xhr.send(formData);
+  xhr.open('POST', '/ECF_Garage/src/Utils/sendMail.php', true);
+
+  xhr.onreadystatechange = function () {
+    if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
+      // Réponse de la requête AJAX
+      let response = xhr.responseText;
+      // Afficher une modal en fonction de la réponse
+      displayModal(response);
+      // Réinitialiser le formulaire
+      resetForm();
+    }
+  };
+
+  // Envoyer les données du formulaire via AJAX
+  xhr.send(formData);
 }
+
 
 /*-------------------------------------------Click Bouton-----------------------------------------*/
 

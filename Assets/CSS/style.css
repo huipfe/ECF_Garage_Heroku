@@ -62,7 +62,7 @@ ul.navbar-nav li.nav-item a.nav-link {
 }
 /* Footer */
 footer {
-  background-color: #262526;
+  background: linear-gradient(to bottom right, #333 0%, #000 50%) bottom right/50% 50% no-repeat, linear-gradient(to bottom left, #333 0%, #000 50%) bottom left/50% 50% no-repeat, linear-gradient(to top left, #333 0%, #000 50%) top left/50% 50% no-repeat, linear-gradient(to top right, #333 0%, #000 50%) top right/50% 50% no-repeat;
   color: #F2F2F2;
 }
 
@@ -926,10 +926,178 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
   color: rgba(255, 210, 51, 0.4);
 }
 
-.btn-danger .bi-info-circle-fill {
+.btn-danger .bi-info-circle-fill, section#modal-image .my-btn-danger .bi-info-circle-fill {
   color: #D9777F;
 }
 
-/* Import */
+/* Import Car details. */
+/* Haut de la page - image */
+section#header {
+  /* Bouton Retour flêche */
+  /* Image */
+}
+section#header div.container {
+  background: #D9777F;
+  width: auto;
+  height: 380px;
+}
+@media (min-width: 480px) and (max-width: 520px) {
+  section#header div.container {
+    height: 410px;
+  }
+}
+@media (min-width: 521px) and (max-width: 767px) {
+  section#header div.container {
+    height: 450px;
+  }
+}
+@media (min-width: 768px) and (max-width: 992px) {
+  section#header div.container {
+    height: 570px;
+  }
+}
+@media (min-width: 993px) and (max-width: 1200px) {
+  section#header div.container {
+    height: 410px;
+  }
+}
+@media (min-width: 1200px) and (max-width: 1400px) {
+  section#header div.container {
+    height: 450px;
+  }
+}
+@media (min-width: 1400px) {
+  section#header div.container {
+    height: 500px;
+  }
+}
+section#header div.justify-content-start a.text-decoration-none span {
+  color: #262526;
+  text-align: start;
+  font-size: 12px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 0.3px;
+}
+section#header img {
+  width: 100%;
+  height: auto;
+}
+
+/* Descriptif */
+section#description div.m-2.fw-4 {
+  display: flex;
+  width: 100px;
+  height: auto;
+  padding: 2px 6px;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+  border-radius: 10px;
+  background: var(--red, #F12B2C);
+  color: var(--primary-grey-6, #FFF);
+}
+section#description div.m-2.fw-4 p {
+  font-size: 14px;
+  margin: 0.5rem;
+  margin-left: 14px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+  letter-spacing: 0.72px;
+  text-transform: uppercase;
+}
+section#description div.m-2 h1,
+section#description div.m-2 h2 {
+  color: #000;
+  font-size: 25px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+section#description div.m-2 h3 {
+  color: #000;
+  font-size: 15px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
+section#description div.m-3 {
+  /* Genre + étoile */
+}
+section#description div.m-3 h4 {
+  color: #d9777f;
+  text-align: start;
+  font-size: 20px;
+  margin-right: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  line-height: 15px;
+  letter-spacing: 1.65px;
+}
+section#description div.m-3 .bi-star-fill::before {
+  content: "\f586";
+  color: #f2d900;
+}
+section#description div.mb-2 {
+  /* Text */
+}
+section#description div.mb-2 h5 {
+  color: #000;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+}
+section#description div.mb-2 p {
+  color: #000;
+  font-size: 13px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 300;
+  line-height: 180%;
+  letter-spacing: 0.2px;
+  display: flex;
+  flex-direction: column;
+  margin-left: 1.5rem;
+}
+
+/* Série image modal & poids */
+section#modal-image {
+  display: flex;
+  width: 380px;
+  height: 189px;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 19px;
+  flex-shrink: 0;
+  /* Button */
+}
+section#modal-image .m-2 {
+  align-items: center;
+  gap: 23px;
+  flex-shrink: 0;
+}
+section#modal-image button.btn, section#modal-image button.my-btn-danger {
+  border-radius: 10px;
+  border: 5px solid rgba(217, 67, 80, 0.2);
+  background: lightgray 6.132px 8.137px/75% 75% no-repeat, #FFF;
+}
+section#modal-image img {
+  width: 50px;
+  height: 50px;
+}
+section#modal-image h5 {
+  color: #000;
+  font-size: 20px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 600;
+  line-height: 15px;
+  letter-spacing: 0.24px;
+}
+section#modal-image .my-btn-danger {
+  border-radius: 10px;
+  border: 2px solid rgba(241, 229, 229, 0.22);
+  background: #d94350;
+}
+
 /* Import */
 /* Import *//*# sourceMappingURL=style.css.map */

@@ -170,8 +170,8 @@ section#modal-image {
 
   /* Button */
     .my-btn-danger {
-        @extend .btn;
-        @extend .btn-danger;
+        @extend .btn !optional;
+        @extend .btn-danger !optional;
         border-radius: 10px;
         border: 2px solid rgba(241, 229, 229, 0.22);
         background: #d94350;

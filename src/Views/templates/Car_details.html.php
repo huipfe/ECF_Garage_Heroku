@@ -82,21 +82,21 @@ require_once 'Header.html.php';
                         <section id="modal-image">
                             <div>
                                 <div class="m-2">
-                                    <button class="btn" data-toggle="modal" data-target="#imageModal1">
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal1">
                                         <img
                                         width="50px"
                                         height="50px"
                                         src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
                                         alt="miniature-1">
                                     </button>
-                                    <button class="btn" data-toggle="modal" data-target="#imageModal2">
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal2">
                                         <img
                                         width="50px"
                                         height="50px"
                                         src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
                                         alt="miniature-1">
                                     </button>
-                                    <button class="btn" data-toggle="modal" data-target="#imageModal3">
+                                    <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal3">
                                         <img
                                         width="50px"
                                         height="50px"
@@ -113,100 +113,117 @@ require_once 'Header.html.php';
                     </div>
 
                     <!-- Modal 1 -->
-                    <div class="modal fade"
+                    <div
+                    class="modal fade"
                     id="imageModal1"
                     tabindex="-1"
-                    role="dialog"
                     aria-labelledby="imageModalLabel1"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel1">Image 1</h5>
                                     <button
                                     type="button"
-                                    class="close"
-                                    data-dismiss="modal"
-                                    aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                    <img
+                                    src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
                                     alt="miniature-1"
                                     class="img-fluid">
                                 </div>
+                                    <div class="modal-footer">
+                                        <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    </div>
                             </div>
                         </div>
                     </div>
-
+                    
                     <!-- Modal 2 -->
-                    <div class="modal fade"
+                    <div
+                    class="modal fade"
                     id="imageModal2"
                     tabindex="-1"
-                    role="dialog"
                     aria-labelledby="imageModalLabel2"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel2">Image 2</h5>
                                     <button
                                     type="button"
-                                    class="close"
-                                    data-dismiss="modal"
-                                    aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                                    <img
+                                    width= "480px"
+                                    height= "320px"
+                                    src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
                                     alt="miniature-2"
                                     class="img-fluid">
                                 </div>
+                                    <div class="modal-footer">
+                                        <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    </div>
                             </div>
                         </div>
                     </div>
                     
                     <!-- Modal 3 -->
-                    <div class="modal fade"
-                    id="imageModal3"
-                    tabindex="-1"
-                    role="dialog"
+                    <div
+                    class="modal fade"
+                    id="imageModal3" tabindex="-1"
                     aria-labelledby="imageModalLabel3"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+                        <div class="modal-dialog modal-dialog-centered">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel3">Image 3</h5>
                                     <button
                                     type="button"
-                                    class="close"
-                                    data-dismiss="modal"
-                                    aria-label="Close">
-                                        <span aria-hidden="true">&times;</span>
-                                    </button>
+                                    class="btn-close"
+                                    data-bs-dismiss="modal"
+                                    aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
                                     <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
                                     alt="miniature-3"
                                     class="img-fluid">
                                 </div>
+                                    <div class="modal-footer">
+                                        <button
+                                        type="button"
+                                        class="btn btn-secondary"
+                                        data-bs-dismiss="modal">Close</button>
+                                    </div>
                             </div>
                         </div>
                     </div>
 
-                    <!-- Button trigger modal -->
-<!-- <button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+
+
+<!-- Button trigger modal -->
+<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
+                                        <img
                                         width="50px"
                                         height="50px"
-                                    alt="miniature-3"
-                                    class="img-fluid">
-</button> -->
+                                        src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                        alt="miniature-1">
+</button>
 
 <!-- Modal -->
-<!-- <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
@@ -224,7 +241,8 @@ require_once 'Header.html.php';
       </div>
     </div>
   </div>
-</div> -->
+</div>
+
 
                 </div>
             </div>

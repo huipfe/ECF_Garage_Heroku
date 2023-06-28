@@ -1037,10 +1037,10 @@ section#description div.m-3 .bi-star-fill::before {
   content: "\f586";
   color: #f2d900;
 }
-section#description div.mb-5 {
+section#description div.mb-2 {
   /* Text */
 }
-section#description div.mb-5 h5 {
+section#description div.mb-2 h5 {
   color: #000;
   font-size: 20px;
   font-family: "Barlow", sans-serif;
@@ -1048,7 +1048,7 @@ section#description div.mb-5 h5 {
   line-height: 15px;
   letter-spacing: 0.24px;
 }
-section#description div.mb-5 p {
+section#description div.mb-2 p {
   color: #000;
   font-size: 13px;
   font-family: "Barlow", sans-serif;

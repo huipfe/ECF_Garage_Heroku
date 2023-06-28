@@ -61,7 +61,7 @@ require_once 'Header.html.php';
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                             </div>
-                            <div class="mb-5">
+                            <div class="mb-2">
                                 <h5 class="m-3 mt-5">Description :</h5>
                                 <ul class="list-unstyled">
                                     <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
@@ -104,7 +104,7 @@ require_once 'Header.html.php';
                                         alt="miniature-1">
                                     </button>
                                 </div>
-                                <div class="m-2">
+                                <div class="mb-3 mt-4">
                                     <h5 class="m-2 mb-4">Poids :</h5>
                                     <div class="btn my-btn-danger mb-2 btn-danger">XX Tonnes</div>
                                 </div>

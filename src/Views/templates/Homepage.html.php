@@ -37,11 +37,19 @@ require_once "Header.html.php";
             me-md-autolink-body-emphasistext-decoration-none position-absolute bottom-30 top-50
             start-50 translate-middle">
                 <!-- Mobile Bouton -->
-                <img src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_mobile.png" class="img-fluid d-lg-none d-block"
-                width="60" height="auto" alt="Bouton Voiture">
+                <img
+                src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_mobile.png"
+                class="img-fluid d-lg-none d-block"
+                width="60"
+                height="auto"
+                alt="Bouton Voiture">
                 <!-- Desktop Bouton -->
-                <img src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_desktop.png" class="img-fluid d-none d-lg-block"
-                width="300"height="auto" alt="Bouton Voiture2">
+                <img
+                src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_desktop.png"
+                class="img-fluid d-none d-lg-block"
+                width="300"
+                height="auto"
+                alt="Bouton Voiture2">
             </a>
             <br>
                 <span class="">pour en savoir plus</span>

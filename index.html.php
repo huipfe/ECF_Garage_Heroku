@@ -17,11 +17,20 @@ Autoloader::register();
 
 $model = new HomepageModel;
 
-// $HomepageModel = $model
-//     ->setTemoignage('Nouveau Temoignage')
-//     ->setIdImage(1);
+// Méthode d'hydratation
+$donnees = [
+    'Temoignage' => 'Temoignage Modifié 9',
+    'id_image' => 1
+];
+
+$HomepageModel = $model->hydrate($donnees);
+
+// Assigner la valeur de 'id_image' à la propriété $id_image SI NOT NULL DANS SQL
+$HomepageModel->setIdImage($donnees['id_image']);
 
 // $model->create($HomepageModel);
+// $model->update(1, $HomepageModel);
+$model->delete(1);
 
 // var_dump($HomepageModel);
 

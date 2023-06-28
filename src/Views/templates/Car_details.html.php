@@ -119,7 +119,7 @@ require_once 'Header.html.php';
                     tabindex="-1"
                     aria-labelledby="imageModalLabel1"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel1">Image 1</h5>
@@ -130,20 +130,32 @@ require_once 'Header.html.php';
                                     aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
-                                    <img
-                                    src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
-                                    alt="miniature-1"
-                                    class="img-fluid">
-                                </div>
-                                    <div class="modal-footer">
-                                        <button
-                                        type="button"
-                                        class="btn btn-secondary"
-                                        data-bs-dismiss="modal">Close</button>
+                                    <div class="row">
+                                        <div class="col-lg-6">
+                                            <img
+                                            src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                            alt="miniature-1"
+                                            class="img-fluid">
+                                        </div>
+                                        <div class="col-lg-6">
+                                            <h6>Title</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Donec accumsan, ligula id convallis imperdiet,
+                                                lorem nisl elementum mi, non finibus sem nisi eu ante.
+                                            </p>
+                                        </div>
                                     </div>
+                                </div>
+                                <div class="modal-footer">
+                                    <button
+                                    type="button"
+                                    class="btn btn-secondary"
+                                    data-bs-dismiss="modal">Close</button>
+                                </div>
                             </div>
                         </div>
                     </div>
+
                     
                     <!-- Modal 2 -->
                     <div
@@ -152,7 +164,7 @@ require_once 'Header.html.php';
                     tabindex="-1"
                     aria-labelledby="imageModalLabel2"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel2">Image 2</h5>
@@ -163,6 +175,8 @@ require_once 'Header.html.php';
                                     aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
                                     <img
                                     width= "480px"
                                     height= "320px"
@@ -170,12 +184,29 @@ require_once 'Header.html.php';
                                     alt="miniature-2"
                                     class="img-fluid">
                                 </div>
-                                    <div class="modal-footer">
+                                <div class="col-lg-6">
+                                            <h6>Title</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Donec accumsan, ligula id convallis imperdiet,
+                                                lorem nisl elementum mi, non finibus sem nisi eu ante.
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Donec accumsan, ligula id convallis imperdiet,
+                                                lorem nisl elementum mi, non finibus sem nisi eu ante.
+                                            </p>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Donec accumsan, ligula id convallis imperdiet,
+                                                lorem nisl elementum mi, non finibus sem nisi eu ante.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
                                         <button
                                         type="button"
                                         class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
@@ -186,7 +217,7 @@ require_once 'Header.html.php';
                     id="imageModal3" tabindex="-1"
                     aria-labelledby="imageModalLabel3"
                     aria-hidden="true">
-                        <div class="modal-dialog modal-dialog-centered">
+                        <div class="modal-dialog modal-dialog-centered modal-lg">
                             <div class="modal-content">
                                 <div class="modal-header">
                                     <h5 class="modal-title" id="imageModalLabel3">Image 3</h5>
@@ -197,52 +228,30 @@ require_once 'Header.html.php';
                                     aria-label="Close"></button>
                                 </div>
                                 <div class="modal-body">
+                                    <div class="row">
+                                        <div class="col-lg-6">
                                     <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
                                     alt="miniature-3"
                                     class="img-fluid">
                                 </div>
-                                    <div class="modal-footer">
+                                <div class="col-lg-6">
+                                            <h6>Title</h6>
+                                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                                                Donec accumsan, ligula id convallis imperdiet,
+                                                lorem nisl elementum mi, non finibus sem nisi eu ante.
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="modal-footer">
                                         <button
                                         type="button"
                                         class="btn btn-secondary"
                                         data-bs-dismiss="modal">Close</button>
-                                    </div>
+                                </div>
                             </div>
                         </div>
                     </div>
-
-
-
-<!-- Button trigger modal -->
-<button type="button" class="btn btn-primary" data-bs-toggle="modal" data-bs-target="#exampleModal">
-                                        <img
-                                        width="50px"
-                                        height="50px"
-                                        src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
-                                        alt="miniature-1">
-</button>
-
-<!-- Modal -->
-<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-  <div class="modal-dialog">
-    <div class="modal-content">
-      <div class="modal-header">
-        <h1 class="modal-title fs-5" id="exampleModalLabel">Modal title</h1>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body">
-                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
-                                    alt="miniature-3"
-                                    class="img-fluid">
-      </div>
-      <div class="modal-footer">
-        <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-        <button type="button" class="btn btn-primary">Save changes</button>
-      </div>
-    </div>
-  </div>
-</div>
-
 
                 </div>
             </div>

@@ -62,7 +62,7 @@ ul.navbar-nav li.nav-item a.nav-link {
 }
 /* Footer */
 footer {
-  background: linear-gradient(to bottom right, #333 0%, #000 50%) bottom right/50% 50% no-repeat, linear-gradient(to bottom left, #333 0%, #000 50%) bottom left/50% 50% no-repeat, linear-gradient(to top left, #333 0%, #000 50%) top left/50% 50% no-repeat, linear-gradient(to top right, #333 0%, #000 50%) top right/50% 50% no-repeat;
+  background: linear-gradient(to bottom right, #333 0%, #000 50%) bottom right/51% 51% no-repeat, linear-gradient(to bottom left, #333 0%, #000 50%) bottom left/50% 51% no-repeat, linear-gradient(to top left, #333 0%, #000 50%) top left/51% 51% no-repeat, linear-gradient(to top right, #333 0%, #000 50%) top right/50% 51% no-repeat;
   color: #F2F2F2;
 }
 

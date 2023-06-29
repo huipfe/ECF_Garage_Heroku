@@ -77,7 +77,7 @@ class Cars_details
      */
 
 
-    public function __construct(string $marque, string $modele, int $annee, 
+    public function __construct(string $marque, string $modele, int $annee,
     int $kilometrage, int $prix, string $image, int $id)
     {
         // On attribut le nom à la propriété $nom à l'instance créer.

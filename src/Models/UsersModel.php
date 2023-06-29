@@ -4,10 +4,40 @@ namespace App\Models;
 
 class UsersModel extends Model
 {
+        /**
+         * $user_id
+         *
+         * @var [int]
+         */
         protected $user_id;
+
+        /**
+         * $nom_de_registre
+         *
+         * @var [string]
+         */
         protected $nom_de_registre;
+
+        /**
+         * $passe_word
+         *
+         * @var [string]
+         */
         protected $passe_word;
+
+        /**
+         * $login_status
+         *
+         * @var [string]
+         */
         protected $login_status;
+
+
+        /**
+         * $email
+         *
+         * @var [string]
+         */
         protected $email;
         
     // Constructeur

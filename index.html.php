@@ -47,17 +47,17 @@ Autoloader::register();
 
 //----------Test Profil_UserModel----------//
 
-$model = new UsersModel;
+// $model = new UsersModel;
 
-$user = $model->setEmail('Nouveaux-Email@gmail.com')
-    ->setPasseWord(password_hash('azerty', PASSWORD_ARGON2I))
-    ->setNom('Nouveaux Nom')
-    ->setLoginStatus(1)
-    ->setUserId(0);
+// $user = $model->setEmail('Nouveaux-Email@gmail.com')
+//     ->setPasseWord(password_hash('azerty', PASSWORD_ARGON2I))
+//     ->setNom('Nouveaux Nom')
+//     ->setLoginStatus(1)
+//     ->setUserId(0);
 
-$model->create($user);
+// $model->create($user);
 
-var_dump($model);
+// var_dump($model);
 
 
 

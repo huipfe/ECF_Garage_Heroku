@@ -1,15 +1,16 @@
-<!-- Fait à partir de la classe abstraite Profil_User dans Profil_User.php -->
+<!-- Fait à partir de la classe abstraite Users dans UsersModel.php -->
 <!-- Fait pour définir les comptes employés du site -->
 
 
 <?php 
+use App\Models\UsersModel;
 
 /**
  * Class Employe
- * Enfant de Profil_User
- * Hérite (étends) de la classe Profil_User
+ * Enfant de Users
+ * Hérite (étends) de la classe Users
  */
-class Employe extends Profil_User
+class Employe extends UsersModel
 {
     
 }

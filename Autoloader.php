@@ -24,7 +24,8 @@ class Autoloader
         // On remplace les \ par des /
         $class = str_replace('\\', '/', $class);
         
-        $fichier = __DIR__ . '/' . $class . '.php';
+        // $fichier = __DIR__ . '/' . $class . '.php';
+        $fichier = ROOT . '/src/' . $class . '.php';
         // On vérifie si le fichier existe
         if (file_exists($fichier)) {
             require_once $fichier;

@@ -52,7 +52,9 @@ crossorigin="anonymous">
         
                 <ul class="navbar-nav" >
                     <li class="nav-item">
-                        <a class="nav-link active" aria-current="page" href="/ECF_Garage/index.html.php">Accueil</a>
+                        <a class="nav-link active"
+                        aria-current="page"
+                        href="/ECF_Garage/public/index.html.php">Accueil</a>
                     </li>
                     <li class="nav-item ">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Services.html.php">Nos service</a>

@@ -122,9 +122,9 @@ CREATE TABLE `users` (
 
 CREATE TABLE `voiture` (
   `id` int NOT NULL AUTO_INCREMENT,
-  `id_image` int NOT NULL,
+  `image` varchar(255) NOT NULL,
   `prix` float NOT NULL,
-  `année` int NOT NULL,
+  `annee` int NOT NULL,
   `kilometrage` int NOT NULL,
   `marque` varchar(50) NOT NULL,
   `modele` varchar(50) NOT NULL,

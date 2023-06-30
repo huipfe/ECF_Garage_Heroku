@@ -112,14 +112,14 @@ class Model extends Db
     
         // On peut exécuter la requête
         return $this->requete("UPDATE `" . $this->table . "` SET " . $liste_champs .
-        " WHERE id_image = ? ", null, ...$valeurs);
+        " WHERE id = ? ", null, ...$valeurs);
     }
 
 
     public function delete(int $id)
     {
         // On retourne une requête SQL
-        return $this->requete("DELETE FROM {$this->table} WHERE id_image = ?", null, $id);
+        return $this->requete("DELETE FROM {$this->table} WHERE id = ?", null, $id);
     }
 
 
@@ -139,12 +139,13 @@ class Model extends Db
         // On vérifie si on a un fetchMode spécifié
         if ($fetchMode !== null) {
             // On retourne le résultat avec le fetchMode
-            return $stmt->fetchAll($fetchMode);
+            return $stmt;
         } else {
             // On retourne le résultat sans fetchMode
-            return $stmt->fetchAll();
+            return $stmt;
         }
     }
+
 
     //Méthode d'hydratation qui va vérifier si les setters existent et qui va les appeler
 public function hydrate(array $donnees)

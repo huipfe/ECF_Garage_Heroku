@@ -46,7 +46,7 @@ class UsersModel extends Model
             // On définit le nom de la table
                 // $this->table = "users";
 
-            // On définit la nom de la table, et on la passe en miniscule, 
+            // On définit la nom de la table, et on la passe en miniscule,
             // on enlève le nom model, pour qu'il ne reste que le nom de la table
                 $class = str_replace(__NAMESPACE__.'\\', '', __CLASS__);
                 $this->table = strtolower(str_replace('Model', '', $class));
@@ -142,5 +142,5 @@ class UsersModel extends Model
 
                 return $this;
         }
-    }
+}
 ?>

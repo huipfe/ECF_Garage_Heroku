@@ -20,7 +20,9 @@ N’importe quel employé du garage doit pouvoir ajouter, depuis son espace, de 
 <?php 
 require_once "Header.html.php";
 ?>
-
+<?php 
+var_dump($carsDetails)
+?>
 <main>
 
 

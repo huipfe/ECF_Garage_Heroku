@@ -1,11 +1,20 @@
 <?php 
+namespace App\Models;
+use App\Models\Model;
+use App\Database\Db;
+
 /**
  * Objet Voiture
- * 
+ *
  */
 
-class Cars_details
+class CarsDetailsModel extends Model
+
 {
+
+    //On définie le nom de la table
+    protected $table = "voiture";
+
     // Propriétés
     /**
      * Voiture id
@@ -163,6 +172,76 @@ class Cars_details
         $this->id = $id;
     }
 
+
+    /**
+     * Set voiture id
+     */
+    public function setId(int $id): self
+    {
+        $this->id = $id;
+
+        return $this;
+    }
+
+    /**
+     * Set voiture marque
+     */
+    public function setMarque(string $marque): self
+    {
+        $this->marque = $marque;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of modele
+     */
+    public function setModele($modele): self
+    {
+        $this->modele = $modele;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of annee
+     */
+    public function setAnnee($annee): self
+    {
+        $this->annee = $annee;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of kilometrage
+     */
+    public function setKilometrage($kilometrage): self
+    {
+        $this->kilometrage = $kilometrage;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of prix
+     */
+    public function setPrix($prix): self
+    {
+        $this->prix = $prix;
+
+        return $this;
+    }
+
+    /**
+     * Set the value of image
+     */
+    public function setImage($image): self
+    {
+        $this->image = $image;
+
+        return $this;
+    }
 }
 
 

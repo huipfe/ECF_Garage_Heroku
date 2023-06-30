@@ -19,11 +19,11 @@ require_once "Header.html.php";
 
         <!-- Image de fond, version desktop & mobile -->
         <img class="img-fluid d-lg-none" width="100%" height="auto"
-        src="../Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
+        src="/ECF_Garage/Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
         alt="Fond_Voiture_homepage_mobile">
         </img>
         <img class="img-fluid d-none d-lg-block" width="100%" height="auto"
-        src="../Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
+        src="/ECF_Garage/Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
         alt="Fond_Voiture_homepage_desktop">
         </img>
 
@@ -32,7 +32,7 @@ require_once "Header.html.php";
             <h2 class="position-absolute bottom-100 start-50 translate-middle text-center mt-n5">
                 <span class="">Cliquez ici,</span>
                 <br>
-            <a href="../src/Views/templates/Apropos.html.php"
+            <a href="/ECF_Garage/src/Views/templates/Apropos.html.php"
             class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
             me-md-autolink-body-emphasistext-decoration-none position-absolute bottom-30 top-50
             start-50 translate-middle">

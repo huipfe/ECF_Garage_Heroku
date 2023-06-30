@@ -35,7 +35,6 @@ require_once "Header.html.php";
         <div class="m-2 justify-content-start text-start">
           <h3>Utilisateur</h3>
           <p id="employeeCount"></p>
-          <!-- <p>X employé(s)</p> -->
         </div>
 
         <input type="text" class="form-control m-2 p-2" placeholder="Recherche">

@@ -21,12 +21,12 @@ class Model extends Db
     {
         // On retourne une requête SQL
         $query = $this->requete("SELECT * FROM `" . $this->table . "`");
-        return $query->fetchAll();  
+        return $query->fetchAll();
 
     }
 
     public function findBy(array $criteres)
-    { 
+    {
         $champs = [];
         $valeurs = [];
     
@@ -41,7 +41,8 @@ class Model extends Db
         $liste_champs = implode(' AND ', $champs);
     
         // On peut exécuter la requête
-        return $this->requete("SELECT * FROM `" . $this->table . "` WHERE ". $liste_champs, null, ...$valeurs)->fetchAll();
+        return $this->requete("SELECT * FROM `" . $this->table . "` WHERE ". $liste_champs,
+        null, ...$valeurs)->fetchAll();
     }
     
     public function find(int $id)
@@ -77,7 +78,8 @@ class Model extends Db
         $list_inter = implode(', ', $inter);
     
         // On peut exécuter la requête
-        return $this->requete("INSERT INTO `" . $this->table . "` (" . $liste_champs . ") VALUES (" . $list_inter . ")", null, ...$valeurs);
+        return $this->requete("INSERT INTO `" . $this->table . "` (" . $liste_champs . ")
+        VALUES (" . $list_inter . ")", null, ...$valeurs);
     }
 
 
@@ -109,7 +111,8 @@ class Model extends Db
         $liste_champs = implode(' , ', $champs);
     
         // On peut exécuter la requête
-        return $this->requete("UPDATE `" . $this->table . "` SET " . $liste_champs . " WHERE id_image = ? ", null, ...$valeurs);
+        return $this->requete("UPDATE `" . $this->table . "` SET " . $liste_champs .
+        " WHERE id_image = ? ", null, ...$valeurs);
     }
 
 

@@ -53,7 +53,8 @@ function displayModal(response) {
           <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
         </div>
         <div class="modal-body">
-          <p style="color: #F2F2F2;">${response === 'success' ? 'Le formulaire a été envoyé avec succès!' : 'Une erreur s\'est produite lors de l\'envoi du formulaire.'}</p>
+          <p style="color: #F2F2F2;">${response === 'success' ? 'Le formulaire a été envoyé avec succès!' 
+          : 'Une erreur s\'est produite lors de l\'envoi du formulaire.'}</p>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-danger" data-bs-dismiss="modal">Fermer</button>

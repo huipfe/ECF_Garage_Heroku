@@ -1,7 +1,7 @@
 <?php
 
 use App\Autoloader;
-use App\Database\Main;
+use App\Core\Main;
 
 // On définie une constance, contenue le dossier racine du projet.
 define('ROOT', dirname(__DIR__));

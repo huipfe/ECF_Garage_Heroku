@@ -5,6 +5,10 @@
 require_once "Header.html.php";
 ?>
 
+<?php 
+// var_dump($donnees)
+?>
+
 <main>
     
     <!-- Titre d'intro de la homepage -->

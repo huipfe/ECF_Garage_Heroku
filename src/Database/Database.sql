@@ -128,6 +128,7 @@ CREATE TABLE `voiture` (
   `kilometrage` int NOT NULL,
   `marque` varchar(50) NOT NULL,
   `modele` varchar(50) NOT NULL,
+  `description` varchar(255) NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table de voiture, liée au catalogue';
 COMMIT;

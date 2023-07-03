@@ -71,6 +71,14 @@ class CarsDetailsModel extends Model
     public $image;
 
 
+    /**
+     * Voiture description
+     *
+     * @var string
+     */
+    public $description;
+
+
 
     // Méthodes
     /**
@@ -83,11 +91,12 @@ class CarsDetailsModel extends Model
      * @param int $prix Prix de la voiture
      * @param string $image Image de la voiture
      * @param int $id Id de la voiture
+     * @param string $description Description de la voiture
      */
 
 
     public function __construct(string $marque, string $modele, int $annee,
-    int $kilometrage, int $prix, string $image, int $id)
+    int $kilometrage, int $prix, string $image, int $id, string $description)
     {
         // On attribut le nom à la propriété $nom à l'instance créer.
         $this->marque = $marque;
@@ -97,6 +106,7 @@ class CarsDetailsModel extends Model
         $this->prix = $prix;
         $this->image = $image;
         $this->id = $id;
+        $this->description = $description;
         
     }
 
@@ -172,7 +182,6 @@ class CarsDetailsModel extends Model
         $this->id = $id;
     }
 
-
     /**
      * Set voiture id
      */
@@ -239,6 +248,31 @@ class CarsDetailsModel extends Model
     public function setImage($image): self
     {
         $this->image = $image;
+
+        return $this;
+    }
+
+    
+    /**
+     * Affiche la description de la voiture
+     * @param string $name
+     * @return void
+     */
+
+    public function getDescription(string $description): void
+
+    {
+        $this->description = $description;
+    }
+
+    /**
+     * Set the value of description
+     */
+
+    public function setDescription($description): self
+
+    {
+        $this->description = $description;
 
         return $this;
     }

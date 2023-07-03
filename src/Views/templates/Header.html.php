@@ -57,25 +57,34 @@ crossorigin="anonymous">
             id="navbarNav" style="text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);">
         
                 <ul class="navbar-nav" >
+
                     <li class="nav-item">
                         <a class="nav-link active"
                         aria-current="page"
-                        href="/ECF_Garage/src/Views/templates/Homepage.html.php">Accueil</a>
+                        href="/ECF_Garage/public/main">Accueil</a>
                     </li>
+                    <!-- ECF_Garage/src/Views/templates/Homepage.html.php -->
+
                     <li class="nav-item ">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Services.html.php">Nos service</a>
                     </li>
+
                     <li class="nav-item ">
-                        <a class="nav-link" href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php">
+                        <a class="nav-link" href="/ECF_Garage/public/cars">
                             Nos produits</a>
                     </li>
+                    <!-- ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
+
                     <li class="nav-item ">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Apropos.html.php">A propos</a>
                     </li>
+                    
                     <li class="nav-item ">
                         <a class="nav-link" href="/ECF_Garage/src/Views/templates/Contact.html.php">Contact</a>
                     </li>
+
                     <li class="list-inline-item nav-item" style="margin-top: 5px;">
+
                     <a href="/ECF_Garage/src/Views/templates/Login.html.php">
                 <svg width="38" height="38" viewBox="0 0 38 38" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M18.9995 17.4167C20.2521 17.4167 21.4766 17.0452

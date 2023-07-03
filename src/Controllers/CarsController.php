@@ -28,10 +28,11 @@ use App\Models\CarsDetailsModel;
 // Modification de voiture dans la BDD
     
     // Création d'une instance de votre modèle "VoitureModel"
-    // $voitureModel = new CarsDetailsModel("BMW", "Série 1", 2020, 50000, 25000, "voiture4.jpg", 1);
+    // $voitureModel = new CarsDetailsModel("Lamborghini", "Aventador SVJ", 2018, 1000, 370000, "voiture4.jpg", 1,
+    // "Lamborghini Aventador SVJ, une voiture de course légendaire avec un design agressif et des performances extrêmes.");
 
     // Inséré l'ID de la voiture à modifier
-    // $voitureModel->update(4, $voitureModel);
+    // $voitureModel->update(5, $voitureModel);
 
 class CarsController extends Controller
 {
@@ -52,10 +53,11 @@ class CarsController extends Controller
         $kilometrage = 50000;
         $prix = 25000;
         $image = "voiture.jpg";
+        $description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.";
     
         // On instancie le modèle correspondant à la table "liste des voitures"
         $carsDetailsModel = new CarsDetailsModel($marque, $modele,
-        $annee, $kilometrage, $prix, $image, $id);
+        $annee, $kilometrage, $prix, $image, $id, $description);
 
         // On va chercher toute les voitures
         $carsDetails = $carsDetailsModel->findAll();
@@ -63,13 +65,18 @@ class CarsController extends Controller
         // On va chercher toute les voitures de la marque "Audi"
         // $carsDetails = $carsDetailsModel->findBy(["marque" => "Audi"]);
 
-        // $carsDetails = $carsDetailsModel->findBy(["marque" => "Audi"]);
+        // On va chercher toute les voitures de la marque "BMW"
+        // $carsDetails = $carsDetailsModel->findBy(["marque" => "BMW"]);
 
         // var_dump($carsDetails);
 
-        $this->render('Views/templates/Used_cars_listing', [
-            "carsDetails" => $carsDetails
-        ]);
+        // On affiche la vue, version longue
+        // $this->render('Views/templates/Used_cars_listing', [
+        //     "carsDetails" => $carsDetails
+        // ]);
+
+        // On affiche la vue, version courte, "compact"
+        $this->render('Views/templates/Used_cars_listing', compact("carsDetails"));
     
         include_once ROOT . '/src/Views/templates/Used_cars_listing.html.php';
     }

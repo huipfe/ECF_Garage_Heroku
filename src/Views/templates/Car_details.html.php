@@ -22,7 +22,8 @@ require_once 'Header.html.php';
                 <section id="header">
                     <div class="container">
                     <div class="justify-content-start">
-                        <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
+                        <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
+                        <a href="/ECF_Garage/public/cars#"
                         class="text-decoration-none">
                             <span>
                                 <button class="btn">

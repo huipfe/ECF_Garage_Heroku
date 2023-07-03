@@ -90,52 +90,51 @@ require_once "Header.html.php";
             </div>
     </section>
 
-        
+
     <!-- Main cars -->
         
 <div class="container">
     <div class="row">
 
-<?php foreach ($carsDetails as $car) : ?>
+        <?php foreach ($carsDetails as $car) : ?>
 
-
-<div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <!-- "/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg" -->
-                        <img src="<?= $car ['image']?>"
-                            alt="Image 1" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card"><?= $car ['marque']?></h3>
-                            <p class="card-text fst-italic" id = "title-description"><?= $car ['description']?></p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : <?= $car ['modele']?></p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année :
-                                <span><?= $car ['annee']?></span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span><?= $car ['kilometrage']?> km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold"><?= $car ['prix']?>€</span></p>
-                                <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
+            <div class="col-lg-4">
+                <div class="card mb-3" style="background: #E8E4E4;">
+                    <div class="row g-0">
+                        <div class="col-md-5 col-lg-12">
+                            <!-- "/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg" -->
+                            <img src="<?= $car->image?>"
+                                alt="Image 1" class="img-fluid">
+                        </div>
+                        <div class="col-md-7 col-lg-12">
+                            <div class="card-body mx-3 text-md-center text-lg-end">
+                                <h3 class="card-title fw-bold" id = "title-card"><?= $car->marque?></h3>
+                                <p class="card-text fst-italic" id = "title-description"><?= $car->description?></p>
+                                <p class="card-text fs-5" id = "title-modele">Modèle : <?= $car->modele?></p>
+                                <p class="card-text fs-5 filter-year" id = "title-year">Année :
+                                    <span><?= $car->annee?></span></p>
+                                <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
+                                    <span><?= $car->kilometrage?> km</span></p>
+                                <p class="card-text fs-5" id = "title-price">Prix :
+                                    <span class="fw-bold"><?= $car->prix?>€</span></p>
+                                    <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
+                                class="btn btn-danger">Détails
+                                    <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
+                                </a>
                             </div>
-                            <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
-                            class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
 
-<?php endforeach; ?>
+        <?php endforeach; ?>
 
 
         <!-- <div class="col-lg-4">

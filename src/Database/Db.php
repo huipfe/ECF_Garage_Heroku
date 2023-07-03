@@ -33,8 +33,15 @@ class Db extends PDO
 
             // On définit le jeu de caractères en UTF-8
             $this->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
-            // à chaque fois que je fais un fetch, je le fais avec un tableau assosciatif
-            $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+            // à chaque fois que je fais un fetch, je le fais avec un tableau assosciatif;
+            //  = $car ['kilometrage'] quand je récupérerais une info
+            // $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+
+            // Pour une écriture simplifié dans les vues, en POO, on utilisera plutot
+            // $car->kilometrage
+            $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+
             // Déclencher une exception en cas d'erreur
             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
 

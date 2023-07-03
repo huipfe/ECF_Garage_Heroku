@@ -28,11 +28,11 @@ use App\Models\CarsDetailsModel;
 // Modification de voiture dans la BDD
     
     // Création d'une instance de votre modèle "VoitureModel"
-    // $voitureModel = new CarsDetailsModel("Lamborghini", "Aventador SVJ", 2018, 1000, 370000, "voiture4.jpg", 1,
-    // "Lamborghini Aventador SVJ, une voiture de course légendaire avec un design agressif et des performances extrêmes.");
+    $voitureModel = new CarsDetailsModel("BMW", "Série 5", 2022, 3000, 45000, "voiture_4.jpg", 1,
+    "La BMW Série 5 est une berline de luxe offrant un mélange parfait de confort, de performances et de technologies avancées.");
 
     // Inséré l'ID de la voiture à modifier
-    // $voitureModel->update(5, $voitureModel);
+    $voitureModel->update(4, $voitureModel);
 
 class CarsController extends Controller
 {
@@ -52,8 +52,15 @@ class CarsController extends Controller
         $annee = 2020;
         $kilometrage = 50000;
         $prix = 25000;
-        $image = "voiture.jpg";
-        $description = "Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.";
+        $description = "La BMW Série 3 est une berline élégante et sportive.";
+
+        // Load the image file
+        $imagePath = "\ECF_Garage\Assets\images\Used cars listing";
+        $image = file_get_contents($imagePath);
+
+        // $imagePath = __DIR__ . '/../../../Assets/images/Used cars listing/voiture_4.jpg';
+        // $image = file_get_contents($imagePath);
+
     
         // On instancie le modèle correspondant à la table "liste des voitures"
         $carsDetailsModel = new CarsDetailsModel($marque, $modele,

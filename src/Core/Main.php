@@ -71,13 +71,19 @@ class Main
 
             if(method_exists($controller, $action)) {
                 // Si, il reste des paramètres, on les passes à la méthode (sous forme de tableau)
-                (isset($params[0])) ? $controller->$action($params) : $controller->$action();
+                // (isset($params[0])) ? $controller->$action($params) :
+                // $controller->$action();
+                
+                //Envoyer à une fonction un tableau de paramètres
+                (isset($params[0])) ?call_user_func_array(
+                [$controller, $action], $params) :
+                $controller->$action();
+
             }else {
                 // On déclenche une erreur 404
                 http_response_code(404);
                 echo "La page recherchée n'existe pas";
             }
-
 
         }else {
             // On n'a pas de paramètre.

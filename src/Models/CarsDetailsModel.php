@@ -279,20 +279,4 @@ class CarsDetailsModel extends Model
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 ?>

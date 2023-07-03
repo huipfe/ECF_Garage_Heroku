@@ -96,6 +96,9 @@ require_once "Header.html.php";
 <div class="container">
     <div class="row">
 
+    <?php
+    // var_dump($carsDetails)
+    ?>
         <?php foreach ($carsDetails as $car) : ?>
 
             <div class="col-lg-4">
@@ -103,7 +106,13 @@ require_once "Header.html.php";
                     <div class="row g-0">
                         <div class="col-md-5 col-lg-12">
                             <!-- "/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg" -->
-                            <img src="<?= $car->image?>"
+                            <?php
+                            // Récupérer les données binaires de l'image depuis la base de données
+                            $imageData = $car->image;
+                            // Convertir les données binaires en base64
+                            $imageBase64 = base64_encode($imageData);
+                            ?>
+                            <img src="data:image/jpeg;base64, <?= $imageBase64 ?>"
                                 alt="Image 1" class="img-fluid">
                         </div>
                         <div class="col-md-7 col-lg-12">
@@ -124,8 +133,9 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
-                                class="btn btn-danger">Détails
+                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php -->
+                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/details/<?= $car->marque?>/<?= $car->id?>"
+                                    class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                                 </a>
                             </div>
@@ -135,7 +145,8 @@ require_once "Header.html.php";
             </div>
 
         <?php endforeach; ?>
-
+<!-- Mauvais : http://localhost/public/src/Views/templates/Car_details.html.php/details/Ford%20Mustang/2 -->
+<!-- Bon     : http://localhost/ECF_Garage/src/Views/templates/Car_details.html.php/details%20Ford%20Mustang/2 -->
 
         <!-- <div class="col-lg-4">
             <div class="card mb-3" style="background: #E8E4E4;">

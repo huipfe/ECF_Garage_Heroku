@@ -21,21 +21,21 @@ require_once 'Header.html.php';
             <div class="col-lg-6">
                 <section id="header">
                     <div class="container">
-                    <div class="justify-content-start">
-                        <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
-                        <a href="/ECF_Garage/public/cars#"
-                        class="text-decoration-none">
-                            <span>
-                                <button class="btn">
-                                    <i class="bi bi-arrow-left"></i>
-                                    Retour à la liste
-                                </button>
-                            </span>
-                        </a>
-                    </div>
+                        <div class="justify-content-start">
+                            <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
+                            <a href="/ECF_Garage/public/cars"
+                            class="text-decoration-none">
+                                <span>
+                                    <button class="btn">
+                                        <i class="bi bi-arrow-left"></i>
+                                        Retour à la liste
+                                    </button>
+                                </span>
+                            </a>
+                        </div>
                     <img class="mb-3 mt-5"
-                    src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
-                    alt="voitureImage">
+                        src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
+                        alt="voitureImage">
                     </div>
                 </section>
             </div>

@@ -16,7 +16,11 @@ class Model extends Db
     // Instance de la classe Db
     private $db;
 
-    // Méthode qui me permet d'aller chercher tout les éléments d'une table
+    /**
+     * Méthode qui me permet d'aller chercher tout les éléments d'une table
+     *
+     * @return null|mixed
+     */
     public function findAll()
     {
         // On retourne une requête SQL
@@ -25,6 +29,12 @@ class Model extends Db
 
     }
 
+    /**
+     * Méthode qui me permet d'aller chercher l'éléments choisie d'une table
+     *
+     * @param array $criteres
+     * @return null|mixed
+     */
     public function findBy(array $criteres)
     {
         $champs = [];
@@ -44,6 +54,13 @@ class Model extends Db
         return $this->requete("SELECT * FROM `" . $this->table . "` WHERE ". $liste_champs,
         null, ...$valeurs)->fetchAll();
     }
+
+    /**
+     * Méthode qui me permet d'aller chercher l'éléments via l'id dans une table
+     *
+     * @param array $criteres
+     * @return null|mixed
+     */
     
     public function find(int $id)
     {
@@ -51,6 +68,12 @@ class Model extends Db
         return $this->requete("SELECT * FROM {$this->table} WHERE id = $id")->fetch();
     }
 
+    /**
+     * Méthode qui me permet de créer un élément dans une table
+     *
+     * @param array $criteres
+     * @return null|mixed
+     */
     public function create(Model $model)
     {
         $champs = [];
@@ -82,6 +105,13 @@ class Model extends Db
         VALUES (" . $list_inter . ")", null, ...$valeurs);
     }
 
+
+    /**
+     * Méthode qui me permet de mettre à jour un élément dans une table
+     * @param int $id
+     * @param array $criteres
+     * @return null|mixed
+     */
 
 
         public function update(int $id, Model $model)
@@ -116,6 +146,12 @@ class Model extends Db
     }
 
 
+    /**
+     * Méthode qui me permet de supprimer un élément dans une table
+     *
+     * @param int $id
+     * @return null|mixed
+     */
     public function delete(int $id)
     {
         // On retourne une requête SQL
@@ -123,6 +159,16 @@ class Model extends Db
     }
 
 
+    /**
+     * Méthode qui me permet de faire une requête SQL
+     * @param string $query
+     * @param int|null $fetchMode
+     * @param array $fetchModeArgs
+     * @return mixed
+     * @throws \Exception
+     * @throws \TypeError
+     * 
+     */
 
     #[\ReturnTypeWillChange]
     public function requete(string $query, ?int $fetchMode = null, ...$fetchModeArgs)

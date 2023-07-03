@@ -28,11 +28,11 @@ use App\Models\CarsDetailsModel;
 // Modification de voiture dans la BDD
     
     // Création d'une instance de votre modèle "VoitureModel"
-    $voitureModel = new CarsDetailsModel("BMW", "Série 5", 2022, 3000, 45000, "voiture_4.jpg", 1,
-    "La BMW Série 5 est une berline de luxe offrant un mélange parfait de confort, de performances et de technologies avancées.");
+    // $voitureModel = new CarsDetailsModel("BMW", "Série 5", 2022, 3000, 45000, "voiture_4.jpg", 1,
+    // "La BMW Série 5 est une berline de luxe offrant un mélange parfait de confort, de performances et de technologies avancées.");
 
     // Inséré l'ID de la voiture à modifier
-    $voitureModel->update(4, $voitureModel);
+    // $voitureModel->update(4, $voitureModel);
 
 class CarsController extends Controller
 {
@@ -52,11 +52,8 @@ class CarsController extends Controller
         $annee = 2020;
         $kilometrage = 50000;
         $prix = 25000;
+        $image = "voiture.jpg";
         $description = "La BMW Série 3 est une berline élégante et sportive.";
-
-        // Load the image file
-        $imagePath = "\ECF_Garage\Assets\images\Used cars listing";
-        $image = file_get_contents($imagePath);
 
         // $imagePath = __DIR__ . '/../../../Assets/images/Used cars listing/voiture_4.jpg';
         // $image = file_get_contents($imagePath);
@@ -86,6 +83,36 @@ class CarsController extends Controller
         $this->render('Views/templates/Used_cars_listing', compact("carsDetails"));
     
         include_once ROOT . '/src/Views/templates/Used_cars_listing.html.php';
+    }
+
+    /**
+     * Cette méthode affichera le détail d'une voiture
+     * Affiche le détail d'une voiture
+     *
+     * @param integer $id
+     * @return void
+     */
+    public function details(int $id)
+    {
+
+        // Exemple de récupération des valeurs depuis une source de données fictive
+        $marque = "BMW";
+        $modele = "Série 3";
+        $annee = 2020;
+        $kilometrage = 50000;
+        $prix = 25000;
+        $image = "voiture_4.jpg";
+        $description = "La BMW Série 3 est une berline élégante et sportive.";
+
+        // On instancie le modèle
+        $carsDetailsModel = new CarsDetailsModel($marque, $modele,
+        $annee, $kilometrage, $prix, $image, $id, $description);
+
+        // On va chercher la voiture correspondant à l'ID
+        $details = $carsDetailsModel->find($id);
+
+        // On envoie à la vue
+        $this->render('Views/templates/Car_details', compact("details"));
     }
 
 }

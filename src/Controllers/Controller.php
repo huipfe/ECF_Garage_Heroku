@@ -24,7 +24,7 @@ abstract class Controller
         
         // On créer le chemin vers la vue
         // require_once ROOT . '/src/Views/' . $fichier . '.html.php';
-        require_once ROOT . '/src/' . $fichier . '.html.php';
+        require_once ROOT . '/Views/' . $fichier . '.html.php';
 
         
         // // On démarre le buffer de sortie

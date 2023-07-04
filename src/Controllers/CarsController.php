@@ -29,7 +29,8 @@ use App\Models\CarsDetailsModel;
     
     // Création d'une instance de votre modèle "VoitureModel"
     // $voitureModel = new CarsDetailsModel("BMW", "Série 5", 2022, 3000, 45000, "voiture_4.jpg", 1,
-    // "La BMW Série 5 est une berline de luxe offrant un mélange parfait de confort, de performances et de technologies avancées.");
+    // "La BMW Série 5 est une berline de luxe offrant un mélange parfait de confort, de performances
+    // et de technologies avancées.");
 
     // Inséré l'ID de la voiture à modifier
     // $voitureModel->update(4, $voitureModel);
@@ -82,20 +83,20 @@ class CarsController extends Controller
         // On affiche la vue, version courte, "compact"
         $this->render('Views/templates/Used_cars_listing', compact("carsDetails"));
     
-        include_once ROOT . '/src/Views/templates/Used_cars_listing.html.php';
+        // include_once ROOT . '/src/Views/templates/Used_cars_listing.html.php';
     }
 
     /**
      * Cette méthode affichera le détail d'une voiture
      * Affiche le détail d'une voiture
-     *
-     * @param integer $id
+     * @param integer $id $id id de la voiture
      * @return void
      */
     public function details(int $id)
     {
 
         // Exemple de récupération des valeurs depuis une source de données fictive
+        $id = 1;
         $marque = "BMW";
         $modele = "Série 3";
         $annee = 2020;
@@ -105,14 +106,20 @@ class CarsController extends Controller
         $description = "La BMW Série 3 est une berline élégante et sportive.";
 
         // On instancie le modèle
-        $carsDetailsModel = new CarsDetailsModel($marque, $modele,
+        $carsDetails2Model = new CarsDetailsModel($marque, $modele,
         $annee, $kilometrage, $prix, $image, $id, $description);
 
         // On va chercher la voiture correspondant à l'ID
-        $details = $carsDetailsModel->find($id);
+        $details = $carsDetails2Model->find($id);
 
         // On envoie à la vue
-        $this->render('Views/templates/Car_details', compact("details"));
+        // $this->render('Views/templates/Car_details', compact("details"));
+
+        $this->render('Views/templates/Car_details', [
+            "details" => $details
+        ]);
+
+        include_once ROOT . '/src/Views/templates/Car_details.html.php';
     }
 
 }

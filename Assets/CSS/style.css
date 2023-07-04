@@ -706,6 +706,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     margin-left: 5px;
     border-radius: 5px;
   }
+  div.container-lg > div.row > div.col-lg-6 > div.input-group {
+    margin-top: 12px;
+    margin-left: -10px;
+  }
 }
 @media (min-width: 1501px) and (max-width: 1700px) {
   section#filter-sidebar div.filtrage-bar {
@@ -737,6 +741,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     height: 20px;
     margin-left: 5px;
     border-radius: 5px;
+  }
+  div.container-lg > div.row > div.col-lg-6 > div.input-group {
+    margin-top: 12px;
+    margin-left: -10px;
   }
 }
 @media (min-width: 1301px) and (max-width: 1500px) {
@@ -770,6 +778,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     margin-left: 5px;
     border-radius: 5px;
   }
+  div.container-lg > div.row > div.col-lg-6 > div.input-group {
+    margin-top: 12px;
+    margin-left: -10px;
+  }
 }
 @media (min-width: 1201px) and (max-width: 1300px) {
   section#filter-sidebar div.filtrage-bar {
@@ -802,6 +814,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     margin-left: 5px;
     border-radius: 5px;
   }
+  div.container-lg > div.row > div.col-lg-6 > div.input-group {
+    margin-top: 12px;
+    margin-left: -10px;
+  }
 }
 @media (min-width: 992px) and (max-width: 1200px) {
   section#filter-sidebar div.filtrage-bar {
@@ -818,6 +834,10 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     margin-right: 34px;
     margin-bottom: 0;
     margin-top: 0;
+  }
+  div.container-lg > div.row > div.col-lg-6 > div.input-group {
+    margin-top: 12px;
+    margin-left: -10px;
   }
 }
 @media (min-width: 819px) and (max-width: 992px) {
@@ -958,17 +978,17 @@ section#header div.container {
 }
 @media (min-width: 993px) and (max-width: 1200px) {
   section#header div.container {
-    height: 410px;
+    height: 678px;
   }
 }
 @media (min-width: 1200px) and (max-width: 1400px) {
   section#header div.container {
-    height: 450px;
+    height: 630px;
   }
 }
 @media (min-width: 1400px) {
   section#header div.container {
-    height: 500px;
+    height: 630px;
   }
 }
 section#header div.justify-content-start a.text-decoration-none span {

@@ -22,6 +22,7 @@ require_once "Header.html.php";
 ?>
 <?php 
 // var_dump($carsDetails)
+
 ?>
 <main>
 
@@ -34,7 +35,7 @@ require_once "Header.html.php";
             </div>
 
             <div class="col-lg-6">
-                <div class="input-group" style="margin-top: 12px;">
+                <div class="input-group">
                     <input type="text" class="form-control m-2 p-2 rounded-5"
                     id="searchInput" placeholder="Recherche">
                     <div class="input-group-append">
@@ -134,7 +135,7 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                 </div>
                                 <!-- /ECF_Garage/src/Views/templates/Car_details.html.php -->
-                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/details/<?= $car->marque?>/<?= $car->id?>"
+                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/carDetails/<?= urlencode($car->marque)?>/<?= $car->id?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                                 </a>
@@ -147,111 +148,6 @@ require_once "Header.html.php";
         <?php endforeach; ?>
 <!-- Mauvais : http://localhost/public/src/Views/templates/Car_details.html.php/details/Ford%20Mustang/2 -->
 <!-- Bon     : http://localhost/ECF_Garage/src/Views/templates/Car_details.html.php/details%20Ford%20Mustang/2 -->
-
-        <!-- <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg"
-                            alt="Image 1" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Ford Mustang</h3>
-                            <p class="card-text fst-italic" id = "title-description">Ford Mustang GT, une voiture de
-                                sport emblématique avec un design élégant et des performances puissantes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : V8-GT </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2022</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>5 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">50 000 €</span></p>
-                                <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_2.jpg"
-                            alt="Image 2" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Audi</h3>
-                            <p class="card-text fst-italic" id = "title-description">Audi R8 V10, une supercar de luxe
-                                avec un moteur V10 et une tenue de route exceptionnelle.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : R8 V10</p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2023</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>2 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">150 000 €</span></p>
-                                <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
-                            class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
-                            alt="Image 3" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
-                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
-                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2018</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>1 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">370 000 €</span></p>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-    -->
 
     </div>
 </div>
@@ -271,3 +167,4 @@ require_once "Header.html.php";
 <?php 
 require_once "Footer.html.php";
 ?>
+

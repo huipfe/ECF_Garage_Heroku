@@ -106,15 +106,16 @@ require_once "Header.html.php";
                 <div class="card mb-3" style="background: #E8E4E4;">
                     <div class="row g-0">
                         <div class="col-md-5 col-lg-12">
-                            <!-- "/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg" -->
+
                             <?php
                             // Récupérer les données binaires de l'image depuis la base de données
                             $imageData = $car->image;
                             // Convertir les données binaires en base64
                             $imageBase64 = base64_encode($imageData);
                             ?>
+
                             <img src="data:image/jpeg;base64, <?= $imageBase64 ?>"
-                                alt="Image 1" class="img-fluid">
+                                alt="ImageBoucle" class="img-fluid">
                         </div>
                         <div class="col-md-7 col-lg-12">
                             <div class="card-body mx-3 text-md-center text-lg-end">
@@ -146,15 +147,19 @@ require_once "Header.html.php";
             </div>
 
         <?php endforeach; ?>
+
+
+<div class="container">
+
+    <?=$contenu?>
+
+</div>
+
 <!-- Mauvais : http://localhost/public/src/Views/templates/Car_details.html.php/details/Ford%20Mustang/2 -->
 <!-- Bon     : http://localhost/ECF_Garage/src/Views/templates/Car_details.html.php/details%20Ford%20Mustang/2 -->
 
     </div>
 </div>
-
-
-
-
 
 
 

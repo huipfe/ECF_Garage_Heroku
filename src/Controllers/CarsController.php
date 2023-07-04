@@ -83,7 +83,6 @@ class CarsController extends Controller
         // On affiche la vue, version courte, "compact"
         $this->render('Views/templates/Used_cars_listing', compact("carsDetails"));
     
-        // include_once ROOT . '/src/Views/templates/Used_cars_listing.html.php';
     }
 
     /**
@@ -113,13 +112,11 @@ class CarsController extends Controller
         $details = $carsDetails2Model->find($id);
 
         // On envoie à la vue
-        // $this->render('Views/templates/Car_details', compact("details"));
+        $this->render('Views/templates/Car_details', compact("details"));
 
-        $this->render('Views/templates/Car_details', [
-            "details" => $details
-        ]);
-
-        include_once ROOT . '/src/Views/templates/Car_details.html.php';
+        // $this->render('Views/templates/Car_details', [
+        //     "details" => $details
+        // ]);
     }
 
 }

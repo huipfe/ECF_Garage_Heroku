@@ -1,6 +1,7 @@
 # Database: Store files related to database management, such as migrations or SQL scripts.
 # Database/
 page_d_accueil.sql
+ecf_garage.sql
 
 # Controllers: Store controller classes handling user interactions and application flow.
 # Controllers/

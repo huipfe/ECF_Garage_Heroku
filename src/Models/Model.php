@@ -167,7 +167,7 @@ class Model extends Db
      * @return mixed
      * @throws \Exception
      * @throws \TypeError
-     * 
+     *
      */
 
     #[\ReturnTypeWillChange]

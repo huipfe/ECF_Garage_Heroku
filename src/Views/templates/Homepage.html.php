@@ -59,7 +59,6 @@ require_once "Header.html.php";
                 <span class="">pour en savoir plus</span>
             </h2>
         </div>
-
     </div>
 </main>
 

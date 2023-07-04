@@ -21,23 +21,19 @@ abstract class Controller
 
         // On extrait les données du tableau $donnees
         extract($donnees);
+
+        // On démarre le buffer de sortie
+        ob_start();
+        // à partir de ce point, toute sortie est conversé en mémoire.
         
         // On créer le chemin vers la vue
         // require_once ROOT . '/src/Views/' . $fichier . '.html.php';
         require_once ROOT . '/src/' . $fichier . '.html.php';
 
+        $contenu = ob_get_clean();
+
+        var_dump($contenu);
         
-        // // On démarre le buffer de sortie
-        // ob_start();
-
-        // // On inclut le fichier de la vue
-        // require_once(VIEWS . $path . '.php');
-
-        // // On stocke le contenu du buffer dans $content
-        // $content = ob_get_clean();
-
-        // // On inclut le template
-        // require_once(VIEWS . 'layout.php');
     }
 
 }

@@ -11,16 +11,16 @@ abstract class Controller
      * Cette méthode permet d'afficher une vue
      *
      * @param string $fichier
-     * @param array $donnees
+     * @param array $data
      * @return void
      */
 
-    public function render(string $fichier, array $donnees = [])
+    public function render(string $fichier, array $data = [])
 
     {
 
         // On extrait les données du tableau $donnees
-        extract($donnees);
+        extract($data);
 
         // On démarre le buffer de sortie
         ob_start();
@@ -30,10 +30,11 @@ abstract class Controller
         // require_once ROOT . '/src/Views/' . $fichier . '.html.php';
         require_once ROOT . '/src/' . $fichier . '.html.php';
 
-        $contenu = ob_get_clean();
+        // Transfère le buffer dans $contenu
+        // $contenu = ob_get_clean();
 
-        var_dump($contenu);
-        
+        // On charge le template
+        // require_once ROOT . '/src/Views/default.php';
     }
 
 }

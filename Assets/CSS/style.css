@@ -149,6 +149,9 @@ button.btn-connexion {
 }
 
 @media (min-width: 992px) {
+  .my-form-control {
+    color: #262526;
+  }
   .my-form-control::-moz-placeholder {
     font-weight: 200;
     font-size: 15px;

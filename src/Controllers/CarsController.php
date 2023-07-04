@@ -81,7 +81,7 @@ class CarsController extends Controller
         // ]);
 
         // On affiche la vue, version courte, "compact"
-        $this->render('Views/templates/Used_cars_listing', compact("carsDetails"));
+        $this->render('/Views/templates/Used_cars_listing', compact("carsDetails"));
     
     }
 
@@ -105,14 +105,14 @@ class CarsController extends Controller
         $description = "La BMW Série 3 est une berline élégante et sportive.";
 
         // On instancie le modèle
-        $carsDetails2Model = new CarsDetailsModel($marque, $modele,
+        $detailsModel = new CarsDetailsModel($marque, $modele,
         $annee, $kilometrage, $prix, $image, $id, $description);
 
         // On va chercher la voiture correspondant à l'ID
-        $details = $carsDetails2Model->find($id);
+        $details = $detailsModel->find($id);
 
         // On envoie à la vue
-        $this->render('Views/templates/Car_details', compact("details"));
+        $this->render('/Views/templates/Car_details', compact("details"));
 
         // $this->render('Views/templates/Car_details', [
         //     "details" => $details

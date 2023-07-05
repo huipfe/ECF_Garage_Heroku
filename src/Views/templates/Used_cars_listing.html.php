@@ -163,7 +163,7 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                 </div>
                                 <!-- /ECF_Garage/src/Views/templates/Car_details.html.php -->
-                                <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/details/<?= urlencode($car->marque)?>/<?= $car->id?>"
+                                    <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/details/<?= urlencode($car->marque) ?>/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                                 </a>
@@ -177,7 +177,6 @@ require_once "Header.html.php";
 
     </div>
 </div>
-
 
 
 <script src="/ECF_Garage/Assets/JS/Used_cars_listing.js"></script>

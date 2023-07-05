@@ -76,8 +76,8 @@ class Main
                 
                 //Envoyer à une fonction un tableau de paramètres
                 (isset($params[0])) ?call_user_func_array(
-                [$controller, $action], $params) :
-                $controller->$action();
+                    [$controller, $action], $params) :
+                    $controller->$action();
 
             }else {
                 // On déclenche une erreur 404

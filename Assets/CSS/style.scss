@@ -10,7 +10,7 @@ $font-text: 'Barlow', sans-serif;
 // Definir couleur de base du projet
 $color-primary_black: #262526;
 $color-primary_white: #F2F2F2;
-$color-primary_red_light: #D9777F;
+$color-primary_red_light: #d97777;
 $color-primary_red: #D94350;
 $color-primary_red_dark: #D92332;
 
@@ -31,6 +31,7 @@ font-family: $font-headline;
 
 min-width: $min-width-mobile;
 min-height: $min-height-mobile;
+
 }
 
 /* Import Header&Footer */

@@ -11,16 +11,16 @@ abstract class Controller
      * Cette méthode permet d'afficher une vue
      *
      * @param string $fichier
-     * @param array $data
+     * @param array $donnees
      * @return void
      */
 
-    public function render(string $fichier, array $data = [])
+    public function render(string $fichier, array $donnees = [])
 
     {
 
         // On extrait les données du tableau $donnees
-        extract($data);
+        extract($donnees);
 
         // On démarre le buffer de sortie
         ob_start();

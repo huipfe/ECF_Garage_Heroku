@@ -14,11 +14,11 @@ require_once "Header.html.php";
     <!-- Titre d'intro de la homepage -->
     <div class="container-fluid p-0 text-light position-relative">
         <h1 class="position-absolute top-0 start-0 m-3">
-        <span style="font-weight: 700;">Le Garage V. Parrot,</span>
-        <span style="font-weight: 600;">pensez</span>
-        <span style="font-weight: 300;">différemment.</span>
-        <span style="font-weight: 600;">Louez</span>
-        <span style="font-weight: 300;">différemment...</span>
+        <span class="fw-bold">Le Garage V. Parrot,</span>
+        <span class="fw-bolder">pensez</span>
+        <span class="fw-light">différemment.</span>
+        <span class="fw-bolder">Louez</span>
+        <span class="fw-light">différemment...</span>
         </h1>
 
         <!-- Image de fond, version desktop & mobile -->

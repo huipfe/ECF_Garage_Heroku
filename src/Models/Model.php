@@ -193,7 +193,12 @@ class Model extends Db
     }
 
 
-    //Méthode d'hydratation qui va vérifier si les setters existent et qui va les appeler
+    /**
+     * Méthode d'hydratation qui va vérifier si les setters existent et qui va les appeler
+     *
+     * @param array $donnees
+     * @return void
+     */
 public function hydrate(array $donnees)
     {
         foreach ($donnees as $key => $value) {

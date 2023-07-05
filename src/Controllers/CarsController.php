@@ -91,7 +91,7 @@ class CarsController extends Controller
      * @param integer $id $id id de la voiture
      * @return void
      */
-    public function details(int $id)
+    public function details()
     {
 
         // Exemple de récupération des valeurs depuis une source de données fictive
@@ -105,6 +105,8 @@ class CarsController extends Controller
         $description = "La BMW Série 3 est une berline élégante et sportive.";
 
         // On instancie le modèle
+        // $detailsModel = new CarsDetailsModel();
+
         $detailsModel = new CarsDetailsModel($marque, $modele,
         $annee, $kilometrage, $prix, $image, $id, $description);
 
@@ -113,7 +115,6 @@ class CarsController extends Controller
 
         // On envoie à la vue
         $this->render('/Views/templates/Car_details', compact("details"));
-
         // $this->render('Views/templates/Car_details', [
         //     "details" => $details
         // ]);

@@ -52,7 +52,7 @@ require_once "Header.html.php";
             </div>
                     </div>
                     <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
-                <form id="login-form" class="was-validated">
+                <form id="login-form" class="was-validated" action="#" method="post">
                 <!-- Logo Login -->
                     <img src="/ECF_Garage/Assets/images/Login page/Login_logo.png"
                     width="80" height="auto"
@@ -105,8 +105,6 @@ require_once "Header.html.php";
         </div>
     </div>
 </section>
-
-
 
 </main>
 

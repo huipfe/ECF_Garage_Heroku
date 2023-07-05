@@ -162,8 +162,8 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php -->
-                                    <a href="/ECF_Garage/src/Views/templates/Car_details.html.php/details/<?= urlencode($car->marque) ?>/<?= intval($car->id) ?>"
+                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->                               
+                                    <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                                 </a>

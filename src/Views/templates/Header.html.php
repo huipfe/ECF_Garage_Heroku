@@ -97,8 +97,8 @@
                         </li>
 
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
-
-                            <a href="/ECF_Garage/src/Views/templates/Login.html.php">
+                            <!-- /ECF_Garage/src/Views/templates/Login.html.php -->
+                            <a href="/ECF_Garage/public/login">
                                 <svg
                                 width="38"
                                 height="38"

@@ -85,41 +85,6 @@ class CarsController extends Controller
     
     }
 
-    /**
-     * Cette méthode affichera le détail d'une voiture
-     * Affiche le détail d'une voiture
-     * @param integer $id $id id de la voiture
-     * @return void
-     */
-    public function details()
-    {
-
-        // Exemple de récupération des valeurs depuis une source de données fictive
-        $id = 1;
-        $marque = "BMW";
-        $modele = "Série 3";
-        $annee = 2020;
-        $kilometrage = 50000;
-        $prix = 25000;
-        $image = "voiture_4.jpg";
-        $description = "La BMW Série 3 est une berline élégante et sportive.";
-
-        // On instancie le modèle
-        // $detailsModel = new CarsDetailsModel();
-
-        $detailsModel = new CarsDetailsModel($marque, $modele,
-        $annee, $kilometrage, $prix, $image, $id, $description);
-
-        // On va chercher la voiture correspondant à l'ID
-        $details = $detailsModel->find($id);
-
-        // On envoie à la vue
-        $this->render('/Views/templates/Car_details', compact("details"));
-        // $this->render('Views/templates/Car_details', [
-        //     "details" => $details
-        // ]);
-    }
-
 }
 
 ?>

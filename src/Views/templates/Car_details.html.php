@@ -33,9 +33,15 @@ require_once 'Header.html.php';
                                 </span>
                             </a>
                         </div>
-                    <img class="mb-3 mt-5"
-                        src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
-                        alt="voitureImage">
+                        
+                    <?php
+                    // Récupérer les données binaires de l'image depuis la base de données
+                    $imageData = $details->image;
+                    // Convertir les données binaires en base64
+                    $imageBase64 = base64_encode($imageData);
+                    ?>
+                    <img class="mb-3 mt-5" src="data:image/jpeg;base64, <?= $imageBase64 ?>"
+                    alt="ImageBoucle" class="img-fluid">
                     </div>
                 </section>
             </div>
@@ -48,15 +54,16 @@ require_once 'Header.html.php';
                         <section id="description">
                             <div class="m-2 fw-4"><p>Hot Sale</p></div>
                             <div class="m-2 d-lg-flex">
-                                <h1>Nom Voiture®</h1>
-                                <h1 class="ml-auto"><?= $car->marque?></h1>
-                                <h2>Descriptif rapide</h2>
+                                <h1><?= $details->marque?>®</h1>
+                                <h2><?= $details->description?></h2>
                             </div>
                             <div class="m-2">
-                                <h3>Année de la mise en circulation</h3>
+                                <h3>Année de la mise en circulation :
+                                    <?= $details->annee?>
+                                </h3>
                             </div>
                             <div class="m-3 mt-5 d-flex">
-                                <h4 class="">Genre Véhicule</h4>
+                                <h4 class=""> <?= $details->modele?></h4>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -106,10 +113,13 @@ require_once 'Header.html.php';
                                         alt="miniature-1">
                                     </button>
                                 </div>
+
                                 <div class="mb-3 mt-4">
-                                    <h5 class="m-2 mb-4">Poids :</h5>
-                                    <div class="btn my-btn-danger mb-2 btn-danger">XX Tonnes</div>
+                                    <h5 class="m-2 mb-4">Kilométrage :</h5>
+                                    <div class="btn my-btn-danger mb-2 btn-danger"> <?= $details->kilometrage?> km
                                 </div>
+                                </div>
+                                
                             </div>
                         </section>
                     </div>

@@ -63,7 +63,7 @@ ul.navbar-nav li.nav-item a.nav-link {
 /* Footer */
 footer {
   background: linear-gradient(to bottom right, #262526 0%, #000 50%) bottom right/51% 51% no-repeat, linear-gradient(to bottom left, #262526 0%, #000 50%) bottom left/50% 51% no-repeat, linear-gradient(to top left, #262526 0%, #000 50%) top left/51% 51% no-repeat, linear-gradient(to top right, #262526 0%, #000 50%) top right/50% 51% no-repeat;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 /* Index ou Homepage */
@@ -75,7 +75,7 @@ div.col-lg-5 p:nth-child(2) {
   font-size: 20px;
   line-height: 25px;
   font-style: normal;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 @media (min-width: 992px) {
@@ -97,7 +97,7 @@ div.form-outline.mb-4 label {
   font-weight: 100;
   font-size: 20px;
   line-height: 15px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 @media (min-width: 992px) {
@@ -119,7 +119,7 @@ button.btn-connexion {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #F2F2F2;
+  color: #f2f2f2;
   background-color: transparent;
   background-clip: padding-box;
   border: var(--bs-border-width) solid #C3C3C3;
@@ -136,7 +136,7 @@ button.btn-connexion {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .my-form-control::placeholder {
@@ -145,7 +145,7 @@ button.btn-connexion {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 @media (min-width: 992px) {
@@ -175,7 +175,7 @@ div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(1) {
   font-weight: 600;
   font-size: 40px;
   line-height: 46px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
   position: absolute;
@@ -187,7 +187,7 @@ div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
   font-weight: 600;
   font-size: 16px;
   line-height: 19px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 @media (min-width: 1440px) and (max-width: 1619px) {
@@ -245,7 +245,7 @@ div.col-lg-7.col-xl-6 div p.mb-2.mx-1.mt-4.d-none.d-lg-block:nth-of-type(2) {
   font-weight: 400;
   font-size: 14px;
   line-height: 14px;
-  color: #F2F2F2;
+  color: #f2f2f2;
   position: absolute;
   top: 89%;
   left: 25%;
@@ -358,7 +358,7 @@ div.container div.row div.col-lg-6 div.m-2 h3 + p {
 /* Contact page */
 .p-1.bg-danger.text-white .container-fluid .row .col-lg-6 section .p-2.m-2 h1 {
   font-weight: 700;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 section div.Num-Garage:nth-child(2) {
@@ -382,7 +382,7 @@ section div:nth-child(3) h2 {
 }
 
 .block-title {
-  background: #F2F2F2;
+  background: #f2f2f2;
   color: #262526;
   padding: 3rem;
   border-radius: 30px;
@@ -428,7 +428,7 @@ section div:nth-child(3) h2 {
   font-size: 18px;
   line-height: 20px;
   text-align: center;
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin: 2rem;
 }
 
@@ -480,7 +480,7 @@ section div:nth-child(3) h2 {
   font-size: 1rem;
   font-weight: 400;
   line-height: 1.5;
-  color: #F2F2F2;
+  color: #f2f2f2;
   background-color: transparent;
   background-clip: padding-box;
   border: var(--bs-border-width) solid #C3C3C3;
@@ -497,7 +497,7 @@ section div:nth-child(3) h2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 .my-form-control-contact::placeholder {
@@ -506,7 +506,7 @@ section div:nth-child(3) h2 {
   font-weight: 400;
   font-size: 20px;
   line-height: 25px;
-  color: #F2F2F2;
+  color: #f2f2f2;
 }
 
 /* Import Used_cars_listing page */
@@ -545,7 +545,7 @@ main div h1.products {
   background: #D94350;
   border-radius: 50%;
   text-align: center;
-  color: #F2F2F2;
+  color: #f2f2f2;
   font-size: 14px;
   width: 50px;
   height: 50px;
@@ -562,7 +562,7 @@ main div h1.products {
 }
 
 #ads .card:hover {
-  background: #F2F2F2;
+  background: #f2f2f2;
   box-shadow: 12px 15px 20px 0px rgba(46, 61, 73, 0.15);
   border-radius: 4px;
   transition: all 0.3s ease;
@@ -613,7 +613,7 @@ section#filter-sidebar div.filtrage-bar {
   justify-content: space-between;
   width: 40rem;
   height: 3rem;
-  background: #F2F2F2;
+  background: #f2f2f2;
   border-radius: 21px;
   padding: 0 10px;
   margin-left: 18px;
@@ -650,7 +650,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
   font-size: 10px;
   line-height: 12px;
   text-align: start;
-  color: #F2F2F2;
+  color: #f2f2f2;
   margin: 0 5px;
 }
 
@@ -673,7 +673,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
 
 .form-check-input[type=checkbox]:checked + .form-check-label::before {
   content: "✓";
-  color: #F2F2F2;
+  color: #f2f2f2;
   text-align: center;
   line-height: 16px;
 }
@@ -700,7 +700,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     font-size: 13px;
     line-height: 10px;
     text-align: start;
-    color: #F2F2F2;
+    color: #f2f2f2;
     margin: 0 5px;
   }
   .form-check-input[type=checkbox] + .form-check-label::before {
@@ -736,7 +736,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     font-size: 13px;
     line-height: 20px;
     text-align: start;
-    color: #F2F2F2;
+    color: #f2f2f2;
     margin: 0 5px;
   }
   .form-check-input[type=checkbox] + .form-check-label::before {
@@ -772,7 +772,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     font-size: 10px;
     line-height: 12px;
     text-align: start;
-    color: #F2F2F2;
+    color: #f2f2f2;
     margin: 0 5px;
   }
   .form-check-input[type=checkbox] + .form-check-label::before {
@@ -808,7 +808,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
     font-size: 10px;
     line-height: 12px;
     text-align: start;
-    color: #F2F2F2;
+    color: #f2f2f2;
     margin: 0 5px;
   }
   .form-check-input[type=checkbox] + .form-check-label::before {
@@ -1019,7 +1019,7 @@ section#description div.m-2.fw-4 {
   flex-shrink: 0;
   border-radius: 10px;
   background: var(--red, #D92332);
-  color: var(--primary-grey-6, #F2F2F2);
+  color: var(--primary-grey-6, #f2f2f2);
 }
 section#description div.m-2.fw-4 p {
   font-size: 14px;
@@ -1102,7 +1102,7 @@ section#modal-image .m-2 {
 section#modal-image button.btn, section#modal-image button.my-btn-danger {
   border-radius: 10px;
   border: 5px solid #D94350;
-  background: lightgray 6.132px 8.137px/75% 75% no-repeat, #F2F2F2;
+  background: lightgray 6.132px 8.137px/75% 75% no-repeat, #f2f2f2;
 }
 section#modal-image img {
   width: 50px;

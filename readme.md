@@ -44,9 +44,9 @@ La création de l'administrateur a été crée à partir du fichier 'injectdata.
 
 L'administrateur dispose d'un compte préalablement créé :
 
-email : 
+email : VincentParrot@gmail.com 
 
-mot de passe : 
+mot de passe : VincentParrotBG (mdp hashé)
 
 Vous pouvez également vous connecter en tant qu'employé :
 

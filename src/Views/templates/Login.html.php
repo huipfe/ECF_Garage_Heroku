@@ -18,8 +18,10 @@ require_once "Header.html.php";
 
 <main>
     <!-- http://localhost/ECF_Garage/public/login/login -->
-    <!--< ?=$loginForm ? >-->
+    <!--<?=$loginForm?>-->
 
+
+    <?= $registerForm ?>
 
 <section class="position-relative">
     <div class="container-fluid py-5 py-lg-0">

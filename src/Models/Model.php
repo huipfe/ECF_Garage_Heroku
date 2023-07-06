@@ -74,17 +74,17 @@ class Model extends Db
      * @param array $criteres
      * @return null|mixed
      */
-    public function create(Model $model)
+    public function create()
     {
         $champs = [];
         $inter = [];
         $valeurs = [];
     
         // On récupère les propriétés définies dans le tableau de données
-        $donnees = get_object_vars($model);
+        // $donnees = get_object_vars($model);
     
         // On boucle pour éclater ce tableau
-        foreach ($donnees as $champ => $valeur) {
+        foreach ($this as $champ => $valeur) {
             // INSERT INTO UserModel (nom, passe_word, email) VALUES (?, ?, ?)
             if ($champ != null && $champ != "db" && $champ != "table" && $champ != "id") {
                 if ($champ === "passe_word" && $valeur === null) {
@@ -114,18 +114,18 @@ class Model extends Db
      */
 
 
-        public function update(int $id, Model $model)
+        public function update()
     {
         $champs = [];
         $valeurs = [];
-    
+
         // On récupère les propriétés définies dans le tableau de données
-        $donnees = get_object_vars($model);
-    
+        // $donnees = get_object_vars($model);
+
         // On boucle pour éclater ce tableau
-        foreach ($donnees as $champ => $valeur) {
+        foreach ($this as $champ => $valeur) {
             // UPDATE page_d_accueil set HomepageModel image = ?, temoignage = ?, actif = ? WHERE id = ?
-            if ($champ != null && $champ != "db" && $champ != "table" && $champ != "id") {
+            if ($champ !== null && $champ != "db" && $champ != "table" && $champ != "id") {
                 if ($champ === "id_image" && $valeur === null) {
                     continue; // Ignorer la colonne 'id_image' si elle est nulle
                 }
@@ -133,9 +133,9 @@ class Model extends Db
                 $valeurs[] = $valeur;
             }
         }
-        
+
         // On ajoute l'id à la liste des valeurs
-        $valeurs[] = $id;
+        $valeurs[] = $this->id;
 
         // On transforme le tableau en string (en chaîne de caractères)
         $liste_champs = implode(' , ', $champs);
@@ -199,7 +199,7 @@ class Model extends Db
      * @param array $donnees
      * @return void
      */
-public function hydrate(array $donnees)
+public function hydrate($donnees)
     {
         foreach ($donnees as $key => $value) {
             // On récupère le nom du setter correspondant à l'attribut key

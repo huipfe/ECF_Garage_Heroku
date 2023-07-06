@@ -12,26 +12,11 @@ class UsersModel extends Model
         protected $user_id;
 
         /**
-         * $nom_de_registre
-         *
-         * @var [string]
-         */
-        protected $nom_de_registre;
-
-        /**
          * $passe_word
          *
          * @var [string]
          */
         protected $passe_word;
-
-        /**
-         * $login_status
-         *
-         * @var [string]
-         */
-        protected $login_status;
-
 
         /**
          * $email
@@ -50,6 +35,17 @@ class UsersModel extends Model
             // on enlève le nom model, pour qu'il ne reste que le nom de la table
                 $class = str_replace(__NAMESPACE__.'\\', '', __CLASS__);
                 $this->table = strtolower(str_replace('Model', '', $class));
+        }
+
+        /**
+         * Récupérer un utilisateur via son email
+         *
+         * @param string $email
+         * @return mixed
+         */
+        public function findOneByEmail(string $email)
+        {
+                return $this->requete("SELECT * FROM {$this->table} WHERE email = ?", [$email])->fetch();
         }
 
 
@@ -72,24 +68,6 @@ class UsersModel extends Model
         }
 
         /**
-         * Get the value of nom
-         */
-        public function getNom()
-        {
-                return $this->nom_de_registre;
-        }
-
-        /**
-         * Set the value of nom
-         */
-        public function setNom($nom_de_registre): self
-        {
-                $this->nom_de_registre = $nom_de_registre;
-
-                return $this;
-        }
-
-        /**
          * Get the value of passe_word
          */
         public function getPasseWord()
@@ -103,24 +81,6 @@ class UsersModel extends Model
         public function setPasseWord($passe_word): self
         {
                 $this->passe_word = $passe_word;
-
-                return $this;
-        }
-
-        /**
-         * Get the value of login_status
-         */
-        public function getLoginStatus()
-        {
-                return $this->login_status;
-        }
-
-        /**
-         * Set the value of login_status
-         */
-        public function setLoginStatus($login_status): self
-        {
-                $this->login_status = $login_status;
 
                 return $this;
         }

@@ -108,8 +108,6 @@ CREATE TABLE `témoignages` (
 CREATE TABLE `users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `passe_word` varchar(255) NOT NULL,
-  `login_status` tinyint(1) NOT NULL,
-  `nom_de_registre` varchar(50) NOT NULL,
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Utilisateur (Pour admin et employé)';

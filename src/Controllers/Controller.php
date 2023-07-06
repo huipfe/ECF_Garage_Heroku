@@ -15,6 +15,9 @@ abstract class Controller
      * @return void
      */
 
+    protected $template1 = 'Header';
+    protected $template2 = 'Footer';
+
     public function render(string $fichier, array $donnees = [])
 
     {
@@ -28,13 +31,15 @@ abstract class Controller
         
         // On créer le chemin vers la vue
         // require_once ROOT . '/src/Views/' . $fichier . '.html.php';
-        require_once ROOT . '/src/' . $fichier . '.html.php';
+        require_once ROOT.'/src/'.$fichier.'.html.php';
 
         // Transfère le buffer dans $contenu
         // $contenu = ob_get_clean();
 
         // On charge le template
-        // require_once ROOT . '/src/Views/default.php';
+        // require_once ROOT . '/src/Views/templates/' . $this->template1. '.html.php';
+        // require_once ROOT . '/src/Views/templates/' . $this->template2 . '.html.php';
+
     }
 
 }

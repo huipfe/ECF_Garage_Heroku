@@ -90,6 +90,7 @@ require_once 'Header.html.php';
                     <div class="col-lg-12">
                         <section id="modal-image">
                             <div>
+                                
                                 <div class="m-2">
                                     <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal1">
                                         <img
@@ -115,11 +116,13 @@ require_once 'Header.html.php';
                                 </div>
 
                                 <div class="mb-3 mt-4">
-                                    <h5 class="m-2 mb-4">Kilométrage :</h5>
+                                    <h5 class="m-2 mb-4">Kilométrage & Prix :</h5>
                                     <div class="btn my-btn-danger mb-2 btn-danger"> <?= $details->kilometrage?> km
+                                    </div>
+                                    <div class="btn my-btn-danger mb-2 btn-danger"> <?= $details->prix?> €
+                                    </div>
                                 </div>
-                                </div>
-                                
+
                             </div>
                         </section>
                     </div>

@@ -96,7 +96,7 @@ require_once "Header.html.php";
                 <div class="username">Bidule</div>
               </div>
               <ul class="list-unstyled">
-                <li style="margin-left: 2rem;">Bidule@gmail.com</li>
+                <li style="margin-left: 2.5rem;">Bidule@gmail.com</li>
               </ul>
               <ul class="list-unstyled">
                 

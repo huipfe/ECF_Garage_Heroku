@@ -17,17 +17,22 @@ require_once "Header.html.php";
 ?>
 
 <main>
-    
+    <!-- http://localhost/ECF_Garage/public/login/login -->
+    <!--< ?=$loginForm ? >-->
+
+
 <section class="position-relative">
     <div class="container-fluid py-5 py-lg-0">
         <div class="row d-flex align-items-center ">
             <div class="col-md-8 col-lg-7 col-xl-6">
                 <div style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; z-index: -1;">
+                
                 <!-- Mobile -->
                 <img class="img-fluid d-lg-none w-100 h-100"
                         src="/ECF_Garage/Assets/images/Login page/Fond_Login_Mobile_page.png"
                         alt="Fond_Login_Mobile">
                 </div>
+
                 <!-- Desktop -->
             <div>
                 <img class=" d-none d-lg-block w-100 h-100"

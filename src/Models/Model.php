@@ -86,7 +86,7 @@ class Model extends Db
         // On boucle pour éclater ce tableau
         foreach ($this as $champ => $valeur) {
             // INSERT INTO UserModel (nom, passe_word, email) VALUES (?, ?, ?)
-            if ($champ != null && $champ != "db" && $champ != "table" && $champ != "id") {
+            if ($valeurs !== null && $champ != "db" && $champ != "table" && $champ != "id") {
                 if ($champ === "passe_word" && $valeur === null) {
                     continue; // Ignorer la colonne 'passe_word' si elle est nulle
                 }

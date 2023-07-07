@@ -48,7 +48,6 @@ class UsersModel extends Model
                 return $this->requete("SELECT * FROM {$this->table} WHERE email = ?", [$email])->fetch();
         }
 
-
         /**
          * Get the value of user_id
          */

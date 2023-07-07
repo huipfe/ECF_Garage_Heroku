@@ -19,9 +19,8 @@ require_once "Header.html.php";
 <main>
     <!-- http://localhost/ECF_Garage/public/login/login -->
     <!--<?=$loginForm?>-->
-
-
     <?= $registerForm ?>
+
 
 <section class="position-relative">
     <div class="container-fluid py-5 py-lg-0">
@@ -59,7 +58,11 @@ require_once "Header.html.php";
             </div>
                     </div>
                     <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
-                <form id="login-form" class="was-validated" action="#" method="post">
+                <form
+                id="login-form"
+                class="was-validated"
+                action="/ECF_Garage/src/Utils/register.php"
+                method="POST">
                 <!-- Logo Login -->
                     <img src="/ECF_Garage/Assets/images/Login page/Login_logo.png"
                     width="80" height="auto"
@@ -73,25 +76,25 @@ require_once "Header.html.php";
                 </div>
 
                 <!-- Name input -->
-                    <div class="form-outline mb-4">
+                    <!-- <div class="form-outline mb-4">
                         <label class="form-label" for="form3Example1" class="">Nom*</label>
                         <input type="text" id="form3Example1" class="my-form-control"
                         placeholder="Entrez votre nom" required/>
                         
-                    </div>
+                    </div> -->
 
                 <!-- Email input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form1Example13">Email*</label>
-                    <input type="email" id="form1Example13" class="my-form-control my-form-control-lg"
+                    <label class="form-label" name="email" for="email">Email*</label>
+                    <input type="email" id="email" class="my-form-control my-form-control-lg"
                     placeholder="Entrez votre email" required/>
 
                 </div>
 
                 <!-- Mot de pass input -->
                 <div class="form-outline mb-4">
-                    <label class="form-label" for="form1Example23">Mot de passe</label>
-                    <input type="password" id="form1Example23" class="my-form-control my-form-control-lg"
+                    <label class="form-label" for="password">Mot de passe</label>
+                    <input type="password" id="password" class="my-form-control my-form-control-lg"
                     placeholder="Entrez votre mot de passe" pattern=".{8,}" required/>
                 <!-- Avertissement Mot de passe -->
                 <div class="invalid-feedback">

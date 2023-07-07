@@ -45,14 +45,12 @@ La création de l'administrateur a été crée à partir du fichier 'injectdata.
 L'administrateur dispose d'un compte préalablement créé :
 
 email : VincentParrot@gmail.com 
-
 mot de passe : VincentParrotBG (mdp hashé)
 
 Vous pouvez également vous connecter en tant qu'employé :
 
-email : 
-
-mot de passe : 
+email : Employer1@gmail.com
+mot de passe : Employé123 (mdp hashé)
 
 Seul l'administrateur peut générer un compte pour les employés :
 Il dispose d'un tableau de bord Admin avec 3 options : créer un compte employé,

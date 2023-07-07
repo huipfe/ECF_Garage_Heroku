@@ -49,6 +49,20 @@ class UsersModel extends Model
         }
 
         /**
+         * Créer la sessions de l'utilisateur
+         *
+         * @param int $id
+         * @return mixed
+         */
+        public function setSession()
+        {
+                $_SESSION['user'] = [
+                        'id' => $this->user_id,
+                        'email' => $this->email
+                ];
+        }
+
+        /**
          * Get the value of user_id
          */
         public function getUserId()

@@ -171,7 +171,8 @@ class Model extends Db
      */
 
     #[\ReturnTypeWillChange]
-    public function requete(string $query, ?int $fetchMode = null, ...$fetchModeArgs)
+    // public function requete(string $query, ?int $fetchMode = null, ...$fetchModeArgs)
+    public function requete(string $query, ?array $fetchModeArgs = null, ?int $fetchMode = null)
     {
         // On récupère l'instance Db
         $this->db = Db::getInstance();
@@ -197,7 +198,6 @@ class Model extends Db
      * Méthode d'hydratation qui va vérifier si les setters existent et qui va les appeler
      *
      * @param array $donnees
-     * @return void
      */
 public function hydrate($donnees)
     {

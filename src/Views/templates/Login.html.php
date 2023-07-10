@@ -17,10 +17,9 @@ require_once "Header.html.php";
 ?>
 
 <main>
+
     <!-- http://localhost/ECF_Garage/public/login/login -->
-    <!-- <?=$loginForm?> -->
-    <!-- http://localhost/ECF_Garage/public/login/register -->
-    <!-- <?= $registerForm ?> -->
+    <?=$loginForm?>
 
     
     <section class="position-relative">
@@ -126,7 +125,13 @@ require_once "Header.html.php";
                                 </div>
                                 
                             </div>
-    
+
+        <!-- Message d'erreur -->
+    <?php if(!empty($_SESSION['erreur'])): ?>
+        <div class="alert alert-danger" id="alert" role="alert">
+            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
+        </div>
+    <?php endif; ?>
                         <!-- Submit button -->
                         <button
                         type="submit"

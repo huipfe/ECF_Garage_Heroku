@@ -32,7 +32,7 @@ class LoginController extends Controller
             if (!$user) {
                 // L'utilisateur n'existe pas
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login');
+                header('Location: /ECF_Garage/public/login/login');
                 exit;
             }
 
@@ -46,7 +46,7 @@ class LoginController extends Controller
                 // Vérifier si l'utilisateur est un admin, et redirige vers la bonne page si admin.
                 if ($user->is_admin == 1) {
                     $_SESSION['is_admin'] = true;
-                    header('Location: /ECF_Garage/public/dashboard');
+                    header('Location: /ECF_Garage/public/dashboard/register');
                 } else {
                     $_SESSION['is_admin'] = false;
                     header('Location: /ECF_Garage/public/cars');
@@ -56,7 +56,7 @@ class LoginController extends Controller
             } else {
                 // Le mot de passe est incorrect
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login');
+                header('Location: /ECF_Garage/public/login/login');
                 exit;
             }
         }
@@ -78,49 +78,20 @@ class LoginController extends Controller
     }
 
     
+
+
     /**
-     * Méthode pour enregistrer un utilisateur
-     * @return void
+     * Déconnecte l'utilisateur
+     *
+     * @return exit
      */
-    public function register()
-    {
-        //On vérifie si le formulaire est valide
-        if(Form::validate($_POST, ['email', 'password'])){
-            // Le formulaire est valide
-
-            // On nettoie l'adresse mail
-            $email = strip_tags($_POST['email']);
-
-            // On chiffre le mot de passe
-            $password = password_hash($_POST['password'], PASSWORD_ARGON2I);
-
-            // On hydrate l'utilisateur en BDD
-            $user = new UsersModel;
-
-            $user->setEmail($email)
-                ->setPasseWord($password)
-            ;
-            
-            // On stock l'utilisateur en BDD
-            $user->create();
-        }
-
-        $form = new Form;
-
-        $form->debutForm()
-            ->ajoutLabelFor('email', 'E-Mail :')
-            ->ajoutInput('email', 'email', ['id' => 'email', 'class' => 'form-control',])
-            ->ajoutLabelFor('password', 'Mot de passe :')
-            ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',])
-            ->ajoutBouton('M\'enregistrer', ['class' => 'btn btn-primary'])
-            ->finForm();
-
-        $this->render('/Views/templates/Login', ['registerForm' => $form->create()]);
-    }
-
     public function logout()
     {
-        session_destroy();
+        // session_destroy();
+        // header('Location: /ECF_Garage/public/login/login');
+        // exit;
+
+        unset($_SESSION['user']);
         header('Location: /ECF_Garage/public/login/login');
         exit;
     }

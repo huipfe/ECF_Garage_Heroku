@@ -5,7 +5,7 @@ require_once "Header.html.php";
 <main>
 
     <!-- http://localhost/ECF_Garage/public/Dashboard/register -->
-    <?= $registerForm ?>
+    <!-- <?= $registerForm ?> -->
 
 <!-- Dashboard titre -->
 <section class="d-none d-lg-block bg-light text-center">

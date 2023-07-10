@@ -15,7 +15,7 @@ class LoginController extends Controller
      * Méthode pour connecter un utilisateur
      * @return void
      */
-    public function login()
+    public function Belogin()
     {
         // On vérifie si le formulaire est complet
         if (Form::validate($_POST, ['email', 'password'])) {
@@ -32,7 +32,7 @@ class LoginController extends Controller
             if (!$user) {
                 // L'utilisateur n'existe pas
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login/login');
+                header('Location: /ECF_Garage/public/login/Belogin');
                 exit;
             }
 
@@ -46,7 +46,7 @@ class LoginController extends Controller
                 // Vérifier si l'utilisateur est un admin, et redirige vers la bonne page si admin.
                 if ($user->is_admin == 1) {
                     $_SESSION['is_admin'] = true;
-                    header('Location: /ECF_Garage/public/dashboard/register');
+                    header('Location: /ECF_Garage/public/dashboard/administration');
                 } else {
                     $_SESSION['is_admin'] = false;
                     header('Location: /ECF_Garage/public/cars');
@@ -56,25 +56,27 @@ class LoginController extends Controller
             } else {
                 // Le mot de passe est incorrect
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login/login');
+                header('Location: /ECF_Garage/public/login/Belogin');
                 exit;
             }
         }
 
-        $form = new Form;
+        // $form = new Form;
 
-        $form->debutForm()
-            ->ajoutLabelFor('email', 'E-mail :')
-            ->ajoutInput('email', 'email', ['class' => 'form-control',
-            'id' => 'email', 'placeholder' => 'Votre e-mail'])
-            ->ajoutLabelFor('password', 'Mot de passe :')
-            ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',
-            'placeholder' => 'Votre mot de passe'])
-            ->ajoutBouton('Me connecter', ['class' => 'btn btn-primary'])
-            ->finForm();
+        // $form->debutForm()
+        //     ->ajoutLabelFor('email', 'E-mail :')
+        //     ->ajoutInput('email', 'email', ['class' => 'form-control',
+        //     'id' => 'email', 'placeholder' => 'Votre e-mail'])
+        //     ->ajoutLabelFor('password', 'Mot de passe :')
+        //     ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',
+        //     'placeholder' => 'Votre mot de passe'])
+        //     ->ajoutBouton('Me connecter', ['class' => 'btn btn-primary'])
+        //     ->finForm();
 
         
-        $this->render('/Views/templates/Login', ['loginForm' => $form->create()]);
+        // $this->render('/Views/templates/Login', ['loginForm' => $form->create()]);
+
+        $this->render('/Views/templates/Login');
     }
 
     
@@ -92,7 +94,7 @@ class LoginController extends Controller
         // exit;
 
         unset($_SESSION['user']);
-        header('Location: /ECF_Garage/public/login/login');
+        header('Location: /ECF_Garage/public/login/Belogin');
         exit;
     }
 }

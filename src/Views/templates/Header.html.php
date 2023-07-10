@@ -149,7 +149,7 @@
                     <!-- Icône du tableau de bord (visible pour les administrateurs) -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
                         <!-- /ECF_Garage/src/Views/templates/Dashboard.html.php -->
-                            <a href="/ECF_Garage/public/Dashboard">
+                            <a href="/ECF_Garage/public/dashboard/administration">
                                 <svg width="30"
                                 height="35"
                                 viewBox="0 0 25 29"
@@ -207,7 +207,7 @@
                             <!-- Connexion (n'apparait que si non connecter) -->
                             <!-- /ECF_Garage/src/Views/templates/Login.html.php -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
-                            <a href="/ECF_Garage/public/login">
+                            <a href="/ECF_Garage/public/login/Belogin">
                                 <svg
                                 width="38"
                                 height="38"

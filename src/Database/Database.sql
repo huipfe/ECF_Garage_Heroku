@@ -19,9 +19,9 @@ SET time_zone = "+00:00";
 -- Structure de la table `catalogue/listes voitures`
 --
 
-CREATE TABLE `catalogue_de_voitures` (
-    `name` varchar(50) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Catalogue voiture';
+-- CREATE TABLE `catalogue_de_voitures` (
+--     `name` varchar(50) NOT NULL
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Catalogue voiture';
 
 -- --------------------------------------------------------
 
@@ -120,17 +120,19 @@ CREATE TABLE `users` (
 --
 
 CREATE TABLE `voiture` (
-  `id` int NOT NULL AUTO_INCREMENT,
-  `image` varchar(255) NOT NULL,
+  `id` int NOT NULL,
+  `image` longblob,
   `prix` float NOT NULL,
   `annee` int NOT NULL,
   `kilometrage` int NOT NULL,
   `marque` varchar(50) NOT NULL,
-  `modele` varchar(50) NOT NULL,
+  `modele` varchar(50) CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci NOT NULL,
   `description` varchar(255) NOT NULL,
-  PRIMARY KEY (`id`)
+  `users_id` int NOT NULL,
+  CONSTRAINT `fk_voiture_users`
+    FOREIGN KEY (`users_id`)
+    REFERENCES `users` (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table de voiture, liée au catalogue';
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;

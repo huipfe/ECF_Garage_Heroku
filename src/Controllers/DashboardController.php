@@ -17,7 +17,7 @@ class DashboardController extends Controller
      * Méthode pour enregistrer un utilisateur
      * @return void
      */
-    public function register()
+    public function administration()
     {
         //On vérifie si le formulaire est valide
         if (Form::validate($_POST, ['email', 'password'])) {
@@ -39,16 +39,18 @@ class DashboardController extends Controller
             $user->create();
         }
 
-        $form = new Form;
+        // $form = new Form;
 
-        $form->debutForm()
-            ->ajoutLabelFor('email', 'E-Mail :')
-            ->ajoutInput('email', 'email', ['id' => 'email', 'class' => 'form-control',])
-            ->ajoutLabelFor('password', 'Mot de passe :')
-            ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',])
-            ->ajoutBouton('M\'enregistrer', ['class' => 'btn btn-primary'])
-            ->finForm();
+        // $form->debutForm()
+        //     ->ajoutLabelFor('email', 'E-Mail :')
+        //     ->ajoutInput('email', 'email', ['id' => 'email', 'class' => 'form-control',])
+        //     ->ajoutLabelFor('password', 'Mot de passe :')
+        //     ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',])
+        //     ->ajoutBouton('M\'enregistrer', ['class' => 'btn btn-primary'])
+        //     ->finForm();
 
-        $this->render('/Views/templates/Dashboard', ['registerForm' => $form->create()]);
+        // $this->render('/Views/templates/Dashboard', ['registerForm' => $form->create()]);
+
+        $this->render('/Views/templates/Dashboard');
     }
 }

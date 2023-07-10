@@ -19,7 +19,7 @@ require_once "Header.html.php";
 <main>
 
     <!-- http://localhost/ECF_Garage/public/login/login -->
-    <?=$loginForm?>
+    <!-- <?=$loginForm?> -->
 
     
     <section class="position-relative">
@@ -126,12 +126,13 @@ require_once "Header.html.php";
                                 
                             </div>
 
-        <!-- Message d'erreur -->
-    <?php if(!empty($_SESSION['erreur'])): ?>
-        <div class="alert alert-danger" id="alert" role="alert">
-            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
-        </div>
-    <?php endif; ?>
+                            <!-- Message d'erreur -->
+                        <?php if(!empty($_SESSION['erreur'])): ?>
+                            <div class="alert alert-danger" id="alert" role="alert">
+                                <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
+                            </div>
+                        <?php endif; ?>
+
                         <!-- Submit button -->
                         <button
                         type="submit"

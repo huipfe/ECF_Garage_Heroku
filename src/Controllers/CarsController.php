@@ -85,6 +85,27 @@ class CarsController extends Controller
     
     }
 
+    /**
+     * Cette méthode me permettra d'ajouter une voiture
+     * Ajoute une voiture
+     * @return void
+     */
+    public function ajouter()
+    {
+        // Pour pouvoir ajouter une annonce, il faut être un employé, ou admin qui est connecter
+        // On vérifie si l'utilisateur est connecter
+        if(isset($_SESSION['user']) && !empty($_SESSION['user']['id'])){
+            // L'utilisateur est connecté
+            echo "Vous êtes connecté, vous pouvez ajouter une annonce";
+        }else{
+            // L'utilisateur n'est pas connecté
+            // On le redirige vers la page de connexion
+            $_SESSION['erreur'] = "Vous devez être connecté pour ajouter une annonce";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit;
+        }
+    }
+
 }
 
 ?>

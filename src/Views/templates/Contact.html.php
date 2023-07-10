@@ -104,9 +104,10 @@ require_once "Header.html.php";
                             </div>
 
                             <!-- Partie message -->
+                            <!-- Pas obligatoire à mettre : action="/ECF_Garage/src/Utils/sendMail.php" -->
                             <form
                             id="contactForm"
-                            action="/ECF_Garage/src/Utils/sendMail.php"
+
                             method="POST">
                                 <!-- SurName & Name Input -->
                                 <div class="form-floating mb-3">

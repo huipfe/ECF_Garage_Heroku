@@ -25,6 +25,14 @@ class UsersModel extends Model
          * @var [string]
          */
         private $email;
+
+        /**
+         * $is_admin
+         *
+         * @var [string]
+         */
+
+        private $is_admin;
         
     // Constructeur
         public function __construct()
@@ -128,5 +136,29 @@ class UsersModel extends Model
 
                 return $this;
         }
+
+        /**
+         * Get the value of is_admin
+         */
+
+        public function getIsAdmin()
+
+        {
+                return $this->is_admin;
+        }
+
+        /**
+         * Set the value of is_admin
+         */
+
+        public function setIsAdmin($is_admin): self
+
+        {
+                $this->is_admin = $is_admin;
+
+                return $this;
+        }
+
+        
 }
 ?>

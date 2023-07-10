@@ -18,7 +18,7 @@ require_once "Header.html.php";
 
 <main>
     <!-- http://localhost/ECF_Garage/public/login/login -->
-    <?=$loginForm?>
+    <!-- <?=$loginForm?> -->
     <!-- http://localhost/ECF_Garage/public/login/register -->
     <!-- <?= $registerForm ?> -->
 
@@ -55,20 +55,22 @@ require_once "Header.html.php";
                             </img>
                             <p class="d-none d-lg-block staff-members-text">Les membres du staff</p>
                             </div>
-    
+                    </div>
                 </div>
-                        </div>
-                        <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
+
+            <div class="col-lg-5 p-5" style="position: relative; z-index: 1;">
                     <form
                     id="login-form"
                     class="was-validated"
-                    action="/ECF_Garage/src/Utils/register.php"
+
                     method="POST">
-                    <!-- action="/ECF_Garage/src/Utils/register.php" -->
+                    <!-- Pas obligatoire à mettre : action="/ECF_Garage/src/Utils/register.php" -->
     
                     <!-- Logo Login -->
-                        <img src="/ECF_Garage/Assets/images/Login page/Login_logo.png"
-                        width="80" height="auto"
+                        <img
+                        src="/ECF_Garage/Assets/images/Login page/Login_logo.png"
+                        width="80"
+                        height="auto"
                         alt="Login_logo"
                         class="m-2">
                     <!-- Se connecter -->
@@ -125,14 +127,17 @@ require_once "Header.html.php";
                                 
                             </div>
     
-            <!-- Submit button -->
-                        <button type="submit" class="btn btn-danger btn-connexion btn-lg btn-block w-100">
+                        <!-- Submit button -->
+                        <button
+                        type="submit"
+                        class="btn btn-danger btn-connexion btn-lg btn-block w-100">
                         Connexion
                         </button>
     
                     </form>
     
                 </div>
+
             </div>
         </div>
 </section>

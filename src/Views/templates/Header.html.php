@@ -16,7 +16,9 @@
     <!-- Typographie Google Font -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Rajdhani:wght@300;400;500;600;700&display=swap" 
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,
+    500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,600;1,700;1,800;1,900&family=Rajdhani:
+    wght@300;400;500;600;700&display=swap"
     rel="stylesheet">
 
     <!-- Style du projet -->
@@ -75,12 +77,15 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/ECF_Garage/public/main">Accueil</a>
+                            <a class="nav-link active" aria-current="page" href="/ECF_Garage/public/main">
+                                Accueil</a>
                         </li>
                         <!-- ECF_Garage/src/Views/templates/Homepage.html.php -->
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/src/Views/templates/Services.html.php">Nos service</a>
+                            <a class="nav-link" href="/ECF_Garage/public/Services">
+                                Nos service</a>
+                                <!-- /ECF_Garage/src/Views/templates/Services.html.php -->
                         </li>
 
                         <li class="nav-item ">
@@ -90,11 +95,15 @@
                         <!-- ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/src/Views/templates/Apropos.html.php">A propos</a>
+                            <a class="nav-link" href="/ECF_Garage/public/Apropos">
+                                A propos</a>
+                            <!-- /ECF_Garage/src/Views/templates/Apropos.html.php -->
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/src/Views/templates/Contact.html.php">Contact</a>
+                            <a class="nav-link" href="/ECF_Garage/public/Contact">
+                                Contact</a>
+                            <!-- /ECF_Garage/src/Views/templates/Contact.html.php -->
                         </li>
                         
 
@@ -136,6 +145,8 @@
                             </a>
                         </li>
 
+                    <?php if ($_SESSION['is_admin']): ?>
+                    <!-- Icône du tableau de bord (visible pour les administrateurs) -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
                         <!-- /ECF_Garage/src/Views/templates/Dashboard.html.php -->
                             <a href="/ECF_Garage/public/Dashboard">
@@ -189,7 +200,10 @@
                             </a>
                         </li>
 
-                    <?php else:?>
+                    <?php endif; ?>
+
+                <?php else: ?>
+
                             <!-- Connexion (n'apparait que si non connecter) -->
                             <!-- /ECF_Garage/src/Views/templates/Login.html.php -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">

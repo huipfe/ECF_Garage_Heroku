@@ -32,7 +32,7 @@ class LoginController extends Controller
             if (!$user) {
                 // L'utilisateur n'existe pas
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login/login');
+                header('Location: /ECF_Garage/public/login');
                 exit;
             }
 
@@ -42,14 +42,21 @@ class LoginController extends Controller
 
                 // On crée la session de l'utilisateur
                 $usersModel->setSession();
-                // var_dump($_SESSION);
-                // die;
-                header('Location: /ECF_Garage/public/dashboard');
+
+                // Vérifier si l'utilisateur est un admin, et redirige vers la bonne page si admin.
+                if ($user->is_admin == 1) {
+                    $_SESSION['is_admin'] = true;
+                    header('Location: /ECF_Garage/public/dashboard');
+                } else {
+                    $_SESSION['is_admin'] = false;
+                    header('Location: /ECF_Garage/public/cars');
+                }
+
                 exit;
             } else {
                 // Le mot de passe est incorrect
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login/register');
+                header('Location: /ECF_Garage/public/login');
                 exit;
             }
         }

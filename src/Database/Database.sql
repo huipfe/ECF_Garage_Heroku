@@ -71,18 +71,18 @@ CREATE TABLE `page_d_accueil` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Contenu de la page d''Accueil';
 
 
--- --------------------------------------------------------
+-- -- --------------------------------------------------------
 
---
--- Structure de la table `rôle`
---
+-- --
+-- -- Structure de la table `rôle`
+-- --
 
-CREATE TABLE `rôle` (
-  `name` varchar(50) NOT NULL,
-  `is_admin` tinyint(1) NOT NULL,
-  `id` int NOT NULL AUTO_INCREMENT,
-  PRIMARY KEY (`id`)
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Rôle, qui désigne l''admin ou l''employé';
+-- CREATE TABLE `rôle` (
+--   `name` varchar(50) NOT NULL,
+--   `is_admin` tinyint(1) NOT NULL,
+--   `id` int NOT NULL AUTO_INCREMENT,
+--   PRIMARY KEY (`id`)
+-- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Rôle, qui désigne l''admin ou l''employé';
 
 -- --------------------------------------------------------
 
@@ -109,6 +109,7 @@ CREATE TABLE `users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `password` varchar(255) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `is_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 if user is admin, 0 otherwise',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Utilisateur (Pour admin et employé)';
 

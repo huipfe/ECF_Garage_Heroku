@@ -1,6 +1,7 @@
-<?php 
-namespace App\Models;
+<?php
 
+
+namespace App\Models;
 
 class UsersModel extends Model
 {
@@ -9,27 +10,27 @@ class UsersModel extends Model
          *
          * @var [int]
          */
-        protected $user_id;
+        private $user_id;
 
         /**
-         * $passe_word
+         * $password
          *
          * @var [string]
          */
-        protected $passe_word;
+        private $password;
 
         /**
          * $email
          *
          * @var [string]
          */
-        protected $email;
+        private $email;
         
     // Constructeur
         public function __construct()
         {
             // On définit le nom de la table
-                // $this->table = "users";
+                $this->table = "users";
 
             // On définit la nom de la table, et on la passe en miniscule,
             // on enlève le nom model, pour qu'il ne reste que le nom de la table
@@ -57,9 +58,21 @@ class UsersModel extends Model
         public function setSession()
         {
                 $_SESSION['user'] = [
-                        'id' => $this->user_id,
+                        // 'id' => $this->user_id,
                         'email' => $this->email
                 ];
+        }
+
+        public function createUser(array $data): bool
+        {
+                $sql = "INSERT INTO {$this->table} (email, password)
+                VALUES (:email, :password)";
+                $query = $this->requete(
+                        $sql,[
+                        'email' => $data['email'],
+                        'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+                ]);
+                return ($query->rowCount() === 1);
         }
 
         /**
@@ -81,19 +94,19 @@ class UsersModel extends Model
         }
 
         /**
-         * Get the value of passe_word
+         * Get the value of password
          */
         public function getPasseWord()
         {
-                return $this->passe_word;
+                return $this->password;
         }
 
         /**
-         * Set the value of passe_word
+         * Set the value of password
          */
-        public function setPasseWord($passe_word): self
+        public function setPasseWord($password): self
         {
-                $this->passe_word = $passe_word;
+                $this->password = $password;
 
                 return $this;
         }

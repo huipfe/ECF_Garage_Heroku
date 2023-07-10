@@ -17,42 +17,39 @@ class LoginController extends Controller
      */
     public function login()
     {
-
         // On vérifie si le formulaire est complet
-        if(Form::validate($_POST, ['email', 'password'])){
+        if (Form::validate($_POST, ['email', 'password'])) {
             // Le formulaire est valide
 
-            // On nettoie l'adresse mail
+            // On nettoie l'adresse e-mail
             $email = strip_tags($_POST['email']);
 
             // On récupère l'utilisateur via son email
             $usersModel = new UsersModel;
-            $userArray = $usersModel->findOneByEmail($email);
+            $user = $usersModel->findOneByEmail($email);
 
-            // On vérifie sur l'utilisateur n'existe pas
-            if(!$userArray){
+            // On vérifie si l'utilisateur existe
+            if (!$user) {
                 // L'utilisateur n'existe pas
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login');
+                header('Location: /ECF_Garage/public/login/login');
                 exit;
             }
 
-            // L'utilisateur existe, on hydrate l'objet
-            $user = $usersModel->hydrate($userArray);
-
             // On vérifie si le mot de passe est correct
-            if(password_verify($_POST['password'], $user->getPasseWord())){
+            if (password_verify($_POST['password'], $user->password)) {
                 // Le mot de passe est correct
 
                 // On crée la session de l'utilisateur
-                $user->setSession();
-                header('Location: /');
+                $usersModel->setSession();
+                // var_dump($_SESSION);
+                // die;
+                header('Location: /ECF_Garage/public/dashboard');
                 exit;
-
-            }else {
-                // Si le mot de passe est incorrect
+            } else {
+                // Le mot de passe est incorrect
                 $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login');
+                header('Location: /ECF_Garage/public/login/register');
                 exit;
             }
         }
@@ -69,9 +66,6 @@ class LoginController extends Controller
             ->ajoutBouton('Me connecter', ['class' => 'btn btn-primary'])
             ->finForm();
 
-        // var_dump($form);
-
-        // echo $form->create();
         
         $this->render('/Views/templates/Login', ['loginForm' => $form->create()]);
     }
@@ -115,6 +109,13 @@ class LoginController extends Controller
             ->finForm();
 
         $this->render('/Views/templates/Login', ['registerForm' => $form->create()]);
+    }
+
+    public function logout()
+    {
+        session_destroy();
+        header('Location: /ECF_Garage/public/login/login');
+        exit;
     }
 }
 ?>

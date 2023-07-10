@@ -14,7 +14,7 @@ class Model extends Db
     protected $table;
 
     // Instance de la classe Db
-    private $db;
+    private Db $db;
 
     /**
      * Méthode qui me permet d'aller chercher tout les éléments d'une table
@@ -87,9 +87,9 @@ class Model extends Db
         foreach ($this as $champ => $valeur) {
             // INSERT INTO UserModel (nom, passe_word, email) VALUES (?, ?, ?)
             if ($valeurs !== null && $champ != "db" && $champ != "table" && $champ != "id") {
-                if ($champ === "passe_word" && $valeur === null) {
-                    continue; // Ignorer la colonne 'passe_word' si elle est nulle
-                }
+                // if ($champ === "password" && $valeur === null) {
+                //     continue; // Ignorer la colonne 'passe_word' si elle est nulle
+                // }
                 $champs[] = $champ;
                 $inter[] = "?";
                 $valeurs[] = $valeur;

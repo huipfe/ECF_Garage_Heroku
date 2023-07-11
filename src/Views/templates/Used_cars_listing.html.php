@@ -26,6 +26,12 @@ require_once "Header.html.php";
 ?>
 <main>
 
+    <!-- Message de réussite (en cas de création d'une nouvelle voiture, voir CarsController)-->
+    <?php if(!empty($_SESSION['message'])): ?>
+        <div class="alert alert-success" id="alert" role="alert">
+            <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
+        </div>
+    <?php endif; ?>
 
     <div class="container-lg">
         <div class="row">
@@ -33,6 +39,7 @@ require_once "Header.html.php";
             <div class="col-lg">
                 <h1 class="products">Nos Produits</h1>
             </div>
+
 
             <div class="col-lg-6">
                 <div class="input-group">
@@ -46,6 +53,7 @@ require_once "Header.html.php";
                 </div>
             </div>
 
+            
         </div>
     </div>
     
@@ -176,6 +184,13 @@ require_once "Header.html.php";
         <?php endforeach; ?>
 
     </div>
+            <!-- Creation d'une nouvelle voiture -->
+            <a href="/ECF_Garage/public/cars/ajouter">
+                <button
+                    class="btn btn-danger my-2 bi bi-plus-circle">
+                    
+                </button>
+            </a>
 </div>
 
 

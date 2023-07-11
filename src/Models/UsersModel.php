@@ -34,12 +34,6 @@ class UsersModel extends Model
 
         private $is_admin;
 
-        /**
-         * $users_id
-         *
-         * @var [int]
-         */
-        private $users_id;
         
     // Constructeur
         public function __construct()
@@ -70,13 +64,7 @@ class UsersModel extends Model
          * @param int $id
          * @return mixed
          */
-        public function setSession()
-        {
-                $_SESSION['user'] = [
-                        // 'id' => $this->user_id,
-                        'email' => $this->email
-                ];
-        }
+
 
         public function createUser(array $data): bool
         {
@@ -166,27 +154,5 @@ class UsersModel extends Model
                 return $this;
         }
 
-        /**
-         * Get the value of users_id
-         */
-
-        
-        public function getUsersId() : int
-
-        {
-                return $this->users_id;
-        }
-
-        /**
-         * Set the value of users_id
-         */
-
-        public function setUsersId(int $users_id): self
-
-        {
-                $this->users_id = $users_id;
-
-                return $this;
-        }
 }
 ?>

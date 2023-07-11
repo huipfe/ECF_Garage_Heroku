@@ -78,7 +78,12 @@ class CarsDetailsModel extends Model
      */
     public $description;
 
-
+    /**
+     * $users_id
+     *
+     * @var [int]
+     */
+    private $users_id;
 
     // Méthodes
     /**
@@ -108,6 +113,20 @@ class CarsDetailsModel extends Model
         $this->id = $id;
         $this->description = $description;
         
+    }
+
+    public function createCar(array $data): bool
+    {
+        $sql = "INSERT INTO {$this->table} (email, password)
+                VALUES (:email, :password)";
+        $query = $this->requete(
+            $sql,
+            [
+                'email' => $data['email'],
+                'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+            ]
+        );
+        return ($query->rowCount() === 1);
     }
 
     /**
@@ -273,6 +292,29 @@ class CarsDetailsModel extends Model
 
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of users_id
+     */
+
+
+    public function getUsersId(): int
+
+    {
+        return $this->users_id;
+    }
+
+    /**
+     * Set the value of users_id
+     */
+
+    public function setUsersId(int $users_id): self
+
+    {
+        $this->users_id = $users_id;
 
         return $this;
     }

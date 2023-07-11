@@ -29,8 +29,6 @@
 
 </head>
 
-
-
 <body>
 
 
@@ -145,7 +143,7 @@
                             </a>
                         </li>
 
-                    <?php if ($_SESSION['is_admin']): ?>
+                    <?php if ($_SESSION['user']['is_admin']): ?>
                     <!-- Icône du tableau de bord (visible pour les administrateurs) -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
                         <!-- /ECF_Garage/src/Views/templates/Dashboard.html.php -->

@@ -144,7 +144,7 @@ class CarsController extends Controller
                 ;
 
                 // On enregistre notre voiture dans la BDD
-                // $carsDetailsModel->create();
+                $carsDetailsModel->createCar();
                 
                 // On redirige l'utilisateur vers la liste des voitures
                 $_SESSION['message'] = "Votre voiture a bien été ajoutée";

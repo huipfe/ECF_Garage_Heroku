@@ -1030,18 +1030,23 @@ section#description div.m-2.fw-4 p {
   letter-spacing: 0.72px;
   text-transform: uppercase;
 }
-section#description div.m-2 h1,
+section#description div.m-2 h1 {
+  color: #262526;
+  font-size: 35px;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 600;
+}
 section#description div.m-2 h2 {
   color: #262526;
   font-size: 25px;
   font-family: "Rajdhani", sans-serif;
-  font-weight: 600;
+  font-weight: 500;
 }
 section#description div.m-2 h3 {
   color: #262526;
-  font-size: 15px;
+  font-size: 20px;
   font-family: "Rajdhani", sans-serif;
-  font-weight: 600;
+  font-weight: 400;
 }
 section#description div.m-3 {
   /* Genre + étoile */
@@ -1120,6 +1125,7 @@ section#modal-image .my-btn-danger {
   border-radius: 10px;
   border: 2px solid #262526;
   background: #D94350;
+  margin-left: 5px;
 }
 
 /* Import */

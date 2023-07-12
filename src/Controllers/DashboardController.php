@@ -51,6 +51,22 @@ class DashboardController extends Controller
 
         // $this->render('/Views/templates/Dashboard', ['registerForm' => $form->create()]);
 
-        $this->render('/Views/templates/Dashboard');
+        // $this->render('/Views/templates/Dashboard');
+
+        // On veut afficher ses utilisateur qui sont en base de donnés.
+        $usersModel = new UsersModel;
+        $users = $usersModel->findAll();
+
+        $this->render('/Views/templates/Dashboard', ['users' => $users]);
     }
+
+    // public function AfficheUsers()
+    // {
+    //     // On veut afficher ses utilisateur qui sont en base de donnés.
+    //     $usersModel = new UsersModel;
+    //     $users = $usersModel->findAll();
+
+    //     $this->render('/Views/templates/Dashboard', ['users' => $users]);
+
+    // }
 }

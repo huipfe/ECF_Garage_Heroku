@@ -117,13 +117,19 @@ class CarsDetailsModel extends Model
 
     public function createCar(array $data): bool
     {
-        $sql = "INSERT INTO {$this->table} (email, password)
-                VALUES (:email, :password)";
+        $sql = "INSERT INTO {$this->table} (marque, modele, annee, kilometrage, prix, image, description, users_id)
+                VALUES (:marque, :modele, :annee, :kilometrage, :prix, :image, :description, :users_id)";
         $query = $this->requete(
             $sql,
             [
-                'email' => $data['email'],
-                'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+                "marque" => $data["marque"],
+                "modele" => $data["modele"],
+                "annee" => $data["annee"],
+                "kilometrage" => $data["kilometrage"],
+                "prix" => $data["prix"],
+                "image" => $data["image"],
+                "description" => $data["description"],
+                "users_id" => $data["users_id"]
             ]
         );
         return ($query->rowCount() === 1);

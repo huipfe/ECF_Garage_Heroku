@@ -109,6 +109,7 @@ CREATE TABLE `users` (
   `user_id` int NOT NULL AUTO_INCREMENT,
   `password` varchar(255) NOT NULL,
   `email` varchar(50) NOT NULL,
+  `name_users` varchar(255) NOT NULL,
   `is_admin` tinyint(1) NOT NULL DEFAULT '0' COMMENT '1 if user is admin, 0 otherwise',
   PRIMARY KEY (`user_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Utilisateur (Pour admin et employé)';

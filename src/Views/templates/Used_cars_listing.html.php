@@ -184,13 +184,17 @@ require_once "Header.html.php";
         <?php endforeach; ?>
 
     </div>
+
             <!-- Creation d'une nouvelle voiture -->
-            <a href="/ECF_Garage/public/cars/ajouter">
-                <button
-                    class="btn btn-danger my-2 bi bi-plus-circle">
-                    
-                </button>
-            </a>
+    <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+        <a href="/ECF_Garage/public/cars/ajouter">
+            <button
+                class="btn btn-danger my-2 bi bi-plus-circle">
+                
+            </button>
+        </a>
+    <?php endif; ?>
+    
 </div>
 
 

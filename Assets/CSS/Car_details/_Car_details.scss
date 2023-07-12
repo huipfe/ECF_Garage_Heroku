@@ -72,19 +72,24 @@ section#description {
     }
 
     div.m-2 {
-        h1,
+        h1 {
+            color: $color-primary_black;
+            font-size: 35px;
+            font-family: $font-headline;
+            font-weight: 600;
+        }
         h2 {
             color: $color-primary_black;
             font-size: 25px;
             font-family: $font-headline;
-            font-weight: 600;
+            font-weight: 500;
         }
 
         h3 {
             color: $color-primary_black;
-            font-size: 15px;
+            font-size: 20px;
             font-family: $font-headline;
-            font-weight: 600;
+            font-weight: 400;
         }
     }
 
@@ -175,6 +180,7 @@ section#modal-image {
         border-radius: 10px;
         border: 2px solid $color-primary_black;
         background: $color-primary_red;
+        margin-left: 5px;
     }
 }
 

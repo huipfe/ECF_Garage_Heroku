@@ -7,24 +7,31 @@
     // Récupérer tous les noms d'utilisateur
     const usernames = document.querySelectorAll('.username');
 
+    // Récupérer tout les email d'utilisateur
+    const emailNames = document.querySelectorAll('.email-name');
+
     // Fonction pour filtrer les utilisateurs en fonction de la recherche
-    function filterUsers() {
+    function filterUsersEmail() {
   const searchValue = searchInput.value.toLowerCase();
+  
+      // Filtrer les utilisateurs et l'email
+      emailNames.forEach((emailName) => {
+        const email = emailName.textContent.toLowerCase();
+        const listItem = emailName.closest('li');
 
-  usernames.forEach((username) => {
-    const user = username.textContent.toLowerCase();
-    const listItem = username.closest('li');
+        const username = listItem.querySelector('.username').textContent.toLowerCase();
 
-    if (user.includes(searchValue)) {
-        listItem.style.display = 'block';
-    } else {
-        listItem.style.display = 'none';
+        if (email.includes(searchValue) || username.includes(searchValue)) {
+          listItem.style.display = 'block';
+        } else {
+          listItem.style.display = 'none';
+        }
+      });
+
     }
-  });
-}
 
     // Ajouter un gestionnaire d'événement pour la recherche en temps réel
-    searchInput.addEventListener('input', filterUsers);
+    searchInput.addEventListener('input', filterUsersEmail);
 
 
 

@@ -34,6 +34,15 @@ class UsersModel extends Model
 
         private $is_admin;
 
+
+        /**
+         * $name_users
+         *
+         * @var [string]
+         */
+
+        private $name_users;
+
         
     // Constructeur
         public function __construct()
@@ -153,6 +162,30 @@ class UsersModel extends Model
 
                 return $this;
         }
+
+        /**
+         * Get the value of name_users
+         */
+
+        public function getNameUsers()
+
+        {
+                return $this->name_users;
+        }
+
+        /**
+         * Set the value of name_users
+         */
+
+        public function setNameUsers($name_users): self
+
+        {
+                $this->name_users = $name_users;
+
+                return $this;
+        }
+
+
 
 }
 ?>

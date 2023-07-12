@@ -55,6 +55,7 @@ require_once 'Header.html.php';
                             <div class="m-2 fw-4"><p>Hot Sale</p></div>
                             <div class="m-2 d-lg-flex">
                                 <h1><?= $details->marque?>®</h1>
+                                
                                 <h2><?= $details->description?></h2>
                             </div>
                             <div class="m-2">

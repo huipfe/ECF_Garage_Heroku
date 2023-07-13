@@ -21,20 +21,27 @@ require_once 'Header.html.php';
             <div class="col-lg-6">
                 <section id="header">
                     <div class="container">
-                    <div class="justify-content-start">
-                        <a href="/ECF_Garage/src/Views/templates/Used_cars_listing.html.php"
-                        class="text-decoration-none">
-                            <span>
-                                <button class="btn">
-                                    <i class="bi bi-arrow-left"></i>
-                                    Retour à la liste
-                                </button>
-                            </span>
-                        </a>
-                    </div>
-                    <img class="mb-3 mt-5"
-                    src="/ECF_Garage/Assets/images/Car_details/Voiture_covers.jpg"
-                    alt="voitureImage">
+                        <div class="justify-content-start">
+                            <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
+                            <a href="/ECF_Garage/public/cars"
+                            class="text-decoration-none">
+                                <span>
+                                    <button class="btn">
+                                        <i class="bi bi-arrow-left"></i>
+                                        Retour à la liste
+                                    </button>
+                                </span>
+                            </a>
+                        </div>
+                        
+                    <?php
+                    // Récupérer les données binaires de l'image depuis la base de données
+                    $imageData = $details->image;
+                    // Convertir les données binaires en base64
+                    $imageBase64 = base64_encode($imageData);
+                    ?>
+                    <img class="mb-3 mt-5" src="data:image/jpeg;base64, <?= $imageBase64 ?>"
+                    alt="ImageBoucle" class="img-fluid">
                     </div>
                 </section>
             </div>
@@ -47,14 +54,17 @@ require_once 'Header.html.php';
                         <section id="description">
                             <div class="m-2 fw-4"><p>Hot Sale</p></div>
                             <div class="m-2 d-lg-flex">
-                                <h1>Nom Voiture®</h1>
-                                <h2>Descriptif rapide</h2>
+                                <h1><?= $details->marque?>®</h1>
+                                
+                                <h2><?= $details->description?></h2>
                             </div>
                             <div class="m-2">
-                                <h3>Année de la mise en circulation</h3>
+                                <h3>Année de la mise en circulation :
+                                    <?= $details->annee?>
+                                </h3>
                             </div>
                             <div class="m-3 mt-5 d-flex">
-                                <h4 class="">Genre Véhicule</h4>
+                                <h4 class=""> <?= $details->modele?></h4>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
@@ -81,6 +91,7 @@ require_once 'Header.html.php';
                     <div class="col-lg-12">
                         <section id="modal-image">
                             <div>
+                                
                                 <div class="m-2">
                                     <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal1">
                                         <img
@@ -104,10 +115,15 @@ require_once 'Header.html.php';
                                         alt="miniature-1">
                                     </button>
                                 </div>
+
                                 <div class="mb-3 mt-4">
-                                    <h5 class="m-2 mb-4">Poids :</h5>
-                                    <div class="btn my-btn-danger mb-2 btn-danger">XX Tonnes</div>
+                                    <h5 class="m-2 mb-4">Kilométrage & Prix :</h5>
+                                    <div class="btn my-btn-danger mb-2 btn-danger"> <?= $details->kilometrage?> km
+                                    </div>
+                                    <div class="btn my-btn-danger mb-2 btn-danger"> <?= $details->prix?> €
+                                    </div>
                                 </div>
+
                             </div>
                         </section>
                     </div>

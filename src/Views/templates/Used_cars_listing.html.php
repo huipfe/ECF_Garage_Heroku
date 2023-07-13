@@ -20,9 +20,18 @@ N’importe quel employé du garage doit pouvoir ajouter, depuis son espace, de 
 <?php 
 require_once "Header.html.php";
 ?>
+<?php 
+// var_dump($carsDetails)
 
+?>
 <main>
 
+    <!-- Message de réussite (en cas de création d'une nouvelle voiture, voir CarsController)-->
+    <?php if(!empty($_SESSION['message'])): ?>
+        <div class="alert alert-success" id="alert" role="alert">
+            <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
+        </div>
+    <?php endif; ?>
 
     <div class="container-lg">
         <div class="row">
@@ -31,8 +40,9 @@ require_once "Header.html.php";
                 <h1 class="products">Nos Produits</h1>
             </div>
 
+
             <div class="col-lg-6">
-                <div class="input-group" style="margin-top: 12px;">
+                <div class="input-group">
                     <input type="text" class="form-control m-2 p-2 rounded-5"
                     id="searchInput" placeholder="Recherche">
                     <div class="input-group-append">
@@ -43,6 +53,7 @@ require_once "Header.html.php";
                 </div>
             </div>
 
+            
         </div>
     </div>
     
@@ -88,190 +99,120 @@ require_once "Header.html.php";
             </div>
     </section>
 
-        
+
     <!-- Main cars -->
         
 <div class="container">
     <div class="row">
 
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_1.jpg"
-                            alt="Image 1" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Ford Mustang</h3>
-                            <p class="card-text fst-italic" id = "title-description">Ford Mustang GT, une voiture de
-                                sport emblématique avec un design élégant et des performances puissantes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : V8-GT </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2022</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>5 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">50 000 €</span></p>
-                                <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <?php
+    // var_dump($carsDetails)
+    ?>
+        <?php foreach ($carsDetails as $car) : ?>
 
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_2.jpg"
-                            alt="Image 2" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Audi</h3>
-                            <p class="card-text fst-italic" id = "title-description">Audi R8 V10, une supercar de luxe
-                                avec un moteur V10 et une tenue de route exceptionnelle.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : R8 V10</p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2023</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>2 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">150 000 €</span></p>
-                                <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="/ECF_Garage/src/Views/templates/Car_details.html.php"
-                            class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <div class="col-lg-4">
+                <div class="card mb-3" style="background: #E8E4E4;">
+                    <div class="row g-0">
+                        <div class="col-md-5 col-lg-12">
+                        
+                            <!-- Supression d'une voiture -->
+                            <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                    <button
+                                        class="btn btn-danger my-2 bi bi-trash3-fill">
+                                    </button>
+                                </a>
+                            <?php endif; ?>
 
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
-                            alt="Image 3" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
-                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
-                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2018</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>1 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">370 000 €</span></p>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
+                            <!-- Modification d'une voiture -->
+                            <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                    <button
+                                        class="btn btn-danger my-2 bi bi-pencil-square">
+                                    </button>
+                                </a>
+                            <?php endif; ?>
 
-                <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
-                            alt="Image 3" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
-                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
-                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2025</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>1 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">250 000 €</span></p>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                            </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
 
-        <div class="col-lg-4">
-            <div class="card mb-3" style="background: #E8E4E4;">
-                <div class="row g-0">
-                    <div class="col-md-5 col-lg-12">
-                        <img src="/ECF_Garage/Assets/images/Used cars listing/voiture_3.jpg"
-                            alt="Image 3" class="img-fluid">
-                    </div>
-                    <div class="col-md-7 col-lg-12">
-                        <div class="card-body mx-3 text-md-center text-lg-end">
-                            <h3 class="card-title fw-bold" id = "title-card">Lamborghini</h3>
-                            <p class="card-text fst-italic" id = "title-description">Lamborghini Aventador SVJ, une
-                                voiture de course légendaire avec un design agressif et des performances extrêmes.</p>
-                            <p class="card-text fs-5" id = "title-modele">Modèle : Aventador SVJ </p>
-                            <p class="card-text fs-5 filter-year" id = "title-year">Année : <span>2018</span></p>
-                            <p class="card-text fs-5 filter-kilometrage" id = "title-kilometrage">Kilométrage :
-                                <span>1 000 km</span></p>
-                            <p class="card-text fs-5" id = "title-price">Prix :
-                                <span class="fw-bold">99 000 €</span></p>
-                            <div class="rating">
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
-                                <i class="bi bi-star"></i>
+                            <?php
+                            // Récupérer les données binaires de l'image depuis la base de données
+                            $imageData = $car->image;
+                            // Convertir les données binaires en base64
+                            $imageBase64 = base64_encode($imageData);
+                            ?>
+
+                            <img src="data:image/jpeg;base64,<?= $imageBase64 ?>"
+                                alt="ImageBoucle" class="img-fluid">
+                        </div>
+                        <div class="col-md-7 col-lg-12">
+
+                            <div class="card-body mx-3 text-md-center text-lg-end">
+                                <h3 class="card-title fw-bold"
+                                id = "title-card"><?= $car->marque?>
+                            </h3>
+
+                                <p class="card-text fst-italic"
+                                    id = "title-description">
+                                    <?= $car->description?>
+                                </p>
+    
+                                <p class="card-text fs-5"
+                                    id = "title-modele">Modèle :
+                                    <?= $car->modele?>
+                                </p>
+
+                                <p class="card-text fs-5 filter-year"
+                                    id = "title-year">Année :
+                                    <span>
+                                        <?= $car->annee?>
+                                    </span>
+                                </p>
+
+                                <p class="card-text fs-5 filter-kilometrage"
+                                id = "title-kilometrage">Kilométrage :
+                                    <span>
+                                        <?= $car->kilometrage?> km
+                                    </span>
+                                </p>
+
+                                <p class="card-text fs-5"
+                                id = "title-price">Prix :
+                                    <span class="fw-bold">
+                                        <?= $car->prix?>€
+                                    </span>
+                                </p>
+
+                                    <div class="rating">
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star-fill"></i>
+                                    <i class="bi bi-star"></i>
+                                    <i class="bi bi-star"></i>
+                                </div>
+                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->
+                                    <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
+                                    class="btn btn-danger">Détails
+                                    <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
+                                </a>
                             </div>
-                            <a href="#" class="btn btn-danger">Détails
-                                <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
-                            </a>
                         </div>
                     </div>
                 </div>
             </div>
-        </div>
+
+        <?php endforeach; ?>
 
     </div>
+
+            <!-- Creation d'une nouvelle voiture -->
+    <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+        <a href="/ECF_Garage/public/AddCars/ajouter">
+            <button
+                class="btn btn-danger my-2 bi bi-plus-circle">
+                
+            </button>
+        </a>
+    <?php endif; ?>
+    
 </div>
-
-
-
-
-
 
 
 <script src="/ECF_Garage/Assets/JS/Used_cars_listing.js"></script>
@@ -283,3 +224,4 @@ require_once "Header.html.php";
 <?php 
 require_once "Footer.html.php";
 ?>
+

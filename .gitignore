@@ -1,11 +1,13 @@
 # Database: Store files related to database management, such as migrations or SQL scripts.
-Database/
+# Database/
+page_d_accueil.sql
+ecf_garage.sql
 
 # Controllers: Store controller classes handling user interactions and application flow.
-Controllers/
+# Controllers/
 
 # Models: Store model classes responsible for data management and business logic.
-Models/
+# Models/
 
 # Ancien test, fait avec sébastiens.
 Anciens/

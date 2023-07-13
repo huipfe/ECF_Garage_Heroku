@@ -53,8 +53,8 @@ section {
 
 // Formulaire - partie block
 .block-title {
-    background: #f8f9fa;
-    color: #343a40;
+    background: $color-primary_white;
+    color: $color-primary_black;
     padding: 3rem;   
     border-radius: 30px;
 
@@ -98,7 +98,7 @@ section {
         font-size: 18px;
         line-height: 20px;
         text-align: center;
-        color: #eeeeee;
+        color: $color-primary_white;
         margin: 2rem;
 }
 
@@ -123,7 +123,7 @@ section {
     gap: 0px;
     width: 220px;
     height: 50px;
-    background: #D94350;
+    background: $color-primary_red;
     border-radius: 50px;
 }
 
@@ -141,7 +141,7 @@ font-style: normal;
 font-weight: 500;
 font-size: 20px;
 line-height: 15px;
-color: #D92332;
+color: $color-primary_red_dark;
 
 }
 

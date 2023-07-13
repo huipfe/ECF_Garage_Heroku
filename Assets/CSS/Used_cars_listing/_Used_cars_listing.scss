@@ -13,7 +13,7 @@ main div  {
     align-items: center;
     text-align: center;
     text-transform: uppercase;
-    color: #000000;
+    color: $color-primary_black;
     }
 
 }
@@ -22,7 +22,6 @@ main div  {
 
 #ads {
     margin: 30px 0 30px 0;
-   
 }
 
 #ads .card-notify-badge {
@@ -32,7 +31,7 @@ main div  {
         background: #f2d900;
         text-align: center;
         border-radius: 30px 30px 30px 30px; 
-        color: #000;
+        color: $color-primary_black;
         padding: 5px 10px;
         font-size: 14px;
 
@@ -42,10 +41,10 @@ main div  {
         position: absolute;
         right: -10px;
         top: -20px;
-        background: #ff4444;
+        background: $color-primary_red;
         border-radius: 50%;
         text-align: center;
-        color: #fff;      
+        color: $color-primary_white;      
         font-size: 14px;      
         width: 50px;
         height: 50px;    
@@ -57,7 +56,7 @@ main div  {
         background: #f2d900;
         text-align: center;
         border-radius: 30px 30px 30px 30px;
-        color: #000;
+        color: $color-primary_black;
         padding: 5px 10px;
         font-size: 14px;        
     }
@@ -65,7 +64,7 @@ main div  {
 
 
 #ads .card:hover {
-            background: #fff;
+            background: $color-primary_white;
             box-shadow: 12px 15px 20px 0px rgba(46,61,73,0.15);
             border-radius: 4px;
             transition: all 0.3s ease;
@@ -94,7 +93,7 @@ main div  {
         display: block;
         text-decoration: none;
         margin: 20px auto 1px auto;
-        color: #000;
+        color: $color-primary_black;
         overflow: hidden;        
         position: relative;
         background-color: #e6de08;
@@ -102,7 +101,7 @@ main div  {
 
 #ads .ad-btn:hover {
             background-color: #e6de08;
-            color: #1e1717;
+            color: $color-primary_black;
             border: 2px solid #e6de08;
             // background: transparent;
             transition: all 0.3s ease;
@@ -125,7 +124,7 @@ section#filter-sidebar {
         justify-content: space-between;
         width: 40rem;
         height: 3rem;
-        background: #e8e4e4;
+        background: $color-primary_white;
         border-radius: 21px;
         padding: 0 10px;
 
@@ -139,7 +138,7 @@ section#filter-sidebar {
             font-weight: 600;
             font-size: 0.8rem;
             line-height: 13px;
-            color: #000000;
+            color: $color-primary_black;
             margin: 0;
         }
 
@@ -149,7 +148,7 @@ section#filter-sidebar {
             flex-grow: 1;
             height: 34px;
             margin: 4px;
-            background: rgba(38, 37, 38, 0.7);
+            background: $color-primary_black;
             padding: 0 10px;
 
             .form-check {
@@ -193,7 +192,7 @@ section#filter-sidebar {
 
 .form-check-input[type="checkbox"]:checked + .form-check-label::before {
     content: "\2713";
-    color: #ffffff;
+    color: $color-primary_white;
     text-align: center;
     line-height: 16px;
 }
@@ -211,7 +210,7 @@ section#filter-sidebar {
 
             div.gray-bar {
                 height: 50px;
-                padding: 0 130px;
+                padding: 0 120px;
 
                 .form-check {
                     margin-right: 40px;
@@ -237,6 +236,10 @@ section#filter-sidebar {
     margin-left: 5px;
     border-radius: 5px;
     }
+    div.container-lg > div.row > div.col-lg-6 > div.input-group {
+        margin-top: 12px;
+        margin-left: -10px;
+    }
 }
 
 @media (min-width: 1501px) and (max-width: 1700px)  {
@@ -249,7 +252,7 @@ section#filter-sidebar {
 
             div.gray-bar {
                 height: 50px;
-                padding: 0 130px;
+                padding: 0 120px;
 
                 .form-check {
                     margin-right: 40px;
@@ -275,6 +278,10 @@ section#filter-sidebar {
     margin-left: 5px;
     border-radius: 5px;
     }
+    div.container-lg > div.row > div.col-lg-6 > div.input-group {
+        margin-top: 12px;
+        margin-left: -10px;
+    }
 }
 
 
@@ -289,7 +296,7 @@ section#filter-sidebar {
 
             div.gray-bar {
                 height: 50px;
-                padding: 0 130px;
+                padding: 0 120px;
 
                 .form-check {
                     margin-right: 40px;
@@ -314,6 +321,10 @@ section#filter-sidebar {
     height: 20px;
     margin-left: 5px;
     border-radius: 5px;
+    }
+    div.container-lg > div.row > div.col-lg-6 > div.input-group {
+        margin-top: 12px;
+        margin-left: -10px;
     }
 }
 
@@ -355,6 +366,10 @@ section#filter-sidebar {
     margin-left: 5px;
     border-radius: 5px;
     }
+    div.container-lg > div.row > div.col-lg-6 > div.input-group {
+        margin-top: 12px;
+        margin-left: -10px;
+    }
 }
 
 @media (min-width: 992px) and (max-width: 1200px) {
@@ -367,7 +382,7 @@ section#filter-sidebar {
             margin-left: 2rem;
 
             div.gray-bar {
-                height: 34px;
+                height: 40px;
                 padding: 0 70px;
 
                 .form-check {
@@ -377,6 +392,10 @@ section#filter-sidebar {
                 }
             }
         }
+    }
+    div.container-lg > div.row > div.col-lg-6 > div.input-group {
+        margin-top: 12px;
+        margin-left: -10px;
     }
 }
 
@@ -396,7 +415,7 @@ section#filter-sidebar {
     
                 div.gray-bar {
                     width: 20rem;
-                    height: 28px;
+                    height: 35px;
                     margin: 1px;
                     padding: 0 25px;
     
@@ -523,6 +542,6 @@ $star-color: #FFD233;
 }
 
 .btn-danger .bi-info-circle-fill {
-    color: #D9777F;
+    color: $color-primary_red_light;
 }
 

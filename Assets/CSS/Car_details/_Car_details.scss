@@ -18,13 +18,13 @@ section#header {
             }
         
             @media (min-width: 993px) and (max-width: 1200px) {
-                height: 410px;
+                height: 678px;
             }
             @media (min-width: 1200px) and (max-width: 1400px) {
-                height: 450px;
+                height: 630px;
             }
             @media (min-width: 1400px) {
-                height: 500px;
+                height: 630px;
             }
         }
         /* Bouton Retour flêche */
@@ -57,8 +57,8 @@ section#description {
         gap: 10px;
         flex-shrink: 0;
         border-radius: 10px;
-        background: var(--red, #F12B2C);
-        color: var(--primary-grey-6, #FFF);
+        background: var(--red, $color-primary_red_dark);
+        color: var(--primary-grey-6, $color-primary_white);
 
         p {
             font-size: 14px;
@@ -72,26 +72,31 @@ section#description {
     }
 
     div.m-2 {
-        h1,
-        h2 {
-            color: #000;
-            font-size: 25px;
+        h1 {
+            color: $color-primary_black;
+            font-size: 35px;
             font-family: $font-headline;
             font-weight: 600;
         }
+        h2 {
+            color: $color-primary_black;
+            font-size: 25px;
+            font-family: $font-headline;
+            font-weight: 500;
+        }
 
         h3 {
-            color: #000;
-            font-size: 15px;
+            color: $color-primary_black;
+            font-size: 20px;
             font-family: $font-headline;
-            font-weight: 600;
+            font-weight: 400;
         }
     }
 
     div.m-3 {
     /* Genre + étoile */
     h4 {
-        color: #d9777f;
+        color: $color-primary_red_light;
         text-align: start;
         font-size: 20px;
         margin-right: 20px;
@@ -109,7 +114,7 @@ section#description {
 
     div.mb-2 {
         h5 {
-            color: #000;
+            color: $color-primary_black;
             font-size: 20px;
             font-family: $font-text;
             font-weight: 600;
@@ -119,7 +124,7 @@ section#description {
 
     /* Text */
     p {
-        color: #000;
+        color: $color-primary_black;
         font-size: 13px;
         font-family: $font-text;
         font-weight: 300;
@@ -150,8 +155,8 @@ section#modal-image {
 
     button.btn {
         border-radius: 10px;
-        border: 5px solid rgba(217, 67, 80, 0.20);
-        background: lightgray 6.132px 8.137px / 75% 75% no-repeat, #FFF;
+        border: 5px solid $color-primary_red;
+        background: lightgray 6.132px 8.137px / 75% 75% no-repeat, $color-primary_white;
     }
 
     img {
@@ -160,7 +165,7 @@ section#modal-image {
     }
 
     h5 {
-        color: #000;
+        color: $color-primary_black;
         font-size: 20px;
         font-family: $font-text;
         font-weight: 600;
@@ -173,8 +178,9 @@ section#modal-image {
         @extend .btn !optional;
         @extend .btn-danger !optional;
         border-radius: 10px;
-        border: 2px solid rgba(241, 229, 229, 0.22);
-        background: #d94350;
+        border: 2px solid $color-primary_black;
+        background: $color-primary_red;
+        margin-left: 5px;
     }
 }
 

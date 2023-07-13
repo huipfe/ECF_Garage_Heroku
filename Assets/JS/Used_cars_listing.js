@@ -38,8 +38,8 @@ const searchCars = () => {
 };
 
 // Écouter l'événement de clic sur le bouton de recherche
-const searchButton = document.getElementById("searchButton");
-searchButton.addEventListener("click", searchCars);
+// const searchButton = document.getElementById("searchButton");
+// searchButton.addEventListener("click", searchCars);
 
 // Écouter l'événement de saisie dans la barre de recherche
 const searchInput = document.getElementById("searchInput");

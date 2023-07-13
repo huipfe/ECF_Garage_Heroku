@@ -4,6 +4,9 @@ require_once "Header.html.php";
 
 <main>
 
+    <!-- http://localhost/ECF_Garage/public/Dashboard/register -->
+    <!-- <?= $registerForm ?> -->
+
 <!-- Dashboard titre -->
 <section class="d-none d-lg-block bg-light text-center">
   <div class="container">
@@ -16,7 +19,7 @@ require_once "Header.html.php";
         <img src="/ECF_Garage/Assets/images/Dashboard page/Avatar Admin.png"
         width="80" height="auto"
         class="img-fluid m-2" alt="Photo de l'admin">
-        <p class="text-center fs-5 fw-bold">Admin@gmail.com</p>
+        <p class="text-center fs-5 fw-bold">VincentParrot@gmail.com</p>
       </div>
     </div>
   </div>
@@ -35,7 +38,6 @@ require_once "Header.html.php";
         <div class="m-2 justify-content-start text-start">
           <h3>Utilisateur</h3>
           <p id="employeeCount"></p>
-          <!-- <p>X employé(s)</p> -->
         </div>
 
         <input type="text" class="form-control m-2 p-2" placeholder="Recherche">
@@ -77,8 +79,62 @@ require_once "Header.html.php";
         </div>
         
 
-
         <ul class="list-unstyled">
+          
+        <?php foreach ($users as $Dashboard) : ?>
+          <li class="employee">
+            <div class="d-flex align-items-center justify-content-between">
+              <div class="picto">
+                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                alt="Pictogramme"
+                class="img p-2"
+                width="72">
+              </div>
+
+              <div class="user-details">
+
+                <div class="avatar">
+                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                  alt="Avatar"
+                  class="img">
+                </div>
+
+                <div class="username">
+                  <!-- <?= $Dashboard->user_id?> -->
+                  <?= $Dashboard->name_users?>
+                </div>
+
+              </div>
+
+              <ul class="list-unstyled email-name">
+                <li style="margin-left: 2.5rem;"><?= $Dashboard->email?></li>
+              </ul>
+
+              <ul class="list-unstyled">
+                
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
+                  <li>
+                    <i class="bi bi-pencil"></i> Modifier
+                  </li>
+                </button>
+
+            <?php if ($Dashboard->is_admin != 1) : ?>
+                <button class="btn btn-responsive btn-sm btn-danger m-2">
+                  <li>
+                    <i class="bi bi-trash"></i> Supprimer
+                  </li>
+                </button>
+            <?php endif; ?>
+
+              </ul>
+            </div>
+          </li>
+
+        <?php endforeach; ?>
+
+      </ul>
+
+        <!-- <ul class="list-unstyled">
           
           <li class="employee">
             <div class="d-flex align-items-center justify-content-between">
@@ -97,7 +153,7 @@ require_once "Header.html.php";
                 <div class="username">Bidule</div>
               </div>
               <ul class="list-unstyled">
-                <li style="margin-left: 2rem;">Bidule@gmail.com</li>
+                <li style="margin-left: 2.5rem;">Bidule@gmail.com</li>
               </ul>
               <ul class="list-unstyled">
                 
@@ -189,7 +245,7 @@ require_once "Header.html.php";
           </li>
 
       
-        </ul>
+        </ul> -->
 
       </div>
     </div>

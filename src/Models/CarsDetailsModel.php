@@ -97,11 +97,12 @@ class CarsDetailsModel extends Model
      * @param string $image Image de la voiture
      * @param int $id Id de la voiture
      * @param string $description Description de la voiture
+     * @param int $users_id Id de l'utilisateur qui à mis la voiture
      */
 
 
     public function __construct(string $marque, string $modele, int $annee,
-    int $kilometrage, int $prix, string $image, int $id, string $description)
+    int $kilometrage, int $prix, string $image, int $id, string $description, int $users_id)
     {
         // On attribut le nom à la propriété $nom à l'instance créer.
         $this->marque = $marque;
@@ -112,6 +113,7 @@ class CarsDetailsModel extends Model
         $this->image = $image;
         $this->id = $id;
         $this->description = $description;
+        $this->users_id = $users_id;
         
     }
 

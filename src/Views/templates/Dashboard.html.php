@@ -118,11 +118,13 @@ require_once "Header.html.php";
                   </li>
                 </button>
 
+            <?php if ($Dashboard->is_admin != 1) : ?>
                 <button class="btn btn-responsive btn-sm btn-danger m-2">
                   <li>
                     <i class="bi bi-trash"></i> Supprimer
                   </li>
                 </button>
+            <?php endif; ?>
 
               </ul>
             </div>

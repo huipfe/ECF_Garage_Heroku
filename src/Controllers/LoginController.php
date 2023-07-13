@@ -55,7 +55,6 @@ class LoginController extends Controller
                 if ($_SESSION['user']['is_admin'] == 1) {
                     header('Location: /ECF_Garage/public/dashboard/administration');
                 } else {
-                    echo "Vous êtes connecté, mais pas admin";
                     header('Location: /ECF_Garage/public/cars');
                 }
             } else {

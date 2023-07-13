@@ -114,6 +114,23 @@ require_once "Header.html.php";
                 <div class="card mb-3" style="background: #E8E4E4;">
                     <div class="row g-0">
                         <div class="col-md-5 col-lg-12">
+                        
+                            <!-- Supression d'une voiture -->
+                            <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                    <button
+                                        class="btn btn-danger my-2 bi bi-trash3-fill">
+                                    </button>
+                                </a>
+                            <?php endif; ?>
+
+                            <!-- Modification d'une voiture -->
+                            <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                    <button
+                                        class="btn btn-danger my-2 bi bi-pencil-square">
+                                    </button>
+                                </a>
+                            <?php endif; ?>
+
 
                             <?php
                             // Récupérer les données binaires de l'image depuis la base de données
@@ -122,7 +139,7 @@ require_once "Header.html.php";
                             $imageBase64 = base64_encode($imageData);
                             ?>
 
-                            <img src="data:image/jpeg;base64, <?= $imageBase64 ?>"
+                            <img src="data:image/jpeg;base64,<?= $imageBase64 ?>"
                                 alt="ImageBoucle" class="img-fluid">
                         </div>
                         <div class="col-md-7 col-lg-12">
@@ -170,7 +187,7 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
                                 </div>
-                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->                               
+                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->
                                     <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
@@ -187,7 +204,7 @@ require_once "Header.html.php";
 
             <!-- Creation d'une nouvelle voiture -->
     <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
-        <a href="/ECF_Garage/public/cars/ajouter">
+        <a href="/ECF_Garage/public/AddCars/ajouter">
             <button
                 class="btn btn-danger my-2 bi bi-plus-circle">
                 

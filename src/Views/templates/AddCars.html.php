@@ -2,7 +2,12 @@
 require_once "Header.html.php";
 ?>
 
-
+    <!-- Message d'erreur -->
+<?php if(!empty($_SESSION['erreur'])): ?>
+    <div class="alert alert-danger" id="alert" role="alert">
+        <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
+    </div>
+<?php endif; ?>
 
 <!-- <?= $form ?> -->
 <!-- <div class=container>

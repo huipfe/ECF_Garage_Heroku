@@ -16,6 +16,7 @@ class DetailsController extends Controller
         $prix = 25000;
         $image = "voiture_4.jpg";
         $description = "La BMW Série 3 est une berline élégante et sportive.";
+        $users_id = 1;
 
         // On instancie le modèle
         $detailsModel = new CarsDetailsModel(
@@ -26,7 +27,9 @@ class DetailsController extends Controller
             $prix,
             $image,
             $id,
-            $description
+            $description,
+            $users_id
+
         );
 
         // On va chercher la voiture correspondant à l'ID

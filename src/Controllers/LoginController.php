@@ -51,10 +51,12 @@ class LoginController extends Controller
                     'is_admin' => $userArray->is_admin,
                 ];
                 
-                // Vérifier si l'utilisateur est un admin, et redirige vers la bonne page si admin.
+                // Vérifier si l'utilisateur est un admin, et redirige vers la page d'admin.
                 if ($_SESSION['user']['is_admin'] == 1) {
                     header('Location: /ECF_Garage/public/dashboard/administration');
-                } else {
+                }
+                // Si non admin, donc employé, rediriger directement vers la liste des voitures.
+                else {
                     header('Location: /ECF_Garage/public/cars');
                 }
             } else {

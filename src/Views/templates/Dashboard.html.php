@@ -68,6 +68,7 @@ require_once "Header.html.php";
     <!-- Première colonne - Noms d'utilisateur -->
     <div class="col-lg-12 col-10">
       <div class="mb-1">
+        
         <div class="d-flex align-items-center justify-content-between">
           <div class="picto">
             <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png" alt="Pictogramme"
@@ -79,173 +80,60 @@ require_once "Header.html.php";
         </div>
         
 
-        <ul class="list-unstyled">
-          
-        <?php foreach ($users as $Dashboard) : ?>
-          <li class="employee">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="picto">
-                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
-                alt="Pictogramme"
-                class="img p-2"
-                width="72">
-              </div>
-
-              <div class="user-details">
-
-                <div class="avatar">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
-                  alt="Avatar"
-                  class="img">
+          <ul class="list-unstyled">
+            
+          <?php foreach ($users as $Dashboard) : ?>
+            <li class="employee">
+              <div class="d-flex align-items-center justify-content-between">
+                <div class="picto">
+                  <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                  alt="Pictogramme"
+                  class="img p-2"
+                  width="72">
                 </div>
-
-                <div class="username">
-                  <!-- <?= $Dashboard->user_id?> -->
-                  <?= $Dashboard->name_users?>
+  
+                <div class="user-details">
+  
+                  <div class="avatar">
+                    <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                    alt="Avatar"
+                    class="img">
+                  </div>
+  
+                  <div class="username">
+                    <!-- <?= $Dashboard->user_id?> -->
+                    <?= $Dashboard->name_users?>
+                  </div>
+  
                 </div>
-
+  
+                <ul class="list-unstyled email-name">
+                  <li style="margin-left: 2.5rem;"><?= $Dashboard->email?></li>
+                </ul>
+  
+                <ul class="list-unstyled">
+                  
+                  <button class="btn btn-responsive btn-sm btn-danger m-2">
+                    <li>
+                      <i class="bi bi-pencil"></i> Modifier
+                    </li>
+                  </button>
+  
+              <?php if ($Dashboard->is_admin != 1) : ?>
+                  <button class="btn btn-responsive btn-sm btn-danger m-2">
+                    <li>
+                      <i class="bi bi-trash"></i> Supprimer
+                    </li>
+                  </button>
+              <?php endif; ?>
+  
+                </ul>
               </div>
-
-              <ul class="list-unstyled email-name">
-                <li style="margin-left: 2.5rem;"><?= $Dashboard->email?></li>
-              </ul>
-
-              <ul class="list-unstyled">
-                
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                  <li>
-                    <i class="bi bi-pencil"></i> Modifier
-                  </li>
-                </button>
-
-            <?php if ($Dashboard->is_admin != 1) : ?>
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                  <li>
-                    <i class="bi bi-trash"></i> Supprimer
-                  </li>
-                </button>
-            <?php endif; ?>
-
-              </ul>
-            </div>
-          </li>
-
-        <?php endforeach; ?>
-
-      </ul>
-
-        <!-- <ul class="list-unstyled">
-          
-          <li class="employee">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="picto">
-                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
-                alt="Pictogramme"
-                class="img p-2"
-                width="72">
-              </div>
-              <div class="user-details">
-                <div class="avatar">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
-                  alt="Avatar"
-                  class="img">
-                </div>
-                <div class="username">Bidule</div>
-              </div>
-              <ul class="list-unstyled">
-                <li style="margin-left: 2.5rem;">Bidule@gmail.com</li>
-              </ul>
-              <ul class="list-unstyled">
-                
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                  <i class="bi bi-pencil"></i> Modifier
-                </li>
-                </button>
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                <i class="bi bi-trash"></i> Supprimer
-                </li>
-                </button>
-
-              </ul>
-            </div>
-          </li>
-
-          <li class="employee">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="picto">
-                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
-                alt="Pictogramme"
-                class="img p-2"
-                width="72">
-              </div>
-              <div class="user-details">
-                <div class="avatar">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
-                  alt="Avatar"
-                  class="img">
-                </div>
-                <div class="username">Chouk</div>
-              </div>
-              <ul class="list-unstyled">
-                <li style="margin-left: 2rem;">Chouk@laposte.net</li>
-              </ul>
-              <ul class="list-unstyled">
-
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                  <i class="bi bi-pencil"></i> Modifier
-                </li>
-                </button>
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                <i class="bi bi-trash"></i> Supprimer
-                </li>
-                </button>
-
-              </ul>
-            </div>
-          </li>
-
-          <li class="employee">
-            <div class="d-flex align-items-center justify-content-between">
-              <div class="picto">
-                <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
-                alt="Pictogramme"
-                class="img  p-2"
-                width="72">
-              </div>
-              <div class="user-details">
-                <div class="avatar">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
-                  alt="Avatar"
-                  class="img">
-                </div>
-                <div class="username">Ilan</div>
-              </div>
-              <ul class="list-unstyled">
-                <li style="margin-left: 2rem;">ilan.tervil@wanadoo.fr</li>
-              </ul>
-              <ul class="list-unstyled">
-
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                  <i class="bi bi-pencil"></i> Modifier
-                </li>
-                </button>
-                <button class="btn btn-responsive btn-sm btn-danger m-2">
-                <li>
-                <i class="bi bi-trash"></i> Supprimer
-                </li>
-                </button>
-
-              </ul>
-            </div>
-          </li>
-
-      
-        </ul> -->
+            </li>
+  
+          <?php endforeach; ?>
+  
+        </ul>
 
       </div>
     </div>

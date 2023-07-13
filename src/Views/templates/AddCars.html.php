@@ -10,30 +10,12 @@ require_once "Header.html.php";
 <?php endif; ?>
 
 <!-- <?= $form ?> -->
-<!-- <div class=container>
-    <h1>Ajouter Voiture</h1>
-    <form action="#" method="post">
-        <label for="marque">Marque de la voiture :</label>
-        <input type="text" name="marque" id="marque" class="form-control">
-        <label for="modele">Modèle de la voiture :</label>
-        <input type="text" name="modele" id="modele" class="form-control">
-        <label for="annee">Année de la voiture :</label>
-        <input type="number" name="annee" id="annee" class="form-control">
-        <label for="kilometrage">Kilométrage de la voiture :</label>
-        <input type="number" name="kilometrage" id="kilometrage" class="form-control">
-        <label for="prix">Prix de la voiture :</label>
-        <input type="number" name="prix" id="prix" class="form-control">
-        <label for="image">Image de la voiture :</label>
-        <input type="file" name="image" id="image" class="form-control">
-        <label for="description">Description de la voiture :</label>
-        <textarea name="description" id="description" class="form-control"></textarea>
-        <button class="btn btn-primary" type="submit">Ajouter</button>
-    </form>
-</div> -->
+
+
 
 <div class="container">
     <h1>Ajouter Voiture</h1>
-    <form  method="post">
+    <form method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
             <label for="marque" class="form-label fs-4">Marque de la voiture :</label>
@@ -63,6 +45,7 @@ require_once "Header.html.php";
             id="annee"
             class="form-control"
             min="1950"
+            max="2025"
             required>
         </div>
 

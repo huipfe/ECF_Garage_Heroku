@@ -131,16 +131,26 @@ require_once "Header.html.php";
                                 </a>
                             <?php endif; ?>
 
-
                             <?php
                             // Récupérer les données binaires de l'image depuis la base de données
                             $imageData = $car->image;
+                            
                             // Convertir les données binaires en base64
-                            $imageBase64 = base64_encode($imageData);
+                            // $imageBase64 = base64_encode($imageData);
                             ?>
+                            
+                            <!-- Me permet de faire apparaitre les images de ma BDD,
+                            qui ont été passé via mon formulaire,
+                            enregister en base64, plus besoin de les affiché en base 64.-->
+                            <img src="data:image/jpeg;base64,<?= $imageData ?>"
+                            alt="ImageVoiture" class="img-fluid">
 
-                            <img src="data:image/jpeg;base64,<?= $imageBase64 ?>"
-                                alt="ImageBoucle" class="img-fluid">
+                            <!-- Fait apparaitre les images de ma BDD, avec l'encodage base64,
+                            via un ajout directe sur phpmyadmin -->
+                            <!-- <img src="data:image/jpeg;base64,<?= $imageBase64 ?>"
+                                alt="ImageBoucle" class="img-fluid"> -->
+                                
+                                
                         </div>
                         <div class="col-md-7 col-lg-12">
 
@@ -180,13 +190,14 @@ require_once "Header.html.php";
                                     </span>
                                 </p>
 
-                                    <div class="rating">
+                                <!-- <div class="rating">
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star-fill"></i>
                                     <i class="bi bi-star"></i>
                                     <i class="bi bi-star"></i>
-                                </div>
+                                </div> -->
+
                                 <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->
                                     <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails

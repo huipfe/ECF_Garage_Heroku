@@ -26,10 +26,18 @@ require_once "Header.html.php";
 ?>
 <main>
 
-    <!-- Message de réussite (en cas de création d'une nouvelle voiture, voir CarsController)-->
+    <!-- Message de réussite-->
     <?php if(!empty($_SESSION['message'])): ?>
         <div class="alert alert-success" id="alert" role="alert">
             <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
+        </div>
+    <?php endif; ?>
+
+    
+    <!-- Message d'erreur -->
+    <?php if(!empty($_SESSION['erreur'])): ?>
+        <div class="alert alert-danger" id="alert" role="alert">
+            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
         </div>
     <?php endif; ?>
 
@@ -58,7 +66,7 @@ require_once "Header.html.php";
     </div>
     
     
-    <!-- Barre de filtrage - Mobile -->
+    <!-- Barre de filtrage -->
     <section id="filter-sidebar">
             <div class=" filtrage-bar ">
                 <h5 class="m-2 p-2 filtrage-title">
@@ -66,32 +74,66 @@ require_once "Header.html.php";
                 </h5>
                 <div class="gray-bar d-flex align-items-center">
                     <div class="form-check ">
-                        <input class="form-check-input"  type="checkbox" value="" id="checkbox1" name="years">
-                        <label class="form-check-label cursor-pointer" for="checkbox1">
+                        <input class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checkbox1"
+                        name="years">
+                        <label
+                        class="form-check-label cursor-pointer"
+                        for="checkbox1">
                             <span class="checkbox-icon pe-none">2020>=</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox2" name="years">
-                        <label class="form-check-label cursor-pointer" for="checkbox2">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checkbox2"
+                        name="years">
+                        <label
+                        class="form-check-label cursor-pointer"
+                        for="checkbox2">
                             <span class="checkbox-icon pe-none">2020<=</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox3" name="kilometers">
-                        <label class="form-check-label cursor-pointer" for="checkbox3">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checkbox3"
+                        name="kilometers">
+                        <label
+                        class="form-check-label cursor-pointer"
+                        for="checkbox3">
                             <span class="checkbox-icon pe-none">2000km>=</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox4" name="kilometers">
-                        <label class="form-check-label cursor-pointer" for="checkbox4">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checkbox4"
+                        name="kilometers">
+                        <label
+                        class="form-check-label cursor-pointer"
+                        for="checkbox4">
                             <span class="checkbox-icon pe-none">2000km<=</span>
                         </label>
                     </div>
                     <div class="form-check">
-                        <input class="form-check-input" type="checkbox" value="" id="checkbox5" name="price">
-                        <label class="form-check-label cursor-pointer" for="checkbox5">
+                        <input
+                        class="form-check-input"
+                        type="checkbox"
+                        value=""
+                        id="checkbox5"
+                        name="price">
+                        <label
+                        class="form-check-label cursor-pointer"
+                        for="checkbox5">
                             <span class="checkbox-icon pe-none">100000€<=</span>
                         </label>
                     </div>
@@ -117,6 +159,7 @@ require_once "Header.html.php";
                         
                             <!-- Supression d'une voiture -->
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                <!-- <a href="/ECF_Garage/public///<?= $car->id ?>"> -->
                                     <button
                                         class="btn btn-danger my-2 bi bi-trash3-fill">
                                     </button>
@@ -125,6 +168,7 @@ require_once "Header.html.php";
 
                             <!-- Modification d'une voiture -->
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
+                                <a href="/ECF_Garage/public/modifier/modifie/<?= $car->id?>">
                                     <button
                                         class="btn btn-danger my-2 bi bi-pencil-square">
                                     </button>
@@ -134,23 +178,13 @@ require_once "Header.html.php";
                             <?php
                             // Récupérer les données binaires de l'image depuis la base de données
                             $imageData = $car->image;
-                            
-                            // Convertir les données binaires en base64
-                            // $imageBase64 = base64_encode($imageData);
                             ?>
                             
                             <!-- Me permet de faire apparaitre les images de ma BDD,
-                            qui ont été passé via mon formulaire,
-                            enregister en base64, plus besoin de les affiché en base 64.-->
+                            qui ont été passé via mon formulaire.-->
                             <img src="data:image/jpeg;base64,<?= $imageData ?>"
                             alt="ImageVoiture" class="img-fluid">
 
-                            <!-- Fait apparaitre les images de ma BDD, avec l'encodage base64,
-                            via un ajout directe sur phpmyadmin -->
-                            <!-- <img src="data:image/jpeg;base64,<?= $imageBase64 ?>"
-                                alt="ImageBoucle" class="img-fluid"> -->
-                                
-                                
                         </div>
                         <div class="col-md-7 col-lg-12">
 

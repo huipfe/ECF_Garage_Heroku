@@ -68,7 +68,7 @@ require_once "Header.html.php";
     <!-- Première colonne - Noms d'utilisateur -->
     <div class="col-lg-12 col-10">
       <div class="mb-1">
-        
+
         <div class="d-flex align-items-center justify-content-between">
           <div class="picto">
             <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png" alt="Pictogramme"
@@ -86,7 +86,8 @@ require_once "Header.html.php";
             <li class="employee">
               <div class="d-flex align-items-center justify-content-between">
                 <div class="picto">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png"
+                  <!-- /ECF_Garage/Assets/images/Dashboard page/sigle.png -->
+                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                   alt="Pictogramme"
                   class="img p-2"
                   width="72">
@@ -94,11 +95,11 @@ require_once "Header.html.php";
   
                 <div class="user-details">
   
-                  <div class="avatar">
+                  <!-- <div class="avatar">
                     <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                     alt="Avatar"
                     class="img">
-                  </div>
+                  </div> -->
   
                   <div class="username">
                     <!-- <?= $Dashboard->user_id?> -->
@@ -126,6 +127,14 @@ require_once "Header.html.php";
                     </li>
                   </button>
               <?php endif; ?>
+
+              <!-- <?php if ($Dashboard->is_admin === 1) : ?>
+                  <button class="btn btn-responsive btn-sm btn-danger m-2">
+                    <li>
+                      <i class=""></i>Placebot
+                    </li>
+                  </button>
+              <?php endif; ?> -->
   
                 </ul>
               </div>

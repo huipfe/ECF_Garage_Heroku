@@ -37,9 +37,8 @@ require_once 'Header.html.php';
                     <?php
                     // Récupérer les données binaires de l'image depuis la base de données
                     $imageData = $details->image;
-                    // Convertir les données binaires en base64
-                    // $imageBase64 = base64_encode($imageData);
                     ?>
+                    
                     <img class="mb-3 mt-5" src="data:image/jpeg;base64, <?= $imageData ?>"
                     alt="ImageBoucle" class="img-fluid">
                     </div>

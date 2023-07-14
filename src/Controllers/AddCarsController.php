@@ -19,7 +19,6 @@ class AddCarsController extends Controller
         // On vérifie si l'utilisateur est connecté
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             // L'utilisateur est connecté
-            // echo "Vous êtes connecté, vous pouvez ajouter une annonce";
 
             // On vérifie si le formulaire est complet.
             if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)){

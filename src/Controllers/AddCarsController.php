@@ -99,8 +99,14 @@ class AddCarsController extends Controller
             }else {
                 // Le formulaire n'est pas complet
                 // On affiche un message d'erreur
-                $_SESSION['error'] = "Le formulaire est incomplet";
-                // echo "<p class='mx-2 alert alert-danger'>Le formulaire est incomplet</p>";
+                $_SESSION['erreur'] = !empty($_POST) ? "Le formulaire est incomplet" : '';
+
+                // Un ternaire, on vérifie que le modele marque ou description sont deja completé.
+                // Au rafraissement de la page, les champs sont encore remplis.
+                $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
+                $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
+                $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
+
             }
 
 

@@ -170,25 +170,6 @@ class CarsDetailsModel extends Model
         return ($query->rowCount() === 1);
     }
 
-    public function updateField(int $id, string $fieldName, $fieldValue): bool
-    {
-        $allowedFields = ['marque', 'modele', 'annee', 'kilometrage', 'prix', 'image', 'description'];
-
-        if (!in_array($fieldName, $allowedFields)) {
-            return false;
-        }
-
-        $sql = "UPDATE {$this->table} SET {$fieldName} = :fieldValue WHERE id = :id";
-        $query = $this->requete(
-            $sql,
-            [
-                "fieldValue" => $fieldValue,
-                "id" => $id
-            ]
-        );
-        return ($query->rowCount() === 1);
-    }
-
 
     /**
      * Affiche la marque de la voiture

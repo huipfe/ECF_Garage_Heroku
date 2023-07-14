@@ -161,7 +161,7 @@ require_once "Header.html.php";
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
                                 <!-- <a href="/ECF_Garage/public///<?= $car->id ?>"> -->
                                     <button
-                                        class="btn btn-danger my-2 bi bi-trash3-fill">
+                                        class="btn btn-danger mx-2 my-2 bi bi-trash3-fill">
                                     </button>
                                 </a>
                             <?php endif; ?>
@@ -170,7 +170,7 @@ require_once "Header.html.php";
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
                                 <a href="/ECF_Garage/public/modifier/modifie/<?= $car->id?>">
                                     <button
-                                        class="btn btn-danger my-2 bi bi-pencil-square">
+                                        class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
                                     </button>
                                 </a>
                             <?php endif; ?>

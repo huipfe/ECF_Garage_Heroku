@@ -80,7 +80,7 @@ form.addEventListener('submit', submitForm);
 
 
 
-/*----------------------------------Réinitialiser Form-----------------------------------------------*/
+/*----------------------------------Réinitialiser Form---------------------------------------------*/
 
 
 // Fonction pour réinitialiser le formulaire

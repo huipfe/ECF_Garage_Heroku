@@ -16,6 +16,7 @@ require_once "Header.html.php";
             name="marque"
             id="marque"
             class="form-control"
+            value="<?= $car->marque ?>"
             required>
         </div>
 
@@ -26,6 +27,7 @@ require_once "Header.html.php";
             name="modele"
             id="modele"
             class="form-control"
+            value="<?= $car->modele ?>"
             required>
         </div>
 
@@ -38,6 +40,7 @@ require_once "Header.html.php";
             class="form-control"
             min="1950"
             max="2025"
+            value="<?= $car->annee ?>"
             required>
         </div>
 
@@ -49,6 +52,7 @@ require_once "Header.html.php";
             id="kilometrage"
             class="form-control"
             min="0"
+            value="<?= $car->kilometrage ?>"
             required>
         </div>
 
@@ -60,6 +64,7 @@ require_once "Header.html.php";
             id="prix"
             class="form-control"
             min="0"
+            value="<?= $car->prix ?>"
             required>
         </div>
 
@@ -70,6 +75,7 @@ require_once "Header.html.php";
             name="image"
             id="image"
             class="form-control"
+            value="<?= $car->image?>"
             required>
         </div>
 
@@ -80,7 +86,7 @@ require_once "Header.html.php";
             id="description"
             class="form-control"
             style="font-family: 'Barlow', sans-serif;"
-            required></textarea>
+            required><?= $car->description ?></textarea>
         </div>
 
         <button

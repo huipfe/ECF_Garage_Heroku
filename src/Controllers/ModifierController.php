@@ -47,21 +47,25 @@ class ModifierController extends Controller {
                 header('Location: /ECF_Garage/public/cars');
                 exit;
             }
-            
 
-        // On vérifie si l'utilisateur est propriétaire de la voiture. Si oui, il peut la modifier
-        if($car->users_id !== $_SESSION['user']['id']) {
-            http_response_code(403);
-            $_SESSION['erreur'] = "Vous n'êtes pas autorisé à modifier cette voiture";
-            header('Location: /ECF_Garage/public/cars');
-            exit;
-        }
+
+            // On vérifie si l'utilisateur est propriétaire de la voiture. Si oui, il peut la modifier
+            // l'admin à tout les droits, donc il modifiera ce qu'il veut.
+            if ($car->users_id !== $_SESSION['user']['id'] && $_SESSION['user']['is_admin'] !== 1
+            ) {
+                http_response_code(403);
+                $_SESSION['erreur'] = "Vous n'êtes pas autorisé à modifier cette voiture";
+                header('Location: /ECF_Garage/public/cars');
+                exit;
+            }
+
 
             // On traite le formulaire
-            // if(Form::validate($_POST, ['marque', 'modele', 'annee', 'kilometrage', 'prix', 'image', 'description'])) {
             if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)
             ) {
-                
+
+
+
             // On se protèges contre les failles XSS
             $marque = strip_tags($_POST['marque']);
             $modele = strip_tags($_POST['modele']);
@@ -103,8 +107,6 @@ class ModifierController extends Controller {
             header('Location: /ECF_Garage/public/cars');
             exit;
         }
-
-
 
             $form = new Form;
 
@@ -154,7 +156,8 @@ class ModifierController extends Controller {
 
             // Une fois que le formulaire est terminés, ont l'envoie à notre vue.
             $this->render('Views/templates/Modifier', [
-                "form" => $form->create()
+                "form" => $form->create(),
+                "car" => $car
             ]);
 
         } else {

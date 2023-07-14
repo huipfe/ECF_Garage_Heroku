@@ -126,7 +126,7 @@ class Model extends Db
         foreach ($this as $champ => $valeur) {
             // UPDATE page_d_accueil set HomepageModel image = ?, temoignage = ?, actif = ? WHERE id = ?
             if ($champ !== null && $champ != "db" && $champ != "table" && $champ != "id") {
-                if ($champ === "id_image" && $valeur === null) {
+                if ($champ === "image" && $valeur === null) {
                     continue; // Ignorer la colonne 'id_image' si elle est nulle
                 }
                 $champs[] = "$champ = ?";

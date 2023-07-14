@@ -16,16 +16,6 @@ SET time_zone = "+00:00";
 -- --------------------------------------------------------
 
 --
--- Structure de la table `catalogue/listes voitures`
---
-
--- CREATE TABLE `catalogue_de_voitures` (
---     `name` varchar(50) NOT NULL
--- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Catalogue voiture';
-
--- --------------------------------------------------------
-
---
 -- Structure de la table `horaires`
 --
 
@@ -70,19 +60,6 @@ CREATE TABLE `page_d_accueil` (
   `id_image` int NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Contenu de la page d''Accueil';
 
-
--- -- --------------------------------------------------------
-
--- --
--- -- Structure de la table `rôle`
--- --
-
--- CREATE TABLE `rôle` (
---   `name` varchar(50) NOT NULL,
---   `is_admin` tinyint(1) NOT NULL,
---   `id` int NOT NULL AUTO_INCREMENT,
---   PRIMARY KEY (`id`)
--- ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_0900_ai_ci COMMENT='Table Rôle, qui désigne l''admin ou l''employé';
 
 -- --------------------------------------------------------
 

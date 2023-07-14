@@ -6,6 +6,12 @@ use App\Models\CarsDetailsModel;
 
 class DetailsController extends Controller
 {
+
+    /**
+     * Cette méthode me permettra d'afficher les détails d'une voiture
+     * Affiche les détails d'une voiture
+     * @return void
+     */
     public function index($id)
     {
         // Exemple de récupération des valeurs depuis une source de données fictive

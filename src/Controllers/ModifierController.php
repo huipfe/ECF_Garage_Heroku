@@ -56,8 +56,106 @@ class ModifierController extends Controller {
             header('Location: /ECF_Garage/public/cars');
             exit;
         }
-        
-        
+
+            // On traite le formulaire
+            // if(Form::validate($_POST, ['marque', 'modele', 'annee', 'kilometrage', 'prix', 'image', 'description'])) {
+            if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)
+            ) {
+                
+            // On se protèges contre les failles XSS
+            $marque = strip_tags($_POST['marque']);
+            $modele = strip_tags($_POST['modele']);
+            $annee = strip_tags($_POST['annee']);
+            $kilometrage = strip_tags($_POST['kilometrage']);
+            $prix = strip_tags($_POST['prix']);
+            $image = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
+            $description = strip_tags($_POST['description']);
+
+            // On va stocker l'annonce en BDD
+            $carModif = new CarsDetailsModel($marque, $modele, $annee, $kilometrage, $prix,
+            $image, $id, $description, $users_id);
+
+                // On hydrate l'objet
+            $carModif->setId($car->id)
+            ->setMarque($marque)
+            ->setModele($modele)
+            ->setAnnee($annee)
+            ->setKilometrage($kilometrage)
+            ->setPrix($prix)
+            ->setImage($image)
+            ->setDescription($description);
+
+                // On met à jour la voiture en BDD
+                $carModif->updateCar([
+                    "marque" => $marque,
+                    "modele" => $modele,
+                    "annee" => $annee,
+                    "kilometrage" => $kilometrage,
+                    "prix" => $prix,
+                    "image" => $image,
+                    "description" => $description,
+                    "id" => $id
+                ]);
+
+
+            // On redirige l'utilisateur vers la liste des voitures
+            $_SESSION['message'] = "Votre voiture a bien été modifiée";
+            header('Location: /ECF_Garage/public/cars');
+            exit;
+        }
+
+
+
+            $form = new Form;
+
+            // On ajoute les champs de notre formulaire
+            $form->debutForm()
+            ->ajoutLabelFor("marque", "Marque de la voiture : ")
+                ->ajoutInput("text", "marque", [
+                    'id' => 'marque',
+                    'class' => 'form-control',
+                    'value' => $carsDetailsModel->marque
+                ])
+                ->ajoutLabelFor("modele", "Modèle de la voiture : ")
+                ->ajoutInput("text", "modele",[
+                    'id' => 'modele',
+                    'class' => 'form-control'
+                ])
+                ->ajoutLabelFor("annee", "Année de la voiture : ")
+                ->ajoutInput("number", "annee",[
+                    'id' => 'annee',
+                    'class' => 'form-control'
+                ])
+                ->ajoutLabelFor("kilometrage", "Kilométrage de la voiture : ")
+                ->ajoutInput("number", "kilometrage",[
+                    'id' => 'kilometrage',
+                    'class' => 'form-control'
+                ])
+                ->ajoutLabelFor("prix", "Prix de la voiture : ")
+                ->ajoutInput("number", "prix", [
+                    'id' => 'prix',
+                    'class' => 'form-control'
+                ])
+                ->ajoutLabelFor("image", "Image de la voiture : ")
+                ->ajoutInput("img", "image", [
+                    'id' => 'image',
+                    'class' => 'form-control'
+                ])
+                ->ajoutLabelFor("description", "Description de la voiture : ")
+                ->ajoutTextarea("text", $carsDetailsModel->description, [
+                    'id' => 'description',
+                    'class' => 'form-control'
+                ])
+                ->ajoutBouton("Modifier",
+                [
+                    'class' => 'btn btn-primary'
+                ])
+                ->finForm();
+
+            // Une fois que le formulaire est terminés, ont l'envoie à notre vue.
+            $this->render('Views/templates/Modifier', [
+                "form" => $form->create()
+            ]);
 
         } else {
             // L'utilisateur n'est pas connecté

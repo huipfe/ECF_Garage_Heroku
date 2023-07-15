@@ -39,34 +39,14 @@ class DashboardController extends Controller
             $user->create();
         }
 
-        // $form = new Form;
-
-        // $form->debutForm()
-        //     ->ajoutLabelFor('email', 'E-Mail :')
-        //     ->ajoutInput('email', 'email', ['id' => 'email', 'class' => 'form-control',])
-        //     ->ajoutLabelFor('password', 'Mot de passe :')
-        //     ->ajoutInput('password', 'password', ['id' => 'password', 'class' => 'form-control',])
-        //     ->ajoutBouton('M\'enregistrer', ['class' => 'btn btn-primary'])
-        //     ->finForm();
-
-        // $this->render('/Views/templates/Dashboard', ['registerForm' => $form->create()]);
-
-        // $this->render('/Views/templates/Dashboard');
 
         // On veut afficher ses utilisateur qui sont en base de donnés.
         $usersModel = new UsersModel;
         $users = $usersModel->findAll();
 
         $this->render('/Views/templates/Dashboard', ['users' => $users]);
+
     }
 
-    // public function AfficheUsers()
-    // {
-    //     // On veut afficher ses utilisateur qui sont en base de donnés.
-    //     $usersModel = new UsersModel;
-    //     $users = $usersModel->findAll();
 
-    //     $this->render('/Views/templates/Dashboard', ['users' => $users]);
-
-    // }
 }

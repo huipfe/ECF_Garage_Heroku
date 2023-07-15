@@ -19,7 +19,7 @@ require_once "Header.html.php";
         <img src="/ECF_Garage/Assets/images/Dashboard page/Avatar Admin.png"
         width="80" height="auto"
         class="img-fluid m-2" alt="Photo de l'admin">
-        <p class="text-center fs-5 fw-bold">VincentParrot@gmail.com</p>
+          <p class="text-center fs-5 fw-bold" id="adminAdressMail"></p>
       </div>
     </div>
   </div>
@@ -109,7 +109,9 @@ require_once "Header.html.php";
                 </div>
   
                 <ul class="list-unstyled email-name">
-                  <li style="margin-left: 2.5rem;"><?= $Dashboard->email?></li>
+                  <li
+                  id="adminEmail"
+                  style="margin-left: 2.5rem;"><?= $Dashboard->email?></li>
                 </ul>
   
                 <ul class="list-unstyled">

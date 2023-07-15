@@ -11,7 +11,7 @@ $(document).ready(function () {
     }
 
     // Vérifier si le message d'erreur ou de succès est affiché
-    var alertElement = $('#alert');
+    let alertElement = $('#alert');
     if (alertElement.length > 0) {
         // Masquer le message après 5 secondes (5000 millisecondes)
         setTimeout(hideMessage, 3000);

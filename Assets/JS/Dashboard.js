@@ -47,3 +47,19 @@ const employeeCountElement = document.getElementById('employeeCount');
 
 // Mettre à jour le contenu de l'élément avec le nombre d'employés
 employeeCountElement.textContent = `${employeeElements.length} employé(s)`;
+
+
+/*----------------------------------Adress de l'admin dynamique-----------------------------------*/
+
+// Récupérer l'élément <li> avec l'id "adminEmail"
+const adminEmailElement = document.getElementById('adminEmail');
+
+// Récupérer le contenu de l'adresse e-mail de l'admin
+const adminEmail = adminEmailElement.textContent;
+
+// Récupérer l'élément <p> avec l'id "adminAdressMail"
+const adminAdressMailElement = document.getElementById('adminAdressMail');
+
+// Mettre à jour le contenu de l'élément avec l'adresse e-mail de l'admin
+adminAdressMailElement.textContent = adminEmail;
+

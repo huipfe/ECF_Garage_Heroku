@@ -68,6 +68,7 @@ class Model extends Db
         return $this->requete("SELECT * FROM {$this->table} WHERE id = $id")->fetch();
     }
 
+
     /**
      * Méthode qui me permet de créer un élément dans une table
      *

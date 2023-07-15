@@ -126,3 +126,14 @@ checkboxes.forEach(checkbox => {
         filtrerVoitures(); // Appeler la fonction de filtrage après chaque modification de checkbox
     });
 });
+
+
+/*--------------------------------------Modale de supression---------------------------------------*/
+
+    const deleteModal = document.getElementById('deleteModal');
+    deleteModal.addEventListener('show.bs.modal', function (event) {
+        const button = event.relatedTarget;
+    const action = button.getAttribute('data-action');
+    const deleteForm = document.getElementById('deleteForm');
+    deleteForm.action = action;
+    });

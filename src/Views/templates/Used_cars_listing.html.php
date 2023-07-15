@@ -159,11 +159,11 @@ require_once "Header.html.php";
                         
                             <!-- Supression d'une voiture -->
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
-                                <!-- <a href="/ECF_Garage/public///<?= $car->id ?>"> -->
-                                    <button
-                                        class="btn btn-danger mx-2 my-2 bi bi-trash3-fill">
-                                    </button>
-                                </a>
+                                <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
+                                    data-bs-toggle="modal"
+                                    data-bs-target="#deleteModal"
+                                    data-action="/ECF_Garage/public/deleteCars/delete/<?= $car->id ?>">
+                                </button>
                             <?php endif; ?>
 
                             <!-- Modification d'une voiture -->
@@ -258,6 +258,28 @@ require_once "Header.html.php";
     <?php endif; ?>
     
 </div>
+
+<!-- Modal de suppression -->
+<div class="modal fade" id="deleteModal" tabindex="-1" aria-labelledby="deleteModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="deleteModalLabel">Confirmation de suppression</h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+        <div class="modal-body">
+            Êtes-vous sûr de vouloir supprimer cette voiture ?
+        </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                <form id="deleteForm" action="" method="POST">
+                    <button type="submit" class="btn btn-danger">Supprimer</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+
 
 
 <script src="/ECF_Garage/Assets/JS/Used_cars_listing.js"></script>

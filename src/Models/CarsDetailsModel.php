@@ -170,6 +170,14 @@ class CarsDetailsModel extends Model
         return ($query->rowCount() === 1);
     }
 
+    public function deleteCar(int $id): bool
+    {
+        $sql = "DELETE FROM {$this->table} WHERE id = :id";
+        $query = $this->requete($sql, ["id" => $id]);
+        return ($query->rowCount() === 1);
+    }
+
+
 
     /**
      * Affiche la marque de la voiture

@@ -14,6 +14,6 @@ $(document).ready(function () {
     let alertElement = $('#alert');
     if (alertElement.length > 0) {
         // Masquer le message après 5 secondes (5000 millisecondes)
-        setTimeout(hideMessage, 3000);
+        setTimeout(hideMessage, 1500);
     }
 });

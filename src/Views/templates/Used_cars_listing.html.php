@@ -251,8 +251,8 @@ require_once "Header.html.php";
     <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
         <a href="/ECF_Garage/public/addCars/ajouter">
             <button
-                class="btn btn-danger my-2 bi bi-plus-circle">
-                
+                class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
+                Ajouter Voiture
             </button>
         </a>
     <?php endif; ?>

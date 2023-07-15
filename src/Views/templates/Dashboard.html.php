@@ -53,8 +53,11 @@ require_once "Header.html.php";
 
     <!-- Bouton "Créer Compte" -->
 <div class="col-12 col-lg-6 py-2 justify-content-end text-end">
-  <button class="btn btn-danger btn-lg-lg">
-    <i class="bi bi-person-add"></i> Créer Compte
+  <button
+  class="btn btn-danger btn-lg-lg"
+  data-bs-toggle="modal"
+  data-bs-target="#createAccountModal">
+    <i class="bi bi-person-add"></i> Créer un Compte
   </button>
 </div>
 
@@ -116,18 +119,24 @@ require_once "Header.html.php";
   
                 <ul class="list-unstyled">
                   
-                  <button class="btn btn-responsive btn-sm btn-danger m-2">
-                    <li>
-                      <i class="bi bi-pencil"></i> Modifier
-                    </li>
-                  </button>
+                <button
+                class="btn btn-responsive btn-sm btn-danger m-2"
+                data-bs-toggle="modal"
+                data-bs-target="#editUserModal">
+                  <li>
+                    <i class="bi bi-pencil"></i> Modifier
+                  </li>
+                </button>
   
               <?php if ($Dashboard->is_admin != 1) : ?>
-                  <button class="btn btn-responsive btn-sm btn-danger m-2">
-                    <li>
-                      <i class="bi bi-trash"></i> Supprimer
-                    </li>
-                  </button>
+                    <button
+                    class="btn btn-responsive btn-sm btn-danger m-2"
+                    data-bs-toggle="modal"
+                    data-bs-target="#confirmDeleteModal">
+                      <li>
+                        <i class="bi bi-trash"></i> Supprimer
+                      </li>
+                    </button>
               <?php endif; ?>
 
               <!-- <?php if ($Dashboard->is_admin === 1) : ?>
@@ -153,7 +162,111 @@ require_once "Header.html.php";
   </div>
 </div>
 
-</main>
+<!-- Modal de confirmation de suppression -->
+    <div
+      class="modal fade"
+      id="confirmDeleteModal"
+      tabindex="-1"
+      aria-labelledby="confirmDeleteModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="confirmDeleteModalLabel">Confirmation de suppression</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            Êtes-vous sûr de vouloir supprimer cet utilisateur ?
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-danger">Supprimer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Modal de création de compte -->
+    <div
+        class="modal fade"
+        id="createAccountModal"
+        tabindex="-1"
+        aria-labelledby="createAccountModalLabel"
+        aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="createAccountModalLabel">Créer un compte</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="username" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="username" placeholder="Nom d'utilisateur"
+                required>
+              </div>
+              <div class="mb-3">
+                <label for="email" class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" id="email" placeholder="Adresse e-mail"
+                required>
+              </div>
+              <div class="mb-3">
+                <label for="password" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="password" placeholder="Mot de passe"
+                required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-danger">Créer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <!-- Modal de modification -->
+    <div
+      class="modal fade"
+      id="editUserModal"
+      tabindex="-1"
+      aria-labelledby="editUserModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="editUserModalLabel">Modifier l'utilisateur</h5>
+            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+          </div>
+          <div class="modal-body">
+            <form>
+              <div class="mb-3">
+                <label for="editUsername" class="form-label">Nom d'utilisateur</label>
+                <input type="text" class="form-control" id="editUsername" placeholder="Nom d'utilisateur"
+                required>
+              </div>
+              <div class="mb-3">
+                <label for="editEmail" class="form-label">Adresse e-mail</label>
+                <input type="email" class="form-control" id="editEmail" placeholder="Adresse e-mail"
+                required>
+              </div>
+              <div class="mb-3">
+                <label for="editPassword" class="form-label">Mot de passe</label>
+                <input type="password" class="form-control" id="editPassword" placeholder="Mot de passe"
+                required>
+              </div>
+            </form>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+            <button type="button" class="btn btn-danger">Enregistrer</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 <script src="/ECF_Garage/Assets/JS/Dashboard.js"></script>

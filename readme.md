@@ -52,6 +52,11 @@ Vous pouvez également vous connecter en tant qu'employé :
 email : Employer1@gmail.com
 mot de passe : Employé123 (mdp hashé)
 
+email : Test1@protonmail.com
+
+mot de passe : Test123Test123 (mdp hashé)
+
+
 Seul l'administrateur peut générer un compte pour les employés :
 Il dispose d'un tableau de bord Admin avec 3 options : créer un compte employé,
 modifier la section 'services' de la page d'accueil' et modifier les horaires d'ouverture.

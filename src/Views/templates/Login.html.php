@@ -19,7 +19,8 @@ require_once "Header.html.php";
 <main>
 
     <!-- http://localhost/ECF_Garage/public/login/login -->
-    <!-- <?=$loginForm?> -->
+
+    
 
     
     <section class="position-relative">

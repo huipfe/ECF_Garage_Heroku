@@ -14,8 +14,21 @@ class LoginController extends Controller
     }
     public function index()
     {
+        // Vérifier si l'utilisateur est déjà connecté
+        if (isset($_SESSION['user'])) {
+            // Vérifier si l'utilisateur est un admin
+            if ($_SESSION['user']['is_admin'] == 1) {
+                header('Location: /ECF_Garage/public/dashboard/administration');
+                exit();
+            } else {
+                header('Location: /ECF_Garage/public/cars');
+                exit();
+            }
+        }
+
         $this->render('/Views/templates/Login');
     }
+
     
     /**
      * Méthode pour connecter un utilisateur

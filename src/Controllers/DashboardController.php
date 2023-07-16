@@ -9,9 +9,23 @@ class DashboardController extends Controller
 {
     public function index()
     {
-        $this->render('/Views/templates/Dashboard');
+        // Vérifier si l'utilisateur est connecté
+        if (!isset($_SESSION['user'])) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
 
+        // Vérifier si l'utilisateur est un admin
+        if ($_SESSION['user']['is_admin'] != 1) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
+        $this->render('/Views/templates/Dashboard');
     }
+
 
     /**
      * Méthode pour enregistrer un utilisateur
@@ -19,6 +33,20 @@ class DashboardController extends Controller
      */
     public function administration()
     {
+        // Vérifier si l'utilisateur est connecté
+        if (!isset($_SESSION['user'])) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
+        // Vérifier si l'utilisateur est un admin
+        if ($_SESSION['user']['is_admin'] != 1) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+        
         // On vérifie si le formulaire est soumis
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // On récupère les données du formulaire
@@ -61,6 +89,21 @@ class DashboardController extends Controller
      */
     public function modifyUser()
     {
+
+        // Vérifier si l'utilisateur est connecté
+        if (!isset($_SESSION['user'])) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
+        // Vérifier si l'utilisateur est un admin
+        if ($_SESSION['user']['is_admin'] != 1) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
         // Vérifie si le formulaire est soumis
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupère les données du formulaire
@@ -78,8 +121,6 @@ class DashboardController extends Controller
                 'email' => $email,
                 'password' => $password
             ]);
-            // var_dump($username);
-            // die;
 
             // Vérifie si la modification de l'utilisateur a réussi
             if ($success) {
@@ -106,6 +147,20 @@ class DashboardController extends Controller
 
     public function deleteUser()
     {
+        // Vérifier si l'utilisateur est connecté
+        if (!isset($_SESSION['user'])) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
+        // Vérifier si l'utilisateur est un admin
+        if ($_SESSION['user']['is_admin'] != 1) {
+            $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+        
         // Vérifie si le formulaire est soumis
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupère les données du formulaire

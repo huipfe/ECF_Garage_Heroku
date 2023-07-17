@@ -2,15 +2,19 @@
     <div class="container-fluid">
         <div class="row p-3">
             <div class="col-md-3">
+
                 <h4>Nos horaires</h4>
                 <p>Horaires d'ouverture et de fermeture :</p>
-                <p>Lun : 08h45 - 12h00/14h00 - 18h00</p>
-                <p>Mar : 08h45 - 12h00/14h00 - 18h00</p>
-                <p>Mer : 08h45 - 12h00/14h00 - 18h00</p>
-                <p>Jeu : 08h45 - 12h00/14h00 - 18h00</p>
-                <p>Ven : 08h45 - 12h00/14h00 - 18h00</p>
-                <p>Sam : 08h45 - 12h00</p>
-                <p>Dim : Fermé</p>
+                
+                <?php if (isset($horaires) && is_array($horaires)) : ?>
+
+                    <?php foreach ($horaires as $horaire) : ?>
+                        <p><?php echo $horaire['jour']; ?> :
+                            <?php echo $horaire['heure_debut']; ?> - <?php echo $horaire['heure_fin']; ?></p>
+                    <?php endforeach; ?>
+
+                <?php endif; ?>
+
 
             </div>
             <div class="col-md-3">
@@ -44,10 +48,14 @@
                 <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
                 <h4>Suivez nous sur :</h4>
                 <ul class="list-inline">
-                    <li class="list-inline-item"><a href="#"><i class="bi bi-whatsapp link-light fs-1"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="bi bi-facebook link-light fs-1"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="bi bi-instagram link-light fs-1"></i></a></li>
-                    <li class="list-inline-item"><a href="#"><i class="bi bi-twitter link-light fs-1"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i
+                    class="bi bi-whatsapp link-light fs-1"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i
+                    class="bi bi-facebook link-light fs-1"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i
+                    class="bi bi-instagram link-light fs-1"></i></a></li>
+                    <li class="list-inline-item"><a href="#"><i
+                    class="bi bi-twitter link-light fs-1"></i></a></li>
                 </ul>
             </div>
 </footer>
@@ -91,13 +99,11 @@
 
 <!-- Bootstrap JavaScript Libraries -->
 <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
-integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
-crossorigin="anonymous">
+integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous">
 </script>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.min.js"
-integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS"
-crossorigin="anonymous">
+integrity="sha384-fbbOQedDUMZZ5KreZpsbe1LCZPVmfTnH7ois6mU1QK+m14rQ1l2bGBq41eYeM/fS" crossorigin="anonymous">
 </script>
 
 <!-- JS du projet -->

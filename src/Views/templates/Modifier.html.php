@@ -6,7 +6,8 @@ require_once "Header.html.php";
 
 
 <div class="container">
-            <div class="justify-content-start">
+    
+        <div class="justify-content-start">
             <a href="/ECF_Garage/public/cars"
             class="text-decoration-none">
                 <span>

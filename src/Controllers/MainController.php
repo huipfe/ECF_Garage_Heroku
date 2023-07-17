@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\HorairesModel;
 
 class MainController extends Controller
 {
@@ -10,6 +11,8 @@ class MainController extends Controller
         $this->render('/Views/templates/Homepage');
 
     }
+
+
 }
 
 ?>

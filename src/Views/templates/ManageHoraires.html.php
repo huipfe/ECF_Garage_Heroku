@@ -18,13 +18,26 @@ require_once "Header.html.php";
     <?php endif; ?>
 <!-- Affichage des horaires actuels -->
 <div class="container">
-    <h4>Nos horaires</h4>
+
+        <div class="justify-content-start">
+            <a href="/ECF_Garage/public/dashboard/administration"
+            class="text-decoration-none">
+                <span>
+                    <button class="btn btn-danger my-2">
+                        <i class="bi bi-arrow-left"></i>
+                        Retour sur le Panel
+                    </button>
+                </span>
+            </a>
+        </div>
+
+    <h3>Modification des horaires</h3>
     <p>Horaires d'ouverture et de fermeture :</p>
 
-    <?php foreach ($horaires as $horaire) : ?>
+    <!-- <?php foreach ($horaires as $horaire) : ?>
         <p><?php echo $horaire['jour']; ?> :
-            <?php echo $horaire['heure_debut']; ?> - <?php echo $horaire['heure_fin']; ?></p>
-    <?php endforeach; ?>
+            <?php echo $horaire['heure_debut']; ?> / <?php echo $horaire['heure_fin']; ?></p>
+    <?php endforeach; ?> -->
 
 
 <!-- Formulaire de modification des horaires -->
@@ -60,7 +73,7 @@ require_once "Header.html.php";
             </div>
         <?php endforeach; ?>
     
-        <button type="submit" class="btn btn-primary">Mettre à jour</button>
+        <button type="submit" class="btn btn-danger my-3">Mettre à jour</button>
     </form>
 
 </div>

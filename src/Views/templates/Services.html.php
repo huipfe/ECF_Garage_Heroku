@@ -6,17 +6,17 @@ le garage sur sa page d'accueil.
 De plus, l'administrateur doit avoir la possibilité de modifier ces informations directement à partir 
 de son espace d'administration. -->
 
-<?php 
+<?php
 require_once "Header.html.php";
 ?>
 
 <main>
-<div>
-    <h1>Service</h1>
-</div>
+    <div class="container">
+        <h1>Nos Service</h1>
+    </div>
 </main>
 
 
-<?php 
+<?php
 require_once "Footer.html.php";
 ?>

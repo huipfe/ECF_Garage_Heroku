@@ -223,7 +223,7 @@ class DashboardController extends Controller
 
         // Récupérer les horaires depuis la base de données
         $horairesModel = new HorairesModel();
-        $horaires = $horairesModel->findAll();
+        $horaires = $horairesModel->fetchAll(); // Utiliser la méthode fetchAll() au lieu de findAll()
 
         $this->render('/Views/templates/ManageHoraires', ['horaires' => $horaires]);
     }

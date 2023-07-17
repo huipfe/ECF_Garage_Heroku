@@ -1,8 +1,6 @@
 <?php
 namespace App\Database;
-// 'DB.php' : contient l'alimentation de la base de données.
-// La création de l'administrateur a été crée à partir du fichier 'DB.php'
-// (comme pour pour toutes les autres créations fictives pour alimenter la database).
+
 
 // On importe PDO
 use PDO;

@@ -2,6 +2,8 @@
 
 namespace App\Models;
 
+use App\Database\Db;
+
 
 
 class HorairesModel extends Model
@@ -27,21 +29,35 @@ class HorairesModel extends Model
     public $jour;
 
     /**
-     * Horaires heure_ouverture
+     * Horaires heure_debut
      *
      * @var string
      */
-
     public $heure_debut;
 
     /**
-     * Horaires heure_fermeture
+     * Horaires heure_fin
      *
      * @var string
      */
-
     public $heure_fin;
 
+    /**
+     * Exécute une requête SQL pour ce modèle Horaire
+     *
+     * @param string $query
+     * @param mixed ...$params
+     * @return mixed
+     */
+    protected function executeQuery(string $query,
+        ...$params
+    ) {
+        $db = Db::getInstance();
+        $stmt = $db->prepare($query);
+        $stmt->execute($params);
+
+        return $stmt;
+    }
 
     /**
      * Met à jour les horaires dans la base de données
@@ -52,34 +68,78 @@ class HorairesModel extends Model
     public function updateHoraires(array $horaires): bool
     {
         // Début de la transaction
-        $this->beginTransaction();
+        $db = Db::getInstance();
+        $db->beginTransaction();
 
         try {
-            // Supprimer tous les horaires existants
-            $this->requete("DELETE FROM {$this->table}");
+            foreach ($horaires as $jour => $horaire) {
+                $heureDebut = $horaire['heure_debut'];
+                $heureFin = $horaire['heure_fin'];
 
-            // Insérer les nouveaux horaires
-            foreach ($horaires as $horaire) {
-                $this->requete(
-                    "INSERT INTO {$this->table} (jour, heure_debut, heure_fin) VALUES (?, ?, ?)",
-                    null,
-                    $horaire['jour'],
-                    $horaire['heure_debut'],
-                    $horaire['heure_fin'],
-                );
+                // Vérifier si l'horaire existe déjà
+                $existingHoraire = $this->fetchByJour($jour);
+
+                if ($existingHoraire) {
+                    // Mettre à jour l'horaire existant
+                    $query = "UPDATE {$this->table} SET heure_debut = ?, heure_fin = ? WHERE jour = ?";
+                    $this->executeQuery($query, $heureDebut, $heureFin, $jour);
+                } else {
+                    // Insérer un nouvel horaire
+                    $query = "INSERT INTO {$this->table} (jour, heure_debut, heure_fin) VALUES (?, ?, ?)";
+                    $this->executeQuery($query, $jour, $heureDebut, $heureFin);
+                }
             }
 
             // Valider la transaction
-            $this->commit();
+            $db->commit();
 
             return true;
         } catch (\Exception $e) {
             // Annuler la transaction en cas d'erreur
-            $this->rollBack();
+            $db->rollBack();
 
             return false;
         }
     }
+
+
+    /**
+     * Récupère un horaire par jour
+     *
+     * @param string $jour
+     * @return mixed|null
+     */
+    public function fetchByJour(string $jour)
+    {
+        $query = "SELECT * FROM {$this->table} WHERE jour = ?";
+        $stmt = $this->executeQuery($query, $jour);
+        $result = $stmt->fetch(\PDO::FETCH_OBJ);
+
+        return $result ?: null;
+    }
+
+    /**
+     * Récupère tous les horaires depuis la base de données
+     *
+     * @return array
+     */
+    public function fetchAll(): array
+    {
+        // Connexion à la base de données
+        $db = \App\Database\Db::getInstance();
+
+        // Requête SQL
+        $query = "SELECT * FROM {$this->table}";
+
+        // Exécution de la requête
+        $stmt = $db->query($query);
+
+        // Récupération des résultats
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+        return $result;
+    }
+
 
     /**
      * Get the value of table

@@ -5,7 +5,7 @@ require_once "Header.html.php";
 <main>
 
     <div class="container">
-        <h1>À propos</h1>
+        <h1 class="mb-3 mt-4 ">À propos</h1>
         <div class="row">
 
             <div class="col-md-6">

@@ -953,7 +953,7 @@ section#filter-sidebar div.filtrage-bar div.gray-bar span {
   color: #d97777;
 }
 
-/* Import Car details. */
+/* Import Car details */
 /* Haut de la page - image */
 section#header {
   /* Bouton Retour flêche */
@@ -1128,5 +1128,35 @@ section#modal-image .my-btn-danger {
   margin-left: 5px;
 }
 
-/* Import */
-/* Import *//*# sourceMappingURL=style.css.map */
+/* Import Apropos */
+/* Titre */
+div.container h1 {
+  color: #262526;
+  text-align: start;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  letter-spacing: 0.3px;
+  margin-bottom: 20px;
+}
+div.container h2 {
+  color: #262526;
+  text-align: start;
+  font-family: "Rajdhani", sans-serif;
+  font-weight: 700;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+  margin-bottom: 20px;
+}
+
+/* Texte p */
+body > main > div > div > div > p {
+  color: #262526;
+  text-align: start;
+  font-size: 13px;
+  font-family: "Barlow", sans-serif;
+  font-weight: 500;
+  line-height: 25px;
+  letter-spacing: 0.3px;
+}
+
+/* Import Services*//*# sourceMappingURL=style.css.map */

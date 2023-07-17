@@ -10,6 +10,11 @@ class MainController extends Controller
     {
         $this->render('/Views/templates/Homepage');
 
+        // $horairesModel = new HorairesModel();
+        // $horaires = $horairesModel->fetchAll();
+
+        // // Passez les horaires à la vue
+        // $this->render('Views/templates/Homepage', ['horaires' => $horaires]);
     }
 
 

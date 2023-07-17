@@ -354,15 +354,6 @@ div.container div.row div.col-lg-6 div.m-2 h3 + p {
   margin-right: 10px;
 }
 
-div.container-lg > div.row > div.col-lg-12.col-10 > div.mb-1 > ul.list-unstyled > li:nth-child(1) > div {
-  margin-right: 7.2rem;
-}
-
-@media (min-width: 669px) and (max-width: 766px) {
-  div.container-lg > div.row > div.col-lg-12.col-10 > div.mb-1 > ul.list-unstyled > li:nth-child(1) > div {
-    margin-right: 5.5rem;
-  }
-}
 /* Import Contact Page */
 /* Contact page */
 .p-1.bg-danger.text-white .container-fluid .row .col-lg-6 section .p-2.m-2 h1 {

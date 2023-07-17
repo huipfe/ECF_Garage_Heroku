@@ -148,7 +148,7 @@ require_once "Header.html.php";
     <div class="row">
 
     <?php
-    // var_dump($carsDetails)
+    
     ?>
         <?php foreach ($carsDetails as $car) : ?>
 

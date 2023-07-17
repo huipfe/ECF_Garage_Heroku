@@ -2,8 +2,8 @@
 
 namespace App\Controllers;
 
-use App\Core\Form;
 use App\Models\UsersModel;
+use App\Models\HorairesModel;
 
 class DashboardController extends Controller
 {
@@ -192,4 +192,40 @@ class DashboardController extends Controller
             }
         }
     }
+
+    public function manageHoraires()
+    {
+        // Vérifier si l'utilisateur est connecté en tant qu'admin
+        if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
+            $_SESSION['erreur'] = "Accès non autorisé";
+            header('Location: /ECF_Garage/public/login/Belogin');
+            exit();
+        }
+
+        // Gérer la soumission du formulaire
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            // Récupérer les horaires modifiés depuis le formulaire
+            $horaires = $_POST['horaires'];
+
+            // Mettre à jour les horaires dans la base de données
+            $horairesModel = new HorairesModel();
+            $success = $horairesModel->updateHoraires($horaires);
+
+            if ($success) {
+                $_SESSION['message'] = "Les horaires ont été mis à jour avec succès";
+            } else {
+                $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
+            }
+
+            header('Location: /ECF_Garage/public/dashboard/manageHoraires');
+            exit();
+        }
+
+        // Récupérer les horaires depuis la base de données
+        $horairesModel = new HorairesModel();
+        $horaires = $horairesModel->findAll();
+
+        $this->render('/Views/templates/ManageHoraires', ['horaires' => $horaires]);
+    }
+
 }

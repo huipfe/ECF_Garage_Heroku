@@ -14,7 +14,21 @@ require_once "Header.html.php";
 
 
 <div class="container">
+
+        <div class="justify-content-start">
+            <a href="/ECF_Garage/public/cars"
+            class="text-decoration-none">
+                <span>
+                    <button class="btn btn-danger my-2">
+                        <i class="bi bi-arrow-left"></i>
+                        Retour à la liste
+                    </button>
+                </span>
+            </a>
+        </div>
+
     <h1>Ajouter Voiture</h1>
+
     <form method="post" enctype="multipart/form-data">
 
         <div class="mb-3">

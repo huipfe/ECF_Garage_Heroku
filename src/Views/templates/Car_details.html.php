@@ -21,8 +21,8 @@ require_once 'Header.html.php';
             <div class="col-lg-6">
                 <section id="header">
                     <div class="container">
+                        
                         <div class="justify-content-start">
-                            <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
                             <a href="/ECF_Garage/public/cars"
                             class="text-decoration-none">
                                 <span>

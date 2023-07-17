@@ -69,7 +69,7 @@ require_once "Header.html.php";
     <!-- Bouton "Créer Compte" -->
 <div class="col-12 col-lg-6 py-2 justify-content-end text-end">
   <button
-  class="btn btn-danger btn-lg-lg"
+  class="btn btn-danger btn-lg-lg btn-sm"
   data-bs-toggle="modal"
   data-bs-target="#createAccountModal">
     <i class="bi bi-person-add"></i> Créer un Compte
@@ -104,7 +104,6 @@ require_once "Header.html.php";
             <li class="employee">
               <div class="d-flex align-items-center justify-content-between">
                 <div class="picto">
-                  <!-- /ECF_Garage/Assets/images/Dashboard page/sigle.png -->
                   <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
                   alt="Pictogramme"
                   class="img p-2"
@@ -112,12 +111,6 @@ require_once "Header.html.php";
                 </div>
   
                 <div class="user-details">
-  
-                  <!-- <div class="avatar">
-                    <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
-                    alt="Avatar"
-                    class="img">
-                  </div> -->
   
                   <div class="username">
                     <!-- <?= $Dashboard->user_id?> -->
@@ -134,6 +127,7 @@ require_once "Header.html.php";
   
                 <ul class="list-unstyled">
                   
+                <!-- Modification de tout les comptes possible. -->
                     <button
                         class="btn btn-responsive btn-sm btn-danger m-2"
                         data-bs-toggle="modal"
@@ -146,6 +140,8 @@ require_once "Header.html.php";
                             <i class="bi bi-pencil"></i> Modifier
                         </li>
                     </button>
+
+                    <!-- Impossible de se supprimer le compte Admin -->
 
                     <?php if ($Dashboard->is_admin != 1) : ?>
 
@@ -160,7 +156,24 @@ require_once "Header.html.php";
                           </li>
                       </button>
 
+                    <!-- Seul l'admin peut modifier les horaires -->
+
                     <?php endif; ?>
+
+                  <?php if ($Dashboard->is_admin == 1) : ?>
+
+                    <a href="/ECF_Garage/public/dashboard/manageHoraires">
+
+                      <button
+                          class="btn btn-responsive btn-sm btn-danger m-2">
+                          <li>
+                              <i class="bi bi-calendar-plus me-2"></i>Horaires
+                          </li>
+                      </button>
+
+                    </a>
+
+                  <?php endif; ?>
   
                 </ul>
               </div>
@@ -331,7 +344,8 @@ require_once "Header.html.php";
                         </div>
 
                         <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
+                            <button type="button" class="btn btn-secondary"
+                            data-bs-dismiss="modal">Annuler</button>
                             <button type="submit" class="btn btn-danger">Enregistrer</button>
                         </div>
                     </form>

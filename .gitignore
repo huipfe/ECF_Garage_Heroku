@@ -9,3 +9,7 @@ Form.php
 Anciens/
 old_index.php
 Crud.php
+
+# 
+vendor/
+.env

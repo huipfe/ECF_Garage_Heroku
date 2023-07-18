@@ -41,7 +41,6 @@
                     class="was-validated"
 
                     method="POST">
-                    <!-- Pas obligatoire à mettre : action="/ECF_Garage/src/Utils/register.php" -->
     
                     <!-- Logo Login -->
                         <img

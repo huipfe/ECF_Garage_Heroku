@@ -4,24 +4,6 @@ require_once "Header.html.php";
 
 <main>
 
-    <!-- Message de réussite-->
-    <?php if(!empty($_SESSION['message'])): ?>
-        <div class="alert alert-success" id="alert" role="alert">
-            <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
-        </div>
-    <?php endif; ?>
-
-    
-    <!-- Message d'erreur -->
-    <?php if(!empty($_SESSION['erreur'])): ?>
-        <div class="alert alert-danger" id="alert" role="alert">
-            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
-        </div>
-    <?php endif; ?>
-
-    <!-- http://localhost/ECF_Garage/public/Dashboard/register -->
-    <!-- <?= $registerForm ?> -->
-
 <!-- Dashboard titre -->
 <section class="d-none d-lg-block bg-light text-center">
   <div class="container">

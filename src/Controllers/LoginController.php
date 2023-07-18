@@ -54,7 +54,7 @@ class LoginController extends Controller
             if($userArray && (password_verify($password, $userArray->password))) {
 
                 // Si erreur avant
-                unset($_SESSION['erreur']);
+                unset($_SESSION['erreur_login']);
 
                 // On crée la session de l'utilisateur.
                 // $this->setSession();
@@ -80,7 +80,7 @@ class LoginController extends Controller
                 }
             } else {
                 // Sinon, on affiche un message d'erreur.
-                $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
+                $_SESSION['erreur_login'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
                 header('Location: /ECF_Garage/public/login/Belogin');
                 exit;
             }

@@ -1,25 +1,8 @@
 <?php 
 require_once "Header.html.php";
 ?>
-<?php 
 
-?>
 <main>
-
-    <!-- Message de réussite-->
-    <?php if(!empty($_SESSION['message'])): ?>
-        <div class="alert alert-success" id="alert" role="alert">
-            <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
-        </div>
-    <?php endif; ?>
-
-    
-    <!-- Message d'erreur -->
-    <?php if(!empty($_SESSION['erreur'])): ?>
-        <div class="alert alert-danger" id="alert" role="alert">
-            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
-        </div>
-    <?php endif; ?>
 
     <div class="container-lg">
         <div class="row">
@@ -127,9 +110,6 @@ require_once "Header.html.php";
 <div class="container">
     <div class="row">
 
-    <?php
-    
-    ?>
         <?php foreach ($carsDetails as $car) : ?>
 
             <div class="col-lg-4">
@@ -212,7 +192,6 @@ require_once "Header.html.php";
                                     <i class="bi bi-star"></i>
                                 </div> -->
 
-                                <!-- /ECF_Garage/src/Views/templates/Car_details.html.php/details/ -->
                                     <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>

@@ -94,7 +94,7 @@
 
                         <li class="nav-item ">
                             <a class="nav-link" href="/ECF_Garage/public/Apropos">
-                                A propos</a>
+                                À propos</a>
                             <!-- /ECF_Garage/src/Views/templates/Apropos.html.php -->
                         </li>
 
@@ -263,3 +263,20 @@
             </ul>
         </nav>
     </header>
+
+        <!-- Message de réussite-->
+    <?php if (!empty($_SESSION['message'])) : ?>
+        <div class="alert alert-success" id="alert" role="alert">
+            <?php echo $_SESSION['message'];
+            unset($_SESSION['message']); ?>
+        </div>
+    <?php endif; ?>
+
+
+    <!-- Message d'erreur -->
+    <?php if (!empty($_SESSION['erreur'])) : ?>
+        <div class="alert alert-danger" id="alert" role="alert">
+            <?php echo $_SESSION['erreur'];
+            unset($_SESSION['erreur']); ?>
+        </div>
+    <?php endif; ?>

@@ -43,9 +43,9 @@
             </div>
             <div class="col-md-3">
                 <h4>Contact</h4>
-                <p><i class="bi bi-geo-alt-fill"></i> 123 Rue du Garage, 75000 Ville</p>
-                <p><i class="bi bi-telephone-fill"></i> +1 234 567 890</p>
-                <p><i class="bi bi-envelope-fill"></i> contact@example.com</p>
+                <p><i class="bi bi-geo-alt-fill"></i> 8 avenue de la prairie verte - Paris 75000</p>
+                <p><i class="bi bi-telephone-fill"></i> 01 62 23 42 50</p>
+                <p><i class="bi bi-envelope-fill"></i> VincentParrot@gmail.com</p>
                 <h4>Suivez nous sur :</h4>
                 <ul class="list-inline">
                     <li class="list-inline-item"><a href="#"><i

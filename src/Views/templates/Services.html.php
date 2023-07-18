@@ -4,23 +4,6 @@ require_once "Header.html.php";
 
 <main>
 
-    <!-- Message de réussite-->
-    <?php if (!empty($_SESSION['message'])) : ?>
-        <div class="alert alert-success" id="alert" role="alert">
-            <?php echo $_SESSION['message'];
-            unset($_SESSION['message']); ?>
-        </div>
-    <?php endif; ?>
-
-
-    <!-- Message d'erreur -->
-    <?php if (!empty($_SESSION['erreur'])) : ?>
-        <div class="alert alert-danger" id="alert" role="alert">
-            <?php echo $_SESSION['erreur'];
-            unset($_SESSION['erreur']); ?>
-        </div>
-    <?php endif; ?>
-
     <div class="container">
         <h1>Nos Services</h1>
         <div class="row">
@@ -38,18 +21,18 @@ require_once "Header.html.php";
                             <p class="card-text">Prix: <?= $service['prix'] ?> €</p>
                             <p class="card-text">Durée estimée: <?= $service['temps_estime'] ?> heures</p>
 
-                        <!-- Supression d'une voiture -->
+                        <!-- Supression d'un service -->
                         <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
                             <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
                             data-bs-toggle="modal"
                             data-bs-target="#deleteModal"
-                            data-action="/ECF_Garage/public/deleteCars/delete/<?= $service ['id'] ?>">
+                            data-action="/ECF_Garage/public/services/delete/<?= $service ['id'] ?>">
                             </button>
                         <?php endif; ?>
 
-                        <!-- Modification d'une voiture -->
+                        <!-- Modification d'un service -->
                         <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-                            <!-- <a href="/ECF_Garage/public/modifier/modifie/<?= $service ['id'] ?>"> -->
+                            <a href="/ECF_Garage/public/services/modifier/<?= $service ['id'] ?>">
                                 <button class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
                                 </button>
                             </a>
@@ -58,14 +41,11 @@ require_once "Header.html.php";
                     </div>
                 </div>
             <?php endforeach; ?>
-
-
-
         </div>
 
         <!-- Creation d'un nouveau service -->
         <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-            <!-- <a href="/ECF_Garage/public/addCars/ajouter"> -->
+            <a href="/ECF_Garage/public/services/ajouter">
             <button class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
                 Ajouter Service
             </button>

@@ -1,21 +1,7 @@
 <?php
 require_once "Header.html.php";
 ?>
-    <!-- Message de réussite-->
-    <?php if(!empty($_SESSION['message'])): ?>
-        <div class="alert alert-success" id="alert" role="alert">
-            <?php echo $_SESSION['message']; unset($_SESSION['message']); ?>
-        </div>
-    <?php endif; ?>
 
-    
-    <!-- Message d'erreur -->
-    <?php if(!empty($_SESSION['erreur'])): ?>
-        <div class="alert alert-danger" id="alert" role="alert">
-            <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
-        </div>
-
-    <?php endif; ?>
 <!-- Affichage des horaires actuels -->
 <div class="container">
 

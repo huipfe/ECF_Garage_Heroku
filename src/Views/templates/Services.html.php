@@ -7,10 +7,15 @@
                 <?php foreach ($services as $service) : ?>
                     <div class="col-md-4">
                         <div class="card mb-4">
-    
-                            <img src="data:image/jpeg;base64,<?= $service['image'] ?>"
+
+                            <?php
+                            // Récupérer les données binaires de l'image depuis la base de données
+                            $imageData = $service['image']
+                            ?>
+
+                            <img src="data:image/jpeg;base64,<?= $imageData ?>"
                             class="card-img-top" alt="<?= $service['nom'] ?>">
-    
+
                             <div class="card-body">
                                 <h5 class="card-title"><?= $service['nom'] ?></h5>
                                 <p class="card-text"><?= $service['description'] ?></p>

@@ -156,15 +156,11 @@ class ServicesModel extends Model
         $this->image = $image;
     }
 
-    // public function getAllServices()
-    // {
-    //     $db = Db::getInstance();
-    //     $query = "SELECT * FROM {$this->table}";
-    //     $stmt = $db->query($query);
-    //     $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-    //     return $result;
-    // }
-
+    /**
+     * Récupère tous les services
+     *
+     * @return array
+     */
     public function fetchAll()
     {
         $query = "SELECT * FROM service";
@@ -173,13 +169,13 @@ class ServicesModel extends Model
 
         $services = [];
         while ($row = $stmt->fetch(\PDO::FETCH_ASSOC)) {
-            // Convertir les données de l'image en base64
-            $row['image'] = base64_encode($row['image']);
+            // Décoder les données de l'image
+            $row['image'] = base64_decode($row['image']);
             $services[] = $row;
         }
 
         return $services;
-    }   
+    }
 
     /**
      *  Création d'un Service
@@ -196,7 +192,7 @@ class ServicesModel extends Model
         $stmt->bindValue(':temps_estime', $data['temps_estime']);
         $stmt->bindValue(':prix', $data['prix']);
         $stmt->bindValue(':description', $data['description']);
-        $stmt->bindValue(':image', $data['image']);
+        $stmt->bindValue(':image', base64_encode($data['image']));
         return $stmt->execute();
     }
 
@@ -216,7 +212,7 @@ class ServicesModel extends Model
             'nom' => $data['nom'],
             'temps_estime' => $data['temps_estime'],
             'prix' => $data['prix'],
-            'image' => $data['image'],
+            'image' => base64_encode($data['image']),
             'description' => $data['description']
         ]);
         return ($query->rowCount() === 1);

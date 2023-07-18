@@ -1,6 +1,5 @@
 # ECF_Garage_2023
 
-
 ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
 (Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)
@@ -27,12 +26,63 @@ Back :
 ● PHP 8.2.6 sous PDO
 ● MySQL
 
-## Installation
+# Déploiement/Installation détaillés.
+## Installation (si volonté d'utiliser en local)
 
 1. Clonez ce dépôt vers votre machine locale : https://github.com/huipfe/ECF_Garage.git
 
    ```shell
-   git clone 
+   git clone https://github.com/huipfe/ECF_Garage.git
+   ```
+
+2. Installez Laragon sur votre machine locale : https://laragon.org/download/index.html
+
+   ```shell
+   https://laragon.org/download/index.html
+   ```
+
+3. Avec Laragon, créez un nouveau projet, et importez le dossier ECF_Garage dans le dossier 'www' de Laragon.
+
+   ```shell
+   C:\laragon\www\ECF_Garage
+   ```
+
+4. Dans Laragon cochez Apache, et MySQL, et cliquez sur 'Start All'.
+
+   ```shell
+   C:\laragon\www\ECF_Garage
+   ```
+
+5. Cliquez sur web, pour afficher le site web, ou afficher via Menu/www/ECF_Garage
+
+   ```shell
+   C:\laragon\www\ECF_Garage
+   ```
+
+6. Cliquez sur Base de données, via phpmyadmin, et importez le fichier 'Database.sql' dans la base de données.
+   Mot de passe : rien, Utilisateur : root
+
+   ```shell
+   ECF_Garage/src/Database/Database.sql
+   ```
+
+7. La connexion et l'alimentation de la BDD se fait par le fichier 'Db.php' dans le dossier 'src/Database'.
+
+   ```shell
+   ECF_Garage/src/Database/Db.php
+   ```
+
+8. Naviger sur le site web : http://localhost/ECF_Garage/public/main
+
+   ```shell
+   http://localhost/ECF_Garage/public/main
+   ```
+
+9. et connectez vous avec les identifiants suivants :
+   
+      ```shell
+      Voir Fonctionnalités, çi dessous. 
+      ```
 
 ## Fonctionnalités
 # US1. Se connecter
@@ -66,8 +116,8 @@ Sauf l'administrateur, qui peut modifier et supprimer tous les véhicules. L'adm
 
 Les utilisateurs se connectent en utilisant leur adresse e-mail et un mot de passe sécurisé.
 
-Le rôle des employés et de géré leur voiture, et les services du garage.
-Le rôle de l'administrateur est de gérer les employés, et les horaires d'ouverture.
+Le rôle des employés et de géré leur voiture.
+Le rôle de l'administrateur est de gérer les employés, les services du garage, et les horaires d'ouverture.
 
 # US2. Présenter les services
 Les services de réparation automobile proposés par le garage sont affichés sur la page 'services', et 

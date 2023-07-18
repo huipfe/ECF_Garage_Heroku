@@ -14,7 +14,7 @@
 
     <h1>Ajouter un service</h1>
 
-    <form method="post" enctype="multipart/form-data">
+    <form method="post"  action="/ECF_Garage/public/services/ajouter" enctype="multipart/form-data">
 
         <div class="mb-3">
             <label for="nom" class="form-label fs-4">Nom du service :</label>

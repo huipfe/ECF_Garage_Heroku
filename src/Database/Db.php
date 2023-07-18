@@ -25,7 +25,7 @@
             private const DBHOST = 'eu-cdbr-west-03.cleardb.net';
             private const DBUSER = 'bd6e371b473d4a';
             private const DBPASS = 'a6ab1a08';
-            private const DBNAME = 'ecf_garage';
+            private const DBNAME = '';
 
             // Constructeur
             public function __construct()

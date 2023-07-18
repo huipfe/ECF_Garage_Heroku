@@ -62,13 +62,15 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
             <div class="modal-body">
-                Êtes-vous sûr de vouloir supprimer cette voiture ?
+                Êtes-vous sûr de vouloir supprimer cet service ?
             </div>
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                    <form id="deleteForm" action="" method="POST">
-                        <button type="submit" class="btn btn-danger">Supprimer</button>
-                    </form>
+                        <form id="deleteForm"
+                        action="/ECF_Garage/public/services/delete/<?= $service['id'] ?>"
+                        method="POST">
+                            <button type="submit" class="btn btn-danger">Supprimer</button>
+                        </form>
                 </div>
             </div>
         </div>

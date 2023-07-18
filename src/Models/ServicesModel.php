@@ -179,7 +179,7 @@ class ServicesModel extends Model
         }
 
         return $services;
-    }
+    }   
 
     /**
      *  Création d'un Service
@@ -189,22 +189,15 @@ class ServicesModel extends Model
      */
     public function createService(array $data): bool
     {
-        $sql = "INSERT INTO {$this->table} (marque, modele, annee, kilometrage, prix, image, description, users_id)
-                VALUES (:marque, :modele, :annee, :kilometrage, :prix, :image, :description, :users_id)";
-        $query = $this->requete(
-            $sql,
-            [
-                "marque" => $data["marque"],
-                "modele" => $data["modele"],
-                "annee" => $data["annee"],
-                "kilometrage" => $data["kilometrage"],
-                "prix" => $data["prix"],
-                "image" => $data["image"],
-                "description" => $data["description"],
-                "users_id" => $data["users_id"]
-            ]
-        );
-        return ($query->rowCount() === 1);
+        $sql = "INSERT INTO {$this->table} (nom, temps_estime, prix, description, image)
+                VALUES (:nom, :temps_estime, :prix, :description, :image)";
+        $stmt = $this->db->prepare($sql);
+        $stmt->bindValue(':nom', $data['nom']);
+        $stmt->bindValue(':temps_estime', $data['temps_estime']);
+        $stmt->bindValue(':prix', $data['prix']);
+        $stmt->bindValue(':description', $data['description']);
+        $stmt->bindValue(':image', $data['image']);
+        return $stmt->execute();
     }
 
     /**
@@ -215,22 +208,17 @@ class ServicesModel extends Model
      */
     public function updateService(array $data): bool
     {
-        $sql = "UPDATE {$this->table} SET marque = :marque, modele = :modele,
-        annee = :annee, kilometrage = :kilometrage, prix = :prix,
-        image = :image, description = :description WHERE id = :id";
-        $query = $this->requete(
-            $sql,
-            [
-                "marque" => $data["marque"],
-                "modele" => $data["modele"],
-                "annee" => $data["annee"],
-                "kilometrage" => $data["kilometrage"],
-                "prix" => $data["prix"],
-                "image" => $data["image"],
-                "description" => $data["description"],
-                "id" => $data["id"]
-            ]
-        );
+        $sql = "UPDATE {$this->table} SET nom = :nom, temps_estime = :temps_estime,
+            prix = :prix, image = :image, description = :description WHERE id = :id";
+        $query = $this->db->prepare($sql);
+        $query->execute([
+            'id' => $data['id'],
+            'nom' => $data['nom'],
+            'temps_estime' => $data['temps_estime'],
+            'prix' => $data['prix'],
+            'image' => $data['image'],
+            'description' => $data['description']
+        ]);
         return ($query->rowCount() === 1);
     }
 
@@ -243,12 +231,9 @@ class ServicesModel extends Model
     public function deleteService(int $id): bool
     {
         $sql = "DELETE FROM {$this->table} WHERE id = :id";
-        $query = $this->requete($sql, ["id" => $id]);
+        $query = $this->db->prepare($sql);
+        $query->execute(['id' => $id]);
         return ($query->rowCount() === 1);
     }
-
-
-
 }
-
 ?>

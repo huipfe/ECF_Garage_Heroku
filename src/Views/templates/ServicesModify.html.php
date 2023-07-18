@@ -19,22 +19,22 @@
     <form method="post" enctype="multipart/form-data">
 
         <div class="mb-3">
-            <label for="marque" class="form-label fs-4">Nom du service :</label>
+            <label for="nom" class="form-label fs-4">Nom du service :</label>
             <input
             type="text"
-            name="marque"
-            id="marque"
+            name="nom"
+            id="nom"
             class="form-control"
             value="<?= $service->nom ?>"
             required>
         </div>
 
         <div class="mb-3">
-            <label for="annee" class="form-label fs-4">Durée estimée du service :</label>
+            <label for="temps_estime" class="form-label fs-4">Durée estimée du service :</label>
             <input
             type="number"
-            name="annee"
-            id="annee"
+            name="temps_estime"
+            id="temps_estime"
             class="form-control"
             min="10"
             max="150"
@@ -43,11 +43,11 @@
         </div>
 
         <div class="mb-3">
-            <label for="kilometrage" class="form-label fs-4">Prix du service:</label>
+            <label for="prix" class="form-label fs-4">Prix du service:</label>
             <input
             type="number"
-            name="kilometrage"
-            id="kilometrage"
+            name="prix"
+            id="prix"
             class="form-control"
             min="10"
             value="<?= $service->prix ?>"

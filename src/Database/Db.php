@@ -21,7 +21,7 @@
             // private const DBNAME = 'ecf_garage';
 
             // Information de connexion pour heroku
-            private const DBHOST = 'localhost';
+            private const DBHOST = 'Herokuhost';
             private const DBUSER = 'ilan.tervil@wanadoo.fr';
             private const DBPASS = 'pmxFa)9DQ-Mn3NX';
             private const DBNAME = 'ecf_garage';

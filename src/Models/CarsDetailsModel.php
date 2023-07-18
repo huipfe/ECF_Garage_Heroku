@@ -117,6 +117,12 @@ class CarsDetailsModel extends Model
         
     }
 
+    /**
+     *  Création d'une voiture
+     *
+     * @param array $data
+     * @return bool
+     */
     public function createCar(array $data): bool
     {
         $sql = "INSERT INTO {$this->table} (marque, modele, annee, kilometrage, prix, image, description, users_id)
@@ -136,6 +142,48 @@ class CarsDetailsModel extends Model
         );
         return ($query->rowCount() === 1);
     }
+
+    /**
+     * Met à jour une voiture
+     *
+     * @param array $data
+     * @return bool
+     */
+    public function updateCar(array $data): bool
+    {
+        $sql = "UPDATE {$this->table} SET marque = :marque, modele = :modele,
+        annee = :annee, kilometrage = :kilometrage, prix = :prix,
+        image = :image, description = :description WHERE id = :id";
+        $query = $this->requete(
+            $sql,
+            [
+                "marque" => $data["marque"],
+                "modele" => $data["modele"],
+                "annee" => $data["annee"],
+                "kilometrage" => $data["kilometrage"],
+                "prix" => $data["prix"],
+                "image" => $data["image"],
+                "description" => $data["description"],
+                "id" => $data["id"]
+            ]
+        );
+        return ($query->rowCount() === 1);
+    }
+
+    /**
+     * Supprime une voiture
+     *
+     * @param integer $id
+     * @return bool
+     */
+    public function deleteCar(int $id): bool
+    {
+        $sql = "DELETE FROM {$this->table} WHERE id = :id";
+        $query = $this->requete($sql, ["id" => $id]);
+        return ($query->rowCount() === 1);
+    }
+
+
 
     /**
      * Affiche la marque de la voiture

@@ -73,18 +73,48 @@ class UsersModel extends Model
          * @param int $id
          * @return mixed
          */
-
-
         public function createUser(array $data): bool
         {
-                $sql = "INSERT INTO {$this->table} (email, password)
-                VALUES (:email, :password)";
-                $query = $this->requete(
-                        $sql,[
+                $sql = "INSERT INTO {$this->table} (name_users, email, password)
+                VALUES (:name_users, :email, :password)";
+                $query = $this->requete($sql, [
+                        'name_users' => $data['name_users'],
                         'email' => $data['email'],
-                        'password' => password_hash($data['password'], PASSWORD_DEFAULT),
+                        'password' => $data['password']
                 ]);
                 return ($query->rowCount() === 1);
+        }
+
+        /**
+         * Modifier un utilisateur
+         *
+         * @param array $data Données de l'utilisateur à modifier
+         * @return bool True si la modification a réussi, false sinon
+         */
+        public function modifyUser(array $data): bool
+        {
+                $sql = "UPDATE {$this->table} SET name_users = :name_users, email = :email,
+                password = :password WHERE user_id = :user_id";
+                $query = $this->requete($sql, [
+                        'user_id' => $data['user_id'],
+                        'name_users' => $data['name_users'],
+                        'email' => $data['email'],
+                        'password' => $data['password']
+                ]);
+                return ($query->rowCount() === 1);
+        }
+
+        /**
+         * Supprimer un utilisateur
+         *
+         * @param int $id ID de l'utilisateur à supprimer
+         * @return bool True si la suppression a réussi, false sinon
+         */
+
+        public function deleteUser(int $id): bool
+        {
+                $sql = "DELETE FROM {$this->table} WHERE user_id = ?";
+                return ($this->requete($sql, [$id])->rowCount() === 1);
         }
 
         /**

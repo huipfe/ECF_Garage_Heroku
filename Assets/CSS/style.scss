@@ -43,7 +43,6 @@ min-height: $min-height-mobile;
 @import "LoginPage/_LoginPage.scss";
 
 /* Import Dashboard */
-
 @import "Dashboard/_Dashboard.scss";
 
 /* Import Contact Page */
@@ -52,10 +51,11 @@ min-height: $min-height-mobile;
 /* Import Used_cars_listing page */
 @import "Used_cars_listing/_Used_cars_listing.scss";
 
-/* Import Car details. */
+/* Import Car details */
 @import "Car_Details/_Car_Details.scss";
 
-/* Import */
+/* Import Apropos */
+@import "Apropos/_Apropos.scss";
 
-
-/* Import */
+/* Import Services*/
+@import "Services/_Services.scss";

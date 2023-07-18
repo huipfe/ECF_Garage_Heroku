@@ -1,27 +1,5 @@
-<!-- Login page: Allow administrators and employees to log in. -->
-<!-- Formulaire d'inscription : US1. Se connecter -->
-
-<!-- US1. Se connecter Utilisateurs concernés: Administrateur,
-Employés Le compte administrateur sera créé spécialement pour Vincent Parrot,
-le chef d’entreprise du garage. C’est lui qui gérera les informations sur le site web.
-Toutefois, un autre type de compte sera possible: l’employé
-
-● Chaque personnel du garage aura son compte sur l’application web
-● L’employé ne pourra pas créer son propre compte, seul l’administrateur pourra en générer un pour lui.
-Quel que soit le type d’utilisateur souhaitant se connecter, il pourra le faire grâce au même formulaire
-de connexion.
-Les identifiants à entrer seront l’adresse e-mail et un mot de passe sécurisé.-->
-
-<?php 
-require_once "Header.html.php";
-?>
-
 <main>
 
-    <!-- http://localhost/ECF_Garage/public/login/login -->
-    <!-- <?=$loginForm?> -->
-
-    
     <section class="position-relative">
         <div class="container-fluid py-5 py-lg-0">
             <div class="row d-flex align-items-center ">
@@ -63,7 +41,6 @@ require_once "Header.html.php";
                     class="was-validated"
 
                     method="POST">
-                    <!-- Pas obligatoire à mettre : action="/ECF_Garage/src/Utils/register.php" -->
     
                     <!-- Logo Login -->
                         <img
@@ -127,9 +104,9 @@ require_once "Header.html.php";
                             </div>
 
                             <!-- Message d'erreur -->
-                        <?php if(!empty($_SESSION['erreur'])): ?>
+                        <?php if(!empty($_SESSION['erreur_login'])): ?>
                             <div class="alert alert-danger" id="alert" role="alert">
-                                <?php echo $_SESSION['erreur']; unset($_SESSION['erreur']); ?>
+                                <?php echo $_SESSION['erreur_login']; unset($_SESSION['erreur_login']); ?>
                             </div>
                         <?php endif; ?>
 
@@ -149,9 +126,3 @@ require_once "Header.html.php";
 </section>
 
 </main>
-
-
-
-<?php 
-require_once "Footer.html.php";
-?>

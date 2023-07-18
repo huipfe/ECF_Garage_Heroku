@@ -14,8 +14,21 @@ class LoginController extends Controller
     }
     public function index()
     {
+        // Vérifier si l'utilisateur est déjà connecté
+        if (isset($_SESSION['user'])) {
+            // Vérifier si l'utilisateur est un admin
+            if ($_SESSION['user']['is_admin'] == 1) {
+                header('Location: /ECF_Garage/public/dashboard/administration');
+                exit();
+            } else {
+                header('Location: /ECF_Garage/public/cars');
+                exit();
+            }
+        }
+
         $this->render('/Views/templates/Login');
     }
+
     
     /**
      * Méthode pour connecter un utilisateur
@@ -41,7 +54,7 @@ class LoginController extends Controller
             if($userArray && (password_verify($password, $userArray->password))) {
 
                 // Si erreur avant
-                unset($_SESSION['erreur']);
+                unset($_SESSION['erreur_login']);
 
                 // On crée la session de l'utilisateur.
                 // $this->setSession();
@@ -51,15 +64,23 @@ class LoginController extends Controller
                     'is_admin' => $userArray->is_admin,
                 ];
                 
-                // Vérifier si l'utilisateur est un admin, et redirige vers la bonne page si admin.
+                // Vérifier si l'utilisateur est un admin, et redirige vers la page d'admin.
                 if ($_SESSION['user']['is_admin'] == 1) {
                     header('Location: /ECF_Garage/public/dashboard/administration');
-                } else {
+                    $_SESSION['message'] =
+                        "Bienvenue sur votre espace admin " . $userArray->name_users;
+                    exit();
+                }
+                // Si non admin, donc employé, rediriger directement vers la liste des voitures.
+                else {
                     header('Location: /ECF_Garage/public/cars');
+                    $_SESSION['message'] =
+                        "Bienvenue sur votre espace employé " . $userArray->name_users;
+                    exit();
                 }
             } else {
                 // Sinon, on affiche un message d'erreur.
-                $_SESSION['erreur'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
+                $_SESSION['erreur_login'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
                 header('Location: /ECF_Garage/public/login/Belogin');
                 exit;
             }
@@ -82,19 +103,7 @@ class LoginController extends Controller
         header('Location: /ECF_Garage/public/login/Belogin');
         exit;
 
-        // unset($_SESSION['user']);
-        // header('Location: /ECF_Garage/public/login/Belogin');
-        // exit;
     }
 
-    // public function setSession()
-    // {
-
-    //     $_SESSION['user'] = [
-    //         'id' => $this->userModel->getUserId(),
-    //         'email' => $this->userModel->getEmail(),
-    //         'is_admin' => $this->userModel->getIsAdmin(),
-    //     ];
-    // }
 }
 ?>

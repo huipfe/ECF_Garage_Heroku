@@ -1,18 +1,3 @@
-<!-- Car details page: Provide detailed information about a selected used car. -->
-<!-- Page de détail d'un produit : US4. Filtrer la liste des véhicules d’occasion -->
-<!-- US4. Filtrer la liste des véhicules d’occasion Utilisateurs concernés: Visiteurs La liste des
-voitures d’occasion disponibles à la vente peut parfois s’avérer être très longue, ce qui risque
-de dérouter les visiteurs du site.
-Pour remédier à cela, il faudrait mettre en place un système de filtres afin de faciliter la
-recherche de véhicules. Les résultats pourront être ajustés en fonction d'une fourchette de prix,
-d'un nombre de kilomètres parcourus ou d'une année de mise en circulation (voir exemple dans les annexes) .
-Et pour obtenir la meilleure expérience utilisateur possible, les filtres devront être appliqués
-sans recharger la page. -->
-
-<?php 
-require_once 'Header.html.php';
-?>
-
 <main>
 
     <div class="container-lg">
@@ -21,8 +6,8 @@ require_once 'Header.html.php';
             <div class="col-lg-6">
                 <section id="header">
                     <div class="container">
+                        
                         <div class="justify-content-start">
-                            <!-- /ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
                             <a href="/ECF_Garage/public/cars"
                             class="text-decoration-none">
                                 <span>
@@ -37,10 +22,9 @@ require_once 'Header.html.php';
                     <?php
                     // Récupérer les données binaires de l'image depuis la base de données
                     $imageData = $details->image;
-                    // Convertir les données binaires en base64
-                    $imageBase64 = base64_encode($imageData);
                     ?>
-                    <img class="mb-3 mt-5" src="data:image/jpeg;base64, <?= $imageBase64 ?>"
+                    
+                    <img class="mb-3 mt-5" src="data:image/jpeg;base64, <?= $imageData ?>"
                     alt="ImageBoucle" class="img-fluid">
                     </div>
                 </section>
@@ -65,19 +49,18 @@ require_once 'Header.html.php';
                             </div>
                             <div class="m-3 mt-5 d-flex">
                                 <h4 class=""> <?= $details->modele?></h4>
+
+                                <!-- <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
                                 <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
-                                <i class="bi bi-star-fill"></i>
+                                <i class="bi bi-star-fill"></i> -->
+                                
                             </div>
                             <div class="mb-2">
                                 <h5 class="m-3 mt-5">Description :</h5>
                                 <ul class="list-unstyled">
-                                    <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
-                                    Odit inventore possimus repudiandae molestiae quaerat cum, velit,
-                                    saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
-                                    veritatis magni quibusdam labore ea?</p></li>
+                                    <li><p><?= $details->description?></p></li>
                                     <li><p>Lorem ipsum dolor sit amet consectetur adipisicing elit.
                                     Odit inventore possimus repudiandae molestiae quaerat cum, velit,
                                     saepe excepturi itaque officia aperiam neque voluptate atque! Impedit
@@ -276,7 +259,3 @@ require_once 'Header.html.php';
     </div>
 
 </main>
-
-<?php
-require_once 'Footer.html.php';
-?>

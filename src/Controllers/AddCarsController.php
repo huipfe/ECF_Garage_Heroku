@@ -6,6 +6,7 @@ use App\Models\CarsDetailsModel;
 use App\Core\Form;
 
 class AddCarsController extends Controller
+
 {
     /**
      * Cette méthode me permettra d'ajouter une voiture
@@ -18,7 +19,6 @@ class AddCarsController extends Controller
         // On vérifie si l'utilisateur est connecté
         if(isset($_SESSION['user']) && !empty($_SESSION['user'])) {
             // L'utilisateur est connecté
-            // echo "Vous êtes connecté, vous pouvez ajouter une annonce";
 
             // On vérifie si le formulaire est complet.
             if($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST)){
@@ -35,7 +35,8 @@ class AddCarsController extends Controller
                 $annee = strip_tags($_POST['annee']);
                 $kilometrage = strip_tags($_POST['kilometrage']);
                 $prix = strip_tags($_POST['prix']);
-                $image = base64_encode(strip_tags($_POST['image']));
+                // $image = strip_tags($_POST['image']);
+                $image = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
                 $description = strip_tags($_POST['description']);
                 $id = strip_tags($_SESSION['user']['id']);
                 $users_id = strip_tags($_SESSION['user']['id']);
@@ -66,10 +67,20 @@ class AddCarsController extends Controller
 
                 ;
 
-                // On enregistre notre voiture dans la BDD
+                // Vérifier si un fichier a été téléchargé
+                if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
+                    // Chemin temporaire du fichier téléchargé
+                    $tmpFilePath = $_FILES['image']['tmp_name'];
 
-                // $carsDetailsModel->createCar($_POST);
-                
+                    // Lire le contenu du fichier
+                    $imageData = file_get_contents($tmpFilePath);
+
+                    // Enregistrer l'image dans la base de données en tant que format longblob
+                    // (vous devez utiliser la méthode appropriée de votre modèle)
+                    $carsDetailsModel->setImage($imageData);
+                }
+
+                // On enregistre notre voiture dans la BDD
                 $carsDetailsModel->createCar([
                     "marque" => $marque,
                     "modele" => $modele,
@@ -88,8 +99,14 @@ class AddCarsController extends Controller
             }else {
                 // Le formulaire n'est pas complet
                 // On affiche un message d'erreur
-                $_SESSION['error'] = "Le formulaire est incomplet";
-                // echo "<p class='mx-2 alert alert-danger'>Le formulaire est incomplet</p>";
+                $_SESSION['erreur'] = !empty($_POST) ? "Le formulaire est incomplet" : '';
+
+                // Un ternaire, on vérifie que le modele marque ou description sont deja completé.
+                // Au rafraissement de la page, les champs sont encore remplis.
+                $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
+                $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
+                $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
+
             }
 
 

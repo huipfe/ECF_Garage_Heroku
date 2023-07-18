@@ -1,14 +1,3 @@
-<!-- Homepage: Display information about the garage, services offered, and featured cars. -->
-
-
-<?php 
-require_once "Header.html.php";
-?>
-
-<?php 
-// var_dump($donnees)
-?>
-
 <main>
     
     <!-- Titre d'intro de la homepage -->
@@ -36,7 +25,7 @@ require_once "Header.html.php";
             <h2 class="position-absolute bottom-100 start-50 translate-middle text-center mt-n5">
                 <span class="">Cliquez ici,</span>
                 <br>
-            <a href="/ECF_Garage/src/Views/templates/Apropos.html.php"
+            <a href="/ECF_Garage/public/Apropos"
             class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
             me-md-autolink-body-emphasistext-decoration-none position-absolute bottom-30 top-50
             start-50 translate-middle">
@@ -61,7 +50,3 @@ require_once "Header.html.php";
         </div>
     </div>
 </main>
-
-<?php 
-require_once 'Footer.html.php';
-?>

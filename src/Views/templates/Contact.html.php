@@ -1,21 +1,3 @@
-<!-- Contact page: Allow visitors to contact the garage via a form. -->
-<!-- Page de contact : US4. Permettre de contacter l'atelier -->
-
-<!-- US4. Permettre de contacter l'atelier Utilisateurs concernés: Visiteurs Il est important que les
-visiteurs du site puissent facilement joindre le garage à tout moment, que ce soit par téléphone
-ou en remplissant un formulaire de contact en ligne.
-Si un visiteur décide d'utiliser le formulaire, il devra alors fournir son nom, prénom, adresse
-e-mail, numéro de téléphone et un message.
-De plus, toutes les informations de contact, formulaire compris, devront également être visibles
-en bas de chaque annonce d’un véhicule d’occasion. Le sujet du formulaire sera alors
-Reproduction interdite ECF - Garage automobile Page 7 sur 12
-automatiquement ajusté en fonction du titre de l'annonce pour permettre une future communication
-plus efficace avec le garage. -->
-
-<?php 
-require_once "Header.html.php";
-?>
-
 <main>
     <div class="p-1 bg-danger text-white">
         <div class="container-fluid">
@@ -44,17 +26,17 @@ require_once "Header.html.php";
                         <section class="p-3">
                             <div>
                                 <i style="color:#D9777F"class="bi bi-envelope-fill fs-2 m-2"></i>
-                                <h2 class="m-2 fs-4">Garage.V.Parrot@gmail.com</h2>
+                                <h2 class="m-2 fs-4">VincentParrot@gmail.com</h2>
                             </div>
 
                             <div class="Num-Garage">
                                 <i style="color:#D9777F"class="bi bi-telephone-fill fs-2 m-2"></i>
-                                <h2 class="m-2 fs-4">Numéro garage</h2>
+                                <h2 class="m-2 fs-4">01 62 23 42 50</h2>
                             </div>
 
                             <div>
                                 <i style="color:#D9777F"class="bi bi-geo-alt-fill fs-2 m-2"></i>
-                                <h2 class="m-2 fs-4">Adresse garage</h2>
+                                <h2 class="m-2 fs-4">8 avenue de la prairie verte - Paris 75000</h2>
                             </div>
                         </section>
                         <!-- Uniquement en desktop, pour apparaitre en dessous -->
@@ -104,7 +86,6 @@ require_once "Header.html.php";
                             </div>
 
                             <!-- Partie message -->
-                            <!-- Pas obligatoire à mettre : action="/ECF_Garage/src/Utils/sendMail.php" -->
                             <form
                             id="contactForm"
 
@@ -167,6 +148,4 @@ require_once "Header.html.php";
 
 <script src="/ECF_Garage/Assets/JS/contact.js"></script>
 
-<?php 
-require_once "Footer.html.php";
-?>
+

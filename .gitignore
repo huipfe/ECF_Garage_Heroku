@@ -1,11 +1,6 @@
 # Database: Store files related to database management, such as migrations or SQL scripts.
 # Database/
-page_d_accueil.sql
 ecf_garage.sql
-
-# Form file, not needed anymore.
-src/Core/
-Form.php
 
 # Ancien test de crud, fait avec sébastien.
 Anciens/

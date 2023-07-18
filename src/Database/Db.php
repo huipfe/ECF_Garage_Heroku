@@ -1,65 +1,105 @@
 <?php
-namespace App\Database;
+
+        namespace App\Database;
 
 
-// On importe PDO
-use PDO;
-use PDOException;
+        // On importe PDO
+        use PDO;
+        use PDOException;
 
 
-class Db extends PDO
-{
+        class Db extends PDO
+        {
 
-    // Instance unique de la classe
-    private static $instance;
+            // Instance unique de la classe
+            private static $instance;
 
-    // Information de connexion
-    private const DBHOST = 'localhost';
-    private const DBUSER = 'root';
-    private const DBPASS = '';
-    private const DBNAME = 'ecf_garage';
+            // Information de connexion en Local (via Laragon)
+            // private const DBHOST = 'localhost';
+            // private const DBUSER = 'root';
+            // private const DBPASS = '';
+            // private const DBNAME = 'ecf_garage';
 
-    // Constructeur
-    public function __construct()
-    {
-        // DSN de connexion
-        $dsn = 'mysql:dbname='.self::DBNAME.';host='.self::DBHOST;
+            // Information de connexion pour heroku
+            private const DBHOST = 'Herokuhost';
+            private const DBUSER = 'ilan.tervil@wanadoo.fr';
+            private const DBPASS = 'pmxFa)9DQ-Mn3NX';
+            private const DBNAME = 'ecf_garage';
 
-        // On appelle le constructeur de la classe PDO
-        try {
-            parent::__construct($dsn, self::DBUSER, self::DBPASS);
+            // Constructeur
+            public function __construct()
+            {
+                // DSN de connexion
+                $dsn = 'mysql:dbname=' . self::DBNAME . ';host=' . self::DBHOST;
 
-            // On définit le jeu de caractères en UTF-8
-            $this->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
+                // On appelle le constructeur de la classe PDO
+                try {
+                    parent::__construct($dsn, self::DBUSER, self::DBPASS);
 
-            // à chaque fois que je fais un fetch, je le fais avec un tableau assosciatif;
-            //  = $car ['kilometrage'] quand je récupérerais une info
-            // $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                    // On définit le jeu de caractères en UTF-8
+                    $this->setAttribute(PDO::MYSQL_ATTR_INIT_COMMAND, 'SET NAMES utf8');
 
-            // Pour une écriture simplifié dans les vues, en POO, on utilisera plutot
-            // $car->kilometrage
-            $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                    // à chaque fois que je fais un fetch, je le fais avec un tableau assosciatif;
+                    //  = $car ['kilometrage'] quand je récupérerais une info
+                    // $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
-            // Déclencher une exception en cas d'erreur
-            $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                    // Pour une écriture simplifié dans les vues, en POO, on utilisera plutot
+                    // $car->kilometrage
+                    $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
-        } catch (PDOException $e) {
-            die($e->getMessage());
+                    // Déclencher une exception en cas d'erreur
+                    $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                } catch (PDOException $e) {
+                    die($e->getMessage());
+                }
+            }
+
+            // Méthode de connexion
+            public static function getInstance()
+            {
+                // Si l'instance n'existe pas
+                if (self::$instance === null) {
+                    // On crée une instance de la classe
+                    self::$instance = new self();
+                }
+                // On retourne l'instance
+                return self::$instance;
+            }
         }
-    }
-
-    // Méthode de connexion
-    public static function getInstance()
-    {
-        // Si l'instance n'existe pas
-        if (self::$instance === null) {
-            // On crée une instance de la classe
-            self::$instance = new self();
-        }
-        // On retourne l'instance
-        return self::$instance;
-    }
-}
 
 
+        ?>
+<?php
+
+// namespace App\Database;
+
+// use PDO;
+// use PDOException;
+
+// class Db extends PDO
+// {
+//     private static $instance;
+
+//     public function __construct()
+//     {
+//         $url = getenv('DATABASE_URL');
+//         // Récupère l'URL de connexion à la base de données depuis les variables d'environnement
+
+//         try {
+//             parent::__construct($url);
+//             $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+//             $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+//         } catch (PDOException $e) {
+//             die($e->getMessage());
+//         }
+//     }
+
+//     public static function getInstance()
+//     {
+//         if (self::$instance === null) {
+//             self::$instance = new self();
+//         }
+//         return self::$instance;
+//     }
+// }
 ?>

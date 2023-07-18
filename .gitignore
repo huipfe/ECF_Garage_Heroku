@@ -2,6 +2,9 @@
 # Database/
 ecf_garage.sql
 
+# Form not needed anymore.
+Form.php
+
 # Ancien test de crud, fait avec sébastien.
 Anciens/
 old_index.php

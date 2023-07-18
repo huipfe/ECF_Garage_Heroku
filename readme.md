@@ -3,8 +3,7 @@
 
 ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
-Ne pas oublier dans ce readme l’explication de la création d’un administrateur
-pour le back-office de l’application web
+(Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)
 
 ## Présentation
 # Projet Garage Automobile - Application Web Vitrine
@@ -14,17 +13,18 @@ Ce projet consiste à créer une application web vitrine pour le Garage V. Parro
 ## Technologies utilisées
 
 Serveur :
-● Version PHP 8.2
+● Version PHP 8.2.6
 ● Extension PHP : PDO
-● MariaDB (version 10.11)
+● Laragon 6
 
 Front :
 ● HTML 5
 ● CSS 3
 ● JavaScript
+● Bootstrap 5
 
 Back :
-● PHP 8.2 sous PDO
+● PHP 8.2.6 sous PDO
 ● MySQL
 
 ## Installation
@@ -36,11 +36,8 @@ Back :
 
 ## Fonctionnalités
 # US1. Se connecter
-'create_database.sql' : contient la base de données + tables.
-'injectdata.php' : contient l'alimentation de la base de données.
-
-La création de l'administrateur a été crée à partir du fichier 'injectdata.php' 
-(comme pour pour toutes les autres créations fictives pour alimenter la database).
+'Database.sql' : contient la base de données + tables.
+'Db.php' : contient l'alimentation de la base de données.
 
 L'administrateur dispose d'un compte préalablement créé :
 
@@ -53,21 +50,28 @@ email : Employer1@gmail.com
 mot de passe : Employé123 (mdp hashé)
 
 email : Test1@protonmail.com
-
 mot de passe : Test123Test123 (mdp hashé)
 
 
 Seul l'administrateur peut générer un compte pour les employés :
 Il dispose d'un tableau de bord Admin avec 3 options : créer un compte employé,
-modifier la section 'services' de la page d'accueil' et modifier les horaires d'ouverture.
+modifier les comptes employés, et modifier les horaires d'ouverture.
+Son compte n'est pas supprimable. Il a un bouton horaire à la place du bouton supprimé pour son compte
 
-Pour les employés, une fois connecté, ils peuvent aussi accéder à leur tableau de bord.
-Ils disposent de deux options : ajouter un nouveau véhicule et gérer les avis clients.
+Pour les employés, une fois connecté, ils accèdent à la page produit.
+Ils disposent de 3 options, pour leurs véhicules : ajouter un nouveau véhicule, le modifier, 
+et le supprimer. Il ne peuvent que modifier et supprimer les véhicules associées à leur comptes.
+(via la clé étrangère 'users_id' dans la table 'voiture' qui est l'id liée à l'user_id dans la table 'users')
+Sauf l'administrateur, qui peut modifier et supprimer tous les véhicules. L'admin à tout les droits.
 
 Les utilisateurs se connectent en utilisant leur adresse e-mail et un mot de passe sécurisé.
 
+Le rôle des employés et de géré leur voiture, et les services du garage.
+Le rôle de l'administrateur est de gérer les employés, et les horaires d'ouverture.
+
 # US2. Présenter les services
-Les services de réparation automobile proposés par le garage sont affichés sur la page d'accueil et dans une page 'services'.
+Les services de réparation automobile proposés par le garage sont affichés sur la page 'services', et 
+sont accessibles depuis la page d'accueil via un bouton.
 
 # US4. Exposer les voitures d'occasion
 Le site web présente les voitures d'occasion disponibles à la vente avec des photos, des descriptions détaillées et des informations techniques.
@@ -77,10 +81,10 @@ Chaque voiture affiche son prix, une image mise en avant, l'année de mise en ci
 Un système de filtres permet aux visiteurs de rechercher des véhicules en fonction d'une fourchette de prix, d'un nombre de kilomètres parcourus ou d'une année de mise en circulation.
 
 # US6. Permettre de contacter l'atelier
-Les visiteurs peuvent contacter le garage par téléphone (infos en bas de page) ou en utilisant un formulaire de contact en ligne.
-Le sujet du formulaire est automatiquement ajusté en fonction du titre de l'annonce.
+Les visiteurs peuvent contacter le garage par téléphone (infos en bas de page) ou en utilisant un formulaire de contact en ligne. (il fonctionne en local, via Laragon, par le sendMail, qui est dans le dossier Utils)
 
 # US7. Recueillir les témoignages des clients
-Les visiteurs peuvent laisser des témoignages composés d'un nom, d'un commentaire et d'une note.
+-
+<!-- Les visiteurs peuvent laisser des témoignages composés d'un nom, d'un commentaire et d'une note.
 Les témoignages sont modérés par un employé du garage et s'affichent sur la page d'accueil.
-Les employés du garage peuvent ajouter ou rejeter des témoignages clients directement depuis leur espace dédié.
+Les employés du garage peuvent ajouter ou rejeter des témoignages clients directement depuis leur espace dédié. -->

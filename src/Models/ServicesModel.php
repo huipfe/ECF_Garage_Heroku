@@ -51,7 +51,7 @@ class ServicesModel extends Model
      *
      * @var int
      */
-    private $tempsEstime;
+    private $temps_estime;
 
     /**
      * Service image
@@ -129,15 +129,15 @@ class ServicesModel extends Model
      */
     public function getTempsEstime()
     {
-        return $this->tempsEstime;
+        return $this->temps_estime;
     }
 
     /**
      * Set the value of tempsEstime
      */
-    public function setTempsEstime($tempsEstime)
+    public function setTempsEstime($temps_estime)
     {
-        $this->tempsEstime = $tempsEstime;
+        $this->temps_estime = $temps_estime;
     }
 
     /**
@@ -156,14 +156,14 @@ class ServicesModel extends Model
         $this->image = $image;
     }
 
-    public function getAllServices()
-    {
-        $db = Db::getInstance();
-        $query = "SELECT * FROM {$this->table}";
-        $stmt = $db->query($query);
-        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-        return $result;
-    }
+    // public function getAllServices()
+    // {
+    //     $db = Db::getInstance();
+    //     $query = "SELECT * FROM {$this->table}";
+    //     $stmt = $db->query($query);
+    //     $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+    //     return $result;
+    // }
 
     public function fetchAll()
     {
@@ -180,6 +180,74 @@ class ServicesModel extends Model
 
         return $services;
     }
+
+    /**
+     *  Création d'un Service
+     *
+     * @param array $data
+     * @return bool
+     */
+    public function createService(array $data): bool
+    {
+        $sql = "INSERT INTO {$this->table} (marque, modele, annee, kilometrage, prix, image, description, users_id)
+                VALUES (:marque, :modele, :annee, :kilometrage, :prix, :image, :description, :users_id)";
+        $query = $this->requete(
+            $sql,
+            [
+                "marque" => $data["marque"],
+                "modele" => $data["modele"],
+                "annee" => $data["annee"],
+                "kilometrage" => $data["kilometrage"],
+                "prix" => $data["prix"],
+                "image" => $data["image"],
+                "description" => $data["description"],
+                "users_id" => $data["users_id"]
+            ]
+        );
+        return ($query->rowCount() === 1);
+    }
+
+    /**
+     * Met à jour un Service
+     *
+     * @param array $data
+     * @return bool
+     */
+    public function updateService(array $data): bool
+    {
+        $sql = "UPDATE {$this->table} SET marque = :marque, modele = :modele,
+        annee = :annee, kilometrage = :kilometrage, prix = :prix,
+        image = :image, description = :description WHERE id = :id";
+        $query = $this->requete(
+            $sql,
+            [
+                "marque" => $data["marque"],
+                "modele" => $data["modele"],
+                "annee" => $data["annee"],
+                "kilometrage" => $data["kilometrage"],
+                "prix" => $data["prix"],
+                "image" => $data["image"],
+                "description" => $data["description"],
+                "id" => $data["id"]
+            ]
+        );
+        return ($query->rowCount() === 1);
+    }
+
+    /**
+     * Supprime un Service
+     *
+     * @param integer $id
+     * @return bool
+     */
+    public function deleteService(int $id): bool
+    {
+        $sql = "DELETE FROM {$this->table} WHERE id = :id";
+        $query = $this->requete($sql, ["id" => $id]);
+        return ($query->rowCount() === 1);
+    }
+
+
 
 }
 

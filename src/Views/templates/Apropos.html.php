@@ -1,7 +1,3 @@
-<?php
-require_once "Header.html.php";
-?>
-
 <main>
 
     <div class="container">
@@ -41,7 +37,3 @@ require_once "Header.html.php";
     </div>
 
 </main>
-
-<?php
-require_once "Footer.html.php";
-?>

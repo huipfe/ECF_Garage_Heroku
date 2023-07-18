@@ -1,10 +1,3 @@
-<?php
-require_once "Header.html.php";
-?>
-
-<!-- <?= $form ?> -->
-
-
 <div class="container">
     
         <div class="justify-content-start">
@@ -113,8 +106,3 @@ require_once "Header.html.php";
         
     </form>
 </div>
-
-
-<?php
-require_once "Footer.html.php";
-?>

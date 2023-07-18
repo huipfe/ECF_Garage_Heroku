@@ -1,7 +1,3 @@
-<?php
-require_once "Header.html.php";
-?>
-
 <!-- Affichage des horaires actuels -->
 <div class="container">
 
@@ -63,8 +59,3 @@ require_once "Header.html.php";
     </form>
 
 </div>
-<!-- <script src="/ECF_Garage/Assets/JS/..."></script> -->
-
-<?php
-require_once "Footer.html.php";
-?>

@@ -23,7 +23,11 @@ class DashboardController extends Controller
             exit();
         }
 
-        $this->render('/Views/templates/Dashboard');
+        // $this->render('/Views/templates/dashboard');
+
+        // Rediriger vers la page d'administration
+        header('Location: /ECF_Garage/public/dashboard/administration');
+        exit();
     }
 
 

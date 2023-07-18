@@ -1,7 +1,3 @@
-<?php 
-require_once "Header.html.php";
-?>
-
 <main>
 
     <section class="position-relative">
@@ -131,9 +127,3 @@ require_once "Header.html.php";
 </section>
 
 </main>
-
-
-
-<?php 
-require_once "Footer.html.php";
-?>

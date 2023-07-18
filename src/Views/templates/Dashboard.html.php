@@ -1,7 +1,3 @@
-<?php 
-require_once "Header.html.php";
-?>
-
 <main>
 
 <!-- Dashboard titre -->
@@ -339,7 +335,3 @@ require_once "Header.html.php";
 
 
 <script src="/ECF_Garage/Assets/JS/Dashboard.js"></script>
-
-<?php 
-require_once "Footer.html.php";
-?>

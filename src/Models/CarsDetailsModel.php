@@ -170,6 +170,12 @@ class CarsDetailsModel extends Model
         return ($query->rowCount() === 1);
     }
 
+    /**
+     * Supprime une voiture
+     *
+     * @param integer $id
+     * @return bool
+     */
     public function deleteCar(int $id): bool
     {
         $sql = "DELETE FROM {$this->table} WHERE id = :id";

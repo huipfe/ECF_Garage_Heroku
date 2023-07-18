@@ -1,7 +1,3 @@
-<?php 
-require_once "Header.html.php";
-?>
-
 <main>
     <div class="p-1 bg-danger text-white">
         <div class="container-fluid">
@@ -153,8 +149,3 @@ require_once "Header.html.php";
 
 <script src="/ECF_Garage/Assets/JS/contact.js"></script>
 
-
-
-<?php 
-require_once "Footer.html.php";
-?>

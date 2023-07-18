@@ -1,54 +1,53 @@
-<?php
-require_once "Header.html.php";
-?>
-
 <main>
 
     <div class="container">
         <h1>Nos Services</h1>
-        <div class="row">
+            <div class="row">
 
-            <?php foreach ($services as $service) : ?>
-                <div class="col-md-4">
-                    <div class="card mb-4">
-
-                        <img src="data:image/jpeg;base64,<?= $service['image'] ?>"
-                        class="card-img-top" alt="<?= $service['nom'] ?>">
-
-                        <div class="card-body">
-                            <h5 class="card-title"><?= $service['nom'] ?></h5>
-                            <p class="card-text"><?= $service['description'] ?></p>
-                            <p class="card-text">Prix: <?= $service['prix'] ?> €</p>
-                            <p class="card-text">Durée estimée: <?= $service['temps_estime'] ?> heures</p>
-
-                        <!-- Supression d'un service -->
-                        <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-                            <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
-                            data-bs-toggle="modal"
-                            data-bs-target="#deleteModal"
-                            data-action="/ECF_Garage/public/services/delete/<?= $service ['id'] ?>">
-                            </button>
-                        <?php endif; ?>
-
-                        <!-- Modification d'un service -->
-                        <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-                            <a href="/ECF_Garage/public/services/modifier/<?= $service ['id'] ?>">
-                                <button class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
+                <?php foreach ($services as $service) : ?>
+                    <div class="col-md-4">
+                        <div class="card mb-4">
+    
+                            <img src="data:image/jpeg;base64,<?= $service['image'] ?>"
+                            class="card-img-top" alt="<?= $service['nom'] ?>">
+    
+                            <div class="card-body">
+                                <h5 class="card-title"><?= $service['nom'] ?></h5>
+                                <p class="card-text"><?= $service['description'] ?></p>
+                                <p class="card-text">Prix: <?= $service['prix'] ?> €</p>
+                                <p class="card-text">Durée estimée: <?= $service['temps_estime'] ?> heures</p>
+    
+                            <!-- Supression d'un service -->
+                            <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
+                                <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
+                                data-bs-toggle="modal"
+                                data-bs-target="#deleteModal"
+                                data-action="/ECF_Garage/public/services/delete/<?= $service ['id'] ?>">
                                 </button>
-                            </a>
-                        <?php endif; ?>
+                            <?php endif; ?>
+    
+                            <!-- Modification d'un service -->
+                            <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
+                                <a href="/ECF_Garage/public/services/modifier/<?= $service ['id'] ?>">
+                                    <button class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
+                                    </button>
+                                </a>
+                            <?php endif; ?>
+    
+                            </div>
                         </div>
                     </div>
-                </div>
-            <?php endforeach; ?>
+    
+                <?php endforeach; ?>
+
         </div>
 
         <!-- Creation d'un nouveau service -->
         <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
             <a href="/ECF_Garage/public/services/ajouter">
-            <button class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
-                Ajouter Service
-            </button>
+                <button class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
+                    Ajouter Service
+                </button>
             </a>
         <?php endif; ?>
 
@@ -78,7 +77,3 @@ require_once "Header.html.php";
 </main>
 
 <script src="/ECF_Garage/Assets/JS/Services.js"></script>
-
-<?php
-require_once "Footer.html.php";
-?>

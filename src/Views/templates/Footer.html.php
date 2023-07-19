@@ -9,8 +9,8 @@
                 <?php if (isset($horaires) && is_array($horaires)) : ?>
 
                     <?php foreach ($horaires as $horaire) : ?>
-                        <p><?php echo $horaire->jour; ?> :
-                            <?php echo $horaire->heure_debut; ?> / <?php echo $horaire->heure_fin; ?></p>
+                        <p><?php echo $horaire['jour']; ?> :
+                            <?php echo $horaire['heure_debut']; ?> / <?php echo $horaire['heure_fin']; ?></p>
                     <?php endforeach; ?>
 
                 <?php endif; ?>

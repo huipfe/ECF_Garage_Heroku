@@ -15,6 +15,7 @@ class CarsDetailsModel extends Model
     //On définie le nom de la table
     protected $table = "voiture";
 
+
     // Propriétés
     /**
      * Voiture id

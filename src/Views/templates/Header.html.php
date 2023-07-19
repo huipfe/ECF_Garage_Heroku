@@ -37,7 +37,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand img-fluid" href="#">
                     <img
-                    src="/ECF_Garage/Assets/images/Header & Footer/Logo_garage.png"
+                    src="/Assets/images/Header & Footer/Logo_garage.png"
                     width="100"
                     height="auto"
                     alt="Logo Garage">
@@ -75,31 +75,31 @@
                     <ul class="navbar-nav">
 
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="/ECF_Garage/public/main">
+                            <a class="nav-link active" aria-current="page" href="/main">
                                 Accueil</a>
                         </li>
                         <!-- ECF_Garage/src/Views/templates/Homepage.html.php -->
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/public/Services">
+                            <a class="nav-link" href="/Services">
                                 Nos service</a>
                                 <!-- /ECF_Garage/src/Views/templates/Services.html.php -->
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/public/cars">
+                            <a class="nav-link" href="/cars">
                                 Nos produits</a>
                         </li>
                         <!-- ECF_Garage/src/Views/templates/Used_cars_listing.html.php -->
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/public/Apropos">
+                            <a class="nav-link" href="/Apropos">
                                 À propos</a>
                             <!-- /ECF_Garage/src/Views/templates/Apropos.html.php -->
                         </li>
 
                         <li class="nav-item ">
-                            <a class="nav-link" href="/ECF_Garage/public/Contact">
+                            <a class="nav-link" href="/Contact">
                                 Contact</a>
                             <!-- /ECF_Garage/src/Views/templates/Contact.html.php -->
                         </li>
@@ -109,7 +109,7 @@
                         <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
                         <!-- Déconnexion (ne doit être visible que si connecter-->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
-                            <a href="/ECF_Garage/public/login/logout">
+                            <a href="/login/logout">
                                 <svg
                                     width="38"
                                     height="38"
@@ -147,7 +147,7 @@
                     <!-- Icône du tableau de bord (visible pour les administrateurs) -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
                         <!-- /ECF_Garage/src/Views/templates/Dashboard.html.php -->
-                            <a href="/ECF_Garage/public/dashboard/administration">
+                            <a href="/dashboard/administration">
                                 <svg width="30"
                                 height="35"
                                 viewBox="0 0 25 29"
@@ -205,7 +205,7 @@
                             <!-- Connexion (n'apparait que si non connecter) -->
                             <!-- /ECF_Garage/src/Views/templates/Login.html.php -->
                         <li class="list-inline-item nav-item" style="margin-top: 5px;">
-                            <a href="/ECF_Garage/public/login/Belogin">
+                            <a href="/login/Belogin">
                                 <svg
                                 width="38"
                                 height="38"

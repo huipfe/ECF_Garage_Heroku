@@ -67,7 +67,7 @@
             <a href="#" class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
         me-md-autolink-body-emphasistext-decoration-none">
                 <img
-                src="/ECF_Garage/Assets/images/Header & Footer/Logo_garage.png"
+                src="/Assets/images/Header & Footer/Logo_garage.png"
                 width="100"
                 height="auto"
                 alt="Logo Garage">
@@ -83,7 +83,7 @@
                 <a href="#" class="col-md-4 d-flex align-items-center justify-content-end mb-3 mb-md-0
         me-md-autolink-body-emphasistext-decoration-none">
                     <img
-                    src="/ECF_Garage/Assets/images/Header & Footer/bouton_question.png"
+                    src="/Assets/images/Header & Footer/bouton_question.png"
                     width="60"
                     height="auto"
                     alt="Logo Garage">

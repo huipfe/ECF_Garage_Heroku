@@ -12,11 +12,11 @@
 
         <!-- Image de fond, version desktop & mobile -->
         <img class="img-fluid d-lg-none" width="100%" height="auto"
-        src="/ECF_Garage/Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
+        src="/Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
         alt="Fond_Voiture_homepage_mobile">
         </img>
         <img class="img-fluid d-none d-lg-block" width="100%" height="auto"
-        src="/ECF_Garage/Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
+        src="/Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
         alt="Fond_Voiture_homepage_desktop">
         </img>
 
@@ -25,20 +25,20 @@
             <h2 class="position-absolute bottom-100 start-50 translate-middle text-center mt-n5">
                 <span class="">Cliquez ici,</span>
                 <br>
-            <a href="/ECF_Garage/public/Apropos"
+            <a href="/Apropos"
             class="col-md-4 d-flex align-items-center justify-content-start mb-3 mb-md-0
             me-md-autolink-body-emphasistext-decoration-none position-absolute bottom-30 top-50
             start-50 translate-middle">
                 <!-- Mobile Bouton -->
                 <img
-                src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_mobile.png"
+                src="/Assets/images/Homepage/Bouton_Voiture_mobile.png"
                 class="img-fluid d-lg-none d-block"
                 width="60"
                 height="auto"
                 alt="Bouton Voiture">
                 <!-- Desktop Bouton -->
                 <img
-                src="/ECF_Garage/Assets/images/Homepage/Bouton_Voiture_desktop.png"
+                src="/Assets/images/Homepage/Bouton_Voiture_desktop.png"
                 class="img-fluid d-none d-lg-block"
                 width="300"
                 height="auto"

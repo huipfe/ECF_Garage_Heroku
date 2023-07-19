@@ -43,11 +43,11 @@
 
                     // à chaque fois que je fais un fetch, je le fais avec un tableau assosciatif;
                     //  = $car ['kilometrage'] quand je récupérerais une info
-                    // $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
+                    $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_ASSOC);
 
                     // Pour une écriture simplifié dans les vues, en POO, on utilisera plutot
                     // $car->kilometrage
-                    $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
+                    // $this->setAttribute(PDO::ATTR_DEFAULT_FETCH_MODE, PDO::FETCH_OBJ);
 
                     // Déclencher une exception en cas d'erreur
                     $this->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);

@@ -241,6 +241,7 @@ public function manageHoraires()
         } else {
             $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
             header('Location: /dashboard/manageHoraires');
+            exit();
         }
 
     // Récupérer les horaires depuis la base de données

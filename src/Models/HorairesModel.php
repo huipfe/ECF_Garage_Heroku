@@ -123,15 +123,10 @@ class HorairesModel extends Model
      *
      * @return array
      */
-public function fetchAll(): array
-{
-    $db = \App\Database\Db::getInstance();
-    $query = "SELECT * FROM {$this->table}";
-    $stmt = $db->query($query);
-    $result = $stmt->fetchAll();
-    return $result;
-}
-
+    public function fetchAll(): array
+    {
+        return $this->findAll();
+    }
 
     /**
      * Get the value of table

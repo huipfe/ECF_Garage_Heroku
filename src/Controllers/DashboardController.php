@@ -197,38 +197,58 @@ class DashboardController extends Controller
         }
     }
 
-    public function manageHoraires()
-    {
-        // Vérifier si l'utilisateur est connecté en tant qu'admin
-        if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
-            $_SESSION['erreur'] = "Accès non autorisé";
-            header('Location: /login/Belogin');
-            exit();
-        }
-
-        // Gérer la soumission du formulaire
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Récupérer les horaires modifiés depuis le formulaire
-            $horaires = $_POST['horaires'];
-
-            $horairesModel = new HorairesModel();
-            $success = $horairesModel->updateHoraires($horaires);
-
-            if ($success) {
-                $_SESSION['message'] = "Les horaires ont été mis à jour avec succès";
-            } else {
-                $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
-            }
-            header('Location: /dashboard/manageHoraires');
-            exit();
-        }
-
-        // Récupérer les horaires depuis la base de données
-        $horairesModel = new HorairesModel();
-        $horaires = $horairesModel->fetchAll(); // Utiliser la méthode fetchAll()
-
-        $this->render('/Views/templates/ManageHoraires', ['horaires' => $horaires]);
+public function manageHoraires()
+{
+    // Vérifier si l'utilisateur est connecté en tant qu'admin
+    if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
+        $_SESSION['erreur'] = "Accès non autorisé";
+        header('Location: /login/Belogin');
+        exit();
     }
+
+    // Gérer la soumission du formulaire
+    if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        // Récupérer les horaires modifiés depuis le formulaire
+        $horaires = $_POST['horaires'];
+
+        $horairesModel = new HorairesModel();
+
+        foreach ($horaires as $jour => $horaire) {
+            $heureDebut = $horaire['heure_debut'];
+            $heureFin = $horaire['heure_fin'];
+
+            // Récupérer l'horaire existant par jour
+            $existingHoraire = $horairesModel->findBy(['jour' => $jour]);
+
+            if ($existingHoraire) {
+                // Mettre à jour l'horaire existant
+                $existingHoraire[0]->heure_debut = $heureDebut;
+                $existingHoraire[0]->heure_fin = $heureFin;
+                $existingHoraire[0]->update();
+            } else {
+                // Insérer un nouvel horaire
+                $newHoraire = new HorairesModel();
+                $newHoraire->jour = $jour;
+                $newHoraire->heure_debut = $heureDebut;
+                $newHoraire->heure_fin = $heureFin;
+                $newHoraire->create();
+            }
+        }
+
+        $_SESSION['message'] = "Les horaires ont été mis à jour avec succès";
+        header('Location: /dashboard/manageHoraires');
+        exit();
+        } else {
+            $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
+            header('Location: /dashboard/manageHoraires');
+        }
+
+    // Récupérer les horaires depuis la base de données
+    $horairesModel = new HorairesModel();
+    $horaires = $horairesModel->findAll();
+
+    $this->render('/Views/templates/ManageHoraires', ['horaires' => $horaires]);
+}
 
 
 }

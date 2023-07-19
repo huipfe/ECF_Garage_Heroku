@@ -4,6 +4,8 @@ ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
 (Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)
 
+
+
 ## Présentation
 # Projet Garage Automobile - Application Web Vitrine
 
@@ -25,6 +27,17 @@ Front :
 Back :
 ● PHP 8.2.6 sous PDO
 ● MySQL
+
+## Documentation - Trello/Figma
+
+### Trello :
+https://trello.com/b/oxxE9JtC/ecf-garage
+https://trello.com/invite/b/oxxE9JtC/ATTI93766aad838552b95ae14f736af1dd8631763816/ecf-garage
+
+### Figma : 
+https://www.figma.com/file/SaW2sE4UMapRzftQdaG8DU/ECF_Garage?type=design&node-id=9-44&t=l3rijzeslJeOXY32-0
+
+
 
 # Déploiement/Installation détaillés.
 ## Installation (si volonté d'utiliser en local)

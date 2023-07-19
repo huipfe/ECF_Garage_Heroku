@@ -16,10 +16,10 @@
     <h3>Modification des horaires</h3>
     <p>Horaires d'ouverture et de fermeture :</p>
 
-    <!-- <?php foreach ($horaires as $horaire) : ?>
+    <?php foreach ($horaires as $horaire) : ?>
         <p><?php echo $horaire['jour']; ?> :
             <?php echo $horaire['heure_debut']; ?> / <?php echo $horaire['heure_fin']; ?></p>
-    <?php endforeach; ?> -->
+    <?php endforeach; ?>
 
 
 <!-- Formulaire de modification des horaires -->

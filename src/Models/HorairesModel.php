@@ -125,18 +125,10 @@ class HorairesModel extends Model
      */
     public function fetchAll(): array
     {
-        // Connexion à la base de données
         $db = \App\Database\Db::getInstance();
-
-        // Requête SQL
         $query = "SELECT * FROM {$this->table}";
-
-        // Exécution de la requête
         $stmt = $db->query($query);
-
-        // Récupération des résultats
-        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-
+        $result = $stmt->fetchAll();
         return $result;
     }
 

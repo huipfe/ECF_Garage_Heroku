@@ -139,7 +139,10 @@ class CarsDetailsModel extends Model
                 ":description" => $data["description"],
                 ":users_id" => $data["users_id"]
             ]
+            
         );
+        var_dump($query->rowCount());
+
         return ($query->rowCount() === 1);
     }
 

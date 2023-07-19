@@ -161,17 +161,14 @@ class Model extends Db
 
 
     /**
-     * Méthode qui me permet de faire une requête SQL
      * @param string $query
+     * @param array|null $fetchModeArgs
      * @param int|null $fetchMode
-     * @param array $fetchModeArgs
      * @return mixed
      * @throws \Exception
      * @throws \TypeError
-     *
      */
-
-    #[\ReturnTypeWillChange]
+    // #[\ReturnTypeWillChange]
     // public function requete(string $query, ?int $fetchMode = null, ...$fetchModeArgs)
     public function requete(string $query, ?array $fetchModeArgs = null, ?int $fetchMode = null)
     {

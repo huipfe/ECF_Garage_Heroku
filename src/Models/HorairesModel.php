@@ -77,7 +77,7 @@ class HorairesModel extends Model
                 $heureFin = $horaire['heure_fin'];
 
                 // Vérifier si l'horaire existe déjà
-                $existingHoraire = $this->fetchByJour($jour);
+                $existingHoraire = $this->fetchByJour($jour)->fetch();
 
                 if ($existingHoraire) {
                     // Mettre à jour l'horaire existant
@@ -125,7 +125,19 @@ class HorairesModel extends Model
      */
     public function fetchAll(): array
     {
-        return $this->findAll();
+        // Connexion à la base de données
+        $db = \App\Database\Db::getInstance();
+
+        // Requête SQL
+        $query = "SELECT * FROM {$this->table}";
+
+        // Exécution de la requête
+        $stmt = $db->query($query);
+
+        // Récupération des résultats
+        $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
+
+        return $stmt->fetchAll();
     }
 
     /**

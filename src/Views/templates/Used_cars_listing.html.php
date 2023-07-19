@@ -237,7 +237,7 @@
 
 
 
-<script src="/ECF_Garage/Assets/JS/Used_cars_listing.js"></script>
+<script src="/Assets/JS/Used_cars_listing.js"></script>
 
 
 </main>

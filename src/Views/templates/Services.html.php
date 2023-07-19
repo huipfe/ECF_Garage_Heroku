@@ -83,4 +83,4 @@
     
 </main>
 
-<script src="/ECF_Garage/Assets/JS/Services.js"></script>
+<script src="/Assets/JS/Services.js"></script>

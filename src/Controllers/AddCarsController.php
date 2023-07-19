@@ -53,7 +53,7 @@ class AddCarsController extends Controller
                     $description,
                     $users_id
                 );
-                var_dump($carsDetailsModel);
+                // var_dump($carsDetailsModel);
                 // On hydrate notre modèle
                 // $carsDetailsModel->setMarque($marque)
                 //     ->setModele($modele)
@@ -77,7 +77,7 @@ class AddCarsController extends Controller
                     $carsDetailsModel->setImage($imageData);
                 }
 
-                var_dump($carsDetailsModel);
+                // var_dump($carsDetailsModel);
 
                 // On enregistre notre voiture dans la BDD
                 $success = $carsDetailsModel->createCar([
@@ -90,7 +90,7 @@ class AddCarsController extends Controller
                     "description" => $description,
                     "users_id" => $users_id
                 ]);
-                var_dump($carsDetailsModel);
+                // var_dump($carsDetailsModel);
 
                 // On redirige l'utilisateur vers la liste des voitures
                 if ($success) {
@@ -102,6 +102,7 @@ class AddCarsController extends Controller
                     // Erreur lors de l'ajout de la voiture
                     $_SESSION['erreur'] = "Erreur lors de l'ajout de la voiture";
                 }
+                var_dump($success);
             }else {
                 // Le formulaire n'est pas complet
                 // On affiche un message d'erreur
@@ -114,7 +115,7 @@ class AddCarsController extends Controller
                 $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
 
             }
-            var_dump($_POST);
+            // var_dump($_POST);
 
                 // Une fois que le formulaire est terminés, ont l'envoie à notre vue.
                 $this->render('Views/templates/AddCars');

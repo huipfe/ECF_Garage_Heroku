@@ -21,7 +21,7 @@
             // private const DBNAME = 'ecf_garage';
 
             // Information de connexion pour heroku
-            mysql://bd6e371b473d4a:a6ab1a08@eu-cdbr-west-03.cleardb.net/heroku_35ed1f025e08fc3?reconnect=true
+            // mysql://bd6e371b473d4a:a6ab1a08@eu-cdbr-west-03.cleardb.net/heroku_35ed1f025e08fc3?reconnect=true
             private const DBHOST = 'eu-cdbr-west-03.cleardb.net';
             private const DBUSER = 'bd6e371b473d4a';
             private const DBPASS = 'a6ab1a08';

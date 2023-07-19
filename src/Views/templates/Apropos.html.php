@@ -5,7 +5,7 @@
         <div class="row">
 
             <div class="col-md-6">
-                <img src="/ECF_Garage/Assets/images/Apropos/Garage_auto.jpg"
+                <img src="/Assets/images/Apropos/Garage_auto.jpg"
                 class="img-fluid mb-3" alt="Garage V. Parrot">
             </div>
 

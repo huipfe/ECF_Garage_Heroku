@@ -146,6 +146,6 @@
 </main>
 
 
-<script src="/ECF_Garage/Assets/JS/contact.js"></script>
+<script src="/Assets/JS/contact.js"></script>
 
 

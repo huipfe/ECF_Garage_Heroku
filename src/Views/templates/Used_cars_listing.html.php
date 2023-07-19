@@ -124,7 +124,7 @@
 
                             <!-- Modification d'une voiture -->
                             <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
-                                <a href="/ECF_Garage/public/modifier/modifie/<?= $car->id?>">
+                                <a href="/modifier/modifie/<?= $car->id?>">
                                     <button
                                         class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
                                     </button>
@@ -188,7 +188,7 @@
                                     <i class="bi bi-star"></i>
                                 </div> -->
 
-                                    <a href="/ECF_Garage/public/details/index/<?= intval($car->id) ?>"
+                                    <a href="/details/index/<?= intval($car->id) ?>"
                                     class="btn btn-danger">Détails
                                     <i class="mx-1 bi bi-info-circle-fill" style="color:#D9777F"></i>
                                 </a>
@@ -204,7 +204,7 @@
 
             <!-- Creation d'une nouvelle voiture -->
     <?php if(isset($_SESSION['user']) && !empty($_SESSION['user'])): ?>
-        <a href="/ECF_Garage/public/addCars/ajouter">
+        <a href="/addCars/ajouter">
             <button
                 class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
                 Ajouter Voiture

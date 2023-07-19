@@ -33,7 +33,7 @@
     
                             <!-- Modification d'un service -->
                             <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-                                <a href="/ECF_Garage/public/services/modifier/<?= $service ['id'] ?>">
+                                <a href="/services/modifier/<?= $service ['id'] ?>">
                                     <button class="btn btn-danger mx-2 my-2 bi bi-pencil-square">
                                     </button>
                                 </a>
@@ -49,7 +49,7 @@
 
         <!-- Creation d'un nouveau service -->
         <?php if (isset($_SESSION['user']) && !empty($_SESSION['user'])) : ?>
-            <a href="/ECF_Garage/public/services/ajouter">
+            <a href="/services/ajouter">
                 <button class="btn btn-danger mx-2 my-2 bi bi-plus-circle">
                     Ajouter Service
                 </button>

@@ -8,7 +8,7 @@
                     <div class="container">
                         
                         <div class="justify-content-start">
-                            <a href="/ECF_Garage/public/cars"
+                            <a href="/cars"
                             class="text-decoration-none">
                                 <span>
                                     <button class="btn">
@@ -80,21 +80,21 @@
                                         <img
                                         width="50px"
                                         height="50px"
-                                        src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                        src="/Assets/images/Car_details/miniature-1.jpg"
                                         alt="miniature-1">
                                     </button>
                                     <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal2">
                                         <img
                                         width="50px"
                                         height="50px"
-                                        src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                                        src="/Assets/images/Car_details/miniature-2.jpg"
                                         alt="miniature-1">
                                     </button>
                                     <button class="btn" data-bs-toggle="modal" data-bs-target="#imageModal3">
                                         <img
                                         width="50px"
                                         height="50px"
-                                        src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                        src="/Assets/images/Car_details/miniature-3.jpg"
                                         alt="miniature-1">
                                     </button>
                                 </div>
@@ -132,7 +132,7 @@
                                     <div class="row">
                                         <div class="col-lg-6">
                                             <img
-                                            src="/ECF_Garage/Assets/images/Car_details/miniature-1.jpg"
+                                            src="/Assets/images/Car_details/miniature-1.jpg"
                                             alt="miniature-1"
                                             class="img-fluid">
                                         </div>
@@ -179,7 +179,7 @@
                                     <img
                                     width= "480px"
                                     height= "320px"
-                                    src="/ECF_Garage/Assets/images/Car_details/miniature-2.jpg"
+                                    src="/Assets/images/Car_details/miniature-2.jpg"
                                     alt="miniature-2"
                                     class="img-fluid">
                                 </div>
@@ -229,7 +229,7 @@
                                 <div class="modal-body">
                                     <div class="row">
                                         <div class="col-lg-6">
-                                    <img src="/ECF_Garage/Assets/images/Car_details/miniature-3.jpg"
+                                    <img src="/Assets/images/Car_details/miniature-3.jpg"
                                     alt="miniature-3"
                                     class="img-fluid">
                                 </div>

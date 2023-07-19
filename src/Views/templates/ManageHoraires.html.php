@@ -2,7 +2,7 @@
 <div class="container">
 
         <div class="justify-content-start">
-            <a href="/ECF_Garage/public/dashboard/administration"
+            <a href="/dashboard/administration"
             class="text-decoration-none">
                 <span>
                     <button class="btn btn-danger my-2">

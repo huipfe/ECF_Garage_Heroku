@@ -8,14 +8,14 @@
                     
                     <!-- Mobile -->
                     <img class="img-fluid d-lg-none w-100 h-100"
-                            src="/ECF_Garage/Assets/images/Login page/Fond_Login_Mobile_page.png"
+                            src="/Assets/images/Login page/Fond_Login_Mobile_page.png"
                             alt="Fond_Login_Mobile">
                     </div>
     
                     <!-- Desktop -->
                 <div>
                     <img class=" d-none d-lg-block w-100 h-100"
-                        src="/ECF_Garage/Assets/images/Login page/Fond_Login_Desktop_page_etoile.png"
+                        src="/Assets/images/Login page/Fond_Login_Desktop_page_etoile.png"
                         alt="Fond_Voiture_homepage_desktop">
                             <p class="h1 mb-2 mx-1 mt-4 d-none d-lg-block">
                             
@@ -27,7 +27,7 @@
                             
                             <div class="">
                             <img class=" d-none d-lg-block staff-members"
-                            src="/ECF_Garage/Assets/images/Login page/Staff_members.png"
+                            src="/Assets/images/Login page/Staff_members.png"
                             alt="Staff_members">
                             </img>
                             <p class="d-none d-lg-block staff-members-text">Les membres du staff</p>
@@ -44,7 +44,7 @@
     
                     <!-- Logo Login -->
                         <img
-                        src="/ECF_Garage/Assets/images/Login page/Login_logo.png"
+                        src="/Assets/images/Login page/Login_logo.png"
                         width="80"
                         height="auto"
                         alt="Login_logo"

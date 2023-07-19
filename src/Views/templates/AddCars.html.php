@@ -1,7 +1,7 @@
 <div class="container">
 
         <div class="justify-content-start">
-            <a href="/ECF_Garage/public/cars"
+            <a href="/cars"
             class="text-decoration-none">
                 <span>
                     <button class="btn btn-danger my-2">

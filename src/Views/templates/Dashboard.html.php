@@ -9,7 +9,7 @@
       </div>
       <div class="col-lg-6 d-flex align-items-center justify-content-center">
         <!-- Photo de l'admin -->
-        <img src="/ECF_Garage/Assets/images/Dashboard page/Avatar Admin.png"
+        <img src="/Assets/images/Dashboard page/Avatar Admin.png"
         width="80" height="auto"
         class="img-fluid m-2" alt="Photo de l'admin">
           <p class="text-center fs-5 fw-bold" id="adminAdressMail"></p>
@@ -67,7 +67,7 @@
 
         <div class="d-flex align-items-center justify-content-between">
           <div class="picto">
-            <img src="/ECF_Garage/Assets/images/Dashboard page/sigle.png" alt="Pictogramme"
+            <img src="/Assets/images/Dashboard page/sigle.png" alt="Pictogramme"
             class="img-fluid p-2" width="72">
           </div>
           <h4>Noms d'utilisateur</h4>
@@ -82,7 +82,7 @@
             <li class="employee">
               <div class="d-flex align-items-center justify-content-between">
                 <div class="picto">
-                  <img src="/ECF_Garage/Assets/images/Dashboard page/avatar.png"
+                  <img src="/Assets/images/Dashboard page/avatar.png"
                   alt="Pictogramme"
                   class="img p-2"
                   width="72">
@@ -140,7 +140,7 @@
 
                   <?php if ($Dashboard->is_admin == 1) : ?>
 
-                    <a href="/ECF_Garage/public/dashboard/manageHoraires">
+                    <a href="/dashboard/manageHoraires">
 
                       <button
                           class="btn btn-responsive btn-sm btn-danger m-2">
@@ -334,4 +334,4 @@
 
 
 
-<script src="/ECF_Garage/Assets/JS/Dashboard.js"></script>
+<script src="/Assets/JS/Dashboard.js"></script>

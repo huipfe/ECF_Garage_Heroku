@@ -12,11 +12,11 @@
 
         <!-- Image de fond, version desktop & mobile -->
         <img class="img-fluid d-lg-none" width="100%" height="auto"
-        src="../Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
+        src="/Assets/images/Homepage/Fond_Voiture_homepage_mobile.jpg"
         alt="Fond_Voiture_homepage_mobile">
         </img>
         <img class="img-fluid d-none d-lg-block" width="100%" height="auto"
-        src="../Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
+        src="/Assets/images/Homepage/Fond_Voiture_homepage_desktop.png"
         alt="Fond_Voiture_homepage_desktop">
         </img>
 

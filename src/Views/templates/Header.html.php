@@ -22,7 +22,7 @@
     rel="stylesheet">
 
     <!-- Style du projet -->
-    <link rel="stylesheet" href="/ECF_Garage/Assets/CSS/style.css">
+    <link rel="stylesheet" href="/Assets/CSS/style.css">
 
     <!-- Boostrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
@@ -37,7 +37,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand img-fluid" href="#">
                     <img
-                    src="../Assets/images/Header & Footer/Logo_garage.png"
+                    src="/Assets/images/Header & Footer/Logo_garage.png"
                     width="100"
                     height="auto"
                     alt="Logo Garage">

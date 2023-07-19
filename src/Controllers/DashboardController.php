@@ -202,6 +202,7 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté en tant qu'admin
         if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
+            http_response_code(301);
             header('Location: /login/Belogin');
             exit();
         }
@@ -220,7 +221,7 @@ class DashboardController extends Controller
             } else {
                 $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
             }
-
+            http_response_code(301);
             header('Location: /dashboard/manageHoraires');
             exit();
         }

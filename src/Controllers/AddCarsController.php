@@ -109,8 +109,33 @@ class AddCarsController extends Controller
 
             }
 
+
+            // Il a le droit d'ajouter une voiture
+            $form = new Form;
+
+            // On ajoute les champs de notre formulaire
+            $form->debutForm()
+                ->ajoutLabelFor("marque", "Marque de la voiture : ")
+                ->ajoutInput("text", "marque", ['id' => 'marque', 'class' => 'form-control'])
+                ->ajoutLabelFor("modele", "Modèle de la voiture : ")
+                ->ajoutInput("text", "modele", ['id' => 'modele', 'class' => 'form-control'])
+                ->ajoutLabelFor("annee", "Année de la voiture : ")
+                ->ajoutInput("number", "annee", ['id' => 'annee', 'class' => 'form-control'])
+                ->ajoutLabelFor("kilometrage", "Kilométrage de la voiture : ")
+                ->ajoutInput("number", "kilometrage", ['id' => 'kilometrage', 'class' => 'form-control'])
+                ->ajoutLabelFor("prix", "Prix de la voiture : ")
+                ->ajoutInput("number", "prix", ['id' => 'prix', 'class' => 'form-control'])
+                ->ajoutLabelFor("image", "Image de la voiture : ")
+                ->ajoutInput("img", "image", ['id' => 'image', 'class' => 'form-control'])
+                ->ajoutLabelFor("description", "Description de la voiture : ")
+                ->ajoutTextarea("text", "", ['id' => 'description', 'class' => 'form-control'])
+                ->ajoutBouton("Ajouter", ['class' => 'btn btn-primary'])
+                ->finForm();
+
                 // Une fois que le formulaire est terminés, ont l'envoie à notre vue.
-                $this->render('Views/templates/AddCars');
+                $this->render('Views/templates/AddCars', [
+                    "form" => $form->create()
+                ]);
 
         } else {
             // L'utilisateur n'est pas connecté

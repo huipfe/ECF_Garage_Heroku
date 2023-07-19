@@ -210,6 +210,13 @@ class DashboardController extends Controller
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             // Récupérer les horaires modifiés depuis le formulaire
             $horaires = $_POST['horaires'];
+            $horaires = array_map(function ($horaire) {
+                return [
+                    'jour' => $horaire['jour'],
+                    'heure_debut' => $horaire['heure_debut'],
+                    'heure_fin' => $horaire['heure_fin']
+                ];
+            }, $horaires);
 
             // Mettre à jour les horaires dans la base de données
             $horairesModel = new HorairesModel();

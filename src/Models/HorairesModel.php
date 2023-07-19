@@ -59,86 +59,49 @@ class HorairesModel extends Model
         return $stmt;
     }
 
-    /**
-     * Met à jour les horaires dans la base de données
-     *
-     * @param array $horaires
-     * @return bool
-     */
+    private $db;
+
+    public function __construct()
+    {
+        $this->db = Db::getInstance();
+    }
+
     public function updateHoraires(array $horaires): bool
     {
-        // Début de la transaction
-        $db = Db::getInstance();
-        $db->beginTransaction();
-
         try {
+            $this->db->beginTransaction();
+
             foreach ($horaires as $jour => $horaire) {
                 $heureDebut = $horaire['heure_debut'];
                 $heureFin = $horaire['heure_fin'];
 
-                // Vérifier si l'horaire existe déjà
-                $existingHoraire = $this->fetchByJour($jour);
-
-                if ($existingHoraire) {
-                    // Mettre à jour l'horaire existant
-                    $query = "UPDATE {$this->table} SET heure_debut = ?, heure_fin = ? WHERE jour = ?";
-                    $this->executeQuery($query, $heureDebut, $heureFin, $jour);
-                } else {
-                    // Insérer un nouvel horaire
-                    $query = "INSERT INTO {$this->table} (jour, heure_debut, heure_fin) VALUES (?, ?, ?)";
-                    $this->executeQuery($query, $jour, $heureDebut, $heureFin);
-                }
+                $query = "UPDATE horaires SET heure_debut = ?, heure_fin = ? WHERE jour = ?";
+                $stmt = $this->db->prepare($query);
+                $stmt->execute([$heureDebut, $heureFin, $jour]);
             }
 
-            // Valider la transaction
-            $db->commit();
-
+            $this->db->commit();
             return true;
         } catch (\Exception $e) {
-            // Annuler la transaction en cas d'erreur
-            $db->rollBack();
-
+            $this->db->rollBack();
             return false;
         }
     }
 
-
-    /**
-     * Récupère un horaire par jour
-     *
-     * @param string $jour
-     * @return mixed|null
-     */
-    public function fetchByJour(string $jour)
+    public function fetchAll(): array
     {
-        $query = "SELECT * FROM {$this->table} WHERE jour = ?";
-        $stmt = $this->executeQuery($query, $jour);
-        $result = $stmt->fetch(\PDO::FETCH_OBJ);
-
-        return $result ?: null;
+        $query = "SELECT * FROM horaires";
+        $stmt = $this->db->query($query);
+        return $stmt->fetchAll(\PDO::FETCH_ASSOC);
     }
 
-    /**
-     * Récupère tous les horaires depuis la base de données
-     *
-     * @return array
-     */
-public function fetchAll(): array
-{
-    // Connexion à la base de données
-    $db = \App\Database\Db::getInstance();
-
-    // Requête SQL
-    $query = "SELECT * FROM {$this->table}";
-
-    // Exécution de la requête
-    $stmt = $db->query($query);
-
-    // Récupération des résultats
-    $result = $stmt->fetchAll(\PDO::FETCH_ASSOC);
-
-    return $result;
-}
+    public function fetchByJour(string $jour)
+    {
+        $query = "SELECT * FROM horaires WHERE jour = ?";
+        $stmt = $this->db->prepare($query);
+        $stmt->execute([$jour]);
+        return $stmt->fetch(\PDO::FETCH_OBJ) ?: null;
+    }
 
     /**
      * Get the value of table

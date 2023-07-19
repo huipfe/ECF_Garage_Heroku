@@ -198,21 +198,19 @@ class DashboardController extends Controller
         }
     }
 
+
     public function manageHoraires()
     {
-        // Vérifier si l'utilisateur est connecté en tant qu'admin
         if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
             header('Location: /login/Belogin');
             exit();
         }
 
-        // Gérer la soumission du formulaire
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            // Récupérer les horaires modifiés depuis le formulaire
-            $horaires = $_POST['horaires'];
+        $horairesModel = new HorairesModel();
 
-            $horairesModel = new HorairesModel();
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $horaires = $_POST['horaires'];
             $success = $horairesModel->updateHoraires($horaires);
 
             if ($success) {
@@ -224,12 +222,8 @@ class DashboardController extends Controller
             exit();
         }
 
-        // Récupérer les horaires depuis la base de données
-        $horairesModel = new HorairesModel();
-        $horaires = $horairesModel->fetchAll(); // Utiliser la méthode fetchAll()
-
+        $horaires = $horairesModel->fetchAll();
         $this->render('/Views/templates/ManageHoraires', ['horaires' => $horaires]);
     }
-
 
 }

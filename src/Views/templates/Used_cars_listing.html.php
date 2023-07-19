@@ -227,7 +227,7 @@
         </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
-                <form id="deleteForm" action="" method="POST">
+                <form id="deleteForm" action="/deleteCars/delete/" method="POST">
                     <button type="submit" class="btn btn-danger">Supprimer</button>
                 </form>
             </div>

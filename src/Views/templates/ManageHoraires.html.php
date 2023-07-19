@@ -23,7 +23,7 @@
 
 
 <!-- Formulaire de modification des horaires -->
-    <form method="POST" action="/dashboard/manageHoraires">
+    <form method="POST" action="/dashboard/manageHoraires/">
         <?php foreach ($horaires as $horaire) : ?>
             <div class="form-group">
                 <label><?php echo $horaire['jour']; ?></label>

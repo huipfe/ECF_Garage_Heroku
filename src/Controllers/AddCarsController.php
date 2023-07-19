@@ -35,7 +35,6 @@ class AddCarsController extends Controller
                 $annee = strip_tags($_POST['annee']);
                 $kilometrage = strip_tags($_POST['kilometrage']);
                 $prix = strip_tags($_POST['prix']);
-                // $image = strip_tags($_POST['image']);
                 $image = base64_encode(file_get_contents($_FILES['image']['tmp_name']));
                 $description = strip_tags($_POST['description']);
                 $id = strip_tags($_SESSION['user']['id']);
@@ -64,8 +63,6 @@ class AddCarsController extends Controller
                     ->setImage($image)
                     ->setDescription($description)
                     ->setUsersId($_SESSION['user']['id']);
-
-                ;
 
                 // Vérifier si un fichier a été téléchargé
                 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
@@ -103,9 +100,9 @@ class AddCarsController extends Controller
 
                 // Un ternaire, on vérifie que le modele marque ou description sont deja completé.
                 // Au rafraissement de la page, les champs sont encore remplis.
-                $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
-                $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
-                $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
+                // $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
+                // $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
+                // $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
 
             }
 

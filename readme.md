@@ -1,5 +1,11 @@
 # ECF_Garage_2023
 
+--En Local (Laragon) : http://localhost/ECF_Garage/public/main
+(Suivre la méthode pour l'installer plus bas))
+
+En déployé, avec Heroku : https://ecfgarage-31eec1271c13.herokuapp.com/
+(Si héroku bug, ou a des problèmes avec des fonctionnalités, passer avec la méthode Local via Laragon, comme expliquer ci-dessous)--
+
 ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
 (Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)

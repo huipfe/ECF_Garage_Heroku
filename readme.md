@@ -1,6 +1,13 @@
 # ECF_Garage_2023
 
-ECF
+--En Local (Laragon) : http://localhost/ECF_Garage/public/main
+(Suivre la méthode pour l'installer plus bas))
+
+En déployé, avec Heroku : https://ecfgarage-31eec1271c13.herokuapp.com/
+(Si héroku bug, ou a des problèmes avec des fonctionnalités, passer avec la méthode Local via Laragon, comme expliquer ci-dessous)--
+
+
+## ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
 (Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)
 
@@ -97,7 +104,7 @@ suivre le chemin /www/ECF_Garage
    C:\laragon\www\ECF_Garage
    ```
 
-6. Cliquez sur Base de données, via phpmyadmin, et importez le fichier 'Database.sql' dans la base de données.
+6. Cliquez sur Base de données, via phpmyadmin, et importez le fichier 'Database.sql' dans la base de données. (ou cliquer sur phpmyadmin, via le bouton menu>Mysql>phpMyAdmin)
    Mot de passe : rien, Utilisateur : root
 
    ```shell

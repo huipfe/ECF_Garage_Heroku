@@ -53,7 +53,7 @@ class AddCarsController extends Controller
                     $description,
                     $users_id
                 );
-
+                var_dump($carsDetailsModel);
                 // On hydrate notre modèle
                 $carsDetailsModel->setMarque($marque)
                     ->setModele($modele)
@@ -77,6 +77,8 @@ class AddCarsController extends Controller
                     $carsDetailsModel->setImage($imageData);
                 }
 
+                var_dump($carsDetailsModel);
+
                 // On enregistre notre voiture dans la BDD
                 $carsDetailsModel->createCar([
                     "marque" => $marque,
@@ -88,7 +90,8 @@ class AddCarsController extends Controller
                     "description" => $description,
                     "users_id" => $users_id
                 ]);
-                
+                var_dump($carsDetailsModel);
+            
                 // On redirige l'utilisateur vers la liste des voitures
                 $_SESSION['message'] = "Votre voiture a bien été ajoutée";
                 header('Location: /cars');
@@ -97,14 +100,15 @@ class AddCarsController extends Controller
                 // Le formulaire n'est pas complet
                 // On affiche un message d'erreur
                 $_SESSION['erreur'] = !empty($_POST) ? "Le formulaire est incomplet" : '';
-
+                
                 // Un ternaire, on vérifie que le modele marque ou description sont deja completé.
                 // Au rafraissement de la page, les champs sont encore remplis.
-                // $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
-                // $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
-                // $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
+                $marque = isset($_POST['marque']) ? strip_tags($_POST['marque']) : '';
+                $modele = isset($_POST['modele']) ? strip_tags($_POST['modele']) : '';
+                $description = isset($_POST['description']) ? strip_tags($_POST['description']) : '';
 
             }
+            var_dump($_POST);
 
                 // Une fois que le formulaire est terminés, ont l'envoie à notre vue.
                 $this->render('Views/templates/AddCars');

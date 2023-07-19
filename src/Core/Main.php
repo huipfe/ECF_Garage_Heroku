@@ -14,7 +14,7 @@ class Main
     {
         // On démarre la session
         session_start();
-    
+
         // Exemple de routes
         // http://Garage-V.Parrot.com/controleur/methode/parametres
         // http://Garage-V.Parrot.com/accueil/nos-produits/details-voiture

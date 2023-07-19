@@ -37,7 +37,7 @@
             <div class="container-fluid">
                 <a class="navbar-brand img-fluid" href="#">
                     <img
-                    src="/Assets/images/Header & Footer/Logo_garage.png"
+                    src="../Assets/images/Header & Footer/Logo_garage.png"
                     width="100"
                     height="auto"
                     alt="Logo Garage">

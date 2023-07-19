@@ -222,7 +222,8 @@ class DashboardController extends Controller
             // Mettre à jour les horaires dans la base de données
             $horairesModel = new HorairesModel();
             $success = $horairesModel->updateHoraires($horaires);
-
+            var_dump($horaires);
+            die;
             if ($success) {
                 $_SESSION['message'] = "Les horaires ont été mis à jour avec succès";
             } else {

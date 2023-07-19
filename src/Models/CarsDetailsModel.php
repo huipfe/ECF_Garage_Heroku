@@ -142,8 +142,6 @@ class CarsDetailsModel extends Model
             ]
             
         );
-        var_dump($query->rowCount());
-
         return ($query->rowCount() === 1);
     }
 

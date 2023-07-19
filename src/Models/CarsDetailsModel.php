@@ -143,7 +143,6 @@ class CarsDetailsModel extends Model
         return ($query->rowCount() === 1);
     }
 
-
     /**
      * Met à jour une voiture
      *

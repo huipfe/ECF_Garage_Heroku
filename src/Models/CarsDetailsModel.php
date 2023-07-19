@@ -127,7 +127,7 @@ class CarsDetailsModel extends Model
     public function createCar(array $data): bool
     {
         $sql = "INSERT INTO {$this->table} (marque, modele, annee, kilometrage, prix, image, description, users_id)
-            VALUES (:marque, :modele, :annee, :kilometrage, :prix, :image, :description, :users_id)";
+        VALUES (:marque, :modele, :annee, :kilometrage, :prix, :image, :description, :users_id)";
         $query = $this->requete(
             $sql,
             [
@@ -140,10 +140,12 @@ class CarsDetailsModel extends Model
                 ":description" => $data["description"],
                 ":users_id" => $data["users_id"]
             ]
-            
         );
+        var_dump($query->rowCount());
+
         return ($query->rowCount() === 1);
     }
+
 
     /**
      * Met à jour une voiture

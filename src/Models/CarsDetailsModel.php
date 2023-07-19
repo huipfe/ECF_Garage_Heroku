@@ -130,14 +130,14 @@ class CarsDetailsModel extends Model
         $query = $this->requete(
             $sql,
             [
-                ":marque" => $data["marque"],
-                ":modele" => $data["modele"],
-                ":annee" => $data["annee"],
-                ":kilometrage" => $data["kilometrage"],
-                ":prix" => $data["prix"],
-                ":image" => $data["image"],
-                ":description" => $data["description"],
-                ":users_id" => $data["users_id"]
+                "marque" => $data["marque"],
+                "modele" => $data["modele"],
+                "annee" => intval($data["annee"]),
+                "kilometrage" => intval($data["kilometrage"]),
+                "prix" => intval($data["prix"]),
+                "image" => $data["image"],
+                "description" => $data["description"],
+                "users_id" => intval($data["users_id"])
             ]
         );
         return ($query->rowCount() === 1);

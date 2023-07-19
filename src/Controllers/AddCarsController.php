@@ -55,14 +55,14 @@ class AddCarsController extends Controller
                 );
                 var_dump($carsDetailsModel);
                 // On hydrate notre modèle
-                $carsDetailsModel->setMarque($marque)
-                    ->setModele($modele)
-                    ->setAnnee($annee)
-                    ->setKilometrage($kilometrage)
-                    ->setPrix($prix)
-                    ->setImage($image)
-                    ->setDescription($description)
-                    ->setUsersId($_SESSION['user']['id']);
+                // $carsDetailsModel->setMarque($marque)
+                //     ->setModele($modele)
+                //     ->setAnnee($annee)
+                //     ->setKilometrage($kilometrage)
+                //     ->setPrix($prix)
+                //     ->setImage($image)
+                //     ->setDescription($description)
+                //     ->setUsersId($_SESSION['user']['id']);
 
                 // Vérifier si un fichier a été téléchargé
                 if (isset($_FILES['image']) && $_FILES['image']['error'] === UPLOAD_ERR_OK) {
@@ -80,7 +80,7 @@ class AddCarsController extends Controller
                 var_dump($carsDetailsModel);
 
                 // On enregistre notre voiture dans la BDD
-                $carsDetailsModel->createCar([
+                $success = $carsDetailsModel->createCar([
                     "marque" => $marque,
                     "modele" => $modele,
                     "annee" => $annee,
@@ -91,11 +91,17 @@ class AddCarsController extends Controller
                     "users_id" => $users_id
                 ]);
                 var_dump($carsDetailsModel);
-            
+
                 // On redirige l'utilisateur vers la liste des voitures
-                $_SESSION['message'] = "Votre voiture a bien été ajoutée";
-                header('Location: /cars');
-                exit;
+                if ($success) {
+                    // Voiture ajoutée avec succès
+                    $_SESSION['message'] = "Votre voiture a bien été ajoutée";
+                    header('Location: /cars');
+                    exit;
+                } else {
+                    // Erreur lors de l'ajout de la voiture
+                    $_SESSION['erreur'] = "Erreur lors de l'ajout de la voiture";
+                }
             }else {
                 // Le formulaire n'est pas complet
                 // On affiche un message d'erreur

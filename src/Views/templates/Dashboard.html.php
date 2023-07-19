@@ -187,7 +187,7 @@
           </div>
 
           <div class="modal-body">
-              <form action="/ECF_Garage/public/dashboard/deleteUser" method="POST">
+              <form action="/dashboard/deleteUser" method="POST">
                 <input type="hidden" name="user_id" id="deleteUserId" value="">
                 Êtes-vous sûr de vouloir supprimer cet utilisateur ?
           </div>
@@ -217,7 +217,7 @@
             <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
           </div>
           <div class="modal-body">
-            <form action="/ECF_Garage/public/dashboard/administration" method="POST">
+            <form action="/dashboard/administration" method="POST">
 
               <div class="mb-3">
                 <label for="username" class="form-label">Nom d'utilisateur</label>
@@ -284,7 +284,7 @@
                 </div>
                 
                 <div class="modal-body">
-                    <form action="/ECF_Garage/public/dashboard/modifyUser" method="POST">
+                    <form action="/dashboard/modifyUser" method="POST">
                       <input type="hidden" id="editUserId" name="user_id" min="1">
 
                         <div class="mb-3">

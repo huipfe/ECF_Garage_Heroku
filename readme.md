@@ -4,7 +4,22 @@ ECF
 un fichier readme.md contenant la démarche à suivre pour l’exécution en local
 (Ne surtout pas oublier, si volonté d'utiliser en local, de passer par Laragon !)
 
+# Point Important - Livrable du projet :
+## Fichier Readme.md : 
+Ce fichier contient une large explication du fonctionnement de l'application, il explique comment utiliser 
+l'app en local, si besoin.
 
+## Fichier Database.sql : 
+Dans ce fichier, vous trouverez la base de données, avec les tables, et les données.
+Il est dans le dossier src/database/Database.sql.
+
+## La documentation technique : 
+Elle est dans le dossier Documentation/Documentation.pdf, c'est réunie dans ce PDF, sinon des versions jpeg
+dispersé existe dans les sous dossier du dossier Documentation.
+
+## La charte graphique :
+Elle se trouve dispersé dans les sous dossier du dossier Documentation.
+Ou elle se trouve dans le pdf qui les réuni tous : Documentation/Documentation.pdf
 
 ## Présentation
 # Projet Garage Automobile - Application Web Vitrine
@@ -28,20 +43,25 @@ Back :
 ● PHP 8.2.6 sous PDO
 ● MySQL
 
-## Documentation - Trello/Figma
+## Documentation - Trello/Figma/Github/Diagramme
 
 ### Trello :
 https://trello.com/b/oxxE9JtC/ecf-garage
 https://trello.com/invite/b/oxxE9JtC/ATTI93766aad838552b95ae14f736af1dd8631763816/ecf-garage
-
+(Important de le voir, ma logique de construction de projet, est expliqué dans les commentaires des cartes,
+ainsi que dans les checklists, et les descriptions des cartes, l'historique du projet, est aussi visible)
 ### Figma : 
 https://www.figma.com/file/SaW2sE4UMapRzftQdaG8DU/ECF_Garage?type=design&node-id=9-44&t=l3rijzeslJeOXY32-0
+(La charte graphique, ainsi que les maquettes, se retrouve aussi, dans le dossier Documentation, 
+en jpeg, dans leur sous dossier Documentation/Figma Maquette)
 
 ### Github : 
 https://github.com/huipfe/ECF_Garage
 
 ### Diagramme : 
 https://app.diagrams.net/#Hhuipfe%2FECF_Garage%2Fmaster%2FECF_Garage.drawio
+(Le fichier est aussi retrouvable dans ce dossier du projet, 
+dans Documentation/Design Diagrams - ECF_Garage.drawio)
 
 # Déploiement/Installation détaillés.
 ## Installation (si volonté d'utiliser en local)
@@ -70,7 +90,8 @@ https://app.diagrams.net/#Hhuipfe%2FECF_Garage%2Fmaster%2FECF_Garage.drawio
    C:\laragon\www\ECF_Garage
    ```
 
-5. Cliquez sur web, pour afficher le site web, ou afficher via Menu/www/ECF_Garage
+5. Cliquez sur web, pour afficher le site web, ou afficher via le bouton en haut de Laragon Menu et 
+suivre le chemin /www/ECF_Garage
 
    ```shell
    C:\laragon\www\ECF_Garage
@@ -89,13 +110,13 @@ https://app.diagrams.net/#Hhuipfe%2FECF_Garage%2Fmaster%2FECF_Garage.drawio
    ECF_Garage/src/Database/Db.php
    ```
 
-8. Naviger sur le site web : http://localhost/ECF_Garage/public/main
+8. Naviger sur le site web : http://localhost/ECF_Garage/public/main (page d'accueil)
 
    ```shell
    http://localhost/ECF_Garage/public/main
    ```
 
-9. et connectez vous avec les identifiants suivants :
+9. et connectez vous avec les identifiants suivants : 
    
       ```shell
       Voir Fonctionnalités, çi dessous. 
@@ -127,31 +148,43 @@ Son compte n'est pas supprimable. Il a un bouton horaire à la place du bouton s
 
 Pour les employés, une fois connecté, ils accèdent à la page produit.
 Ils disposent de 3 options, pour leurs véhicules : ajouter un nouveau véhicule, le modifier, 
-et le supprimer. Il ne peuvent que modifier et supprimer les véhicules associées à leur comptes.
+ou le supprimer. Il ne peuvent que modifier et supprimer les véhicules associées à leur comptes.
 (via la clé étrangère 'users_id' dans la table 'voiture' qui est l'id liée à l'user_id dans la table 'users')
-Sauf l'administrateur, qui peut modifier et supprimer tous les véhicules. L'admin à tout les droits.
+Sauf l'administrateur, qui peut modifier et supprimer tous les véhicules, puisque l'admin à tout les droits.
 
 Les utilisateurs se connectent en utilisant leur adresse e-mail et un mot de passe sécurisé.
 
-Le rôle des employés et de géré leur voiture.
+Le rôle des employés et de géré leur voiture (supression et modification, ou d'ajout de nouvelle).
 Le rôle de l'administrateur est de gérer les employés, les services du garage, et les horaires d'ouverture.
+(Ajout d'employé/de service, de modification de service/d'employé, de suppression de service/d'employé, 
+et de modification d'horaire.)
 
-# US2. Présenter les services
-Les services de réparation automobile proposés par le garage sont affichés sur la page 'services', et 
-sont accessibles depuis la page d'accueil via un bouton.
+# US2. Présenter les services - Modification des différents services
+Les services de réparation automobile proposés par le garage sont affichés sur la page 'services'.
+Seul l'administrateur peut modifier/supprimé/créer les services, et les employés peuvent les voir, ainsi que les boutons, mais n'ont pas l'autorisation d'y accéder.
+
+# US3 Modifier et définir les horaires d'ouvertures 
+Depuis son tableaux de bord/panel d'administration, grâce au bouton horaire, qui se trouve sur 
+la droite de l'écran à coté de sa ligne, l'administrateur peut modifier les horaires 
+d'ouvertures du garage, via un formulaire de modification.
+Le formulaire, influence la vue qui se trouve sur le footer du site, visible partout.
 
 # US4. Exposer les voitures d'occasion
-Le site web présente les voitures d'occasion disponibles à la vente avec des photos, des descriptions détaillées et des informations techniques.
-Chaque voiture affiche son prix, une image mise en avant, l'année de mise en circulation et le kilométrage.
+Le site web présente les voitures d'occasion disponibles à la vente avec des photos, 
+des descriptions détaillées et des informations techniques.
+Chaque voiture affiche, la marque, et le modele, ainsi que son prix, une image mise en avant, l'année de mise en circulation et le kilométrage.
+(les 6 premières voitures ont été créer par l'admin, la dernière par un employé, vous pouvez en créer d'autres, avec les différents comptes, pour tester la fonctionnalité, et les limitations entre admin et employé, et entre les différents comptes employé eux-même.)
 
 # US5. Filtrer la liste des véhicules d’occasion
-Un système de filtres permet aux visiteurs de rechercher des véhicules en fonction d'une fourchette de prix, d'un nombre de kilomètres parcourus ou d'une année de mise en circulation.
+Un système de filtres, via des boutons, regrouper en groupe de 3 (années, kilométrage et prix) 
+permet aux visiteurs de rechercher des véhicules en fonction d'une fourchette de prix, d'un nombre de kilomètres parcourus ou d'une année de mise en circulation.
+(Après 2020>=, Avant 2020<=, plus ou égale 2000km>=, moins ou égale 2000km<= et moins ou égale 100 000€<=)
 
-# US6. Permettre de contacter l'atelier
-Les visiteurs peuvent contacter le garage par téléphone (infos en bas de page) ou en utilisant un formulaire de contact en ligne. (il fonctionne en local, via Laragon, par le sendMail, qui est dans le dossier Utils)
+# US6. Permettre de contacter l'atelier (fonctionne en Local, avec Laragon)
+Les visiteurs peuvent contacter le garage par téléphone (infos en bas de page footer, ou sur la page contact) ou en utilisant un formulaire de contact en ligne. (il fonctionne en local, via Laragon, par le sendMail, qui est dans le dossier Utils)
 
-# US7. Recueillir les témoignages des clients
--
+# US7. Recueillir les témoignages des clients 
+- 
 <!-- Les visiteurs peuvent laisser des témoignages composés d'un nom, d'un commentaire et d'une note.
 Les témoignages sont modérés par un employé du garage et s'affichent sur la page d'accueil.
 Les employés du garage peuvent ajouter ou rejeter des témoignages clients directement depuis leur espace dédié. -->

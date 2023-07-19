@@ -44,7 +44,7 @@ class ModifierController extends Controller {
             if (!$car) {
                 http_response_code(404);
                 $_SESSION['erreur'] = "La voiture recherchée n'existe pas";
-                header('Location: /ECF_Garage/public/cars');
+                header('Location: /cars');
                 exit;
             }
 
@@ -55,7 +55,7 @@ class ModifierController extends Controller {
             ) {
                 http_response_code(403);
                 $_SESSION['erreur'] = "Vous n'êtes pas autorisé à modifier cette voiture";
-                header('Location: /ECF_Garage/public/cars');
+                header('Location: /cars');
                 exit;
             }
 
@@ -104,7 +104,7 @@ class ModifierController extends Controller {
 
             // On redirige l'utilisateur vers la liste des voitures
             $_SESSION['message'] = "Votre voiture a bien été modifiée";
-            header('Location: /ECF_Garage/public/cars');
+            header('Location: /cars');
             exit;
         }
 
@@ -118,7 +118,7 @@ class ModifierController extends Controller {
             // L'utilisateur n'est pas connecté
             // On le redirige vers la page de connexion
             $_SESSION['erreur'] = "Vous devez être connecté pour modifier une annonce";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit;
         }
     }

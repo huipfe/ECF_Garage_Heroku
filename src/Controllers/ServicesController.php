@@ -26,14 +26,14 @@ class ServicesController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
-            header('Location: /ECF_Garage/public/services');
+            header('Location: /services');
             exit();
         }
 
@@ -63,16 +63,16 @@ class ServicesController extends Controller
 
                 if ($success) {
                     $_SESSION['message'] = "Le service a été ajouté avec succès";
-                    header('Location: /ECF_Garage/public/services');
+                    header('Location: /services');
                     exit();
                 } else {
                     $_SESSION['erreur'] = "Une erreur s'est produite lors de l'ajout du service";
-                    header('Location: /ECF_Garage/public/services');
+                    header('Location: /services');
                     exit();
                 }
             } else {
                 $_SESSION['erreur'] = "Veuillez sélectionner une image valide";
-                header('Location: /ECF_Garage/public/services');
+                header('Location: /services');
                 exit();
             }
         }
@@ -86,14 +86,14 @@ class ServicesController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
-            header('Location: /ECF_Garage/public/services');
+            header('Location: /services');
             exit();
         }
 
@@ -102,7 +102,7 @@ class ServicesController extends Controller
         $service = $serviceModel->find($id);
         if (!$service) {
             $_SESSION['erreur'] = "Service non trouvé";
-            header('Location: /ECF_Garage/public/services');
+            header('Location: /services');
             exit();
         }
 
@@ -132,16 +132,16 @@ class ServicesController extends Controller
 
                 if ($success) {
                     $_SESSION['message'] = "Le service a été modifié avec succès";
-                    header('Location: /ECF_Garage/public/services');
+                    header('Location: /services');
                     exit();
                 } else {
                     $_SESSION['erreur'] = "Une erreur s'est produite lors de la modification du service";
-                    header('Location: /ECF_Garage/public/services');
+                    header('Location: /services');
                     exit();
                 }
             } else {
                 $_SESSION['erreur'] = "Veuillez sélectionner une image valide";
-                header('Location: /ECF_Garage/public/services');
+                header('Location: /services');
                 exit();
             }
         }
@@ -155,14 +155,14 @@ class ServicesController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
-            header('Location: /ECF_Garage/public/services');
+            header('Location: /services');
             exit();
         }
 
@@ -171,7 +171,7 @@ class ServicesController extends Controller
         $service = $serviceModel->find($id);
         if (!$service) {
             $_SESSION['erreur'] = "Service non trouvé";
-            header('Location: /ECF_Garage/public/services');
+            header('Location: /services');
             exit();
         }
 
@@ -180,11 +180,11 @@ class ServicesController extends Controller
             $success = $serviceModel->deleteService($id);
             if ($success) {
                 $_SESSION['message'] = "Le service a été supprimé avec succès";
-                header('Location: /ECF_Garage/public/services');
+                header('Location: /services');
                 exit();
             } else {
                 $_SESSION['erreur'] = "Une erreur s'est produite lors de la suppression du service";
-                header('Location: /ECF_Garage/public/services');
+                header('Location: /services');
                 exit();
             }
         }

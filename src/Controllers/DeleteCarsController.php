@@ -27,31 +27,31 @@ class DeleteCarsController extends Controller
                     if ($success) {
                         // Redirige l'utilisateur vers la liste des voitures ou affiche un message de réussite
                         $_SESSION['message'] = "La voiture a été supprimée avec succès";
-                        header('Location: /ECF_Garage/public/cars');
+                        header('Location: /cars');
                         exit;
                     } else {
                         $_SESSION['erreur'] = "Une erreur s'est produite lors de la suppression de la voiture";
-                        header('Location: /ECF_Garage/public/cars');
+                        header('Location: /cars');
                         exit;
                     }
                 } else {
                     // L'utilisateur n'est pas autorisé à supprimer la voiture
                     http_response_code(403);
                     $_SESSION['erreur'] = "Vous n'êtes pas autorisé à supprimer cette voiture";
-                    header('Location: /ECF_Garage/public/cars');
+                    header('Location: /cars');
                     exit;
                 }
             } else {
                 // La voiture n'existe pas
                 $_SESSION['erreur'] = "La voiture que vous essayez de supprimer n'existe pas";
-                header('Location: /ECF_Garage/public/cars');
+                header('Location: /cars');
                 exit;
             }
         } else {
             // L'utilisateur n'est pas connecté
             // Redirige l'utilisateur vers la page de connexion
             $_SESSION['erreur'] = "Vous devez être connecté pour supprimer une voiture";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit;
         }
     }

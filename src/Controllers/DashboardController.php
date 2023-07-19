@@ -12,21 +12,21 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // $this->render('/Views/templates/dashboard');
 
         // Rediriger vers la page d'administration
-        header('Location: /ECF_Garage/public/dashboard/administration');
+        header('Location: /dashboard/administration');
         exit();
     }
 
@@ -40,14 +40,14 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
         
@@ -69,12 +69,12 @@ class DashboardController extends Controller
             if ($success) {
                 // Redirige vers la page d'administration avec un message de succès
                 $_SESSION['message'] = "Le compte a été créé avec succès";
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             } else {
                 // Redirige vers la page d'administration avec un message d'erreur
                 $_SESSION['erreur'] = "La création de compte a échoué";
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             }
         }
@@ -97,14 +97,14 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
@@ -130,12 +130,12 @@ class DashboardController extends Controller
             if ($success) {
                 // Redirige vers la page d'administration avec un message de succès
                 $_SESSION['message'] = "L'utilisateur a été modifié avec succès";
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             } else {
                 // Redirige vers la page d'administration avec un message d'erreur
                 $_SESSION['erreur'] = "La modification de l'utilisateur a échoué";
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             }
         } else {
@@ -154,14 +154,14 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté
         if (!isset($_SESSION['user'])) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
         // Vérifier si l'utilisateur est un admin
         if ($_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Veuillez vous connecter en tant qu'administrateur";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
         
@@ -180,18 +180,18 @@ class DashboardController extends Controller
                 if ($success) {
                     // Redirige vers la page d'administration avec un message de succès
                     $_SESSION['message'] = "L'utilisateur a été supprimé avec succès";
-                    header('Location: /ECF_Garage/public/dashboard/administration');
+                    header('Location: /dashboard/administration');
                     exit();
                 } else {
                     // Redirige vers la page d'administration avec un message d'erreur
                     $_SESSION['erreur'] = "La suppression de l'utilisateur a échoué";
-                    header('Location: /ECF_Garage/public/dashboard/administration');
+                    header('Location: /dashboard/administration');
                     exit();
                 }
             } else {
                 // L'identifiant de l'utilisateur n'est pas valide
                 $_SESSION['erreur'] = "Identifiant d'utilisateur non valide";
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             }
         }
@@ -202,7 +202,7 @@ class DashboardController extends Controller
         // Vérifier si l'utilisateur est connecté en tant qu'admin
         if (!isset($_SESSION['user']) || $_SESSION['user']['is_admin'] != 1) {
             $_SESSION['erreur'] = "Accès non autorisé";
-            header('Location: /ECF_Garage/public/login/Belogin');
+            header('Location: /login/Belogin');
             exit();
         }
 
@@ -221,7 +221,7 @@ class DashboardController extends Controller
                 $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
             }
 
-            header('Location: /ECF_Garage/public/dashboard/manageHoraires');
+            header('Location: /dashboard/manageHoraires');
             exit();
         }
 

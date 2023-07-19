@@ -18,10 +18,10 @@ class LoginController extends Controller
         if (isset($_SESSION['user'])) {
             // Vérifier si l'utilisateur est un admin
             if ($_SESSION['user']['is_admin'] == 1) {
-                header('Location: /ECF_Garage/public/dashboard/administration');
+                header('Location: /dashboard/administration');
                 exit();
             } else {
-                header('Location: /ECF_Garage/public/cars');
+                header('Location: /public/cars');
                 exit();
             }
         }
@@ -66,14 +66,14 @@ class LoginController extends Controller
                 
                 // Vérifier si l'utilisateur est un admin, et redirige vers la page d'admin.
                 if ($_SESSION['user']['is_admin'] == 1) {
-                    header('Location: /ECF_Garage/public/dashboard/administration');
+                    header('Location: /dashboard/administration');
                     $_SESSION['message'] =
                         "Bienvenue sur votre espace admin " . $userArray->name_users;
                     exit();
                 }
                 // Si non admin, donc employé, rediriger directement vers la liste des voitures.
                 else {
-                    header('Location: /ECF_Garage/public/cars');
+                    header('Location: /cars');
                     $_SESSION['message'] =
                         "Bienvenue sur votre espace employé " . $userArray->name_users;
                     exit();
@@ -81,7 +81,7 @@ class LoginController extends Controller
             } else {
                 // Sinon, on affiche un message d'erreur.
                 $_SESSION['erreur_login'] = 'L\'adresse e-mail et/ou le mot de passe est incorrect';
-                header('Location: /ECF_Garage/public/login/Belogin');
+                header('Location: /login/Belogin');
                 exit;
             }
         }
@@ -100,7 +100,7 @@ class LoginController extends Controller
     public function logout()
     {
         session_destroy();
-        header('Location: /ECF_Garage/public/login/Belogin');
+        header('Location: /login/Belogin');
         exit;
 
     }

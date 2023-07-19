@@ -26,16 +26,16 @@
     <form method="POST" action="/dashboard/manageHoraires">
         <?php foreach ($horaires as $horaire) : ?>
             <div class="form-group">
-                <label><?php echo $horaire['jour']; ?></label>
+                <label><?php echo $horaire->jour; ?></label>
                 <div class="row">
     
                     <div class="col">
 
                         <input
                         type="text"
-                        name="horaires[<?php echo $horaire['jour']; ?>][heure_debut]"
+                        name="horaires[<?php echo $horaire->jour; ?>][heure_debut]"
                         class="form-control"
-                        value="<?php echo $horaire['heure_debut']; ?>"
+                        value="<?php echo $horaire->heure_debut; ?>"
                         required>
 
                     </div>
@@ -44,9 +44,9 @@
 
                         <input
                         type="text"
-                        name="horaires[<?php echo $horaire['jour']; ?>][heure_fin]"
+                        name="horaires[<?php echo $horaire->jour; ?>][heure_fin]"
                         class="form-control"
-                        value="<?php echo $horaire['heure_fin']; ?>"
+                        value="<?php echo $horaire->heure_fin; ?>"
                         required>
 
                     </div>

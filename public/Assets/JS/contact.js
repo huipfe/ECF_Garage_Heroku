@@ -10,7 +10,7 @@ function submitForm(event) {
 
     // Créer une requête AJAX
     let xhr = new XMLHttpRequest();
-    xhr.open('POST', '/ECF_Garage/src/Utils/sendMail.php', true);
+    xhr.open('POST', '/Utils/sendMail.php', true);
     xhr.onreadystatechange = function () {
         if (xhr.readyState === XMLHttpRequest.DONE && xhr.status === 200) {
             // Réponse de la requête AJAX

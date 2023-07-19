@@ -27,7 +27,7 @@
                                 <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
                                 data-bs-toggle="modal"
                                 data-bs-target="#deleteModal"
-                                data-action="/ECF_Garage/public/services/delete/<?= $service ['id'] ?>">
+                                data-action="/services/delete/<?= $service ['id'] ?>">
                                 </button>
                             <?php endif; ?>
     
@@ -72,7 +72,7 @@
                 <div class="modal-footer">
                     <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Annuler</button>
                         <form id="deleteForm"
-                        action="/ECF_Garage/public/services/delete/<?= $service['id'] ?>"
+                        action="/services/delete/<?= $service['id'] ?>"
                         method="POST">
                             <button type="submit" class="btn btn-danger">Supprimer</button>
                         </form>

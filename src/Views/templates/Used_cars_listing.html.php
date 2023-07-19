@@ -118,7 +118,7 @@
                                 <button class="btn btn-danger mx-2 my-2 bi bi-trash3-fill deleteBtn"
                                     data-bs-toggle="modal"
                                     data-bs-target="#deleteModal"
-                                    data-action="/ECF_Garage/public/deleteCars/delete/<?= $car->id ?>">
+                                    data-action="/deleteCars/delete/<?= $car->id ?>">
                                 </button>
                             <?php endif; ?>
 

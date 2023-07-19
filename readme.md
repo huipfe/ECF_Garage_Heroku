@@ -37,7 +37,11 @@ https://trello.com/invite/b/oxxE9JtC/ATTI93766aad838552b95ae14f736af1dd863176381
 ### Figma : 
 https://www.figma.com/file/SaW2sE4UMapRzftQdaG8DU/ECF_Garage?type=design&node-id=9-44&t=l3rijzeslJeOXY32-0
 
+### Github : 
+https://github.com/huipfe/ECF_Garage
 
+### Diagramme : 
+https://app.diagrams.net/#Hhuipfe%2FECF_Garage%2Fmaster%2FECF_Garage.drawio
 
 # Déploiement/Installation détaillés.
 ## Installation (si volonté d'utiliser en local)

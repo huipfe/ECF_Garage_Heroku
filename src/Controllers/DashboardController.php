@@ -221,7 +221,7 @@ class DashboardController extends Controller
                 $_SESSION['erreur'] = "Une erreur s'est produite lors de la mise à jour des horaires";
             }
 
-            header('Location: /dashboard/manageHoraires');
+            header('Location: /dashboard/manageHoraires/');
             exit();
         }
 

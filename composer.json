@@ -1,0 +1,27 @@
+{
+    "name": "vparrot/garage",
+    "description": "Application pour ECF au sein de l'ecole STUDI promo novembre/decembre 2023.",
+    "type": "project",
+    "license": "MIT",
+    "autoload": {
+        "psr-4": {
+            "App\\": ""
+        }
+    },
+    "authors": [
+        {
+            "name": "Ilan Tervil",
+            "email": "Ilan.Tervil@gmail.com"
+        }
+    ],
+    "require": {
+        "twig/twig": "^3.6"
+    },
+    "require-dev": {
+        "heroku/heroku-buildpack-php": "*"
+    },
+    "post-install-cmd": [
+        "php artisan clear-compiled",
+        "chmod -R 777 public/"
+    ]
+}
